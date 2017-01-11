@@ -45,6 +45,6 @@ There are various administration tools for MySQL database servers. We recommend 
 
 ## 4. Streaming server 
 
-## 4.1. Linking Wowza with Lecture2Go
+## 4.1. Linking Lecture2Go with Streaming Server
 
 ## 5. Download server
