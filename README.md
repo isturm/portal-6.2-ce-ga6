@@ -48,17 +48,17 @@ Import install.sql onto the installed MySQL database server.
 
 Afterwards the portal software can be prepared for further installation. First edit the configuration file portal-setup-wizard.properties, which can be found under:
 
-your-lecture2go-server:~ # cd /usr/local/l2go/portal-6.2-ce-ga6/
-your-lecture2go-server:/.../portal-6.2-ce-ga6/ # joe portal-setup-wizard.properties
+    your-lecture2go-server:~ # cd /usr/local/l2go/portal-6.2-ce-ga6/
+    your-lecture2go-server:/.../portal-6.2-ce-ga6/ # joe portal-setup-wizard.properties
 Here you enter the installation directory:
  
-liferay.home=/usr/local/l2go/portal-6.2-ce-ga6
+    liferay.home=/usr/local/l2go/portal-6.2-ce-ga6
  
 
 Now edit the configuration file portal-ext.properties:
 
-your-lecture2go-server:~ # cd /usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.62/webapps/
-your-lecture2go-server:/.../webapps/ # joe ROOT/WEB-INF/classes/portal-ext.properties
+    your-lecture2go-server:~ # cd /usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.62/webapps/
+    your-lecture2go-server:/.../webapps/ # joe ROOT/WEB-INF/classes/portal-ext.properties
 
 Configure the database access by modifying the following lines in the 'Database Properties':
 
