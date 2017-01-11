@@ -12,9 +12,14 @@ Lecture2Go supports the free access to knowledge because this is a component of 
 
 # Installation (Linux, MAC)
 
-1. System requirements
-2. Database server
-3. Portal server
-4. Streaming server 
-4.1. Linking Wowza with Lecture2Go
-5. Download server
+## 1. System requirements
+
+## 2. Database server
+
+## 3. Portal server
+
+## 4. Streaming server 
+
+## 4.1. Linking Wowza with Lecture2Go
+
+## 5. Download server
