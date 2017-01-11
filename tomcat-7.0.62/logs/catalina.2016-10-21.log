@@ -1,0 +1,372 @@
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Server version:        Apache Tomcat/7.0.62
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Server built:          May 7 2015 17:14:55 UTC
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Server number:         7.0.62.0
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: OS Name:               Mac OS X
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: OS Version:            10.10.5
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Architecture:          x86_64
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Java Home:             /Library/Java/JavaVirtualMachines/jdk1.7.0_75.jdk/Contents/Home/jre
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: JVM Version:           1.7.0_75-b13
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: JVM Vendor:            Oracle Corporation
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: CATALINA_BASE:         /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: CATALINA_HOME:         /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:49823
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Duser.timezone=GMT
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Dfile.encoding=UTF8
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Djava.net.preferIPv4Stack=true
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Djava.util.logging.config.file=/Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/conf/logging.properties
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Djava.io.tmpdir=/Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/temp
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Dexternal-properties=/Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/portal-ide.properties
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Dcatalina.base=/Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Dcatalina.home=/Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Dwtp.deploy=/Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Djava.endorsed.dirs=/Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/endorsed
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Xmx1024m
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -XX:MaxPermSize=512m
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Dfreemarker.debug.password=liferay
+Okt 21, 2016 7:33:52 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Dfreemarker.debug.port=57676
+Okt 21, 2016 7:33:52 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFORMATION: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /Users/isturm/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+Okt 21, 2016 7:33:53 AM org.apache.coyote.AbstractProtocol init
+INFORMATION: Initializing ProtocolHandler ["http-bio-8080"]
+Okt 21, 2016 7:33:53 AM org.apache.coyote.AbstractProtocol init
+INFORMATION: Initializing ProtocolHandler ["ajp-bio-8009"]
+Okt 21, 2016 7:33:53 AM org.apache.catalina.startup.Catalina load
+INFORMATION: Initialization processed in 1078 ms
+Okt 21, 2016 7:33:53 AM org.apache.catalina.core.StandardService startInternal
+INFORMATION: Starting service Catalina
+Okt 21, 2016 7:33:53 AM org.apache.catalina.core.StandardEngine startInternal
+INFORMATION: Starting Servlet Engine: Apache Tomcat/7.0.62
+Okt 21, 2016 7:33:53 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFORMATION: Deploying configuration descriptor /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/conf/Catalina/localhost/ROOT.xml
+Okt 21, 2016 7:34:07 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:04 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFORMATION: Deployment of configuration descriptor /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/conf/Catalina/localhost/ROOT.xml has finished in 71,546 ms
+Okt 21, 2016 7:35:04 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/50JIT
+Okt 21, 2016 7:35:05 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:05 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/50JIT has finished in 657 ms
+Okt 21, 2016 7:35:05 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/calendar-portlet
+Okt 21, 2016 7:35:07 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:07 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/calendar-portlet has finished in 2,187 ms
+Okt 21, 2016 7:35:07 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/campusInnovation
+Okt 21, 2016 7:35:08 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:08 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/campusInnovation has finished in 563 ms
+Okt 21, 2016 7:35:08 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/commsy
+Okt 21, 2016 7:35:08 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:08 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/commsy has finished in 639 ms
+Okt 21, 2016 7:35:08 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/dini
+Okt 21, 2016 7:35:09 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:09 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/dini has finished in 811 ms
+Okt 21, 2016 7:35:09 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/download
+Okt 21, 2016 7:35:09 AM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFORMATION: validateJarFile(/Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/download/WEB-INF/lib/servlet-api.jar) - jar not loaded. See Servlet Spec 3.0, section 10.7.2. Offending class: javax/servlet/Servlet.class
+Okt 21, 2016 7:35:11 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:11 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/download has finished in 1,326 ms
+Okt 21, 2016 7:35:11 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/flowplayer
+Okt 21, 2016 7:35:11 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:11 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/flowplayer has finished in 849 ms
+Okt 21, 2016 7:35:11 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/flowplayer3.1.0
+Okt 21, 2016 7:35:12 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:12 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/flowplayer3.1.0 has finished in 637 ms
+Okt 21, 2016 7:35:12 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/fp
+Okt 21, 2016 7:35:13 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:13 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/fp has finished in 560 ms
+Okt 21, 2016 7:35:13 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/gif
+Okt 21, 2016 7:35:13 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:13 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/gif has finished in 597 ms
+Okt 21, 2016 7:35:13 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/imagebuilder
+Okt 21, 2016 7:35:14 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:14 AM org.apache.catalina.core.StandardContext startInternal
+SCHWERWIEGEND: One or more Filters failed to start. Full details will be found in the appropriate container log file
+Okt 21, 2016 7:35:14 AM org.apache.catalina.core.StandardContext startInternal
+SCHWERWIEGEND: Context [/imagebuilder] startup failed due to previous errors
+Okt 21, 2016 7:35:14 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/imagebuilder has finished in 692 ms
+Okt 21, 2016 7:35:14 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/images
+Okt 21, 2016 7:35:15 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:15 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/images has finished in 709 ms
+Okt 21, 2016 7:35:15 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/ISC2009
+Okt 21, 2016 7:35:15 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:15 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/ISC2009 has finished in 539 ms
+Okt 21, 2016 7:35:15 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/jq
+Okt 21, 2016 7:35:16 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:16 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/jq has finished in 701 ms
+Okt 21, 2016 7:35:16 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/jquery
+Okt 21, 2016 7:35:16 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:16 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/jquery has finished in 578 ms
+Okt 21, 2016 7:35:16 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/jw
+Okt 21, 2016 7:35:17 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:17 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/jw has finished in 598 ms
+Okt 21, 2016 7:35:17 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/jw5.0
+Okt 21, 2016 7:35:18 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:18 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/jw5.0 has finished in 649 ms
+Okt 21, 2016 7:35:18 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/kaleo-web
+Okt 21, 2016 7:35:20 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:20 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/kaleo-web has finished in 2,568 ms
+Okt 21, 2016 7:35:20 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-hook
+Okt 21, 2016 7:35:21 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:21 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-hook has finished in 975 ms
+Okt 21, 2016 7:35:21 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet
+Okt 21, 2016 7:35:25 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:25 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet has finished in 3,777 ms
+Okt 21, 2016 7:35:25 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-theme
+Okt 21, 2016 7:35:26 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:26 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-theme has finished in 844 ms
+Okt 21, 2016 7:35:26 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/liferay-jedi-theme
+Okt 21, 2016 7:35:26 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:26 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/liferay-jedi-theme has finished in 481 ms
+Okt 21, 2016 7:35:26 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/logo
+Okt 21, 2016 7:35:27 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:27 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/logo has finished in 639 ms
+Okt 21, 2016 7:35:27 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/marketplace-portlet
+Okt 21, 2016 7:35:29 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:45 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/marketplace-portlet has finished in 17,617 ms
+Okt 21, 2016 7:35:45 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/migration-portlet
+Okt 21, 2016 7:35:47 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:52 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/migration-portlet has finished in 7,758 ms
+Okt 21, 2016 7:35:52 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/notifications-portlet
+Okt 21, 2016 7:35:54 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:35:56 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/notifications-portlet has finished in 3,223 ms
+Okt 21, 2016 7:35:56 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/opensocial-portlet
+Okt 21, 2016 7:35:58 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:36:01 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/opensocial-portlet has finished in 5,870 ms
+Okt 21, 2016 7:36:01 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/player
+Okt 21, 2016 7:36:02 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:36:02 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/player has finished in 983 ms
+Okt 21, 2016 7:36:02 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/portal
+Okt 21, 2016 7:36:03 AM org.apache.shindig.config.JsonContainerConfig loadContainers
+INFORMATION: Loading resources from: containers/default/container.js
+Okt 21, 2016 7:36:03 AM org.apache.shindig.config.JsonContainerConfig loadResources
+INFORMATION: Reading container config: containers/default/container.js
+Okt 21, 2016 7:36:03 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:36:03 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/portal has finished in 872 ms
+Okt 21, 2016 7:36:03 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/resources-importer-web
+Okt 21, 2016 7:36:04 AM org.apache.shindig.gadgets.features.FeatureRegistry register
+INFORMATION: Loading resources from: res:features-extras/features.txt
+Okt 21, 2016 7:36:04 AM org.apache.shindig.common.xml.XmlUtil <clinit>
+INFORMATION: Reusing document builders
+Okt 21, 2016 7:36:04 AM org.apache.shindig.gadgets.features.FeatureRegistry register
+INFORMATION: Loading resources from: res:features/features.txt
+Okt 21, 2016 7:36:05 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:36:05 AM org.apache.shindig.gadgets.servlet.CajaContentRewriter <init>
+INFORMATION: Cajoled cache createdorg.apache.shindig.common.cache.ehcache.EhConfiguredCache@788c3d2a
+Okt 21, 2016 7:36:05 AM org.apache.shindig.gadgets.servlet.CajaContentRewriter <init>
+INFORMATION: Cajoled cache createdorg.apache.shindig.common.cache.ehcache.EhConfiguredCache@788c3d2a
+Okt 21, 2016 7:36:05 AM org.apache.shindig.gadgets.oauth.OAuthModule$OAuthCrypterProvider <init>
+INFORMATION: Using random key for OAuth client-side state encryption
+Okt 21, 2016 7:36:06 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/resources-importer-web has finished in 2,385 ms
+Okt 21, 2016 7:36:06 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/rss
+Okt 21, 2016 7:36:07 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:36:07 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/rss has finished in 1,573 ms
+Okt 21, 2016 7:36:07 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/servlet-file-upload
+Okt 21, 2016 7:36:07 AM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFORMATION: validateJarFile(/Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/servlet-file-upload/WEB-INF/lib/javax.servlet-api-3.1.0.jar) - jar not loaded. See Servlet Spec 3.0, section 10.7.2. Offending class: javax/servlet/Servlet.class
+Okt 21, 2016 7:36:10 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:36:10 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/servlet-file-upload has finished in 2,691 ms
+Okt 21, 2016 7:36:10 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/strobemediaplayer
+Okt 21, 2016 7:36:11 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:36:11 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/strobemediaplayer has finished in 767 ms
+Okt 21, 2016 7:36:11 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/swfobject
+Okt 21, 2016 7:36:11 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:36:11 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/swfobject has finished in 587 ms
+Okt 21, 2016 7:36:11 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/sync-web
+Okt 21, 2016 7:36:13 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:36:16 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/sync-web has finished in 4,835 ms
+Okt 21, 2016 7:36:16 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/veranstaltung
+Okt 21, 2016 7:36:18 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:36:18 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/veranstaltung has finished in 1,647 ms
+Okt 21, 2016 7:36:18 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/wasserzeichen
+Okt 21, 2016 7:36:20 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:36:20 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/wasserzeichen has finished in 1,871 ms
+Okt 21, 2016 7:36:20 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/web-form-portlet
+Okt 21, 2016 7:36:22 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 7:36:22 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/web-form-portlet has finished in 1,880 ms
+Okt 21, 2016 7:36:22 AM org.apache.coyote.AbstractProtocol start
+INFORMATION: Starting ProtocolHandler ["http-bio-8080"]
+Okt 21, 2016 7:36:22 AM org.apache.coyote.AbstractProtocol start
+INFORMATION: Starting ProtocolHandler ["ajp-bio-8009"]
+Okt 21, 2016 7:36:22 AM org.apache.catalina.startup.Catalina start
+INFORMATION: Server startup in 148825 ms
+Okt 21, 2016 8:22:14 AM org.apache.catalina.startup.HostConfig undeploy
+INFORMATION: Undeploying context [/lecture2go-portlet]
+Okt 21, 2016 8:22:15 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet
+Okt 21, 2016 8:22:17 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 8:22:22 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet has finished in 7,460 ms
+Okt 21, 2016 8:30:23 AM org.apache.catalina.startup.HostConfig undeploy
+INFORMATION: Undeploying context [/lecture2go-portlet]
+Okt 21, 2016 8:30:23 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet
+Okt 21, 2016 8:30:26 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 8:30:32 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet has finished in 8,353 ms
+Okt 21, 2016 8:34:02 AM org.apache.catalina.startup.HostConfig undeploy
+INFORMATION: Undeploying context [/lecture2go-portlet]
+Okt 21, 2016 8:34:02 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet
+Okt 21, 2016 8:34:05 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 8:34:11 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet has finished in 9,014 ms
+Okt 21, 2016 1:03:04 PM org.apache.catalina.startup.HostConfig undeploy
+INFORMATION: Undeploying context [/lecture2go-portlet]
+Okt 21, 2016 1:03:05 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet
+Okt 21, 2016 1:03:08 PM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 1:03:15 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet has finished in 10,049 ms
+Okt 21, 2016 1:09:15 PM org.apache.catalina.startup.HostConfig undeploy
+INFORMATION: Undeploying context [/lecture2go-portlet]
+Okt 21, 2016 1:09:16 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet
+Okt 21, 2016 1:09:18 PM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 21, 2016 1:09:26 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet has finished in 9,502 ms

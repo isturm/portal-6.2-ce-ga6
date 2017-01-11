@@ -1,0 +1,346 @@
+10:36:08,983 INFO  [DispatcherPortlet:106] Initializing portlet 'migration'
+10:36:09,046 INFO  [DispatcherPortlet:263] FrameworkPortlet 'migration': initialization started
+10:36:09,059 INFO  [XmlPortletApplicationContext:513] Refreshing PortletApplicationContext for namespace 'migration-portlet': startup date [Thu Sep 22 10:36:09 GMT 2016]; root of context hierarchy
+10:36:09,093 INFO  [XmlBeanDefinitionReader:316] Loading XML bean definitions from PortletContext resource [/WEB-INF/migration-portlet.xml]
+10:36:09,272 INFO  [XmlBeanDefinitionReader:316] Loading XML bean definitions from PortletContext resource [/WEB-INF/common-portlet.xml]
+10:36:09,578 INFO  [DispatcherPortlet:282] FrameworkPortlet 'migration': initialization completed in 532 ms
+10:36:09,578 INFO  [DispatcherPortlet:127] Portlet 'migration' configured successfully
+10:37:19,936 INFO  [XmlPortletApplicationContext:873] Closing PortletApplicationContext for namespace 'migration-portlet': startup date [Thu Sep 22 10:36:09 GMT 2016]; root of context hierarchy
+10:38:55,734 INFO  [DispatcherPortlet:106] Initializing portlet 'migration'
+10:38:55,797 INFO  [DispatcherPortlet:263] FrameworkPortlet 'migration': initialization started
+10:38:55,812 INFO  [XmlPortletApplicationContext:513] Refreshing PortletApplicationContext for namespace 'migration-portlet': startup date [Thu Sep 22 10:38:55 GMT 2016]; root of context hierarchy
+10:38:55,850 INFO  [XmlBeanDefinitionReader:316] Loading XML bean definitions from PortletContext resource [/WEB-INF/migration-portlet.xml]
+10:38:55,973 INFO  [XmlBeanDefinitionReader:316] Loading XML bean definitions from PortletContext resource [/WEB-INF/common-portlet.xml]
+10:38:56,279 INFO  [DispatcherPortlet:282] FrameworkPortlet 'migration': initialization completed in 482 ms
+10:38:56,279 INFO  [DispatcherPortlet:127] Portlet 'migration' configured successfully
+12:14:32,085 INFO  [migrationLog:721] Migration / Update of:198 Legacy Users successfull!!
+12:15:15,126 INFO  [migrationLog:745] Migration / Update of:4693 Legacy Segments successfull!!
+12:15:15,175 INFO  [migrationLog:750] Segements with UserId = 0 ==  2149
+12:15:15,256 INFO  [migrationLog:754] legacySegments with UserId = 0 ==  2149
+12:16:00,836 INFO  [migrationLog:799] Migration / Update of:191 Legacy producer successfull!!
+12:16:05,740 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id59
+12:16:05,751 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id60
+12:16:05,760 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id61
+12:16:05,768 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id62
+12:16:05,780 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id63
+12:16:05,789 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id64
+12:16:05,799 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id65
+12:16:05,809 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id66
+12:16:05,823 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id67
+12:16:05,834 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id68
+12:16:05,847 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id69
+12:16:05,860 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id70
+12:16:05,869 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id71
+12:16:05,880 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id72
+12:16:05,890 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id73
+12:17:08,361 INFO  [migrationLog:902] Migration / Update of:12 Legacy offices successfull!!
+12:17:54,529 INFO  [migrationLog:927] Migration / Update of:8548 Legacy offices successfull!!
+12:18:53,220 ERROR [DispatcherPortlet:561] Could not complete request
+java.lang.RuntimeException: java.lang.ClassNotFoundException is not a valid exception
+	at de.uhh.l2g.plugins.service.InstitutionLocalServiceClp.addInstitution(InstitutionLocalServiceClp.java:255)
+	at de.uhh.l2g.plugins.service.InstitutionLocalServiceUtil.addInstitution(InstitutionLocalServiceUtil.java:52)
+	at de.uhh.l2g.plugins.migration.controller.MigrationController.migrateInstitution(MigrationController.java:1732)
+	at de.uhh.l2g.plugins.migration.controller.MigrationController.migrateInstitutions(MigrationController.java:946)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.bind.annotation.support.HandlerMethodInvoker.invokeHandlerMethod(HandlerMethodInvoker.java:175)
+	at org.springframework.web.portlet.mvc.annotation.AnnotationMethodHandlerAdapter.invokeHandlerMethod(AnnotationMethodHandlerAdapter.java:369)
+	at org.springframework.web.portlet.mvc.annotation.AnnotationMethodHandlerAdapter.doHandle(AnnotationMethodHandlerAdapter.java:356)
+	at org.springframework.web.portlet.mvc.annotation.AnnotationMethodHandlerAdapter.handleAction(AnnotationMethodHandlerAdapter.java:287)
+	at org.springframework.web.portlet.DispatcherPortlet.doActionService(DispatcherPortlet.java:670)
+	at org.springframework.web.portlet.FrameworkPortlet.processRequest(FrameworkPortlet.java:521)
+	at org.springframework.web.portlet.FrameworkPortlet.processAction(FrameworkPortlet.java:462)
+	at com.liferay.portlet.FilterChainImpl.doFilter(FilterChainImpl.java:71)
+	at com.liferay.portal.kernel.portlet.PortletFilterUtil.doFilter(PortletFilterUtil.java:48)
+	at com.liferay.portal.kernel.servlet.PortletServlet.service(PortletServlet.java:112)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:116)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:748)
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:604)
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:543)
+	at com.liferay.portlet.InvokerPortletImpl.invoke(InvokerPortletImpl.java:583)
+	at com.liferay.portlet.InvokerPortletImpl.invokeAction(InvokerPortletImpl.java:628)
+	at com.liferay.portlet.InvokerPortletImpl.processAction(InvokerPortletImpl.java:308)
+	at com.liferay.portlet.PortletContainerImpl._doProcessAction(PortletContainerImpl.java:389)
+	at com.liferay.portlet.PortletContainerImpl.processAction(PortletContainerImpl.java:107)
+	at com.liferay.portlet.SecurityPortletContainerWrapper.processAction(SecurityPortletContainerWrapper.java:109)
+	at com.liferay.portlet.RestrictPortletContainerWrapper.processAction(RestrictPortletContainerWrapper.java:75)
+	at com.liferay.portal.kernel.portlet.PortletContainerUtil.processAction(PortletContainerUtil.java:115)
+	at com.liferay.portal.action.LayoutAction.processLayout(LayoutAction.java:386)
+	at com.liferay.portal.action.LayoutAction.doExecute(LayoutAction.java:200)
+	at com.liferay.portal.action.LayoutAction.execute(LayoutAction.java:95)
+	at org.apache.struts.action.RequestProcessor.processActionPerform(RequestProcessor.java:431)
+	at org.apache.struts.action.RequestProcessor.process(RequestProcessor.java:236)
+	at com.liferay.portal.struts.PortalRequestProcessor.process(PortalRequestProcessor.java:168)
+	at org.apache.struts.action.ActionServlet.process(ActionServlet.java:1196)
+	at org.apache.struts.action.ActionServlet.doGet(ActionServlet.java:414)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:624)
+	at com.liferay.portal.servlet.MainServlet.callParentService(MainServlet.java:557)
+	at com.liferay.portal.servlet.MainServlet.service(MainServlet.java:534)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:116)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.uploadservletrequest.UploadServletRequestFilter.processFilter(UploadServletRequestFilter.java:93)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.secure.SecureFilter.processFilter(SecureFilter.java:308)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.jsoncontenttype.JSONContentTypeFilter.processFilter(JSONContentTypeFilter.java:42)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:748)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:486)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:411)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:338)
+	at com.liferay.portal.servlet.FriendlyURLServlet.service(FriendlyURLServlet.java:161)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:116)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.uploadservletrequest.UploadServletRequestFilter.processFilter(UploadServletRequestFilter.java:93)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.strip.StripFilter.processFilter(StripFilter.java:361)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.gzip.GZipFilter.processFilter(GZipFilter.java:123)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.secure.SecureFilter.processFilter(SecureFilter.java:308)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.i18n.I18nFilter.processFilter(I18nFilter.java:254)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.jsoncontenttype.JSONContentTypeFilter.processFilter(JSONContentTypeFilter.java:42)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.autologin.AutoLoginFilter.processFilter(AutoLoginFilter.java:268)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.sso.ntlm.NtlmPostFilter.processFilter(NtlmPostFilter.java:83)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.sharepoint.SharepointFilter.processFilter(SharepointFilter.java:88)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.virtualhost.VirtualHostFilter.processFilter(VirtualHostFilter.java:226)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:185)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:738)
+	at com.liferay.portal.servlet.filters.urlrewrite.UrlRewriteFilter.processFilter(UrlRewriteFilter.java:57)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:185)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:957)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:423)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1079)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:318)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+12:19:51,908 INFO  [migrationLog:949] Migration / Update of:142 Legacy legacyFacilities successfull!!
+12:20:36,999 INFO  [migrationLog:972] Migration / Update of:8502 Legacy legacyLicenses successfull!!
+12:20:43,026 INFO  [migrationLog:995] Migration / Update of:11 Legacy legacyHosts successfull!!
+12:20:46,700 INFO  [migrationLog:1019] Migration / Update of:1 Legacy legacyL2gSyss successfull!!
+12:21:14,619 INFO  [migrationLog:1041] Migration / Update of:959 Legacy legacyLectureserieses successfull!!
+12:37:07,955 INFO  [migrationLog:1041] Migration / Update of:959 Legacy legacyLectureserieses successfull!!
+12:40:45,563 INFO  [migrationLog:1041] Migration / Update of:959 Legacy legacyLectureserieses successfull!!
+12:41:31,641 INFO  [XmlPortletApplicationContext:873] Closing PortletApplicationContext for namespace 'migration-portlet': startup date [Thu Sep 22 10:38:55 GMT 2016]; root of context hierarchy
+12:43:18,804 INFO  [DispatcherPortlet:106] Initializing portlet 'migration'
+12:43:18,874 INFO  [DispatcherPortlet:263] FrameworkPortlet 'migration': initialization started
+12:43:18,893 INFO  [XmlPortletApplicationContext:513] Refreshing PortletApplicationContext for namespace 'migration-portlet': startup date [Thu Sep 22 12:43:18 GMT 2016]; root of context hierarchy
+12:43:18,926 INFO  [XmlBeanDefinitionReader:316] Loading XML bean definitions from PortletContext resource [/WEB-INF/migration-portlet.xml]
+12:43:19,050 INFO  [XmlBeanDefinitionReader:316] Loading XML bean definitions from PortletContext resource [/WEB-INF/common-portlet.xml]
+12:43:19,395 INFO  [DispatcherPortlet:282] FrameworkPortlet 'migration': initialization completed in 521 ms
+12:43:19,396 INFO  [DispatcherPortlet:127] Portlet 'migration' configured successfully
+12:48:46,805 INFO  [migrationLog:721] Migration / Update of:198 Legacy Users successfull!!
+12:49:44,977 INFO  [migrationLog:745] Migration / Update of:4693 Legacy Segments successfull!!
+12:49:45,102 INFO  [migrationLog:750] Segements with UserId = 0 ==  2149
+12:49:45,147 INFO  [migrationLog:754] legacySegments with UserId = 0 ==  2149
+12:53:58,378 INFO  [migrationLog:799] Migration / Update of:191 Legacy producer successfull!!
+12:54:03,920 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id59
+12:54:03,931 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id60
+12:54:03,949 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id61
+12:54:03,961 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id62
+12:54:03,971 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id63
+12:54:03,981 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id64
+12:54:03,991 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id65
+12:54:04,002 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id66
+12:54:04,024 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id67
+12:54:04,034 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id68
+12:54:04,043 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id69
+12:54:04,054 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id70
+12:54:04,064 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id71
+12:54:04,076 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id72
+12:54:04,086 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id73
+12:55:08,791 INFO  [migrationLog:902] Migration / Update of:12 Legacy offices successfull!!
+12:55:51,046 INFO  [migrationLog:927] Migration / Update of:8548 Legacy offices successfull!!
+12:56:03,549 INFO  [migrationLog:949] Migration / Update of:142 Legacy legacyFacilities successfull!!
+12:56:53,588 INFO  [migrationLog:972] Migration / Update of:8502 Legacy legacyLicenses successfull!!
+12:57:12,256 INFO  [migrationLog:995] Migration / Update of:11 Legacy legacyHosts successfull!!
+12:57:22,396 INFO  [migrationLog:1019] Migration / Update of:1 Legacy legacyL2gSyss successfull!!
+12:57:50,602 INFO  [migrationLog:1041] Migration / Update of:959 Legacy legacyLectureserieses successfull!!
+13:02:48,043 INFO  [XmlPortletApplicationContext:873] Closing PortletApplicationContext for namespace 'migration-portlet': startup date [Thu Sep 22 12:43:18 GMT 2016]; root of context hierarchy
+13:04:30,630 INFO  [DispatcherPortlet:106] Initializing portlet 'migration'
+13:04:30,703 INFO  [DispatcherPortlet:263] FrameworkPortlet 'migration': initialization started
+13:04:30,721 INFO  [XmlPortletApplicationContext:513] Refreshing PortletApplicationContext for namespace 'migration-portlet': startup date [Thu Sep 22 13:04:30 GMT 2016]; root of context hierarchy
+13:04:30,779 INFO  [XmlBeanDefinitionReader:316] Loading XML bean definitions from PortletContext resource [/WEB-INF/migration-portlet.xml]
+13:04:30,908 INFO  [XmlBeanDefinitionReader:316] Loading XML bean definitions from PortletContext resource [/WEB-INF/common-portlet.xml]
+13:04:31,217 INFO  [DispatcherPortlet:282] FrameworkPortlet 'migration': initialization completed in 513 ms
+13:04:31,218 INFO  [DispatcherPortlet:127] Portlet 'migration' configured successfully
+13:15:49,897 INFO  [XmlPortletApplicationContext:873] Closing PortletApplicationContext for namespace 'migration-portlet': startup date [Thu Sep 22 13:04:30 GMT 2016]; root of context hierarchy
+13:17:48,801 INFO  [DispatcherPortlet:106] Initializing portlet 'migration'
+13:17:48,875 INFO  [DispatcherPortlet:263] FrameworkPortlet 'migration': initialization started
+13:17:48,903 INFO  [XmlPortletApplicationContext:513] Refreshing PortletApplicationContext for namespace 'migration-portlet': startup date [Thu Sep 22 13:17:48 GMT 2016]; root of context hierarchy
+13:17:48,943 INFO  [XmlBeanDefinitionReader:316] Loading XML bean definitions from PortletContext resource [/WEB-INF/migration-portlet.xml]
+13:17:49,086 INFO  [XmlBeanDefinitionReader:316] Loading XML bean definitions from PortletContext resource [/WEB-INF/common-portlet.xml]
+13:17:49,377 INFO  [DispatcherPortlet:282] FrameworkPortlet 'migration': initialization completed in 502 ms
+13:17:49,378 INFO  [DispatcherPortlet:127] Portlet 'migration' configured successfully
+13:20:56,785 INFO  [migrationLog:995] Migration / Update of:11 Legacy legacyHosts successfull!!
+13:22:50,452 INFO  [migrationLog:995] Migration / Update of:11 Legacy legacyHosts successfull!!
+13:23:22,012 INFO  [migrationLog:721] Migration / Update of:198 Legacy Users successfull!!
+13:24:00,347 INFO  [migrationLog:745] Migration / Update of:4693 Legacy Segments successfull!!
+13:24:00,391 INFO  [migrationLog:750] Segements with UserId = 0 ==  2149
+13:24:00,429 INFO  [migrationLog:754] legacySegments with UserId = 0 ==  2149
+13:24:15,741 INFO  [migrationLog:799] Migration / Update of:191 Legacy producer successfull!!
+13:24:24,153 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id104
+13:24:24,164 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id105
+13:24:24,178 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id106
+13:24:24,188 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id107
+13:24:24,198 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id108
+13:24:24,208 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id109
+13:24:24,218 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id110
+13:24:24,228 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id111
+13:24:24,244 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id112
+13:24:24,253 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id113
+13:24:24,263 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id114
+13:24:24,273 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id120
+13:24:24,284 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id121
+13:24:24,318 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id122
+13:24:24,328 WARN  [migrationLog:827] ConsistencyCheck: Legacy-Video has dead LectureseriesID in legacy system LectureseriesID will be set to 0 | video item with id123
+13:25:29,487 INFO  [migrationLog:902] Migration / Update of:12 Legacy offices successfull!!
+13:36:21,887 INFO  [migrationLog:927] Migration / Update of:8548 Legacy offices successfull!!
+13:36:53,242 INFO  [migrationLog:949] Migration / Update of:142 Legacy legacyFacilities successfull!!
+13:37:40,040 INFO  [migrationLog:972] Migration / Update of:8502 Legacy legacyLicenses successfull!!
+13:37:47,299 INFO  [migrationLog:995] Migration / Update of:11 Legacy legacyHosts successfull!!
+13:37:52,628 INFO  [migrationLog:1019] Migration / Update of:1 Legacy legacyL2gSyss successfull!!
+13:38:20,489 INFO  [migrationLog:1041] Migration / Update of:959 Legacy legacyLectureserieses successfull!!
+13:38:53,839 INFO  [migrationLog:1063] Migration / Update of:4397 Legacy legacyVideohitlists successfull!!
+13:39:01,406 INFO  [migrationLog:1085] Migration / Update of:30 Legacy legacyLastvideolists successfull!!
+13:39:12,751 INFO  [migrationLog:1145] Migration / Update of:1006 Legacy lectureseriesFacilities successfull!!
+13:39:31,577 INFO  [migrationLog:1194] Migration / Update of:1838 Legacy producerLectureserieses successfull!!
+13:40:53,122 INFO  [migrationLog:1171] Migration / Update of:8961 Legacy videoFacilities successfull!!
+13:44:13,311 INFO  [migrationLog:1219] Migration / Update of:18 Legacy facilityHosts successfull!!
+13:44:57,584 WARN  [migrationLog:1251] ConsistencyCheck Video: CAN NOT LINK TERM ID ! Due to Lectureseries ID == 0 found at video 123
+13:44:57,585 WARN  [migrationLog:1253] Video Entry Skipped for mapping into Video_Lectureseries Table
+13:44:57,585 WARN  [migrationLog:1251] ConsistencyCheck Video: CAN NOT LINK TERM ID ! Due to Lectureseries ID == 0 found at video 122
+13:44:57,586 WARN  [migrationLog:1253] Video Entry Skipped for mapping into Video_Lectureseries Table
+13:44:57,587 WARN  [migrationLog:1251] ConsistencyCheck Video: CAN NOT LINK TERM ID ! Due to Lectureseries ID == 0 found at video 121
+13:44:57,587 WARN  [migrationLog:1253] Video Entry Skipped for mapping into Video_Lectureseries Table
+13:44:57,588 WARN  [migrationLog:1251] ConsistencyCheck Video: CAN NOT LINK TERM ID ! Due to Lectureseries ID == 0 found at video 120
+13:44:57,588 WARN  [migrationLog:1253] Video Entry Skipped for mapping into Video_Lectureseries Table
+13:44:57,589 WARN  [migrationLog:1251] ConsistencyCheck Video: CAN NOT LINK TERM ID ! Due to Lectureseries ID == 0 found at video 114
+13:44:57,589 WARN  [migrationLog:1253] Video Entry Skipped for mapping into Video_Lectureseries Table
+13:44:57,590 WARN  [migrationLog:1251] ConsistencyCheck Video: CAN NOT LINK TERM ID ! Due to Lectureseries ID == 0 found at video 113
+13:44:57,591 WARN  [migrationLog:1253] Video Entry Skipped for mapping into Video_Lectureseries Table
+13:44:57,591 WARN  [migrationLog:1251] ConsistencyCheck Video: CAN NOT LINK TERM ID ! Due to Lectureseries ID == 0 found at video 112
+13:44:57,592 WARN  [migrationLog:1253] Video Entry Skipped for mapping into Video_Lectureseries Table
+13:44:57,592 WARN  [migrationLog:1251] ConsistencyCheck Video: CAN NOT LINK TERM ID ! Due to Lectureseries ID == 0 found at video 111
+13:44:57,593 WARN  [migrationLog:1253] Video Entry Skipped for mapping into Video_Lectureseries Table
+13:44:57,593 WARN  [migrationLog:1251] ConsistencyCheck Video: CAN NOT LINK TERM ID ! Due to Lectureseries ID == 0 found at video 110
+13:44:57,594 WARN  [migrationLog:1253] Video Entry Skipped for mapping into Video_Lectureseries Table
+13:44:57,594 WARN  [migrationLog:1251] ConsistencyCheck Video: CAN NOT LINK TERM ID ! Due to Lectureseries ID == 0 found at video 109
+13:44:57,595 WARN  [migrationLog:1253] Video Entry Skipped for mapping into Video_Lectureseries Table
+13:44:57,595 WARN  [migrationLog:1251] ConsistencyCheck Video: CAN NOT LINK TERM ID ! Due to Lectureseries ID == 0 found at video 108
+13:44:57,596 WARN  [migrationLog:1253] Video Entry Skipped for mapping into Video_Lectureseries Table
+13:44:57,596 WARN  [migrationLog:1251] ConsistencyCheck Video: CAN NOT LINK TERM ID ! Due to Lectureseries ID == 0 found at video 107
+13:44:57,597 WARN  [migrationLog:1253] Video Entry Skipped for mapping into Video_Lectureseries Table
+13:44:57,597 WARN  [migrationLog:1251] ConsistencyCheck Video: CAN NOT LINK TERM ID ! Due to Lectureseries ID == 0 found at video 106
+13:44:57,598 WARN  [migrationLog:1253] Video Entry Skipped for mapping into Video_Lectureseries Table
+13:44:57,598 WARN  [migrationLog:1251] ConsistencyCheck Video: CAN NOT LINK TERM ID ! Due to Lectureseries ID == 0 found at video 105
+13:44:57,599 WARN  [migrationLog:1253] Video Entry Skipped for mapping into Video_Lectureseries Table
+13:44:57,599 WARN  [migrationLog:1251] ConsistencyCheck Video: CAN NOT LINK TERM ID ! Due to Lectureseries ID == 0 found at video 104
+13:44:57,600 WARN  [migrationLog:1253] Video Entry Skipped for mapping into Video_Lectureseries Table
+13:44:57,904 INFO  [migrationLog:1257] Update of:8496Videos sucessfull - updated!
+13:45:28,725 INFO  [migrationLog:1281] Update of:8481video_Lectureserieses sucessfull - updated!
+13:45:37,534 INFO  [migrationLog:1444] Following Person/Creator needs to be revised manually: Dr. Catherine Wihtol De Wenden lenght:5
+13:45:40,390 INFO  [migrationLog:1444] Following Person/Creator needs to be revised manually: Dr. rer. pol. Klaus Töpfer lenght:5
+13:45:45,955 INFO  [migrationLog:1444] Following Person/Creator needs to be revised manually: Dr. Markus von der Heyde lenght:5
+13:46:00,046 INFO  [migrationLog:1444] Following Person/Creator needs to be revised manually: Dr. Markus von der Heyde lenght:5
+13:46:01,539 INFO  [migrationLog:1444] Following Person/Creator needs to be revised manually: Dr. Ivo van den Berk lenght:5
+13:46:12,824 INFO  [migrationLog:1444] Following Person/Creator needs to be revised manually: Dr. Markus von der Heyde lenght:5
+13:46:23,117 INFO  [migrationLog:1444] Following Person/Creator needs to be revised manually: Dr. Markus von der Heyde lenght:5
+13:46:30,075 INFO  [migrationLog:1444] Following Person/Creator needs to be revised manually: Dr. Wilko Graf von Hardenberg lenght:5
+13:46:33,293 INFO  [migrationLog:1444] Following Person/Creator needs to be revised manually: Prof. Hugo van der Hart lenght:5
+13:46:34,890 INFO  [migrationLog:1444] Following Person/Creator needs to be revised manually: María del Carmen Acebo González lenght:5
+13:46:34,903 INFO  [migrationLog:1444] Following Person/Creator needs to be revised manually: María del Carmen Acebo González lenght:5
+13:46:37,055 INFO  [migrationLog:1444] Following Person/Creator needs to be revised manually: Dr. Markus von der Heyde lenght:5
+13:46:41,095 INFO  [migrationLog:1444] Following Person/Creator needs to be revised manually: Dr. Markus von der Heyde lenght:5
+13:46:56,608 INFO  [migrationLog:1444] Following Person/Creator needs to be revised manually: Dr. Markus von der Heyde lenght:5
+13:47:11,800 INFO  [migrationLog:1444] Following Person/Creator needs to be revised manually: Dr. Markus von der Heyde lenght:5
+13:47:16,819 INFO  [migrationLog:1304] Update of:8496 creators found in Videos  sucessfull -  created / Updated!
+13:47:52,220 INFO  [migrationLog:879] Migration / Update of:1259 Legacy statistic successfull!!

@@ -1,0 +1,250 @@
+Okt 20, 2016 8:47:23 AM org.apache.catalina.startup.HostConfig undeploy
+INFORMATION: Undeploying context [/lecture2go-portlet]
+Okt 20, 2016 8:47:24 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalsForLeaks
+WARNUNG: Failed to check for ThreadLocal references for web application [/lecture2go-portlet]
+java.lang.NoClassDefFoundError: org/apache/axis/utils/XMLUtils$1
+	at java.lang.Class.getDeclaringClass0(Native Method)
+	at java.lang.Class.getDeclaringClass(Class.java:1106)
+	at java.lang.Class.getEnclosingClass(Class.java:1142)
+	at java.lang.Class.getCanonicalName(Class.java:1231)
+	at org.apache.catalina.loader.WebappClassLoader.getPrettyClassName(WebappClassLoader.java:2601)
+	at org.apache.catalina.loader.WebappClassLoader.checkThreadLocalMapForLeaks(WebappClassLoader.java:2559)
+	at org.apache.catalina.loader.WebappClassLoader.checkThreadLocalsForLeaks(WebappClassLoader.java:2507)
+	at org.apache.catalina.loader.WebappClassLoader.clearReferences(WebappClassLoader.java:2013)
+	at org.apache.catalina.loader.WebappClassLoader.stop(WebappClassLoader.java:1908)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:661)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5766)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+	at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:1028)
+	at org.apache.catalina.startup.HostConfig.undeploy(HostConfig.java:1547)
+	at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1453)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1695)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:333)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1374)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1546)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1556)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1524)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: org.apache.axis.utils.XMLUtils$1
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1720)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1571)
+	... 25 more
+
+Okt 20, 2016 8:47:24 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet
+Okt 20, 2016 8:47:29 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 20, 2016 8:47:35 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet has finished in 11,333 ms
+Okt 20, 2016 8:48:15 AM org.apache.catalina.startup.HostConfig undeploy
+INFORMATION: Undeploying context [/lecture2go-portlet]
+Okt 20, 2016 8:48:16 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet
+Okt 20, 2016 8:48:21 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 20, 2016 8:48:26 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet has finished in 10,737 ms
+Okt 20, 2016 9:18:39 AM org.apache.catalina.startup.HostConfig undeploy
+INFORMATION: Undeploying context [/lecture2go-portlet]
+Okt 20, 2016 9:18:39 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalsForLeaks
+WARNUNG: Failed to check for ThreadLocal references for web application [/lecture2go-portlet]
+java.lang.NoClassDefFoundError: org/apache/axis/utils/XMLUtils$1
+	at java.lang.Class.getDeclaringClass0(Native Method)
+	at java.lang.Class.getDeclaringClass(Class.java:1106)
+	at java.lang.Class.getEnclosingClass(Class.java:1142)
+	at java.lang.Class.getCanonicalName(Class.java:1231)
+	at org.apache.catalina.loader.WebappClassLoader.getPrettyClassName(WebappClassLoader.java:2601)
+	at org.apache.catalina.loader.WebappClassLoader.checkThreadLocalMapForLeaks(WebappClassLoader.java:2559)
+	at org.apache.catalina.loader.WebappClassLoader.checkThreadLocalsForLeaks(WebappClassLoader.java:2507)
+	at org.apache.catalina.loader.WebappClassLoader.clearReferences(WebappClassLoader.java:2013)
+	at org.apache.catalina.loader.WebappClassLoader.stop(WebappClassLoader.java:1908)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:661)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5766)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+	at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:1028)
+	at org.apache.catalina.startup.HostConfig.undeploy(HostConfig.java:1547)
+	at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1453)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1695)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:333)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1374)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1546)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1556)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1524)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: org.apache.axis.utils.XMLUtils$1
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1720)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1571)
+	... 25 more
+
+Okt 20, 2016 9:18:39 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet
+Okt 20, 2016 9:18:44 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 20, 2016 9:18:54 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet has finished in 14,698 ms
+Okt 20, 2016 9:21:14 AM org.apache.catalina.startup.HostConfig undeploy
+INFORMATION: Undeploying context [/lecture2go-portlet]
+Okt 20, 2016 9:21:14 AM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SCHWERWIEGEND: The web application [/lecture2go-portlet] appears to have started a thread named [liferay/scheduler_dispatch-8] but has failed to stop it. This is very likely to create a memory leak.
+Okt 20, 2016 9:21:14 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet
+Okt 20, 2016 9:21:15 AM org.apache.catalina.loader.WebappClassLoader loadClass
+INFORMATION: Illegal access: this web application instance has been stopped already.  Could not load com.liferay.portal.kernel.json.JSONObject.  The eventual following stack trace is caused by an error thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access, and has no functional impact.
+java.lang.IllegalStateException
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1612)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1571)
+	at de.uhh.l2g.plugins.util.AutocompleteManager.generateAutocompleteResults(AutocompleteManager.java:79)
+	at de.uhh.l2g.plugins.util.AutocompleteScheduler.receive(AutocompleteScheduler.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.kernel.bean.ClassLoaderBeanHandler.invoke(ClassLoaderBeanHandler.java:67)
+	at com.sun.proxy.$Proxy1587.receive(Unknown Source)
+	at com.liferay.portal.kernel.scheduler.messaging.SchedulerEventMessageListenerWrapper.receive(SchedulerEventMessageListenerWrapper.java:77)
+	at com.liferay.portal.kernel.messaging.InvokerMessageListener.receive(InvokerMessageListener.java:72)
+	at com.liferay.portal.kernel.messaging.ParallelDestination$1.run(ParallelDestination.java:71)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask._runTask(ThreadPoolExecutor.java:682)
+	at com.liferay.portal.kernel.concurrent.ThreadPoolExecutor$WorkerTask.run(ThreadPoolExecutor.java:593)
+	at java.lang.Thread.run(Thread.java:745)
+
+Okt 20, 2016 9:21:21 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 20, 2016 9:21:28 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet has finished in 13,445 ms
+Okt 20, 2016 11:50:20 AM org.apache.catalina.startup.HostConfig reload
+INFORMATION: Reloading context [/lecture2go-theme]
+Okt 20, 2016 11:50:20 AM org.apache.catalina.core.StandardContext reload
+INFORMATION: Reloading Context with name [/lecture2go-theme] has started
+Okt 20, 2016 11:50:24 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 20, 2016 11:50:24 AM org.apache.catalina.core.StandardContext reload
+INFORMATION: Reloading Context with name [/lecture2go-theme] is completed
+Okt 20, 2016 12:07:58 PM org.apache.catalina.startup.HostConfig undeploy
+INFORMATION: Undeploying context [/lecture2go-portlet]
+Okt 20, 2016 12:07:59 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalsForLeaks
+WARNUNG: Failed to check for ThreadLocal references for web application [/lecture2go-portlet]
+java.lang.NoClassDefFoundError: org/apache/axis/utils/XMLUtils$1
+	at java.lang.Class.getDeclaringClass0(Native Method)
+	at java.lang.Class.getDeclaringClass(Class.java:1106)
+	at java.lang.Class.getEnclosingClass(Class.java:1142)
+	at java.lang.Class.getCanonicalName(Class.java:1231)
+	at org.apache.catalina.loader.WebappClassLoader.getPrettyClassName(WebappClassLoader.java:2601)
+	at org.apache.catalina.loader.WebappClassLoader.checkThreadLocalMapForLeaks(WebappClassLoader.java:2559)
+	at org.apache.catalina.loader.WebappClassLoader.checkThreadLocalsForLeaks(WebappClassLoader.java:2507)
+	at org.apache.catalina.loader.WebappClassLoader.clearReferences(WebappClassLoader.java:2013)
+	at org.apache.catalina.loader.WebappClassLoader.stop(WebappClassLoader.java:1908)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:661)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5766)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+	at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:1028)
+	at org.apache.catalina.startup.HostConfig.undeploy(HostConfig.java:1547)
+	at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1453)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1695)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:333)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1374)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1546)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1556)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1524)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: org.apache.axis.utils.XMLUtils$1
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1720)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1571)
+	... 25 more
+
+Okt 20, 2016 12:07:59 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet
+Okt 20, 2016 12:08:07 PM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 20, 2016 12:08:13 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet has finished in 13,767 ms
+Okt 20, 2016 12:09:53 PM org.apache.catalina.startup.HostConfig undeploy
+INFORMATION: Undeploying context [/lecture2go-portlet]
+Okt 20, 2016 12:09:55 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet
+Okt 20, 2016 12:10:01 PM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 20, 2016 12:10:09 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet has finished in 13,667 ms
+Okt 20, 2016 12:15:01 PM org.apache.catalina.startup.HostConfig undeploy
+INFORMATION: Undeploying context [/lecture2go-portlet]
+Okt 20, 2016 12:15:02 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet
+Okt 20, 2016 12:15:06 PM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 20, 2016 12:15:15 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet has finished in 12,392 ms
+Okt 20, 2016 12:18:16 PM org.apache.catalina.startup.HostConfig undeploy
+INFORMATION: Undeploying context [/lecture2go-portlet]
+Okt 20, 2016 12:18:16 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet
+Okt 20, 2016 12:18:21 PM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 20, 2016 12:18:31 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet has finished in 14,248 ms
+Okt 20, 2016 12:22:47 PM org.apache.catalina.startup.HostConfig undeploy
+INFORMATION: Undeploying context [/lecture2go-portlet]
+Okt 20, 2016 12:22:47 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet
+Okt 20, 2016 12:22:54 PM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 20, 2016 12:23:02 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet has finished in 15,262 ms
+Okt 20, 2016 12:52:30 PM org.apache.catalina.startup.HostConfig undeploy
+INFORMATION: Undeploying context [/lecture2go-portlet]
+Okt 20, 2016 12:52:31 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalsForLeaks
+WARNUNG: Failed to check for ThreadLocal references for web application [/lecture2go-portlet]
+java.lang.NoClassDefFoundError: org/apache/axis/utils/XMLUtils$1
+	at java.lang.Class.getDeclaringClass0(Native Method)
+	at java.lang.Class.getDeclaringClass(Class.java:1106)
+	at java.lang.Class.getEnclosingClass(Class.java:1142)
+	at java.lang.Class.getCanonicalName(Class.java:1231)
+	at org.apache.catalina.loader.WebappClassLoader.getPrettyClassName(WebappClassLoader.java:2601)
+	at org.apache.catalina.loader.WebappClassLoader.checkThreadLocalMapForLeaks(WebappClassLoader.java:2559)
+	at org.apache.catalina.loader.WebappClassLoader.checkThreadLocalsForLeaks(WebappClassLoader.java:2507)
+	at org.apache.catalina.loader.WebappClassLoader.clearReferences(WebappClassLoader.java:2013)
+	at org.apache.catalina.loader.WebappClassLoader.stop(WebappClassLoader.java:1908)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:661)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5766)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+	at org.apache.catalina.core.ContainerBase.removeChild(ContainerBase.java:1028)
+	at org.apache.catalina.startup.HostConfig.undeploy(HostConfig.java:1547)
+	at org.apache.catalina.startup.HostConfig.checkResources(HostConfig.java:1453)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1695)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:333)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:1374)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1546)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1556)
+	at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1524)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.ClassNotFoundException: org.apache.axis.utils.XMLUtils$1
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1720)
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1571)
+	... 25 more
+
+Okt 20, 2016 12:52:31 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet
+Okt 20, 2016 12:52:39 PM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 20, 2016 12:52:48 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet has finished in 17,865 ms
+Okt 20, 2016 1:26:42 PM org.apache.catalina.startup.HostConfig undeploy
+INFORMATION: Undeploying context [/lecture2go-portlet]
+Okt 20, 2016 1:26:43 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet
+Okt 20, 2016 1:26:52 PM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Okt 20, 2016 1:27:04 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/tomcat-7.0.62/webapps/lecture2go-portlet has finished in 21,741 ms

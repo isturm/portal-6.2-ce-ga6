@@ -1,0 +1,6 @@
+Okt 14, 2016 9:37:22 AM org.apache.catalina.startup.HostConfig undeploy
+INFORMATION: Undeploying context [/abo]
+Okt 14, 2016 9:37:23 AM org.apache.catalina.startup.HostConfig undeploy
+INFORMATION: Undeploying context [/images]
+Okt 14, 2016 9:37:23 AM org.apache.catalina.startup.HostConfig undeploy
+INFORMATION: Undeploying context [/chapters]

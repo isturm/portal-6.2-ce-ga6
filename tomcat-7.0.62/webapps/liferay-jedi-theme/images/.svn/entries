@@ -1,0 +1,326 @@
+9
+
+dir
+7
+svn://lecture2go-entwicklung.rrz.uni-hamburg.de/var/svn/l2g/l2g/tomcat-6.0.18/webapps/liferay-jedi-theme/images
+svn://lecture2go-entwicklung.rrz.uni-hamburg.de/var/svn/l2g
+
+
+
+2013-11-15T10:22:00.655381Z
+7
+iavor
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ad7aaaf8-4c76-11e3-a063-4390f93c9a59
+
+
+
+
+
+
+0
+
+.sprite.properties
+file
+
+
+
+
+2013-01-23T07:49:20.000000Z
+d41d8cd98f00b204e9800998ecf8427e
+2013-11-15T10:22:00.655381Z
+7
+iavor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0
+
+add_content
+dir
+
+application
+dir
+
+arrows
+dir
+
+blogs
+dir
+
+calendar
+dir
+
+color_picker
+dir
+
+common
+dir
+
+control_panel
+dir
+
+custom
+dir
+
+dock
+dir
+
+document_library
+dir
+
+emoticons
+dir
+
+enterprise_admin
+dir
+
+favicon.ico
+file
+
+
+
+
+2013-10-11T11:17:56.000000Z
+0af7b03287a328f8b1697d912b5f95ee
+2013-11-15T10:22:00.655381Z
+7
+iavor
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+206
+
+forms
+dir
+
+l2go
+dir
+
+language
+dir
+
+liferay.ico
+file
+
+
+
+
+2013-10-11T11:17:52.000000Z
+0af7b03287a328f8b1697d912b5f95ee
+2013-11-15T10:22:00.655381Z
+7
+iavor
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+206
+
+mail
+dir
+
+message_boards
+dir
+
+messages
+dir
+
+navigation
+dir
+
+portlet
+dir
+
+progress_bar
+dir
+
+ratings
+dir
+
+screenshot.png
+file
+
+
+
+
+2013-10-11T11:17:56.000000Z
+999c8c33ce96161354bb6daa0f69c9d5
+2013-11-15T10:22:00.655381Z
+7
+iavor
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+362226
+
+shadow
+dir
+
+shopping
+dir
+
+social_bookmarks
+dir
+
+socialshareprivacy
+dir
+
+spacer.png
+file
+
+
+
+
+2013-10-11T11:17:48.000000Z
+8eea1f0f6cb3c84a4114a1eccb306f23
+2013-11-15T10:22:00.655381Z
+7
+iavor
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+153
+
+thumbnail.png
+file
+
+
+
+
+2013-10-11T11:17:56.000000Z
+c85a822483bf276b9fd2813982705f4e
+2013-11-15T10:22:00.655381Z
+7
+iavor
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+19215
+
+trees
+dir
+
+wiki
+dir
+
