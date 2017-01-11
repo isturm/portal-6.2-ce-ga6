@@ -10,3 +10,11 @@ The Lecture2Go media distribution portal software is based on Liferay (liferay.c
 
 Lecture2Go supports the free access to knowledge because this is a component of each democratic society. The open source software is aimed at academic institutions and its objective is to strengthen the blended learning.
 
+# Installation (Linux, MAC)
+
+1. System requirements
+2. Database server
+3. Portal server
+4. Streaming server 
+4.1. Linking Wowza with Lecture2Go
+5. Download server
