@@ -14,12 +14,12 @@ Lecture2Go supports the free access to knowledge because this is a component of 
 Lecture2Go runs on Linux and Mac systems. The required hardware is depending on the usage of the portal. The following configuration has been implemented at the University  of Hamburg since year 2010.
 
 ## 1. System requirements
-   Web server
+    Web server
         Operating system - SUSE 11 (x86_64)
         CPU – 16 x Intel(R) Xeon(R) E5640 @ 2.67 GHz
         RAM – 8 GB
         Hard drive – 500 GB
-   Streaming server
+    Streaming server
         Operating system - SUSE 11 (x86_64)
         CPU – 8 x Intel(R) Xeon(R) E5430 @ 2.66 GHz
         RAM – 8 GB
@@ -27,7 +27,7 @@ Lecture2Go runs on Linux and Mac systems. The required hardware is depending on 
         lecture recording does not exceed the data volume of 600 MB, so 4TB of storage would be sufficient 
         for about 6500 videos. LAN – 1Gb. With this bandwidth and average transmission of 500 Kb/sec bit rate 
         can be realized around 2000 simultaneous streams.
-   Download server
+    Download server
         Operating system - SUSE 11 (x86_64)
         CPU – 16 x Intel(R) Xeon(R) E5640 @ 2.67 GHz
         RAM – 8 GB
@@ -35,6 +35,11 @@ Lecture2Go runs on Linux and Mac systems. The required hardware is depending on 
         LAN – 1 Gb
 
 ## 2. Database server
+For this setup we will use a MySQL database. At this point we do not provide any installation instructions for MySQL because you can find very good guides on the official website of MySQL as well as on numerous other websites.
+
+After setting up the server create a user account which will be used to access the MySQL server. These login parameters will be required in section 3 - username (dbuser) and password (dbpassword).
+
+There are various administration tools for MySQL database servers. We recommend the official MySQL administration tools, which are downloadable from the software manufacturer's website.
 
 ## 3. Portal server
 
