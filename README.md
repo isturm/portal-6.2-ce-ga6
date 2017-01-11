@@ -14,12 +14,12 @@ Lecture2Go supports the free access to knowledge because this is a component of 
 Lecture2Go runs on Linux and Mac systems. The required hardware is depending on the usage of the portal. The following configuration has been implemented at the University  of Hamburg since year 2010.
 
 ## 1. System requirements
-    Web server
+   Web server
         Operating system - SUSE 11 (x86_64)
         CPU – 16 x Intel(R) Xeon(R) E5640 @ 2.67 GHz
         RAM – 8 GB
         Hard drive – 500 GB
-    Streaming server
+   Streaming server
         Operating system - SUSE 11 (x86_64)
         CPU – 8 x Intel(R) Xeon(R) E5430 @ 2.66 GHz
         RAM – 8 GB
@@ -27,7 +27,7 @@ Lecture2Go runs on Linux and Mac systems. The required hardware is depending on 
         lecture recording does not exceed the data volume of 600 MB, so 4TB of storage would be sufficient 
         for about 6500 videos. LAN – 1Gb. With this bandwidth and average transmission of 500 Kb/sec bit rate 
         can be realized around 2000 simultaneous streams.
-    Download server
+   Download server
         Operating system - SUSE 11 (x86_64)
         CPU – 16 x Intel(R) Xeon(R) E5640 @ 2.67 GHz
         RAM – 8 GB
