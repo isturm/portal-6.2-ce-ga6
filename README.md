@@ -23,9 +23,10 @@ Lecture2Go runs on Linux and Mac systems. The required hardware is depending on 
         Operating system - SUSE 11 (x86_64)
         CPU – 8 x Intel(R) Xeon(R) E5430 @ 2.66 GHz
         RAM – 8 GB
-        Hard drive – 4 TB. With this capacity, a large amount of videos are hosted. If a ninety minute lecture recording does not
-        exceed the data volume of 600 MB, so 4TB of storage would be sufficient for about 6500 videos.
-        LAN – 1Gb. With this bandwidth and average transmission of 500 Kb/sec bit rate can be realized around 2000 simultaneous streams.
+        Hard drive – 4 TB. With this capacity, a large amount of videos are hosted. If a ninety minute 
+        lecture recording does not exceed the data volume of 600 MB, so 4TB of storage would be sufficient for about 6500 videos.
+        LAN – 1Gb. With this bandwidth and average transmission of 500 Kb/sec bit rate can be realized around 
+        2000 simultaneous streams.
     Download server
         Operating system - SUSE 11 (x86_64)
         CPU – 16 x Intel(R) Xeon(R) E5640 @ 2.67 GHz
