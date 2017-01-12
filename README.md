@@ -1,4 +1,4 @@
-#  Lecture2Go Video Portal
+#  Lecture2Go Video Portal Installation Guide
 
 The [media and distribution portal](https://lecture2go.uni-hamburg.de) software of the University of Hamburg is now available for other institutions of education in an open source version. The software is currently in further development for Liferay Version 6.2.
 
@@ -158,5 +158,30 @@ After installing the license key must be entered. You can get a free trial licen
 After the software is registered, you can proceed with the configuration (Section 4.1).
 
 ## 4.1. Linking Lecture2Go with Streaming Server
+After setting up the streaming server it must be linked to the Lecture2Go media repository (location of all media files). So that the uploaded video contents can be found by the streaming server, some settings must be adjusted in the /usr/local/WowzaStreamingEngine/conf.
+
+- VHost.xml – This is where you configure the port number of your server. Change the port number to 80 (approx line 10), because the server must be accessible via the HTTP protocol.
+
+    <!-- 80: HTTP, RTMPT -->
+    <!-- 554: RTSP -->
+    <Port>80</Port>
+
+- Application.xml – The media repository, which the server accesses, can be configurated in this file.
+
+    <Streams>
+    <StreamType>default</StreamType>
+    <StorageDir>${com.wowza.wms.context.VHostConfigHome}/content</StorageDir>
+
+The media repository of your server is defined in node <StorageDir> </ StorageDir>. We recommend not to change this default value but to replace the directory ${com.wowza.wms.context.VHostConfigHome}/content with a symbolic link to your Lecture2Go media repository. In Section 3 we already set the parameter lecture2go.httpstreaming.video.repository. The value of this parameter (/l2gomedia/vh_000/) is your Lecture2Go media repository and is now needed for linking the two components.
+
+Perform the following:
+
+    your-lecture2go-streamer:~ #  cd /usr/local/WowzaStreamingEngine
+    your-lecture2go-streamer:/usr/local/WowzaStreamingEngine # rm –r content
+    your-lecture2go-streamer:/usr/local/WowzaStreamingEngine # ln -s /l2gomedia/vh_000/ content
+
+As a final step, the server must be registered in your Lecture2Go portal. Therefore login as Lecture2Go administrator. Now find the menu "My L2Go" -> "Administration of streamers". Streaming servers can be registered or edited here.
+
+Replace "www.mystreamingserver.com"  with your domain name or the IP address of your new Wowza server installation (e.g. www.mywowzastreamer.com). Then click the "edit" button.
 
 ## 5. Download server
