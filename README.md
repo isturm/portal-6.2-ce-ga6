@@ -173,7 +173,7 @@ After setting up the streaming server it must be linked to the Lecture2Go media 
         <StreamType>default</StreamType>
         <StorageDir>${com.wowza.wms.context.VHostConfigHome}/content</StorageDir>
 
-The media repository of your server is defined in node <StorageDir> </ StorageDir>. We do not recommend to change this default value but to replace the directory ${com.wowza.wms.context.VHostConfigHome}/content with a symbolic link to your Lecture2Go media repository. In Section 3 we already set the parameter lecture2go.httpstreaming.video.repository. The value of this parameter (/l2gomedia/vh_000/) is your Lecture2Go media repository and is now needed for linking the two components.
+The media repository of your server is defined in node \<StorageDir\> \<\/ StorageDir\>. We do not recommend to change this default value but to replace the directory ${com.wowza.wms.context.VHostConfigHome}/content with a symbolic link to your Lecture2Go media repository. In Section 3 we already set the parameter lecture2go.httpstreaming.video.repository. The value of this parameter (/l2gomedia/vh_000/) is your Lecture2Go media repository and is now needed for linking the two components.
 
 Perform the following:
 
