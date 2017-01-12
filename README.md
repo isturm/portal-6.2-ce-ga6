@@ -160,11 +160,12 @@ After the software is registered, you can proceed with the configuration (Sectio
 ## 4.1. Linking Lecture2Go with Streaming Server
 After setting up the streaming server it must be linked to the Lecture2Go media repository (location of all media files). So that the uploaded video contents can be found by the streaming server, some settings must be adjusted in the /usr/local/WowzaStreamingEngine/conf.
 
-- VHost.xml – This is where you configure the port number of your server. Change the port number to 80 (approx line 10), because the server must be accessible via the HTTP protocol.```
-    <!-- 80: HTTP, RTMPT -->
-    <!-- 554: RTSP -->
-    <Port>80</Port>```
-- Application.xml – The media repository, which the server accesses, can be configurated in this file.```
+- VHost.xml – This is where you configure the port number of your server. Change the port number to 80 (approx line 10), because the server must be accessible via the HTTP protocol.
+    --```<!-- 80: HTTP, RTMPT -->
+        <!-- 554: RTSP -->
+        <Port>80</Port>```
+- Application.xml – The media repository, which the server accesses, can be configurated in this file.
+--```
     <Streams>
     <StreamType>default</StreamType>
     <StorageDir>${com.wowza.wms.context.VHostConfigHome}/content</StorageDir>```
