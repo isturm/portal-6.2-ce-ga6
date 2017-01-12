@@ -87,6 +87,58 @@ In the section 'Lecture2Go Properties', adjust the following parameters:
     lecture2go.response.email.address=lecture2go@l2go.edu
     lecture2go.noresponse.email.address=noresponse@l2go.edu
 
+The most important settings for the installation of the plug-ins are provided with the prefix lecture2go.* .
+
+- lecture2go.web.root – Enter the URL of your Lecture2Go server (If necessary enter portnumber, e.g. http://mywebserver.de:8080).
+- lecture2go.web.home – This parameter must not be changed.
+- lecture2go.downloadserver.root – For load balancing we recommend to use a separate the download server from the web server. 
+- Then enter here the URL of this server. Otherwise enter 'lecture2go.downloadserver.root=${lecture2go.web.root}'
+- lecture2go.media.repository – Enter the file path where the uploaded video content should be stored. 
+- The default parameter is /l2gomedia.
+- lecture2go.response.email.address – E-Mail adress from the system administrator
+- lecture2go.noresponse.email.address – Autoresponder e-mail adress
+
+The following parameters should not be changed!
+
+- lecture2go.images.system.path – All produced images are stored in this directory.
+- lecture2go.httpstreaming.video.repository – This is a very important directory, because the streaming server accesses it for delivering the media content via HTTP streaming.
+- lecture2go.security.folder – location for all .htaccess protection files.
+
+In order to change the last two parameters run the following commands:
+
+    your-lecture2go-server:~ # which ffmpeg
+    /usr/local/bin/ffmpeg
+
+    lecture2go.ffmpeg.bin = /usr/local/bin/ffmpeg
+
+If the FFMPEG-library is not installed on your Linux system, you have to install it.
+
+    your-lecture2go-server:~ # which bash
+    /bin/bash
+
+    lecture2go.shell.bin = /bin/bash
+
+After the configuration file has been filled with the necessary parameters and the MySQL server is available, you can start the portal. Proceed as follows:
+
+    your-lecture2go-server:~ # cd /usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.62/bin/
+    your-lecture2go-server:/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.62/bin # chmod 755 *
+    your-lecture2go-server:/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.62/bin # ./startup.sh
+
+Assuming you have made all necessary preparations, the portal software will be launched successfully.
+ 
+The server logs can be found under /usr/local/l2go/portal-6.1.1-ce-ga2/tomcat-7.0.27/logs. The starting process will finish with a similar log output:
+
+    your-lecture2go-server:~ # tail -f /usr/local/l2go/portal-6.1.1-ce-ga2/tomcat-7.0.27/logs/catalina.out
+
+    INFO: Starting Coyote HTTP/1.1 on http-80
+    Jul 25, 2012 12:46:01 PM org.apache.jk.common.ChannelSocket init
+    INFO: JK: ajp13 listening on /0.0.0.0:8009
+    Jul 25, 2012 12:46:01 PM org.apache.jk.server.JkMain start
+    INFO: Jk running ID=0 time=0/177  config=null
+    Jul 25, 2012 12:46:03 PM org.apache.catalina.startup.Catalina start
+    INFO: Server startup in 40776 ms
+    12:46:49,528 INFO  [PluginPackageUtil:1148] Reloading repositories
+
 ## 4. Streaming server 
 
 ## 4.1. Linking Lecture2Go with Streaming Server
