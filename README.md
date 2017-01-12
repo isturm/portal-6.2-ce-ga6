@@ -10,4 +10,4 @@ The Lecture2Go media distribution portal software is based on Liferay (liferay.c
 
 Lecture2Go supports the free access to knowledge because this is a component of each democratic society. The open source software is aimed at academic institutions and its objective is to strengthen the blended learning.
 
-For furder information check out our [wiki page](/lecture2go/portal-6.2-ce-ga6/wiki) 
+For furder information check out our [wiki page](https://github.com/lecture2go/portal-6.2-ce-ga6/wiki) 
