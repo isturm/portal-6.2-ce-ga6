@@ -166,9 +166,21 @@ After setting up the streaming server it must be linked to the Lecture2Go media 
 <!-- 554: RTSP -->
 <Port>80</Port>
 ````
-    
 - Application.xml – The media repository, which the server accesses, can be configurated in this file.
+````
+<Streams>
+<StreamType>default</StreamType>
+<StorageDir>${com.wowza.wms.context.VHostConfigHome}/content</StorageDir>
+````
 
-    <Streams>
-    <StreamType>default</StreamType>
-    <StorageDir>${com.wowza.wms.context.VHostConfigHome}/content</StorageDir>
+The media repository of your server is defined in node <StorageDir> </ StorageDir>. We do not recommend to change this default value but to replace the directory ${com.wowza.wms.context.VHostConfigHome}/content with a symbolic link to your Lecture2Go media repository. In Section 3 we already set the parameter lecture2go.httpstreaming.video.repository. The value of this parameter (/l2gomedia/vh_000/) is your Lecture2Go media repository and is now needed for linking the two components.
+
+Perform the following:
+
+    your-lecture2go-streamer:~ #  cd /usr/local/WowzaStreamingEngine
+    your-lecture2go-streamer:/usr/local/WowzaStreamingEngine # rm –r content
+    your-lecture2go-streamer:/usr/local/WowzaStreamingEngine # ln -s /l2gomedia/vh_000/ content
+
+As a final step, the server must be registered in your Lecture2Go portal. Therefore login as Lecture2Go administrator. Now find the menu "My L2Go" -> "Streaming server". Streaming servers can be registered or edited here.
+
+## 5. Download server
