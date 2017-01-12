@@ -196,6 +196,13 @@ your-lecture2go-portalserver:~ #  scp -r  -P \<Portnumber> /usr/local/l2go/porta
 
 To configure the servlet for database access, open the file /tomcat-base/webapps/download/WEB-INF/web.xml  and enter the following parameters (see next figure):
 
-    vRep = /l2gomedia
+		<init-param>
+			<param-name>repositoryRoot</param-name>
+			<param-value>/Users/isturm/Desktop/l2gomedia</param-value>
+		</init-param>
+		<init-param>
+			<param-name>downloadServerName</param-name>
+			<param-value>localhost</param-value>
+        </init-param>
    
 Restart the Tomcat server so the new configurations are made effective.
