@@ -128,7 +128,7 @@ Assuming you have made all necessary preparations, the portal software will be l
  
 The server logs can be found under /usr/local/l2go/portal-6.1.1-ce-ga2/tomcat-7.0.62/logs. The starting process will finish with a similar log output:
 
-    your-lecture2go-server:~ # tail -f /usr/local/l2go/portal-6.1.1-ce-ga2/tomcat-7.0.62/logs/catalina.out
+    your-lecture2go-server:~ # tail -f /usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.62/logs/catalina.out
 
     INFO: Starting Coyote HTTP/1.1 on http-80
     Jul 25, 2012 12:46:01 PM org.apache.jk.common.ChannelSocket init
@@ -184,3 +184,18 @@ Perform the following:
 As a final step, the server must be registered in your Lecture2Go portal. Therefore login as Lecture2Go administrator. Now find the menu "My L2Go" -> "Streaming server". Streaming servers can be registered or edited here.
 
 ## 5. Download server
+In order for the uploaded media content - in /l2gomedia - to be visible for the download server, this directory must be imported e.g. via NFS and also mounted on /l2gomedia (If changed beforehand use new directory) .
+
+Install and activate the Tomcat Web server (e.g. SLES 11 using the installation tool YAST).
+
+Afterwards transfer the Lecture2Go download servlet into the webapps directory of the Tomcat server on the download machine. The servlet is located in the webapps directory of Lecture2Go portal server (see section 3).
+
+Copy the directory by using SCP-Command:
+
+your-lecture2go-portalserver:~ #  scp -r  -P \<Portnumber> /usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.62/webapps/download username@your-lecture2go-downloadserver:/tomcat-base/webapps/
+
+To configure the servlet for database access, open the file /tomcat-base/webapps/download/WEB-INF/web.xml  and enter the following parameters (see next figure):
+
+    vRep = /l2gomedia
+   
+Restart the Tomcat server so the new configurations are made effective.
