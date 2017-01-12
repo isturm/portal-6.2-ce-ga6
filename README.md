@@ -146,12 +146,12 @@ Hereinafter is offered a quick start guide for the installation.
 
 First download the latest version of Wowza:
 
-    your-lecture2go-streamer:~ #  wget http://www.wowza.com/downloads/WowzaStreamingEngine-4-0-0/WowzaStreamingEngine-4.0.0.tar.bin
+    your-lecture2go-streamer:~ #  wget http://www.wowza.com/downloads/WowzaStreamingEngine-X-X-X/WowzaStreamingEngine-X-X-X.tar.bin
 
 Execute the following commands:
 
-    your-lecture2go-streamer:~ #  sudo chmod +x WowzaStreamingEngine-4.0.0.tar.bin
-    your-lecture2go-streamer:~ #  sudo ./WowzaStreamingEngine-4.0.0.tar.bin
+    your-lecture2go-streamer:~ #  sudo chmod +x WowzaStreamingEngine-X-X-X.tar.bin
+    your-lecture2go-streamer:~ #  sudo ./WowzaStreamingEngine-X-X-X.tar.bin
 
 After installing the license key must be entered. You can get a free trial license of the Wowza software. With this trial license all features of the server are usuable and up to ten simultaneous streams can be supported.
 
