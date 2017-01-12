@@ -126,9 +126,9 @@ After the configuration file has been filled with the necessary parameters and t
 
 Assuming you have made all necessary preparations, the portal software will be launched successfully.
  
-The server logs can be found under /usr/local/l2go/portal-6.1.1-ce-ga2/tomcat-7.0.27/logs. The starting process will finish with a similar log output:
+The server logs can be found under /usr/local/l2go/portal-6.1.1-ce-ga2/tomcat-7.0.62/logs. The starting process will finish with a similar log output:
 
-    your-lecture2go-server:~ # tail -f /usr/local/l2go/portal-6.1.1-ce-ga2/tomcat-7.0.27/logs/catalina.out
+    your-lecture2go-server:~ # tail -f /usr/local/l2go/portal-6.1.1-ce-ga2/tomcat-7.0.62/logs/catalina.out
 
     INFO: Starting Coyote HTTP/1.1 on http-80
     Jul 25, 2012 12:46:01 PM org.apache.jk.common.ChannelSocket init
