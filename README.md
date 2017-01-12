@@ -1,4 +1,4 @@
-#  Lecture2Go Video Portal Installation Guide
+#  Lecture2Go Video Portal 
 
 The [media and distribution portal](https://lecture2go.uni-hamburg.de) software of the University of Hamburg is now available for other institutions of education in an open source version. The software is currently in further development for Liferay Version 6.2.
 
@@ -10,7 +10,7 @@ The Lecture2Go media distribution portal software is based on Liferay (liferay.c
 
 Lecture2Go supports the free access to knowledge because this is a component of each democratic society. The open source software is aimed at academic institutions and its objective is to strengthen the blended learning.
 
-# Installation (Linux, MAC)
+# Installation Guide (Linux, MAC)
 Lecture2Go runs on Linux and Mac systems. The required hardware is depending on the usage of the portal. The following configuration has been implemented at the University  of Hamburg since year 2010.
 
 ## 1. System requirements
