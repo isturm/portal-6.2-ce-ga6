@@ -144,7 +144,7 @@ The default installation of this video portal suppors HTML5 streaming! The strea
 
 Hereinafter is offered a quick start guide for the installation.
 
-First download the latest version of Wowza:
+First download the latest version of Wowza Streaming Engine:
 
     your-lecture2go-streamer:~ #  wget http://www.wowza.com/downloads/WowzaStreamingEngine-X-X-X/WowzaStreamingEngine-X-X-X.tar.bin
 
