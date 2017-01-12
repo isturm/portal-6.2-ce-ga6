@@ -140,6 +140,22 @@ The server logs can be found under /usr/local/l2go/portal-6.1.1-ce-ga2/tomcat-7.
     12:46:49,528 INFO  [PluginPackageUtil:1148] Reloading repositories
 
 ## 4. Streaming server 
+The default installation of this video portal suppors HTML5 streaming! The streaming server is an optional component. At this point it is important to mention that due to better load distribution the server should be installed on a separate machine.
+
+Hereinafter is offered a quick start guide for the installation.
+
+First download the latest version of Wowza:
+
+    your-lecture2go-streamer:~ #  wget http://www.wowza.com/downloads/WowzaStreamingEngine-4-0-0/WowzaStreamingEngine-4.0.0.tar.bin
+
+Execute the following commands:
+
+    your-lecture2go-streamer:~ #  sudo chmod +x WowzaStreamingEngine-4.0.0.tar.bin
+    your-lecture2go-streamer:~ #  sudo ./WowzaStreamingEngine-4.0.0.tar.bin
+
+After installing the license key must be entered. You can get a free trial license of the Wowza software. With this trial license all features of the server are usuable and up to ten simultaneous streams can be supported.
+
+After the software is registered, you can proceed with the configuration (Section 4.1).
 
 ## 4.1. Linking Lecture2Go with Streaming Server
 
