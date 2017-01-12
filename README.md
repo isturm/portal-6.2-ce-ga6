@@ -206,3 +206,25 @@ To configure the servlet for database access, open the file /tomcat-base/webapps
         </init-param>
    
 Restart the Tomcat server so the new configurations are made effective.
+
+The download servlet should be accessible via port 80. You can now set up the Apache2 as a proxy in front of the portal server application. Activate (network services - HTTP server) the following server modules for the Apache2 via YAST:
+
+    proxy_ajp
+    proxy_balancer
+    proxy
+    proxy_connect
+    proxy_ftp
+    proxy_http
+
+Enter the following line at the buttom of the configuration file /etc/apache2/httpd.conf:
+
+	ProxyPass /download ajp://lecture2go-download-server-name.de:8009/download
+
+Start the Apache2. In the htdocs directory from Apache2 create the following symbolic links:
+
+	lecture2go-download-server:~ #  cd /srv/www/htdocs
+	lecture2go-download-server:/srv/www/htdocs # ln -s /l2gomedia/abo/ abo
+	lecture2go-download-server:/srv/www/htdocs # ln -s /l2gomedia/vh_000/ vh_000
+
+All media files under the /l2gomedia/vh_000/ are now theoretically visible and reachable over HTTP. This only refers to content on the Lecture2Go video portal that has been released as downloadable. Media, which may not be downloaded, are protected by .htaccess files.
+
