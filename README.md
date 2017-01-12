@@ -9,3 +9,5 @@ Watch our official [project video](https://lecture2go.uni-hamburg.de/l2go/-/get/
 The Lecture2Go media distribution portal software is based on Liferay (liferay.com). All plugins for our software are being developed at the Regional Computer Center (RRZ) at the University of Hamburg.
 
 Lecture2Go supports the free access to knowledge because this is a component of each democratic society. The open source software is aimed at academic institutions and its objective is to strengthen the blended learning.
+
+For furder information check out our [wiki page](/lecture2go/portal-6.2-ce-ga6/wiki) 
