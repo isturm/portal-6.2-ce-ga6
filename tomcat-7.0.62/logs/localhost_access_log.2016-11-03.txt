@@ -1,2 +1,0 @@
-127.0.0.1 - - [03/Nov/2016:07:23:24 +0000] "POST /c/portal/extend_session HTTP/1.1" 200 35
-127.0.0.1 - - [03/Nov/2016:07:53:11 +0000] "POST /c/portal/extend_session HTTP/1.1" 200 35

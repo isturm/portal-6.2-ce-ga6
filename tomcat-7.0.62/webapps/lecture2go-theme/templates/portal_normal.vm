@@ -120,8 +120,6 @@ $theme.include($body_top_include)
 			<a href="http://www.facebook.com/pages/Hamburg-Germany/Lecture2Go/201731849859567" id="fb" title="Facebook" target="blank">Facebook</a>
 		</div>	
 		
-		#parse ("$full_templates_path/uhh_footer.vm")
-		#parse ("$full_templates_path/uhh_footer_seiteninfo2.vm")
 	</footer>
 </div>
 

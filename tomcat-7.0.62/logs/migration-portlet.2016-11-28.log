@@ -1,7 +1,0 @@
-13:20:04,046 INFO  [DispatcherPortlet:106] Initializing portlet 'migration'
-13:20:04,147 INFO  [DispatcherPortlet:263] FrameworkPortlet 'migration': initialization started
-13:20:04,172 INFO  [XmlPortletApplicationContext:513] Refreshing PortletApplicationContext for namespace 'migration-portlet': startup date [Mon Nov 28 13:20:04 GMT 2016]; root of context hierarchy
-13:20:04,229 INFO  [XmlBeanDefinitionReader:316] Loading XML bean definitions from PortletContext resource [/WEB-INF/migration-portlet.xml]
-13:20:04,492 INFO  [XmlBeanDefinitionReader:316] Loading XML bean definitions from PortletContext resource [/WEB-INF/common-portlet.xml]
-13:20:04,984 INFO  [DispatcherPortlet:282] FrameworkPortlet 'migration': initialization completed in 837 ms
-13:20:04,984 INFO  [DispatcherPortlet:127] Portlet 'migration' configured successfully

@@ -1,0 +1,1550 @@
+14:45:40,905 INFO  [localhost-startStop-1][DialectDetector:71] Determine dialect for MySQL 5
+14:45:40,935 INFO  [localhost-startStop-1][DialectDetector:136] Found dialect org.hibernate.dialect.MySQLDialect
+14:46:04,492 INFO  [localhost-startStop-1][StartupAction:97] There are no patches installed
+14:46:05,688 ERROR [localhost-startStop-1][JDBCExceptionReporter:82] Table 'lportal620_os.Lock_' doesn't exist
+14:46:05,692 WARN  [localhost-startStop-1][StartupAction:147] Unable to clear locks because Lock table does not exist
+14:46:06,082 WARN  [localhost-startStop-1][ReleaseLocalServiceImpl:171] Table 'lportal620_os.Release_' doesn't exist
+14:46:06,084 INFO  [localhost-startStop-1][ReleaseLocalServiceImpl:84] Create tables and populate with default data
+14:46:18,128 INFO  [localhost-startStop-1][BaseDB:484] Database does not support case sensitive queries
+14:46:18,813 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyProcessSuite
+14:46:18,814 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyProperties
+14:46:18,821 ERROR [localhost-startStop-1][VerifyProperties:181] Portal property "http.header.secure.x.frame.options" was migrated to the system property "http.header.secure.x.frame.options"
+14:46:18,821 ERROR [localhost-startStop-1][VerifyProperties:223] Portal property "field.editable.com.liferay.portal.model.User.emailAddress" was renamed to "field.editable.user.types"
+14:46:18,821 ERROR [localhost-startStop-1][VerifyProperties:223] Portal property "field.editable.com.liferay.portal.model.User.screenName" was renamed to "field.editable.user.types"
+14:46:18,831 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyDB2
+14:46:18,832 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyMySQL
+14:46:19,121 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyOracle
+14:46:19,123 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifySQLServer
+14:46:19,123 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyUUID
+14:46:19,188 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyPermission
+14:46:20,572 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyGroup
+14:46:20,602 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyRole
+14:46:20,602 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyAsset
+14:46:20,605 INFO  [localhost-startStop-1][UpgradeProcess:164] Upgrading com.liferay.portal.upgrade.util.UpgradeAssetPublisherManualEntries
+14:46:20,607 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyAuditedModel
+14:46:20,618 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyBlogs
+14:46:20,624 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyBookmarks
+14:46:20,631 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyCalendar
+14:46:20,638 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyDocumentLibrary
+14:46:20,767 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyDynamicDataMapping
+14:46:20,772 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyGroupId
+14:46:20,778 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyJournal
+14:46:20,794 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyLayout
+14:46:20,806 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyMessageBoards
+14:46:20,819 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyOrganization
+14:46:20,827 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyPortalPreferences
+14:46:20,829 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyPortletPreferences
+14:46:20,844 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyRegion
+14:46:20,846 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyResourcePermissions
+14:46:20,846 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyUser
+14:46:20,854 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyWiki
+14:46:20,858 INFO  [localhost-startStop-1][VerifyProcess:65] Verifying com.liferay.portal.verify.VerifyWorkflow
+14:46:20,911 INFO  [localhost-startStop-1][ServerDetector:166] Server supports hot deploy
+14:46:20,915 INFO  [localhost-startStop-1][PluginPackageUtil:1013] Reading plugin package for the root context
+14:46:25,580 INFO  [localhost-startStop-1][AutoDeployDir:139] Auto deploy scanner started for /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/deploy
+14:52:03,261 INFO  [http-bio-8080-exec-4][HotDeployEvent:145] Plugin lecture2go-portlet requires marketplace-portlet
+14:52:03,268 INFO  [http-bio-8080-exec-4][HotDeployImpl:276] Queueing lecture2go-portlet for deploy because it is missing marketplace-portlet
+14:52:03,463 INFO  [http-bio-8080-exec-4][HotDeployEvent:145] Plugin lecture2go-theme requires marketplace-portlet
+14:52:03,464 INFO  [http-bio-8080-exec-4][HotDeployImpl:276] Queueing lecture2go-theme for deploy because it is missing marketplace-portlet
+14:52:03,702 INFO  [http-bio-8080-exec-4][HotDeployEvent:145] Plugin calendar-portlet requires marketplace-portlet
+14:52:03,703 INFO  [http-bio-8080-exec-4][HotDeployImpl:276] Queueing calendar-portlet for deploy because it is missing marketplace-portlet
+14:52:03,904 INFO  [http-bio-8080-exec-4][HotDeployImpl:217] Deploying marketplace-portlet from queue
+14:52:03,906 INFO  [http-bio-8080-exec-4][PluginPackageUtil:1016] Reading plugin package for marketplace-portlet
+14:52:04,086 INFO  [http-bio-8080-exec-4][ServiceComponentLocalServiceImpl:323] Running Marketplace SQL scripts
+14:52:04,817 INFO  [http-bio-8080-exec-4][HookHotDeployListener:709] Registering hook for marketplace-portlet
+14:52:04,859 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.marketplace.hook.upgrade.UpgradeProcess_1_0_0
+14:52:04,862 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.marketplace.hook.upgrade.v1_0_0.UpgradeExpando
+14:52:04,927 INFO  [http-bio-8080-exec-4][HookHotDeployListener:851] Hook for marketplace-portlet is available for use
+14:52:04,932 INFO  [http-bio-8080-exec-4][PortletHotDeployListener:344] Registering portlets for marketplace-portlet
+14:52:05,137 INFO  [http-bio-8080-exec-4][PortletHotDeployListener:497] 3 portlets for marketplace-portlet are available for use
+14:52:05,139 INFO  [http-bio-8080-exec-4][HotDeployImpl:217] Deploying lecture2go-portlet from queue
+14:52:05,139 INFO  [http-bio-8080-exec-4][PluginPackageUtil:1016] Reading plugin package for lecture2go-portlet
+14:52:05,225 INFO  [http-bio-8080-exec-4][ServiceComponentLocalServiceImpl:323] Running LG SQL scripts
+14:52:05,489 WARN  [http-bio-8080-exec-4][BaseDB:457] BLOB/TEXT column 'firstName' used in key specification without a key length: create index IX_D3B1627D on LG_Creator (firstName);
+
+14:52:05,491 WARN  [http-bio-8080-exec-4][BaseDB:457] BLOB/TEXT column 'fullName' used in key specification without a key length: create index IX_E933BBBC on LG_Creator (fullName);
+
+14:52:05,492 WARN  [http-bio-8080-exec-4][BaseDB:457] BLOB/TEXT column 'lastName' used in key specification without a key length: create index IX_8BEDCA83 on LG_Creator (lastName);
+
+14:52:05,493 WARN  [http-bio-8080-exec-4][BaseDB:457] BLOB/TEXT column 'middleName' used in key specification without a key length: create index IX_2CE50242 on LG_Creator (middleName);
+
+14:52:05,605 WARN  [http-bio-8080-exec-4][BaseDB:457] BLOB/TEXT column 'typ' used in key specification without a key length: create index IX_C5BF45E1 on LG_Institution (level, typ);
+
+14:52:05,606 WARN  [http-bio-8080-exec-4][BaseDB:457] BLOB/TEXT column 'typ' used in key specification without a key length: create index IX_63B03BE9 on LG_Institution (level, typ, groupId);
+
+14:52:05,608 WARN  [http-bio-8080-exec-4][BaseDB:457] BLOB/TEXT column 'name' used in key specification without a key length: create index IX_582427D9 on LG_Institution (name);
+
+14:52:05,609 WARN  [http-bio-8080-exec-4][BaseDB:457] BLOB/TEXT column 'name' used in key specification without a key length: create index IX_755E10F1 on LG_Institution (name, groupId);
+
+14:52:05,639 WARN  [http-bio-8080-exec-4][BaseDB:457] BLOB/TEXT column 'typ' used in key specification without a key length: create index IX_C968E6A1 on LG_Institution (typ);
+
+14:52:05,641 WARN  [http-bio-8080-exec-4][BaseDB:457] BLOB/TEXT column 'typ' used in key specification without a key length: create index IX_8BEF7329 on LG_Institution (typ, groupId);
+
+14:52:05,643 WARN  [http-bio-8080-exec-4][BaseDB:457] BLOB/TEXT column 'www' used in key specification without a key length: create index IX_C9925EAD on LG_Institution (www);
+
+14:52:05,645 WARN  [http-bio-8080-exec-4][BaseDB:457] BLOB/TEXT column 'www' used in key specification without a key length: create index IX_8A5E489D on LG_Institution (www, groupId);
+
+14:52:05,721 WARN  [http-bio-8080-exec-4][BaseDB:457] BLOB/TEXT column 'eventType' used in key specification without a key length: create index IX_EBC55E2D on LG_Lectureseries (eventType);
+
+14:52:05,723 WARN  [http-bio-8080-exec-4][BaseDB:457] BLOB/TEXT column 'facultyName' used in key specification without a key length: create index IX_F43BC8 on LG_Lectureseries (facultyName);
+
+14:52:05,724 WARN  [http-bio-8080-exec-4][BaseDB:457] BLOB/TEXT column 'language' used in key specification without a key length: create index IX_4F65B8A3 on LG_Lectureseries (language);
+
+14:52:05,749 WARN  [http-bio-8080-exec-4][BaseDB:457] BLOB/TEXT column 'name' used in key specification without a key length: create index IX_DB929396 on LG_Lectureseries (name);
+
+14:52:05,762 WARN  [http-bio-8080-exec-4][BaseDB:457] BLOB/TEXT column 'password_' used in key specification without a key length: create index IX_3714125D on LG_Lectureseries (password_);
+
+14:52:06,134 WARN  [http-bio-8080-exec-4][BaseDB:457] BLOB/TEXT column 'filename' used in key specification without a key length: create index IX_D1B2A998 on LG_Video (filename);
+
+14:52:08,982 INFO  [http-bio-8080-exec-4][HookHotDeployListener:709] Registering hook for lecture2go-portlet
+14:52:08,984 INFO  [http-bio-8080-exec-4][HookHotDeployListener:851] Hook for lecture2go-portlet is available for use
+14:52:08,988 INFO  [http-bio-8080-exec-4][PortletHotDeployListener:344] Registering portlets for lecture2go-portlet
+14:52:09,008 ERROR [http-bio-8080-exec-4][PortletImpl:2717] Unable to link role for portlet [lgfrontpage_WAR_lecture2goportlet] with role-name [guest] because role-link is null
+14:52:09,009 ERROR [http-bio-8080-exec-4][PortletImpl:2717] Unable to link role for portlet [lgopenaccessvideos_WAR_lecture2goportlet] with role-name [guest] because role-link is null
+14:52:09,009 WARN  [http-bio-8080-exec-4][PortletLocalServiceImpl:796] Portlet with the name lgadmincategorymanagement_WAR_lecture2goportlet is described in portlet.xml but does not have a matching entry in liferay-portlet.xml
+14:52:09,994 INFO  [http-bio-8080-exec-4][PortletHotDeployListener:497] 12 portlets for lecture2go-portlet are available for use
+14:52:09,994 INFO  [http-bio-8080-exec-4][HotDeployImpl:217] Deploying lecture2go-theme from queue
+14:52:09,995 INFO  [http-bio-8080-exec-4][PluginPackageUtil:1016] Reading plugin package for lecture2go-theme
+14:52:10,143 INFO  [http-bio-8080-exec-4][ThemeHotDeployListener:98] Registering themes for lecture2go-theme
+14:52:10,962 INFO  [http-bio-8080-exec-4][ThemeHotDeployListener:113] 1 theme for lecture2go-theme is available for use
+14:52:10,962 INFO  [http-bio-8080-exec-4][HotDeployImpl:217] Deploying calendar-portlet from queue
+14:52:10,963 INFO  [http-bio-8080-exec-4][PluginPackageUtil:1016] Reading plugin package for calendar-portlet
+14:52:11,105 INFO  [http-bio-8080-exec-4][ServiceComponentLocalServiceImpl:323] Running Calendar SQL scripts
+14:52:12,533 INFO  [http-bio-8080-exec-4][HookHotDeployListener:709] Registering hook for calendar-portlet
+14:52:12,562 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.calendar.hook.upgrade.UpgradeProcess_1_0_2
+14:52:12,564 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.calendar.hook.upgrade.v1_0_2.UpgradePortletPreferences
+14:52:13,347 INFO  [http-bio-8080-exec-4][HookHotDeployListener:851] Hook for calendar-portlet is available for use
+14:52:13,362 INFO  [http-bio-8080-exec-4][PortletHotDeployListener:344] Registering portlets for calendar-portlet
+14:52:13,585 INFO  [http-bio-8080-exec-4][PortletHotDeployListener:492] 1 portlet for calendar-portlet is available for use
+14:52:13,587 INFO  [http-bio-8080-exec-4][SocialHotDeployListener:94] Registering social for calendar-portlet
+14:52:13,589 INFO  [http-bio-8080-exec-4][SocialHotDeployListener:103] Social for calendar-portlet is available for use
+14:52:13,717 INFO  [http-bio-8080-exec-4][HotDeployEvent:145] Plugin notifications-portlet requires marketplace-portlet
+14:52:13,718 INFO  [http-bio-8080-exec-4][HotDeployImpl:217] Deploying notifications-portlet from queue
+14:52:13,718 INFO  [http-bio-8080-exec-4][PluginPackageUtil:1016] Reading plugin package for notifications-portlet
+14:52:13,835 INFO  [http-bio-8080-exec-4][ServiceComponentLocalServiceImpl:323] Running Notification SQL scripts
+14:52:14,166 INFO  [http-bio-8080-exec-4][HookHotDeployListener:709] Registering hook for notifications-portlet
+14:52:14,181 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.notifications.hook.upgrade.UpgradeProcess_1_0_0
+14:52:14,182 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.notifications.hook.upgrade.v1_0_0.UpgradeUserNotificationEvent
+14:52:14,209 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.notifications.hook.upgrade.UpgradeProcess_1_1_0
+14:52:14,213 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.notifications.hook.upgrade.v1_1_0.UpgradeUserNotificationEvent
+14:52:14,541 INFO  [http-bio-8080-exec-4][HookHotDeployListener:851] Hook for notifications-portlet is available for use
+14:52:14,544 INFO  [http-bio-8080-exec-4][PortletHotDeployListener:344] Registering portlets for notifications-portlet
+14:52:14,709 INFO  [http-bio-8080-exec-4][PortletHotDeployListener:497] 2 portlets for notifications-portlet are available for use
+14:52:14,751 INFO  [http-bio-8080-exec-4][HotDeployEvent:145] Plugin opensocial-portlet requires marketplace-portlet
+14:52:14,752 INFO  [http-bio-8080-exec-4][HotDeployImpl:217] Deploying opensocial-portlet from queue
+14:52:14,753 INFO  [http-bio-8080-exec-4][PluginPackageUtil:1016] Reading plugin package for opensocial-portlet
+14:52:14,966 INFO  [http-bio-8080-exec-4][ServiceComponentLocalServiceImpl:323] Running OpenSocial SQL scripts
+14:52:15,039 WARN  [http-bio-8080-exec-4][BaseDB:457] BLOB/TEXT column 'url' used in key specification without a key length: create unique index IX_A6A89EB1 on OpenSocial_Gadget (companyId, url);
+
+14:52:16,552 INFO  [http-bio-8080-exec-4][HookHotDeployListener:709] Registering hook for opensocial-portlet
+14:52:16,640 INFO  [http-bio-8080-exec-4][HookHotDeployListener:851] Hook for opensocial-portlet is available for use
+14:52:16,646 INFO  [http-bio-8080-exec-4][PortletHotDeployListener:344] Registering portlets for opensocial-portlet
+14:52:17,134 INFO  [http-bio-8080-exec-4][PortletHotDeployListener:497] 4 portlets for opensocial-portlet are available for use
+14:52:17,715 INFO  [http-bio-8080-exec-4][HotDeployEvent:145] Plugin resources-importer-web requires marketplace-portlet
+14:52:17,716 INFO  [http-bio-8080-exec-4][HotDeployImpl:217] Deploying resources-importer-web from queue
+14:52:17,716 INFO  [http-bio-8080-exec-4][PluginPackageUtil:1016] Reading plugin package for resources-importer-web
+14:52:18,009 INFO  [http-bio-8080-exec-4][HookHotDeployListener:709] Registering hook for resources-importer-web
+14:52:18,020 INFO  [http-bio-8080-exec-4][HookHotDeployListener:851] Hook for resources-importer-web is available for use
+14:52:18,101 INFO  [http-bio-8080-exec-4][HotDeployEvent:145] Plugin sync-web requires marketplace-portlet
+14:52:18,103 INFO  [http-bio-8080-exec-4][HotDeployImpl:217] Deploying sync-web from queue
+14:52:18,103 INFO  [http-bio-8080-exec-4][PluginPackageUtil:1016] Reading plugin package for sync-web
+14:52:18,182 INFO  [http-bio-8080-exec-4][ServiceComponentLocalServiceImpl:323] Running Sync SQL scripts
+14:52:19,405 INFO  [http-bio-8080-exec-4][HookHotDeployListener:709] Registering hook for sync-web
+14:52:19,449 INFO  [http-bio-8080-exec-4][UpgradeProcess:164] Upgrading com.liferay.sync.hook.upgrade.v1_0_0.UpgradeIndex
+14:52:19,995 INFO  [http-bio-8080-exec-4][HookHotDeployListener:851] Hook for sync-web is available for use
+14:54:58,693 ERROR [http-bio-8080-exec-3][MainServlet:1151] com.liferay.portal.kernel.events.ActionException: com.liferay.portal.NoSuchGroupException: No Group exists with the key {companyId=20155, classNameId=20005, classPK=20434}
+com.liferay.portal.kernel.events.ActionException: com.liferay.portal.NoSuchGroupException: No Group exists with the key {companyId=20155, classNameId=20005, classPK=20434}
+	at com.liferay.portal.events.ServicePreAction.run(ServicePreAction.java:1337)
+	at com.liferay.portal.events.EventsProcessorImpl.processEvent(EventsProcessorImpl.java:83)
+	at com.liferay.portal.events.EventsProcessorImpl.process(EventsProcessorImpl.java:59)
+	at com.liferay.portal.events.EventsProcessorUtil.process(EventsProcessorUtil.java:40)
+	at com.liferay.portal.servlet.MainServlet.processServicePre(MainServlet.java:1131)
+	at com.liferay.portal.servlet.MainServlet.service(MainServlet.java:498)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:116)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.uploadservletrequest.UploadServletRequestFilter.processFilter(UploadServletRequestFilter.java:93)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.strip.StripFilter.processFilter(StripFilter.java:361)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.gzip.GZipFilter.processFilter(GZipFilter.java:123)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.secure.SecureFilter.processFilter(SecureFilter.java:308)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.jsoncontenttype.JSONContentTypeFilter.processFilter(JSONContentTypeFilter.java:42)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.header.HeaderFilter.processFilter(HeaderFilter.java:154)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.sso.ntlm.NtlmPostFilter.processFilter(NtlmPostFilter.java:83)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.sharepoint.SharepointFilter.processFilter(SharepointFilter.java:88)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:185)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:738)
+	at com.liferay.portal.servlet.filters.urlrewrite.UrlRewriteFilter.processFilter(UrlRewriteFilter.java:57)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:185)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:957)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:423)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1079)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:318)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.liferay.portal.NoSuchGroupException: No Group exists with the key {companyId=20155, classNameId=20005, classPK=20434}
+	at com.liferay.portal.service.persistence.GroupPersistenceImpl.findByC_C_C(GroupPersistenceImpl.java:5227)
+	at com.liferay.portal.service.impl.LayoutLocalServiceImpl.hasLayouts(LayoutLocalServiceImpl.java:1678)
+	at sun.reflect.GeneratedMethodAccessor927.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:115)
+	at com.liferay.portal.service.impl.LayoutLocalServiceVirtualLayoutsAdvice.invoke(LayoutLocalServiceVirtualLayoutsAdvice.java:183)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:111)
+	at com.liferay.portal.service.impl.LayoutLocalServiceStagingAdvice.invoke(LayoutLocalServiceStagingAdvice.java:141)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:111)
+	at com.liferay.portal.spring.transaction.DefaultTransactionExecutor.execute(DefaultTransactionExecutor.java:62)
+	at com.liferay.portal.spring.transaction.TransactionInterceptor.invoke(TransactionInterceptor.java:51)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:111)
+	at com.liferay.portal.spring.aop.ServiceBeanAopProxy.invoke(ServiceBeanAopProxy.java:175)
+	at com.sun.proxy.$Proxy36.hasLayouts(Unknown Source)
+	at com.liferay.portal.service.LayoutLocalServiceUtil.hasLayouts(LayoutLocalServiceUtil.java:1212)
+	at com.liferay.portal.events.ServicePreAction.updateUserLayouts(ServicePreAction.java:2326)
+	at com.liferay.portal.events.ServicePreAction.initThemeDisplay(ServicePreAction.java:321)
+	at com.liferay.portal.events.ServicePreAction.servicePre(ServicePreAction.java:2204)
+	at com.liferay.portal.events.ServicePreAction.run(ServicePreAction.java:1334)
+	... 83 more
+14:54:59,059 ERROR [http-bio-8080-exec-3][error_jsp:506] User ID 20434
+14:54:59,059 ERROR [http-bio-8080-exec-3][error_jsp:507] Current URL /c/portal/logout
+14:54:59,060 ERROR [http-bio-8080-exec-3][error_jsp:508] Referer http://localhost:8080/group/control_panel?refererPlid=20185&doAsGroupId=20182&controlPanelCategory=current_site.users&p_p_id=174
+14:54:59,060 ERROR [http-bio-8080-exec-3][error_jsp:509] Remote address 127.0.0.1
+14:54:59,061 ERROR [http-bio-8080-exec-3][error_jsp:511] com.liferay.portal.kernel.events.ActionException: com.liferay.portal.NoSuchGroupException: No Group exists with the key {companyId=20155, classNameId=20005, classPK=20434}
+com.liferay.portal.kernel.events.ActionException: com.liferay.portal.NoSuchGroupException: No Group exists with the key {companyId=20155, classNameId=20005, classPK=20434}
+	at com.liferay.portal.events.ServicePreAction.run(ServicePreAction.java:1337)
+	at com.liferay.portal.events.EventsProcessorImpl.processEvent(EventsProcessorImpl.java:83)
+	at com.liferay.portal.events.EventsProcessorImpl.process(EventsProcessorImpl.java:59)
+	at com.liferay.portal.events.EventsProcessorUtil.process(EventsProcessorUtil.java:40)
+	at com.liferay.portal.servlet.MainServlet.processServicePre(MainServlet.java:1131)
+	at com.liferay.portal.servlet.MainServlet.service(MainServlet.java:498)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:116)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.uploadservletrequest.UploadServletRequestFilter.processFilter(UploadServletRequestFilter.java:93)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.strip.StripFilter.processFilter(StripFilter.java:361)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.gzip.GZipFilter.processFilter(GZipFilter.java:123)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.secure.SecureFilter.processFilter(SecureFilter.java:308)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.jsoncontenttype.JSONContentTypeFilter.processFilter(JSONContentTypeFilter.java:42)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.header.HeaderFilter.processFilter(HeaderFilter.java:154)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.sso.ntlm.NtlmPostFilter.processFilter(NtlmPostFilter.java:83)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.sharepoint.SharepointFilter.processFilter(SharepointFilter.java:88)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:185)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:738)
+	at com.liferay.portal.servlet.filters.urlrewrite.UrlRewriteFilter.processFilter(UrlRewriteFilter.java:57)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:185)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:957)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:423)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1079)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:318)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.liferay.portal.NoSuchGroupException: No Group exists with the key {companyId=20155, classNameId=20005, classPK=20434}
+	at com.liferay.portal.service.persistence.GroupPersistenceImpl.findByC_C_C(GroupPersistenceImpl.java:5227)
+	at com.liferay.portal.service.impl.LayoutLocalServiceImpl.hasLayouts(LayoutLocalServiceImpl.java:1678)
+	at sun.reflect.GeneratedMethodAccessor927.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:115)
+	at com.liferay.portal.service.impl.LayoutLocalServiceVirtualLayoutsAdvice.invoke(LayoutLocalServiceVirtualLayoutsAdvice.java:183)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:111)
+	at com.liferay.portal.service.impl.LayoutLocalServiceStagingAdvice.invoke(LayoutLocalServiceStagingAdvice.java:141)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:111)
+	at com.liferay.portal.spring.transaction.DefaultTransactionExecutor.execute(DefaultTransactionExecutor.java:62)
+	at com.liferay.portal.spring.transaction.TransactionInterceptor.invoke(TransactionInterceptor.java:51)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:111)
+	at com.liferay.portal.spring.aop.ServiceBeanAopProxy.invoke(ServiceBeanAopProxy.java:175)
+	at com.sun.proxy.$Proxy36.hasLayouts(Unknown Source)
+	at com.liferay.portal.service.LayoutLocalServiceUtil.hasLayouts(LayoutLocalServiceUtil.java:1212)
+	at com.liferay.portal.events.ServicePreAction.updateUserLayouts(ServicePreAction.java:2326)
+	at com.liferay.portal.events.ServicePreAction.initThemeDisplay(ServicePreAction.java:321)
+	at com.liferay.portal.events.ServicePreAction.servicePre(ServicePreAction.java:2204)
+	at com.liferay.portal.events.ServicePreAction.run(ServicePreAction.java:1334)
+	... 83 more
+14:55:00,008 INFO  [liferay/scheduler_dispatch-3][VideohitlistScheduler:36] Autocomplete Scheduler running de.uhh.l2g.plugins.util.AutocompleteScheduler...
+14:55:00,079 INFO  [liferay/scheduler_dispatch-3][VideohitlistScheduler:40] Autocomplete Scheduler finished.
+14:55:07,185 INFO  [localhost-startStop-2][HotDeployEvent:145] Plugin sync-web requires marketplace-portlet
+14:55:07,204 INFO  [localhost-startStop-2][HookHotDeployListener:982] Hook for sync-web was unregistered
+14:55:07,236 INFO  [localhost-startStop-2][PluginPackageUtil:1016] Reading plugin package for sync-web
+14:55:07,257 INFO  [localhost-startStop-2][HotDeployEvent:145] Plugin resources-importer-web requires marketplace-portlet
+14:55:07,259 INFO  [localhost-startStop-2][HookHotDeployListener:982] Hook for resources-importer-web was unregistered
+14:55:07,262 INFO  [localhost-startStop-2][PluginPackageUtil:1016] Reading plugin package for resources-importer-web
+14:55:07,266 INFO  [localhost-startStop-2][HotDeployEvent:145] Plugin opensocial-portlet requires marketplace-portlet
+14:55:07,266 INFO  [localhost-startStop-2][PortletHotDeployListener:525] Unregistering portlets for opensocial-portlet
+14:55:07,279 INFO  [localhost-startStop-2][PortletHotDeployListener:565] 4 portlets for opensocial-portlet were unregistered
+14:55:07,378 INFO  [localhost-startStop-2][HookHotDeployListener:982] Hook for opensocial-portlet was unregistered
+14:55:07,449 INFO  [localhost-startStop-2][PluginPackageUtil:1016] Reading plugin package for opensocial-portlet
+14:55:07,455 INFO  [localhost-startStop-2][HotDeployEvent:145] Plugin notifications-portlet requires marketplace-portlet
+14:55:07,455 INFO  [localhost-startStop-2][PortletHotDeployListener:525] Unregistering portlets for notifications-portlet
+14:55:07,457 INFO  [localhost-startStop-2][PortletHotDeployListener:565] 2 portlets for notifications-portlet were unregistered
+14:55:07,507 INFO  [localhost-startStop-2][HookHotDeployListener:982] Hook for notifications-portlet was unregistered
+14:55:07,522 INFO  [localhost-startStop-2][PluginPackageUtil:1016] Reading plugin package for notifications-portlet
+14:55:07,528 INFO  [localhost-startStop-2][PortletHotDeployListener:525] Unregistering portlets for marketplace-portlet
+14:55:07,531 INFO  [localhost-startStop-2][PortletHotDeployListener:565] 3 portlets for marketplace-portlet were unregistered
+14:55:07,531 INFO  [localhost-startStop-2][HookHotDeployListener:982] Hook for marketplace-portlet was unregistered
+14:55:07,548 INFO  [localhost-startStop-2][PluginPackageUtil:1016] Reading plugin package for marketplace-portlet
+14:55:07,553 INFO  [localhost-startStop-2][HotDeployEvent:145] Plugin calendar-portlet requires marketplace-portlet
+14:55:07,554 INFO  [localhost-startStop-2][SocialHotDeployListener:159] Social for calendar-portlet was unregistered
+14:55:07,554 INFO  [localhost-startStop-2][PortletHotDeployListener:525] Unregistering portlets for calendar-portlet
+14:55:07,557 INFO  [localhost-startStop-2][PortletHotDeployListener:560] 1 portlet for calendar-portlet was unregistered
+14:55:07,603 INFO  [localhost-startStop-2][HookHotDeployListener:982] Hook for calendar-portlet was unregistered
+14:55:07,626 INFO  [localhost-startStop-2][PluginPackageUtil:1016] Reading plugin package for calendar-portlet
+14:55:07,631 INFO  [localhost-startStop-2][HotDeployEvent:145] Plugin lecture2go-theme requires marketplace-portlet
+14:55:07,631 INFO  [localhost-startStop-2][ThemeHotDeployListener:140] Unregistering themes for lecture2go-theme
+14:55:07,633 INFO  [localhost-startStop-2][ThemeHotDeployListener:172] 1 theme for lecture2go-theme was unregistered
+14:55:07,634 INFO  [localhost-startStop-2][PluginPackageUtil:1016] Reading plugin package for lecture2go-theme
+14:55:07,637 INFO  [localhost-startStop-2][HotDeployEvent:145] Plugin lecture2go-portlet requires marketplace-portlet
+14:55:07,638 INFO  [localhost-startStop-2][PortletHotDeployListener:525] Unregistering portlets for lecture2go-portlet
+14:55:07,645 INFO  [localhost-startStop-2][PortletHotDeployListener:565] 12 portlets for lecture2go-portlet were unregistered
+14:55:07,645 INFO  [localhost-startStop-2][HookHotDeployListener:982] Hook for lecture2go-portlet was unregistered
+14:55:07,650 INFO  [localhost-startStop-2][PluginPackageUtil:1016] Reading plugin package for lecture2go-portlet
+14:55:40,953 INFO  [localhost-startStop-1][DialectDetector:71] Determine dialect for MySQL 5
+14:55:41,000 INFO  [localhost-startStop-1][DialectDetector:136] Found dialect org.hibernate.dialect.MySQLDialect
+14:56:03,826 INFO  [localhost-startStop-1][StartupAction:97] There are no patches installed
+14:56:05,600 INFO  [localhost-startStop-1][BaseDB:484] Database does not support case sensitive queries
+14:56:06,152 INFO  [localhost-startStop-1][ServerDetector:166] Server supports hot deploy
+14:56:06,158 INFO  [localhost-startStop-1][PluginPackageUtil:1013] Reading plugin package for the root context
+14:56:09,822 INFO  [localhost-startStop-1][AutoDeployDir:139] Auto deploy scanner started for /Users/isturm/Documents/workspace-for-liferay-6.2.0/liferay-portal-6.2-ce-ga6/deploy
+14:56:26,465 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:56:29,495 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:56:32,521 WARN  [http-bio-8080-exec-9][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:56:35,548 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:56:38,573 WARN  [http-bio-8080-exec-3][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:23,660 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:23,729 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:23,782 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:23,823 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:23,869 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:23,905 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:23,942 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:23,982 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:24,017 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:24,056 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:24,101 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:24,138 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:24,202 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:24,262 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:24,322 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:24,383 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:24,440 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:24,499 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:24,599 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:24,712 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:24,760 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:24,803 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:24,848 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:24,903 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:24,934 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:24,974 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:25,016 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:25,066 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:25,131 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:25,170 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:25,207 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:25,247 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:25,297 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:25,336 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:25,369 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:25,408 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:25,448 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:25,484 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:25,525 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:25,554 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:25,591 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:25,628 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:25,667 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:25,703 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:25,747 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:25,791 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:25,828 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:25,865 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:25,901 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:25,934 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:25,969 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:26,006 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:26,046 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:26,077 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:26,114 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:26,146 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:26,180 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:26,213 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:26,247 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:26,282 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:26,319 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:26,352 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:26,385 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:26,421 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:26,455 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:26,492 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:26,555 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:26,623 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:26,702 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:26,745 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:26,829 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:26,882 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:26,923 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:26,958 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:27,021 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:27,074 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:27,114 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:27,184 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:27,220 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:27,255 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:27,294 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:27,332 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:27,367 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:27,409 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:27,443 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:27,572 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:27,604 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:27,637 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:27,675 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:27,728 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:27,767 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:27,805 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:27,874 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:27,910 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:27,948 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:27,992 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:28,033 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:28,089 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:28,135 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:28,177 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:28,227 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:28,267 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:28,302 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:28,336 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:28,372 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:28,415 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:28,451 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:28,486 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:28,576 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:28,677 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:28,715 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:57:28,780 ERROR [http-bio-8080-exec-7][SecureFilter:83] com.liferay.portal.NoSuchUserException: No User exists with the primary key 20434
+com.liferay.portal.NoSuchUserException: No User exists with the primary key 20434
+	at com.liferay.portal.service.persistence.UserPersistenceImpl.findByPrimaryKey(UserPersistenceImpl.java:7199)
+	at com.liferay.portal.service.persistence.UserPersistenceImpl.findByPrimaryKey(UserPersistenceImpl.java:7217)
+	at com.liferay.portal.service.impl.UserLocalServiceImpl.getUserById(UserLocalServiceImpl.java:2712)
+	at sun.reflect.GeneratedMethodAccessor361.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:115)
+	at com.liferay.portal.spring.transaction.DefaultTransactionExecutor.execute(DefaultTransactionExecutor.java:62)
+	at com.liferay.portal.spring.transaction.TransactionInterceptor.invoke(TransactionInterceptor.java:51)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:111)
+	at com.liferay.portal.spring.aop.ServiceBeanAopProxy.invoke(ServiceBeanAopProxy.java:175)
+	at com.sun.proxy.$Proxy107.getUserById(Unknown Source)
+	at com.liferay.portal.service.UserLocalServiceUtil.getUserById(UserLocalServiceUtil.java:2140)
+	at com.liferay.portal.util.PortalImpl.getUser(PortalImpl.java:5399)
+	at com.liferay.portal.util.PortalUtil.getUser(PortalUtil.java:1544)
+	at com.liferay.portal.servlet.filters.secure.SecureFilter.processFilter(SecureFilter.java:286)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.i18n.I18nFilter.processFilter(I18nFilter.java:254)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.etag.ETagFilter.processFilter(ETagFilter.java:86)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.jsoncontenttype.JSONContentTypeFilter.processFilter(JSONContentTypeFilter.java:42)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.autologin.AutoLoginFilter.processFilter(AutoLoginFilter.java:268)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.sso.ntlm.NtlmPostFilter.processFilter(NtlmPostFilter.java:83)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.sharepoint.SharepointFilter.processFilter(SharepointFilter.java:88)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.virtualhost.VirtualHostFilter.processFilter(VirtualHostFilter.java:226)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:185)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:738)
+	at com.liferay.portal.servlet.filters.urlrewrite.UrlRewriteFilter.processFilter(UrlRewriteFilter.java:57)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:185)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:957)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:423)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1079)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:318)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+14:57:37,807 ERROR [http-bio-8080-exec-7][SecureFilter:83] com.liferay.portal.NoSuchUserException: No User exists with the primary key 20434
+com.liferay.portal.NoSuchUserException: No User exists with the primary key 20434
+	at com.liferay.portal.service.persistence.UserPersistenceImpl.findByPrimaryKey(UserPersistenceImpl.java:7199)
+	at com.liferay.portal.service.persistence.UserPersistenceImpl.findByPrimaryKey(UserPersistenceImpl.java:7217)
+	at com.liferay.portal.service.impl.UserLocalServiceImpl.getUserById(UserLocalServiceImpl.java:2712)
+	at sun.reflect.GeneratedMethodAccessor361.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:115)
+	at com.liferay.portal.spring.transaction.DefaultTransactionExecutor.execute(DefaultTransactionExecutor.java:62)
+	at com.liferay.portal.spring.transaction.TransactionInterceptor.invoke(TransactionInterceptor.java:51)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:111)
+	at com.liferay.portal.spring.aop.ServiceBeanAopProxy.invoke(ServiceBeanAopProxy.java:175)
+	at com.sun.proxy.$Proxy107.getUserById(Unknown Source)
+	at com.liferay.portal.service.UserLocalServiceUtil.getUserById(UserLocalServiceUtil.java:2140)
+	at com.liferay.portal.util.PortalImpl.getUser(PortalImpl.java:5399)
+	at com.liferay.portal.util.PortalUtil.getUser(PortalUtil.java:1544)
+	at com.liferay.portal.servlet.filters.secure.SecureFilter.processFilter(SecureFilter.java:286)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.i18n.I18nFilter.processFilter(I18nFilter.java:254)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.etag.ETagFilter.processFilter(ETagFilter.java:86)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.jsoncontenttype.JSONContentTypeFilter.processFilter(JSONContentTypeFilter.java:42)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.autologin.AutoLoginFilter.processFilter(AutoLoginFilter.java:268)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.sso.ntlm.NtlmPostFilter.processFilter(NtlmPostFilter.java:83)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.sharepoint.SharepointFilter.processFilter(SharepointFilter.java:88)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.virtualhost.VirtualHostFilter.processFilter(VirtualHostFilter.java:226)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:185)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:738)
+	at com.liferay.portal.servlet.filters.urlrewrite.UrlRewriteFilter.processFilter(UrlRewriteFilter.java:57)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:185)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:957)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:423)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1079)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:318)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+14:57:43,767 ERROR [http-bio-8080-exec-7][SecureFilter:83] com.liferay.portal.NoSuchUserException: No User exists with the primary key 20434
+com.liferay.portal.NoSuchUserException: No User exists with the primary key 20434
+	at com.liferay.portal.service.persistence.UserPersistenceImpl.findByPrimaryKey(UserPersistenceImpl.java:7199)
+	at com.liferay.portal.service.persistence.UserPersistenceImpl.findByPrimaryKey(UserPersistenceImpl.java:7217)
+	at com.liferay.portal.service.impl.UserLocalServiceImpl.getUserById(UserLocalServiceImpl.java:2712)
+	at sun.reflect.GeneratedMethodAccessor361.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:115)
+	at com.liferay.portal.spring.transaction.DefaultTransactionExecutor.execute(DefaultTransactionExecutor.java:62)
+	at com.liferay.portal.spring.transaction.TransactionInterceptor.invoke(TransactionInterceptor.java:51)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:111)
+	at com.liferay.portal.spring.aop.ServiceBeanAopProxy.invoke(ServiceBeanAopProxy.java:175)
+	at com.sun.proxy.$Proxy107.getUserById(Unknown Source)
+	at com.liferay.portal.service.UserLocalServiceUtil.getUserById(UserLocalServiceUtil.java:2140)
+	at com.liferay.portal.util.PortalImpl.getUser(PortalImpl.java:5399)
+	at com.liferay.portal.util.PortalUtil.getUser(PortalUtil.java:1544)
+	at com.liferay.portal.servlet.filters.secure.SecureFilter.processFilter(SecureFilter.java:286)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.i18n.I18nFilter.processFilter(I18nFilter.java:254)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.etag.ETagFilter.processFilter(ETagFilter.java:86)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.jsoncontenttype.JSONContentTypeFilter.processFilter(JSONContentTypeFilter.java:42)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.autologin.AutoLoginFilter.processFilter(AutoLoginFilter.java:268)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.sso.ntlm.NtlmPostFilter.processFilter(NtlmPostFilter.java:83)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.sharepoint.SharepointFilter.processFilter(SharepointFilter.java:88)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.virtualhost.VirtualHostFilter.processFilter(VirtualHostFilter.java:226)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:185)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:738)
+	at com.liferay.portal.servlet.filters.urlrewrite.UrlRewriteFilter.processFilter(UrlRewriteFilter.java:57)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:185)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:957)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:423)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1079)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:318)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+14:57:58,856 ERROR [http-bio-8080-exec-7][SecureFilter:83] com.liferay.portal.NoSuchUserException: No User exists with the primary key 20434
+com.liferay.portal.NoSuchUserException: No User exists with the primary key 20434
+	at com.liferay.portal.service.persistence.UserPersistenceImpl.findByPrimaryKey(UserPersistenceImpl.java:7199)
+	at com.liferay.portal.service.persistence.UserPersistenceImpl.findByPrimaryKey(UserPersistenceImpl.java:7217)
+	at com.liferay.portal.service.impl.UserLocalServiceImpl.getUserById(UserLocalServiceImpl.java:2712)
+	at sun.reflect.GeneratedMethodAccessor361.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:115)
+	at com.liferay.portal.spring.transaction.DefaultTransactionExecutor.execute(DefaultTransactionExecutor.java:62)
+	at com.liferay.portal.spring.transaction.TransactionInterceptor.invoke(TransactionInterceptor.java:51)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:111)
+	at com.liferay.portal.spring.aop.ServiceBeanAopProxy.invoke(ServiceBeanAopProxy.java:175)
+	at com.sun.proxy.$Proxy107.getUserById(Unknown Source)
+	at com.liferay.portal.service.UserLocalServiceUtil.getUserById(UserLocalServiceUtil.java:2140)
+	at com.liferay.portal.util.PortalImpl.getUser(PortalImpl.java:5399)
+	at com.liferay.portal.util.PortalUtil.getUser(PortalUtil.java:1544)
+	at com.liferay.portal.servlet.filters.secure.SecureFilter.processFilter(SecureFilter.java:286)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.i18n.I18nFilter.processFilter(I18nFilter.java:254)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.etag.ETagFilter.processFilter(ETagFilter.java:86)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.jsoncontenttype.JSONContentTypeFilter.processFilter(JSONContentTypeFilter.java:42)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.autologin.AutoLoginFilter.processFilter(AutoLoginFilter.java:268)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.sso.ntlm.NtlmPostFilter.processFilter(NtlmPostFilter.java:83)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.sharepoint.SharepointFilter.processFilter(SharepointFilter.java:88)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.virtualhost.VirtualHostFilter.processFilter(VirtualHostFilter.java:226)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:185)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:738)
+	at com.liferay.portal.servlet.filters.urlrewrite.UrlRewriteFilter.processFilter(UrlRewriteFilter.java:57)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:185)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:957)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:423)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1079)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:318)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+14:58:03,762 ERROR [http-bio-8080-exec-7][SecureFilter:83] com.liferay.portal.NoSuchUserException: No User exists with the primary key 20434
+com.liferay.portal.NoSuchUserException: No User exists with the primary key 20434
+	at com.liferay.portal.service.persistence.UserPersistenceImpl.findByPrimaryKey(UserPersistenceImpl.java:7199)
+	at com.liferay.portal.service.persistence.UserPersistenceImpl.findByPrimaryKey(UserPersistenceImpl.java:7217)
+	at com.liferay.portal.service.impl.UserLocalServiceImpl.getUserById(UserLocalServiceImpl.java:2712)
+	at sun.reflect.GeneratedMethodAccessor361.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:115)
+	at com.liferay.portal.spring.transaction.DefaultTransactionExecutor.execute(DefaultTransactionExecutor.java:62)
+	at com.liferay.portal.spring.transaction.TransactionInterceptor.invoke(TransactionInterceptor.java:51)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:111)
+	at com.liferay.portal.spring.aop.ServiceBeanAopProxy.invoke(ServiceBeanAopProxy.java:175)
+	at com.sun.proxy.$Proxy107.getUserById(Unknown Source)
+	at com.liferay.portal.service.UserLocalServiceUtil.getUserById(UserLocalServiceUtil.java:2140)
+	at com.liferay.portal.util.PortalImpl.getUser(PortalImpl.java:5399)
+	at com.liferay.portal.util.PortalUtil.getUser(PortalUtil.java:1544)
+	at com.liferay.portal.servlet.filters.secure.SecureFilter.processFilter(SecureFilter.java:286)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.i18n.I18nFilter.processFilter(I18nFilter.java:254)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.etag.ETagFilter.processFilter(ETagFilter.java:86)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.jsoncontenttype.JSONContentTypeFilter.processFilter(JSONContentTypeFilter.java:42)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.autologin.AutoLoginFilter.processFilter(AutoLoginFilter.java:268)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.sso.ntlm.NtlmPostFilter.processFilter(NtlmPostFilter.java:83)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.sharepoint.SharepointFilter.processFilter(SharepointFilter.java:88)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.virtualhost.VirtualHostFilter.processFilter(VirtualHostFilter.java:226)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:185)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:738)
+	at com.liferay.portal.servlet.filters.urlrewrite.UrlRewriteFilter.processFilter(UrlRewriteFilter.java:57)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:185)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:957)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:423)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1079)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:318)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+14:58:06,610 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:06,647 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:06,692 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:06,733 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:06,767 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:06,804 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:06,836 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:06,878 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:06,919 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:06,952 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,003 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,050 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,098 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,131 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,165 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,202 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,237 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,265 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,296 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,330 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,364 WARN  [http-bio-8080-exec-1][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,407 WARN  [http-bio-8080-exec-1][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,437 WARN  [http-bio-8080-exec-1][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,475 WARN  [http-bio-8080-exec-1][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,513 WARN  [http-bio-8080-exec-1][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,550 WARN  [http-bio-8080-exec-1][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,585 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,637 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,672 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,712 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,747 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,784 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,822 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,861 WARN  [http-bio-8080-exec-9][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,907 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,943 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:07,981 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:08,018 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:08,063 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:08,103 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:08,140 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:08,192 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:08,336 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:08,372 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:08,428 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:08,474 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:08,518 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:08,563 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:08,606 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:08,661 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:08,714 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:08,754 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:08,802 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:08,854 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:08,942 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:08,978 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:09,030 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:09,059 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:09,097 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:09,136 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:09,169 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:09,206 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:09,244 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:09,280 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:09,314 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:09,349 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:09,382 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:09,415 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:09,451 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:09,484 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:09,517 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:09,549 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:09,583 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:09,617 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:09,652 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:09,686 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:09,718 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:09,781 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:09,845 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:09,905 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:09,969 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:10,026 WARN  [http-bio-8080-exec-2][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:10,089 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:10,200 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:10,253 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:10,292 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:10,328 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:10,368 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:10,410 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:10,444 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:10,481 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:10,524 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:10,555 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:10,615 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:10,664 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:10,697 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:10,733 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:10,777 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:10,810 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:10,848 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:10,892 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:11,004 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:11,055 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:11,095 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:11,138 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:11,187 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:11,232 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:11,284 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:11,330 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:11,371 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:11,415 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:11,454 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:11,497 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:11,549 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:11,597 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:11,649 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:11,697 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:11,737 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:11,778 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:11,824 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:11,868 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:11,913 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:11,953 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:12,001 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:12,048 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:12,099 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:12,147 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:12,190 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:12,235 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:12,279 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:12,318 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:12,394 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:12,470 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:12,525 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:12,578 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:12,629 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:12,681 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:12,744 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:12,795 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:12,878 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:12,938 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:12,987 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:13,051 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:13,096 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:13,145 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:13,192 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:13,237 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:13,283 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:13,331 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:13,381 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:13,429 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:13,470 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:13,519 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:13,564 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:13,612 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:13,661 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:13,707 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:13,763 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:13,806 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:13,856 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:13,901 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:14,019 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:14,055 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:14,095 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:14,134 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:14,175 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:14,207 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:14,253 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:14,299 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:14,339 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:14,386 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:14,429 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:14,470 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:14,509 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:14,549 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:14,589 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:14,628 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:14,663 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:14,710 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:14,748 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:14,789 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:14,847 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:14,900 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:14,936 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:14,970 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,003 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,036 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,068 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,105 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,138 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,175 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,205 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,239 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,273 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,306 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,339 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,376 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,409 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,444 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,477 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,511 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,542 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,575 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,607 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,642 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,679 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,713 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,746 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,781 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,816 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,857 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,890 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,937 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:15,971 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:16,002 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:16,039 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:16,074 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:16,107 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:16,139 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:16,174 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:16,206 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:16,242 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:16,275 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:16,314 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:16,381 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:16,440 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:16,490 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:16,553 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:16,639 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:16,734 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:16,847 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:16,917 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:16,970 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:17,016 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:17,055 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:17,094 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:17,144 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:17,212 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:17,282 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:17,375 WARN  [http-bio-8080-exec-10][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:17,420 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:17,471 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:17,515 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:17,560 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:17,597 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:17,628 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:17,663 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:17,695 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:17,728 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:17,758 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:17,796 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:17,834 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:17,874 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:17,909 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:17,940 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:17,975 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,006 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,046 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,078 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,118 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,147 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,178 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,212 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,246 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,279 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,314 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,351 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,381 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,422 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,452 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,482 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,512 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,545 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,588 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,620 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,655 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,689 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,721 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,771 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,808 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,856 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,901 WARN  [http-bio-8080-exec-6][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,955 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:18,994 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:19,035 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:19,081 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:19,117 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:19,161 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:19,199 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:19,241 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:19,279 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:19,308 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:19,351 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:19,392 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:19,430 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:19,476 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:19,517 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:19,557 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:19,598 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:19,641 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:19,702 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:19,752 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:19,817 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:19,850 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:19,888 WARN  [http-bio-8080-exec-8][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:19,921 WARN  [http-bio-8080-exec-1][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:19,956 WARN  [http-bio-8080-exec-1][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:19,989 WARN  [http-bio-8080-exec-1][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,021 WARN  [http-bio-8080-exec-1][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,055 WARN  [http-bio-8080-exec-1][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,109 WARN  [http-bio-8080-exec-1][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,138 WARN  [http-bio-8080-exec-1][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,174 WARN  [http-bio-8080-exec-1][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,207 WARN  [http-bio-8080-exec-1][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,241 WARN  [http-bio-8080-exec-1][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,272 WARN  [http-bio-8080-exec-1][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,305 WARN  [http-bio-8080-exec-1][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,341 WARN  [http-bio-8080-exec-1][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,375 WARN  [http-bio-8080-exec-1][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,409 WARN  [http-bio-8080-exec-1][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,440 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,473 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,509 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,544 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,575 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,617 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,646 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,682 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,730 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,776 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,816 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,850 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,890 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,932 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,962 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:20,997 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,034 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,083 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,121 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,172 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,209 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,248 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,285 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,319 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,355 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,392 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,425 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,459 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,493 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,526 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,558 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,597 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,643 WARN  [http-bio-8080-exec-5][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,683 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,714 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,766 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,796 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,832 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,869 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,912 WARN  [http-bio-8080-exec-4][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,947 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:21,983 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:22,016 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:22,055 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:22,091 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:22,126 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:22,170 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:22,207 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:22,241 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:22,276 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:22,315 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:22,358 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:22,392 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:22,436 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:22,477 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:22,516 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:22,563 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:22,681 WARN  [http-bio-8080-exec-7][code_jsp:130] {code="404", msg="/l2gos", uri=/l2gos}
+14:58:22,725 ERROR [http-bio-8080-exec-7][SecureFilter:83] com.liferay.portal.NoSuchUserException: No User exists with the primary key 20434
+com.liferay.portal.NoSuchUserException: No User exists with the primary key 20434
+	at com.liferay.portal.service.persistence.UserPersistenceImpl.findByPrimaryKey(UserPersistenceImpl.java:7199)
+	at com.liferay.portal.service.persistence.UserPersistenceImpl.findByPrimaryKey(UserPersistenceImpl.java:7217)
+	at com.liferay.portal.service.impl.UserLocalServiceImpl.getUserById(UserLocalServiceImpl.java:2712)
+	at sun.reflect.GeneratedMethodAccessor361.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:115)
+	at com.liferay.portal.spring.transaction.DefaultTransactionExecutor.execute(DefaultTransactionExecutor.java:62)
+	at com.liferay.portal.spring.transaction.TransactionInterceptor.invoke(TransactionInterceptor.java:51)
+	at com.liferay.portal.spring.aop.ServiceBeanMethodInvocation.proceed(ServiceBeanMethodInvocation.java:111)
+	at com.liferay.portal.spring.aop.ServiceBeanAopProxy.invoke(ServiceBeanAopProxy.java:175)
+	at com.sun.proxy.$Proxy107.getUserById(Unknown Source)
+	at com.liferay.portal.service.UserLocalServiceUtil.getUserById(UserLocalServiceUtil.java:2140)
+	at com.liferay.portal.util.PortalImpl.getUser(PortalImpl.java:5399)
+	at com.liferay.portal.util.PortalUtil.getUser(PortalUtil.java:1544)
+	at com.liferay.portal.servlet.filters.secure.SecureFilter.processFilter(SecureFilter.java:286)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.i18n.I18nFilter.processFilter(I18nFilter.java:254)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.etag.ETagFilter.processFilter(ETagFilter.java:86)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.jsoncontenttype.JSONContentTypeFilter.processFilter(JSONContentTypeFilter.java:42)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.autologin.AutoLoginFilter.processFilter(AutoLoginFilter.java:268)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.sso.ntlm.NtlmPostFilter.processFilter(NtlmPostFilter.java:83)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.sharepoint.SharepointFilter.processFilter(SharepointFilter.java:88)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.virtualhost.VirtualHostFilter.processFilter(VirtualHostFilter.java:226)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:185)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:738)
+	at com.liferay.portal.servlet.filters.urlrewrite.UrlRewriteFilter.processFilter(UrlRewriteFilter.java:57)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:185)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:957)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:423)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1079)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:318)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+14:59:12,144 WARN  [http-bio-8080-exec-5][ThemeLocalServiceImpl:156] No theme found for specified theme id lecture2go_WAR_lecture2gotheme. Returning the default theme.
+14:59:12,294 WARN  [http-bio-8080-exec-5][ThemeLocalServiceImpl:156] No theme found for specified theme id lecture2go_WAR_lecture2gotheme. Returning the default theme.
+14:59:12,344 WARN  [http-bio-8080-exec-5][ThemeLocalServiceImpl:156] No theme found for specified theme id lecture2go_WAR_lecture2gotheme. Returning the default theme.
+14:59:12,345 WARN  [http-bio-8080-exec-5][ThemeLocalServiceImpl:156] No theme found for specified theme id lecture2go_WAR_lecture2gotheme. Returning the default theme.
+14:59:12,425 WARN  [http-bio-8080-exec-5][ThemeLocalServiceImpl:156] No theme found for specified theme id lecture2go_WAR_lecture2gotheme. Returning the default theme.
+14:59:12,606 WARN  [http-bio-8080-exec-5][ThemeLocalServiceImpl:156] No theme found for specified theme id lecture2go_WAR_lecture2gotheme. Returning the default theme.
+14:59:12,660 WARN  [http-bio-8080-exec-5][ThemeLocalServiceImpl:156] No theme found for specified theme id lecture2go_WAR_lecture2gotheme. Returning the default theme.
+14:59:12,662 WARN  [http-bio-8080-exec-5][ThemeLocalServiceImpl:156] No theme found for specified theme id lecture2go_WAR_lecture2gotheme. Returning the default theme.
+14:59:12,668 WARN  [http-bio-8080-exec-5][ThemeLocalServiceImpl:156] No theme found for specified theme id lecture2go_WAR_lecture2gotheme. Returning the default theme.
+14:59:13,029 WARN  [http-bio-8080-exec-5][ThemeLocalServiceImpl:156] No theme found for specified theme id lecture2go_WAR_lecture2gotheme. Returning the default theme.
+14:59:13,250 WARN  [http-bio-8080-exec-5][ThemeLocalServiceImpl:156] No theme found for specified theme id lecture2go_WAR_lecture2gotheme. Returning the default theme.
+14:59:16,808 ERROR [http-bio-8080-exec-1][ImageImpl:72] Error reading image 20999
+com.liferay.portlet.documentlibrary.NoSuchFileException: setup.wizard.enabled=true/data/document_library/0/0/20999.gif/1.0
+	at com.liferay.portlet.documentlibrary.store.FileSystemStore.getFileAsStream(FileSystemStore.java:224)
+	at com.liferay.portlet.documentlibrary.store.BaseStore.getFileAsStream(BaseStore.java:373)
+	at com.liferay.portlet.documentlibrary.store.StoreProxyImpl.getFileAsStream(StoreProxyImpl.java:167)
+	at com.liferay.portlet.documentlibrary.store.SafeFileNameStoreWrapper.getFileAsStream(SafeFileNameStoreWrapper.java:246)
+	at com.liferay.portlet.documentlibrary.store.DLStoreImpl.getFileAsStream(DLStoreImpl.java:289)
+	at com.liferay.portlet.documentlibrary.store.DLStoreUtil.getFileAsStream(DLStoreUtil.java:425)
+	at com.liferay.portal.model.impl.ImageImpl.getTextObj(ImageImpl.java:63)
+	at com.liferay.portal.webserver.WebServerServlet.getImageBytes(WebServerServlet.java:507)
+	at com.liferay.portal.webserver.WebServerServlet.writeImage(WebServerServlet.java:1226)
+	at com.liferay.portal.webserver.WebServerServlet.service(WebServerServlet.java:292)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:116)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.uploadservletrequest.UploadServletRequestFilter.processFilter(UploadServletRequestFilter.java:93)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.etag.ETagFilter.processFilter(ETagFilter.java:86)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.jsoncontenttype.JSONContentTypeFilter.processFilter(JSONContentTypeFilter.java:42)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.header.HeaderFilter.processFilter(HeaderFilter.java:154)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.sso.ntlm.NtlmPostFilter.processFilter(NtlmPostFilter.java:83)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.sharepoint.SharepointFilter.processFilter(SharepointFilter.java:88)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.BaseFilter.processFilter(BaseFilter.java:169)
+	at com.liferay.portal.servlet.filters.virtualhost.VirtualHostFilter.processFilter(VirtualHostFilter.java:226)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:185)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at org.tuckey.web.filters.urlrewrite.UrlRewriteFilter.doFilter(UrlRewriteFilter.java:738)
+	at com.liferay.portal.servlet.filters.urlrewrite.UrlRewriteFilter.processFilter(UrlRewriteFilter.java:57)
+	at com.liferay.portal.kernel.servlet.BaseFilter.doFilter(BaseFilter.java:59)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDoFilter(InvokerFilterChain.java:204)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:109)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:165)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.processDirectCallFilter(InvokerFilterChain.java:185)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterChain.doFilter(InvokerFilterChain.java:96)
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doFilter(InvokerFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:957)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:423)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1079)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:318)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: setup.wizard.enabled=true/data/document_library/0/0/20999.gif/1.0 (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at com.liferay.portlet.documentlibrary.store.FileSystemStore.getFileAsStream(FileSystemStore.java:221)
+	... 82 more
+14:59:39,180 INFO  [localhost-startStop-2][HotDeployEvent:145] Plugin sync-web requires marketplace-portlet
+14:59:39,183 INFO  [localhost-startStop-2][PluginPackageUtil:1016] Reading plugin package for sync-web
+14:59:39,196 INFO  [localhost-startStop-2][HotDeployEvent:145] Plugin resources-importer-web requires marketplace-portlet
+14:59:39,197 INFO  [localhost-startStop-2][PluginPackageUtil:1016] Reading plugin package for resources-importer-web
+14:59:39,200 INFO  [localhost-startStop-2][HotDeployEvent:145] Plugin opensocial-portlet requires marketplace-portlet
+14:59:39,201 INFO  [localhost-startStop-2][PluginPackageUtil:1016] Reading plugin package for opensocial-portlet
+14:59:39,208 INFO  [localhost-startStop-2][HotDeployEvent:145] Plugin notifications-portlet requires marketplace-portlet
+14:59:39,209 INFO  [localhost-startStop-2][PluginPackageUtil:1016] Reading plugin package for notifications-portlet
+14:59:39,216 INFO  [localhost-startStop-2][PluginPackageUtil:1016] Reading plugin package for marketplace-portlet
+14:59:39,222 INFO  [localhost-startStop-2][HotDeployEvent:145] Plugin calendar-portlet requires marketplace-portlet
+14:59:39,223 INFO  [localhost-startStop-2][PluginPackageUtil:1016] Reading plugin package for calendar-portlet
+14:59:39,229 INFO  [localhost-startStop-2][HotDeployEvent:145] Plugin lecture2go-theme requires marketplace-portlet
+14:59:39,230 INFO  [localhost-startStop-2][PluginPackageUtil:1016] Reading plugin package for lecture2go-theme
+14:59:39,233 INFO  [localhost-startStop-2][HotDeployEvent:145] Plugin lecture2go-portlet requires marketplace-portlet
+14:59:39,234 INFO  [localhost-startStop-2][PluginPackageUtil:1016] Reading plugin package for lecture2go-portlet
