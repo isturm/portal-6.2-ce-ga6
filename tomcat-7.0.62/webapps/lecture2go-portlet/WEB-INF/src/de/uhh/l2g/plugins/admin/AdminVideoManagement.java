@@ -74,6 +74,7 @@ import de.uhh.l2g.plugins.service.Video_CreatorLocalServiceUtil;
 import de.uhh.l2g.plugins.service.Video_InstitutionLocalServiceUtil;
 import de.uhh.l2g.plugins.service.Video_LectureseriesLocalServiceUtil;
 import de.uhh.l2g.plugins.util.FFmpegManager;
+import de.uhh.l2g.plugins.util.FileManager;
 import de.uhh.l2g.plugins.util.ProzessManager;
 import de.uhh.l2g.plugins.util.Security;
 
@@ -403,6 +404,7 @@ public class AdminVideoManagement extends MVCPortlet {
 	 	    String password = ParamUtil.getString(resourceRequest, "password");
 
 			Lectureseries oldLs = new LectureseriesImpl();
+			Long oldLsId = video.getLectureseriesId();
 			try {
 				oldLs = LectureseriesLocalServiceUtil.getLectureseries(video.getLectureseriesId());
 			} catch (PortalException e1) {
@@ -516,6 +518,18 @@ public class AdminVideoManagement extends MVCPortlet {
 				// refresh open access for old lecture if lid > 0
 				if(oldLs.getLectureseriesId()>0) LectureseriesLocalServiceUtil.updateOpenAccess(video, oldLs);
 				
+				//update lg_lectureseries_creators
+				if(lId.longValue() != oldLsId.longValue())
+				{
+					try{
+						if(lId>0)CreatorLocalServiceUtil.updateCreatorsForLectureseriesOverTheAssigenedVideosByLectureseriesId(lId);
+					}catch(SystemException e){}
+					
+					try{
+						if(oldLsId>0)CreatorLocalServiceUtil.updateCreatorsForLectureseriesOverTheAssigenedVideosByLectureseriesId(oldLsId);
+					}catch(SystemException e){}
+				}
+				
 			} catch (NumberFormatException e) {
 				//System.out.println(e);
 			} catch (SystemException e) {
@@ -537,8 +551,13 @@ public class AdminVideoManagement extends MVCPortlet {
 			//rebuild rss
 			// generate RSS
 			ProzessManager pm = new ProzessManager();
-			for (String f: pm.MEDIA_FORMATS) {           
-				pm.generateRSS(video, f);
+			for (String f: FileManager.MEDIA_FORMATS) {           
+				try {
+					pm.generateRSS(video, f);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} 
 			}			
 			JSONObject json = JSONFactoryUtil.createJSONObject();
 			//generate new JSON date for auto complete functionality
@@ -854,7 +873,11 @@ public class AdminVideoManagement extends MVCPortlet {
 					}
 				}
 				ProzessManager pm = new ProzessManager();
-				pm.deleteFilesImagesFromVideo(video);
+				try {
+					pm.deleteFilesImagesFromVideo(video);
+				} catch (Exception e) {
+					e.printStackTrace();
+				} 
 			}else{
 				org.json.JSONObject o = new org.json.JSONObject();
 					try {

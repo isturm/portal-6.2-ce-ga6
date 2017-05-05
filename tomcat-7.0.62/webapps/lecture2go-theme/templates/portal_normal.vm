@@ -69,7 +69,7 @@ $theme.include($body_top_include)
 		#end
 		
 		#set ($param1="")
-		#set ($param1 = $request.getParameter('_lgopenaccessvideos_WAR_lecture2goportlet_searchQuery')) 
+		#set ($param1 = $request.getParameter('_lgopenaccessvideos_WAR_lecture2goportlet_searchQuery').text()) 
 		
 		<div class="search">
 			<form action="/web/vod/l2go/-/get/0/0/0/0/0/"  method="post" name="_lgopenaccessvideos_WAR_lecture2goportlet_fm" id="_lgopenaccessvideos_WAR_lecture2goportlet_fm"> 
@@ -120,6 +120,8 @@ $theme.include($body_top_include)
 			<a href="http://www.facebook.com/pages/Hamburg-Germany/Lecture2Go/201731849859567" id="fb" title="Facebook" target="blank">Facebook</a>
 		</div>	
 		
+		#parse ("$full_templates_path/uhh_footer.vm")
+		#parse ("$full_templates_path/uhh_footer_seiteninfo2.vm")
 	</footer>
 </div>
 
@@ -128,5 +130,6 @@ $theme.include($body_bottom_include)
 $theme.include($bottom_include)
 
 <script src="$javascript_folder/autocomplete.js"></script>
+
 </body>
 </html>

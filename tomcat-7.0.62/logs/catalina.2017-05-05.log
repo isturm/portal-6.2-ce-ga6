@@ -1,0 +1,747 @@
+Mai 05, 2017 11:36:45 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Server version:        Apache Tomcat/7.0.62
+Mai 05, 2017 11:36:45 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Server built:          May 7 2015 17:14:55 UTC
+Mai 05, 2017 11:36:45 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Server number:         7.0.62.0
+Mai 05, 2017 11:36:45 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: OS Name:               Mac OS X
+Mai 05, 2017 11:36:45 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: OS Version:            10.10.5
+Mai 05, 2017 11:36:45 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Architecture:          x86_64
+Mai 05, 2017 11:36:45 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre
+Mai 05, 2017 11:36:45 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: JVM Version:           1.8.0_121-b13
+Mai 05, 2017 11:36:45 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: JVM Vendor:            Oracle Corporation
+Mai 05, 2017 11:36:45 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: CATALINA_BASE:         /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62
+Mai 05, 2017 11:36:45 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: CATALINA_HOME:         /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62
+Mai 05, 2017 11:36:45 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Djava.util.logging.config.file=/Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/conf/logging.properties
+Mai 05, 2017 11:36:45 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Mai 05, 2017 11:36:45 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Dfile.encoding=UTF8
+Mai 05, 2017 11:36:45 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Djava.net.preferIPv4Stack=true
+Mai 05, 2017 11:36:45 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false
+Mai 05, 2017 11:36:45 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Duser.timezone=GMT
+Mai 05, 2017 11:36:45 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Xmx1024m
+Mai 05, 2017 11:36:45 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -XX:MaxPermSize=256m
+Mai 05, 2017 11:36:45 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Djava.endorsed.dirs=/Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/endorsed
+Mai 05, 2017 11:36:45 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Dcatalina.base=/Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62
+Mai 05, 2017 11:36:45 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Dcatalina.home=/Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62
+Mai 05, 2017 11:36:45 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Djava.io.tmpdir=/Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/temp
+Mai 05, 2017 11:36:45 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFORMATION: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /Users/isturm/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+Mai 05, 2017 11:36:45 AM org.apache.coyote.AbstractProtocol init
+INFORMATION: Initializing ProtocolHandler ["http-bio-8080"]
+Mai 05, 2017 11:36:45 AM org.apache.coyote.AbstractProtocol init
+INFORMATION: Initializing ProtocolHandler ["ajp-bio-8009"]
+Mai 05, 2017 11:36:45 AM org.apache.catalina.startup.Catalina load
+INFORMATION: Initialization processed in 676 ms
+Mai 05, 2017 11:36:45 AM org.apache.catalina.core.StandardService startInternal
+INFORMATION: Starting service Catalina
+Mai 05, 2017 11:36:45 AM org.apache.catalina.core.StandardEngine startInternal
+INFORMATION: Starting Servlet Engine: Apache Tomcat/7.0.62
+Mai 05, 2017 11:36:45 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFORMATION: Deploying configuration descriptor /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/conf/Catalina/localhost/ROOT.xml
+Mai 05, 2017 11:36:55 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Mai 05, 2017 11:38:14 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFORMATION: Deployment of configuration descriptor /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/conf/Catalina/localhost/ROOT.xml has finished in 89,407 ms
+Mai 05, 2017 11:38:14 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/calendar-portlet
+Mai 05, 2017 11:38:17 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Mai 05, 2017 11:38:17 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/calendar-portlet has finished in 2,376 ms
+Mai 05, 2017 11:38:17 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/kaleo-web
+Mai 05, 2017 11:38:19 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Mai 05, 2017 11:38:19 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/kaleo-web has finished in 2,209 ms
+Mai 05, 2017 11:38:19 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/lecture2go-portlet
+Mai 05, 2017 11:38:25 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Mai 05, 2017 11:38:25 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/lecture2go-portlet has finished in 6,453 ms
+Mai 05, 2017 11:38:25 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/lecture2go-theme
+Mai 05, 2017 11:38:26 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Mai 05, 2017 11:38:26 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/lecture2go-theme has finished in 988 ms
+Mai 05, 2017 11:38:26 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/marketplace-portlet
+Mai 05, 2017 11:38:27 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Mai 05, 2017 11:38:43 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/marketplace-portlet has finished in 17,089 ms
+Mai 05, 2017 11:38:43 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/notifications-portlet
+Mai 05, 2017 11:38:45 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Mai 05, 2017 11:38:46 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/notifications-portlet has finished in 2,763 ms
+Mai 05, 2017 11:38:46 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/opensocial-portlet
+Mai 05, 2017 11:38:50 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Mai 05, 2017 11:38:53 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/opensocial-portlet has finished in 6,485 ms
+Mai 05, 2017 11:38:53 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/resources-importer-web
+Mai 05, 2017 11:38:54 AM org.apache.shindig.config.JsonContainerConfig loadContainers
+INFORMATION: Loading resources from: containers/default/container.js
+Mai 05, 2017 11:38:54 AM org.apache.shindig.config.JsonContainerConfig loadResources
+INFORMATION: Reading container config: containers/default/container.js
+Mai 05, 2017 11:38:54 AM org.apache.shindig.gadgets.features.FeatureRegistry register
+INFORMATION: Loading resources from: res:features-extras/features.txt
+Mai 05, 2017 11:38:54 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Mai 05, 2017 11:38:54 AM org.apache.shindig.common.xml.XmlUtil <clinit>
+INFORMATION: Reusing document builders
+Mai 05, 2017 11:38:55 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/resources-importer-web has finished in 2,115 ms
+Mai 05, 2017 11:38:55 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/rss
+Mai 05, 2017 11:38:55 AM org.apache.shindig.gadgets.features.FeatureRegistry register
+INFORMATION: Loading resources from: res:features/features.txt
+Mai 05, 2017 11:38:56 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Mai 05, 2017 11:38:56 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/rss has finished in 1,033 ms
+Mai 05, 2017 11:38:56 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/servlet-file-upload
+Mai 05, 2017 11:38:56 AM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFORMATION: validateJarFile(/Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/servlet-file-upload/WEB-INF/lib/javax.servlet-api-3.1.0.jar) - jar not loaded. See Servlet Spec 3.0, section 10.7.2. Offending class: javax/servlet/Servlet.class
+Mai 05, 2017 11:38:56 AM org.apache.catalina.startup.ContextConfig processAnnotationsJar
+SCHWERWIEGEND: contextConfig.jarFile
+java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:219)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:149)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:103)
+	at sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:93)
+	at sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:69)
+	at sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:99)
+	at sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:122)
+	at sun.net.www.protocol.jar.JarURLConnection.getJarFile(JarURLConnection.java:89)
+	at org.apache.tomcat.util.scan.FileUrlJar.<init>(FileUrlJar.java:41)
+	at org.apache.tomcat.util.scan.JarFactory.newInstance(JarFactory.java:34)
+	at org.apache.catalina.startup.ContextConfig.processAnnotationsJar(ContextConfig.java:1956)
+	at org.apache.catalina.startup.ContextConfig.processAnnotationsUrl(ContextConfig.java:1931)
+	at org.apache.catalina.startup.ContextConfig.processAnnotations(ContextConfig.java:1916)
+	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1330)
+	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:889)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:386)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5416)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+Mai 05, 2017 11:38:56 AM org.apache.catalina.startup.ContextConfig processAnnotationsJar
+SCHWERWIEGEND: contextConfig.jarFile
+java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:219)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:149)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:103)
+	at sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:93)
+	at sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:69)
+	at sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:99)
+	at sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:122)
+	at sun.net.www.protocol.jar.JarURLConnection.getJarFile(JarURLConnection.java:89)
+	at org.apache.tomcat.util.scan.FileUrlJar.<init>(FileUrlJar.java:41)
+	at org.apache.tomcat.util.scan.JarFactory.newInstance(JarFactory.java:34)
+	at org.apache.catalina.startup.ContextConfig.processAnnotationsJar(ContextConfig.java:1956)
+	at org.apache.catalina.startup.ContextConfig.processAnnotationsUrl(ContextConfig.java:1931)
+	at org.apache.catalina.startup.ContextConfig.processAnnotations(ContextConfig.java:1916)
+	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1330)
+	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:889)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:386)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5416)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+Mai 05, 2017 11:38:56 AM org.apache.catalina.startup.ContextConfig processAnnotationsJar
+SCHWERWIEGEND: contextConfig.jarFile
+java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:219)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:149)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:103)
+	at sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:93)
+	at sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:69)
+	at sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:99)
+	at sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:122)
+	at sun.net.www.protocol.jar.JarURLConnection.getJarFile(JarURLConnection.java:89)
+	at org.apache.tomcat.util.scan.FileUrlJar.<init>(FileUrlJar.java:41)
+	at org.apache.tomcat.util.scan.JarFactory.newInstance(JarFactory.java:34)
+	at org.apache.catalina.startup.ContextConfig.processAnnotationsJar(ContextConfig.java:1956)
+	at org.apache.catalina.startup.ContextConfig.processAnnotationsUrl(ContextConfig.java:1931)
+	at org.apache.catalina.startup.ContextConfig.processAnnotations(ContextConfig.java:1916)
+	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1330)
+	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:889)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:386)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5416)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+Mai 05, 2017 11:38:57 AM org.apache.catalina.startup.ContextConfig processAnnotationsJar
+SCHWERWIEGEND: contextConfig.jarFile
+java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:219)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:149)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:103)
+	at sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:93)
+	at sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:69)
+	at sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:99)
+	at sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:122)
+	at sun.net.www.protocol.jar.JarURLConnection.getJarFile(JarURLConnection.java:89)
+	at org.apache.tomcat.util.scan.FileUrlJar.<init>(FileUrlJar.java:41)
+	at org.apache.tomcat.util.scan.JarFactory.newInstance(JarFactory.java:34)
+	at org.apache.catalina.startup.ContextConfig.processAnnotationsJar(ContextConfig.java:1956)
+	at org.apache.catalina.startup.ContextConfig.processAnnotationsUrl(ContextConfig.java:1931)
+	at org.apache.catalina.startup.ContextConfig.processAnnotations(ContextConfig.java:1916)
+	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1330)
+	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:889)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:386)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5416)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+Mai 05, 2017 11:38:57 AM org.apache.catalina.startup.ContextConfig processResourceJARs
+SCHWERWIEGEND: Failed to processes JAR found at URL [jar:file:/Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/servlet-file-upload/WEB-INF/lib/portals-bridges.jar!/] for static resources to be included in context with name [jar:file:/Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/servlet-file-upload/WEB-INF/lib/portals-bridges.jar!/]
+Mai 05, 2017 11:38:57 AM org.apache.catalina.startup.ContextConfig processResourceJARs
+SCHWERWIEGEND: Failed to processes JAR found at URL [jar:file:/Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/servlet-file-upload/WEB-INF/lib/util-taglib.jar!/] for static resources to be included in context with name [jar:file:/Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/servlet-file-upload/WEB-INF/lib/util-taglib.jar!/]
+Mai 05, 2017 11:38:57 AM org.apache.catalina.startup.ContextConfig processResourceJARs
+SCHWERWIEGEND: Failed to processes JAR found at URL [jar:file:/Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/servlet-file-upload/WEB-INF/lib/util-bridges.jar!/] for static resources to be included in context with name [jar:file:/Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/servlet-file-upload/WEB-INF/lib/util-bridges.jar!/]
+Mai 05, 2017 11:38:57 AM org.apache.catalina.startup.ContextConfig processResourceJARs
+SCHWERWIEGEND: Failed to processes JAR found at URL [jar:file:/Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/servlet-file-upload/WEB-INF/lib/util-java.jar!/] for static resources to be included in context with name [jar:file:/Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/servlet-file-upload/WEB-INF/lib/util-java.jar!/]
+Mai 05, 2017 11:38:57 AM org.apache.catalina.startup.TldConfig tldScanResourcePaths
+WARNUNG: Failed to process TLD found at [/WEB-INF/tld/liferay-ui.tld]
+java.net.MalformedURLException
+	at java.net.URL.<init>(URL.java:627)
+	at java.net.URL.<init>(URL.java:490)
+	at java.net.URL.<init>(URL.java:439)
+	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:620)
+	at com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:148)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:805)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1555)
+	at org.apache.catalina.startup.TldConfig.tldScanStream(TldConfig.java:565)
+	at org.apache.catalina.startup.TldConfig.tldScanResourcePaths(TldConfig.java:416)
+	at org.apache.catalina.startup.TldConfig.tldScanResourcePaths(TldConfig.java:431)
+	at org.apache.catalina.startup.TldConfig.execute(TldConfig.java:265)
+	at org.apache.catalina.startup.TldConfig.lifecycleEvent(TldConfig.java:590)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5416)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at java.net.URL.<init>(URL.java:532)
+	... 29 more
+
+Mai 05, 2017 11:38:57 AM org.apache.catalina.startup.TldConfig tldScanResourcePaths
+WARNUNG: Failed to process TLD found at [/WEB-INF/tld/liferay-portlet-ext.tld]
+java.net.MalformedURLException
+	at java.net.URL.<init>(URL.java:627)
+	at java.net.URL.<init>(URL.java:490)
+	at java.net.URL.<init>(URL.java:439)
+	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:620)
+	at com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:148)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:805)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1555)
+	at org.apache.catalina.startup.TldConfig.tldScanStream(TldConfig.java:565)
+	at org.apache.catalina.startup.TldConfig.tldScanResourcePaths(TldConfig.java:416)
+	at org.apache.catalina.startup.TldConfig.tldScanResourcePaths(TldConfig.java:431)
+	at org.apache.catalina.startup.TldConfig.execute(TldConfig.java:265)
+	at org.apache.catalina.startup.TldConfig.lifecycleEvent(TldConfig.java:590)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5416)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at java.net.URL.<init>(URL.java:532)
+	... 29 more
+
+Mai 05, 2017 11:38:57 AM org.apache.catalina.startup.TldConfig tldScanResourcePaths
+WARNUNG: Failed to process TLD found at [/WEB-INF/tld/liferay-portlet.tld]
+java.net.MalformedURLException
+	at java.net.URL.<init>(URL.java:627)
+	at java.net.URL.<init>(URL.java:490)
+	at java.net.URL.<init>(URL.java:439)
+	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:620)
+	at com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:148)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:805)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1555)
+	at org.apache.catalina.startup.TldConfig.tldScanStream(TldConfig.java:565)
+	at org.apache.catalina.startup.TldConfig.tldScanResourcePaths(TldConfig.java:416)
+	at org.apache.catalina.startup.TldConfig.tldScanResourcePaths(TldConfig.java:431)
+	at org.apache.catalina.startup.TldConfig.execute(TldConfig.java:265)
+	at org.apache.catalina.startup.TldConfig.lifecycleEvent(TldConfig.java:590)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5416)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at java.net.URL.<init>(URL.java:532)
+	... 29 more
+
+Mai 05, 2017 11:38:57 AM org.apache.catalina.startup.TldConfig tldScanResourcePaths
+WARNUNG: Failed to process TLD found at [/WEB-INF/tld/liferay-util.tld]
+java.net.MalformedURLException
+	at java.net.URL.<init>(URL.java:627)
+	at java.net.URL.<init>(URL.java:490)
+	at java.net.URL.<init>(URL.java:439)
+	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:620)
+	at com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:148)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:805)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1555)
+	at org.apache.catalina.startup.TldConfig.tldScanStream(TldConfig.java:565)
+	at org.apache.catalina.startup.TldConfig.tldScanResourcePaths(TldConfig.java:416)
+	at org.apache.catalina.startup.TldConfig.tldScanResourcePaths(TldConfig.java:431)
+	at org.apache.catalina.startup.TldConfig.execute(TldConfig.java:265)
+	at org.apache.catalina.startup.TldConfig.lifecycleEvent(TldConfig.java:590)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5416)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at java.net.URL.<init>(URL.java:532)
+	... 29 more
+
+Mai 05, 2017 11:38:57 AM org.apache.catalina.startup.TldConfig tldScanResourcePaths
+WARNUNG: Failed to process TLD found at [/WEB-INF/tld/liferay-security.tld]
+java.net.MalformedURLException
+	at java.net.URL.<init>(URL.java:627)
+	at java.net.URL.<init>(URL.java:490)
+	at java.net.URL.<init>(URL.java:439)
+	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:620)
+	at com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:148)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:805)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1555)
+	at org.apache.catalina.startup.TldConfig.tldScanStream(TldConfig.java:565)
+	at org.apache.catalina.startup.TldConfig.tldScanResourcePaths(TldConfig.java:416)
+	at org.apache.catalina.startup.TldConfig.tldScanResourcePaths(TldConfig.java:431)
+	at org.apache.catalina.startup.TldConfig.execute(TldConfig.java:265)
+	at org.apache.catalina.startup.TldConfig.lifecycleEvent(TldConfig.java:590)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5416)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at java.net.URL.<init>(URL.java:532)
+	... 29 more
+
+Mai 05, 2017 11:38:57 AM org.apache.catalina.startup.TldConfig tldScanResourcePaths
+WARNUNG: Failed to process TLD found at [/WEB-INF/tld/aui.tld]
+java.net.MalformedURLException
+	at java.net.URL.<init>(URL.java:627)
+	at java.net.URL.<init>(URL.java:490)
+	at java.net.URL.<init>(URL.java:439)
+	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:620)
+	at com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:148)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:805)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1555)
+	at org.apache.catalina.startup.TldConfig.tldScanStream(TldConfig.java:565)
+	at org.apache.catalina.startup.TldConfig.tldScanResourcePaths(TldConfig.java:416)
+	at org.apache.catalina.startup.TldConfig.tldScanResourcePaths(TldConfig.java:431)
+	at org.apache.catalina.startup.TldConfig.execute(TldConfig.java:265)
+	at org.apache.catalina.startup.TldConfig.lifecycleEvent(TldConfig.java:590)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5416)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at java.net.URL.<init>(URL.java:532)
+	... 29 more
+
+Mai 05, 2017 11:38:57 AM org.apache.catalina.startup.TldConfig tldScanResourcePaths
+WARNUNG: Failed to process TLD found at [/WEB-INF/tld/liferay-theme.tld]
+java.net.MalformedURLException
+	at java.net.URL.<init>(URL.java:627)
+	at java.net.URL.<init>(URL.java:490)
+	at java.net.URL.<init>(URL.java:439)
+	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:620)
+	at com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:148)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:805)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:770)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1555)
+	at org.apache.catalina.startup.TldConfig.tldScanStream(TldConfig.java:565)
+	at org.apache.catalina.startup.TldConfig.tldScanResourcePaths(TldConfig.java:416)
+	at org.apache.catalina.startup.TldConfig.tldScanResourcePaths(TldConfig.java:431)
+	at org.apache.catalina.startup.TldConfig.execute(TldConfig.java:265)
+	at org.apache.catalina.startup.TldConfig.lifecycleEvent(TldConfig.java:590)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5416)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException
+	at java.net.URL.<init>(URL.java:532)
+	... 29 more
+
+Mai 05, 2017 11:38:57 AM org.apache.catalina.startup.TldConfig tldScanJar
+WARNUNG: Failed to process JAR [jar:file:/Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/servlet-file-upload/WEB-INF/lib/util-java.jar!/] for TLD files
+java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:219)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:149)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:103)
+	at sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:93)
+	at sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:69)
+	at sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:99)
+	at sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:122)
+	at sun.net.www.protocol.jar.JarURLConnection.getJarFile(JarURLConnection.java:89)
+	at org.apache.tomcat.util.scan.FileUrlJar.<init>(FileUrlJar.java:41)
+	at org.apache.tomcat.util.scan.JarFactory.newInstance(JarFactory.java:34)
+	at org.apache.catalina.startup.TldConfig.tldScanJar(TldConfig.java:502)
+	at org.apache.catalina.startup.TldConfig.access$200(TldConfig.java:61)
+	at org.apache.catalina.startup.TldConfig$TldJarScannerCallback.scan(TldConfig.java:300)
+	at org.apache.tomcat.util.scan.StandardJarScanner.process(StandardJarScanner.java:258)
+	at org.apache.tomcat.util.scan.StandardJarScanner.scan(StandardJarScanner.java:177)
+	at org.apache.catalina.startup.TldConfig.execute(TldConfig.java:271)
+	at org.apache.catalina.startup.TldConfig.lifecycleEvent(TldConfig.java:590)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5416)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+Mai 05, 2017 11:38:57 AM org.apache.catalina.startup.TldConfig tldScanJar
+WARNUNG: Failed to process JAR [jar:file:/Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/servlet-file-upload/WEB-INF/lib/portals-bridges.jar!/] for TLD files
+java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:219)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:149)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:103)
+	at sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:93)
+	at sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:69)
+	at sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:99)
+	at sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:122)
+	at sun.net.www.protocol.jar.JarURLConnection.getJarFile(JarURLConnection.java:89)
+	at org.apache.tomcat.util.scan.FileUrlJar.<init>(FileUrlJar.java:41)
+	at org.apache.tomcat.util.scan.JarFactory.newInstance(JarFactory.java:34)
+	at org.apache.catalina.startup.TldConfig.tldScanJar(TldConfig.java:502)
+	at org.apache.catalina.startup.TldConfig.access$200(TldConfig.java:61)
+	at org.apache.catalina.startup.TldConfig$TldJarScannerCallback.scan(TldConfig.java:300)
+	at org.apache.tomcat.util.scan.StandardJarScanner.process(StandardJarScanner.java:258)
+	at org.apache.tomcat.util.scan.StandardJarScanner.scan(StandardJarScanner.java:177)
+	at org.apache.catalina.startup.TldConfig.execute(TldConfig.java:271)
+	at org.apache.catalina.startup.TldConfig.lifecycleEvent(TldConfig.java:590)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5416)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+Mai 05, 2017 11:38:57 AM org.apache.catalina.startup.TldConfig tldScanJar
+WARNUNG: Failed to process JAR [jar:file:/Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/servlet-file-upload/WEB-INF/lib/util-bridges.jar!/] for TLD files
+java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:219)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:149)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:103)
+	at sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:93)
+	at sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:69)
+	at sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:99)
+	at sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:122)
+	at sun.net.www.protocol.jar.JarURLConnection.getJarFile(JarURLConnection.java:89)
+	at org.apache.tomcat.util.scan.FileUrlJar.<init>(FileUrlJar.java:41)
+	at org.apache.tomcat.util.scan.JarFactory.newInstance(JarFactory.java:34)
+	at org.apache.catalina.startup.TldConfig.tldScanJar(TldConfig.java:502)
+	at org.apache.catalina.startup.TldConfig.access$200(TldConfig.java:61)
+	at org.apache.catalina.startup.TldConfig$TldJarScannerCallback.scan(TldConfig.java:300)
+	at org.apache.tomcat.util.scan.StandardJarScanner.process(StandardJarScanner.java:258)
+	at org.apache.tomcat.util.scan.StandardJarScanner.scan(StandardJarScanner.java:177)
+	at org.apache.catalina.startup.TldConfig.execute(TldConfig.java:271)
+	at org.apache.catalina.startup.TldConfig.lifecycleEvent(TldConfig.java:590)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5416)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+Mai 05, 2017 11:38:57 AM org.apache.catalina.startup.TldConfig tldScanJar
+WARNUNG: Failed to process JAR [jar:file:/Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/servlet-file-upload/WEB-INF/lib/util-taglib.jar!/] for TLD files
+java.util.zip.ZipException: zip file is empty
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:219)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:149)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:103)
+	at sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:93)
+	at sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:69)
+	at sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:99)
+	at sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:122)
+	at sun.net.www.protocol.jar.JarURLConnection.getJarFile(JarURLConnection.java:89)
+	at org.apache.tomcat.util.scan.FileUrlJar.<init>(FileUrlJar.java:41)
+	at org.apache.tomcat.util.scan.JarFactory.newInstance(JarFactory.java:34)
+	at org.apache.catalina.startup.TldConfig.tldScanJar(TldConfig.java:502)
+	at org.apache.catalina.startup.TldConfig.access$200(TldConfig.java:61)
+	at org.apache.catalina.startup.TldConfig$TldJarScannerCallback.scan(TldConfig.java:300)
+	at org.apache.tomcat.util.scan.StandardJarScanner.process(StandardJarScanner.java:258)
+	at org.apache.tomcat.util.scan.StandardJarScanner.scan(StandardJarScanner.java:177)
+	at org.apache.catalina.startup.TldConfig.execute(TldConfig.java:271)
+	at org.apache.catalina.startup.TldConfig.lifecycleEvent(TldConfig.java:590)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:117)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:90)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5416)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:901)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:877)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:652)
+	at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1263)
+	at org.apache.catalina.startup.HostConfig$DeployDirectory.run(HostConfig.java:1948)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+Mai 05, 2017 11:38:57 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Mai 05, 2017 11:38:57 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/servlet-file-upload has finished in 1,394 ms
+Mai 05, 2017 11:38:57 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/sync-web
+Mai 05, 2017 11:38:59 AM org.apache.shindig.gadgets.servlet.CajaContentRewriter <init>
+INFORMATION: Cajoled cache createdorg.apache.shindig.common.cache.ehcache.EhConfiguredCache@7c1a4604
+Mai 05, 2017 11:38:59 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Mai 05, 2017 11:38:59 AM org.apache.shindig.gadgets.servlet.CajaContentRewriter <init>
+INFORMATION: Cajoled cache createdorg.apache.shindig.common.cache.ehcache.EhConfiguredCache@7c1a4604
+Mai 05, 2017 11:38:59 AM org.apache.shindig.gadgets.oauth.OAuthModule$OAuthCrypterProvider <init>
+INFORMATION: Using random key for OAuth client-side state encryption
+Mai 05, 2017 11:39:01 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/sync-web has finished in 4,093 ms
+Mai 05, 2017 11:39:01 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploying web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/web-form-portlet
+Mai 05, 2017 11:39:02 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Mai 05, 2017 11:39:02 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory /Users/isturm/Documents/workspace-for-liferay-6.2.0/portal-6.2-ce-ga6-test/tomcat-7.0.62/webapps/web-form-portlet has finished in 971 ms
+Mai 05, 2017 11:39:02 AM org.apache.coyote.AbstractProtocol start
+INFORMATION: Starting ProtocolHandler ["http-bio-8080"]
+Mai 05, 2017 11:39:02 AM org.apache.coyote.AbstractProtocol start
+INFORMATION: Starting ProtocolHandler ["ajp-bio-8009"]
+Mai 05, 2017 11:39:02 AM org.apache.catalina.startup.Catalina start
+INFORMATION: Server startup in 137448 ms
+Mai 05, 2017 11:40:45 AM org.apache.catalina.core.StandardServer await
+INFORMATION: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Mai 05, 2017 11:40:45 AM org.apache.coyote.AbstractProtocol pause
+INFORMATION: Pausing ProtocolHandler ["http-bio-8080"]
+Mai 05, 2017 11:40:45 AM org.apache.coyote.AbstractProtocol pause
+INFORMATION: Pausing ProtocolHandler ["ajp-bio-8009"]
+Mai 05, 2017 11:40:45 AM org.apache.catalina.core.StandardService stopInternal
+INFORMATION: Stopping service Catalina
+Mai 05, 2017 11:40:47 AM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SCHWERWIEGEND: The web application [] appears to have started a thread named [org.python.google.common.base.internal.Finalizer] but has failed to stop it. This is very likely to create a memory leak.
+Mai 05, 2017 11:40:47 AM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SCHWERWIEGEND: The web application [] appears to have started a thread named [MariaDb-bulk-1] but has failed to stop it. This is very likely to create a memory leak.
+Mai 05, 2017 11:40:48 AM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SCHWERWIEGEND: The web application [/notifications-portlet] appears to have started a thread named [MariaDb-bulk-5] but has failed to stop it. This is very likely to create a memory leak.
+Mai 05, 2017 11:40:48 AM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SCHWERWIEGEND: The web application [/kaleo-web] appears to have started a thread named [MariaDb-bulk-4] but has failed to stop it. This is very likely to create a memory leak.
+Mai 05, 2017 11:40:48 AM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SCHWERWIEGEND: The web application [/marketplace-portlet] appears to have started a thread named [MariaDb-bulk-2] but has failed to stop it. This is very likely to create a memory leak.
+Mai 05, 2017 11:40:48 AM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SCHWERWIEGEND: The web application [/calendar-portlet] appears to have started a thread named [MariaDb-bulk-3] but has failed to stop it. This is very likely to create a memory leak.
+Mai 05, 2017 11:40:49 AM org.apache.coyote.AbstractProtocol stop
+INFORMATION: Stopping ProtocolHandler ["http-bio-8080"]
+Mai 05, 2017 11:40:49 AM org.apache.coyote.AbstractProtocol stop
+INFORMATION: Stopping ProtocolHandler ["ajp-bio-8009"]
+Mai 05, 2017 11:40:49 AM org.apache.coyote.AbstractProtocol destroy
+INFORMATION: Destroying ProtocolHandler ["http-bio-8080"]
+Mai 05, 2017 11:40:49 AM org.apache.coyote.AbstractProtocol destroy
+INFORMATION: Destroying ProtocolHandler ["ajp-bio-8009"]

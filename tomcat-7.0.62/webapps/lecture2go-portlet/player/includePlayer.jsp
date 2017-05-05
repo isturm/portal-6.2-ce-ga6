@@ -80,9 +80,6 @@
             width: "100%",
             aspectratio: "16:9",
             image: "${video.image}",
-            skin: {
-            	  name: "seven"
-            	  },
             sources: [
             	{ file: playerUri1 },
             	{ file: playerUri2 },

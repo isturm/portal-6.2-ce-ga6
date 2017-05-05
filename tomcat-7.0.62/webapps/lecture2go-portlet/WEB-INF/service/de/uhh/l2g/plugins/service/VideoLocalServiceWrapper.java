@@ -390,11 +390,14 @@ public class VideoLocalServiceWrapper implements VideoLocalService,
 	* [filename]=video file name (automatically e.g 00.000_video_2015-06-08_08-06.mp4)
 	* [protocol]=host protocol (automatically e.g rtmpt)
 	* [port]=host port (automatically e.g 80)
-	* lecture2go.uri1.player.template=${lecture2go.web.root}/abo/[filename]
-	* lecture2go.uri2.player.template=rtmpt://[host]/vod/_definst/[ext]:[l2go_path]/[filename]
-	* lecture2go.uri3.player.template=rtmpt://[host]/vod/_definst/[ext]:[l2go_path]/[filename]/playlist.m3u8
-	* lecture2go.uri4.player.template=${lecture2go.uri3.player.template}
-	* lecture2go.uri5.player.template=${lecture2go.uri3.player.template}
+	* [smilfile]=adaptive streaming file
+	*
+	* example for lecture2go configuration
+	* lecture2go.uri1.player.template=https://[host]/vod/_definst/smil:[l2go_path]/[smilfile]/playlist.m3u8
+	* lecture2go.uri2.player.template=https://[host]/vod/_definst/[ext]:[l2go_path]/[filename]/playlist.m3u8
+	* lecture2go.uri3.player.template=rtmpt://[host]/vod/_definst/[ext]:[l2go_path]/[filename]
+	* lecture2go.uri4.player.template=${lecture2go.downloadserver.web.root}/abo/[filename]
+	* lecture2go.uri5.player.template=rtsp://[host]:[port]/vod/_definst/[ext]:[l2go_path]/[filename]
 	*/
 	@Override
 	public void addPlayerUris2Video(de.uhh.l2g.plugins.model.Host host,

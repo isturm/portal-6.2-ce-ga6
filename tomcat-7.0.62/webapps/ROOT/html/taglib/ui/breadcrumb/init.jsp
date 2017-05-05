@@ -17,9 +17,6 @@
 <%@ include file="/html/taglib/init.jsp" %>
 
 <%
-String companyName = company.getName();
-String portalURL = PrefsPropsUtil.getString(company.getCompanyId(),PropsKeys.DEFAULT_LANDING_PAGE_PATH);
-
-String breadcrumbString = "<a href='"+portalURL+"'>"+companyName +"<a/>" + "<span class='uhh-icon-arrow-right'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>" + GetterUtil.getString((String)request.getAttribute("liferay-ui:breadcrumb:breadcrumbString"));
+String breadcrumbString = GetterUtil.getString((String)request.getAttribute("liferay-ui:breadcrumb:breadcrumbString"));
 String displayStyle = GetterUtil.getString((String)request.getAttribute("liferay-ui:breadcrumb:displayStyle"));
 %>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>xssFilter Example For Browser-End</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        pre{
+            background: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            line-height: 1.4em;
+        }
+    </style>
+</head>
+<body>
+<h3 class="red">xssFilter</h3>
+Test Html Content:<br>
+<pre id="source">
+    <!--
+    <div class="like" ondblclick="takeme()" onmousedown="mousedown()">
+        <div class="title">title</div>
+        <div class="desc" onsubmit="load()">desc</div>
+        <div>just</div>
+        <style type="text">
+            .red{color: #f00}
+        </style>
+        <script>alert(88)</script>
+    </div>
+    -->
+</pre>
+===================================<br>
+Code:<br>
+<pre>
+var xss = new xssFilter();
+xss.options('escape', true);
+
+var candy = xss.filter(testHTML);
+</pre>
+===================================<br>
+Result:<br>
+<pre id="preview"></pre>
+<script src="../dist/xssFilter.js"></script>
+<script>
+    var testHTML = '<div class ="like" ondblclick= "ondblclick(); return false;" onmousedown="mousedown()">\n' +
+                '\t<div class="title" title="I am a title!" value = "big">title</div>\n' +
+                '\t<div class="desc" onsubmit="load()">desc</div>\n' +
+                '\t<div>just a div</div>\n' +
+                '\t<style type="text">\n' +
+                '\t\t.red{color: #f00}\n' +
+                '\t</style>\n' +
+                '\t<script>alert(88)<\/script>\n' +
+        '</div>\n' +
+        '<script>alert(99)<\/script>';
+
+    var source = document.getElementById('source');
+    var preview = document.getElementById('preview');
+
+    source.innerHTML = testHTML.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+    var xss = new xssFilter();
+    //xss.options('escape', true);
+    xss.options({
+        escape: true
+    });
+
+    var candy = xss.filter(testHTML);
+    console.log(candy);
+    preview.innerHTML = candy;
+
+</script>
+</body>
+</html>
