@@ -457,6 +457,12 @@ public class VideoLocalServiceWrapper implements VideoLocalService,
 		return _videoLocalService.getByHits();
 	}
 
+	@Override
+	public java.lang.Long getLatestClosedAccessVideoId(
+		java.lang.Long lectureseriesId) {
+		return _videoLocalService.getLatestClosedAccessVideoId(lectureseriesId);
+	}
+
 	/**
 	 * @deprecated As of 6.1.0, replaced by {@link #getWrappedService}
 	 */

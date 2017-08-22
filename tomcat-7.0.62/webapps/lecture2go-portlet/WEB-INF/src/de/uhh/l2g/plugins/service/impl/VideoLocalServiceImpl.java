@@ -117,7 +117,8 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 
 	public List<Video> getByLectureseries(Long lectureseriesId) throws SystemException {
 		List<Video> vl = videoPersistence.findByLectureseries(lectureseriesId);
-		return vl;
+		List<Video> rvl = getSortedVideoList(vl, lectureseriesId);
+		return rvl;
 	}
 
 	public List<Video> getByProducerAndLectureseries(Long producerId, Long lectureseriesId) throws SystemException {
@@ -377,7 +378,7 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 		}
 		
 		//embed iframe
-		String embedIframe="<iframe src='"+PropsUtil.get("lecture2go.web.root")+"/lecture2go-portlet/player/iframe/?v="+objectVideo.getVideoId()+"' frameborder='0' width='647' height='373'></iframe>";
+		String embedIframe="<iframe src='"+PropsUtil.get("lecture2go.web.root")+"/lecture2go-portlet/player/iframe/?v="+objectVideo.getVideoId()+"' frameborder='0' width='647' height='373' allowfullscreen></iframe>";
 		objectVideo.setEmbedIframe(embedIframe);
 		
 		//embed html5
@@ -544,20 +545,8 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 
 	public List<Video> getByLectureseriesAndOpenaccess(Long lectureseriesId, int openAccess) throws SystemException{
 		List<Video> vl = new ArrayList<Video>();
-		if(lectureseriesId!=0)vl=videoPersistence.findByLectureseriesAndOpenaccess(lectureseriesId, openAccess);
-		List<Video> rvl = new ArrayList<Video>();
-		ListIterator<Video> vli = vl.listIterator();
-		while(vli.hasNext()){
-			Video objectVideo = getFullVideo(vli.next().getVideoId());
-			if(objectVideo.getFilename().trim().length()>0)rvl.add(objectVideo);
-		}
-		// Sort by generation date
-		Collections.sort(rvl, new Comparator<Video>() {
-				@Override
-				public int compare(Video v1, Video v2) {
-					return  v2.getGenerationDate().compareTo(v1.getGenerationDate());
-				}
-		    });
+		if(lectureseriesId!=0)vl=videoPersistence.findByLectureseriesAndOpenaccess(lectureseriesId, openAccess);	
+		List<Video> rvl = getSortedVideoList(vl, lectureseriesId);		
 		return rvl;
 	}
 	
@@ -672,4 +661,51 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 		return v;
 	}
 	
+	
+	private List<Video> getSortedVideoList(List<Video> vl, Long lectureseriesId) throws SystemException
+	{ 
+		List<Video> sortedVideoList = new ArrayList<Video>();
+		
+		if(vl == null || lectureseriesId < 1)
+			return sortedVideoList;
+	
+		ListIterator<Video> vli = vl.listIterator();
+		while(vli.hasNext()){
+			Video objectVideo = getFullVideo(vli.next().getVideoId());
+			if(objectVideo.getFilename().trim().length()>0)sortedVideoList.add(objectVideo);
+		}
+		int sortVideo = 0;
+		try {
+			Lectureseries lectureseriesObject = lectureseriesPersistence.findByPrimaryKey(lectureseriesId);
+			sortVideo = lectureseriesObject.getVideoSort();
+		} catch (NoSuchModelException e) {
+			e.printStackTrace();
+		}
+		
+		// Sort by generation date
+		Collections.sort(sortedVideoList, new Comparator<Video>() {
+				@Override
+				public int compare(Video v1, Video v2) {
+					return  v2.getGenerationDate().compareTo(v1.getGenerationDate());
+				}
+		    });
+		
+		// Sort videos ascending
+		if(sortVideo == 1)
+		{
+			Collections.reverse(sortedVideoList);
+		}
+		
+		return sortedVideoList;
+	}
+	
+	public Long getLatestClosedAccessVideoId(Long lectureseriesId){
+		List<Video> vl = new ArrayList<Video>();
+		try {
+			vl = getByLectureseriesAndOpenaccess(lectureseriesId,0);
+		} catch (SystemException e) {
+			e.printStackTrace();
+		}
+		return vl.get(0).getVideoId();
+	}
 }

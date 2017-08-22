@@ -429,6 +429,11 @@ public class VideoLocalServiceUtil {
 		return getService().getByHits();
 	}
 
+	public static java.lang.Long getLatestClosedAccessVideoId(
+		java.lang.Long lectureseriesId) {
+		return getService().getLatestClosedAccessVideoId(lectureseriesId);
+	}
+
 	public static void clearService() {
 		_service = null;
 	}

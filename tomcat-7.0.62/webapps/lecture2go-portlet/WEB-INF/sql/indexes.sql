@@ -39,6 +39,7 @@ create index IX_4EF42608 on LG_Institution_Host (groupId, hostId);
 
 create index IX_7503A061 on LG_Lastvideolist (videoId);
 
+create index IX_B01349C4 on LG_Lectureseries (USID);
 create index IX_8CD13042 on LG_Lectureseries (approved);
 create index IX_A3002D84 on LG_Lectureseries (categoryId);
 create index IX_EBC55E2D on LG_Lectureseries (eventType);

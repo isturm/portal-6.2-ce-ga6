@@ -2096,6 +2096,166 @@ public class LectureseriesUtil {
 	}
 
 	/**
+	* Returns all the lectureserieses where USID = &#63;.
+	*
+	* @param USID the u s i d
+	* @return the matching lectureserieses
+	* @throws SystemException if a system exception occurred
+	*/
+	public static java.util.List<de.uhh.l2g.plugins.model.Lectureseries> findByUSID(
+		java.lang.String USID)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getPersistence().findByUSID(USID);
+	}
+
+	/**
+	* Returns a range of all the lectureserieses where USID = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link de.uhh.l2g.plugins.model.impl.LectureseriesModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param USID the u s i d
+	* @param start the lower bound of the range of lectureserieses
+	* @param end the upper bound of the range of lectureserieses (not inclusive)
+	* @return the range of matching lectureserieses
+	* @throws SystemException if a system exception occurred
+	*/
+	public static java.util.List<de.uhh.l2g.plugins.model.Lectureseries> findByUSID(
+		java.lang.String USID, int start, int end)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getPersistence().findByUSID(USID, start, end);
+	}
+
+	/**
+	* Returns an ordered range of all the lectureserieses where USID = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link de.uhh.l2g.plugins.model.impl.LectureseriesModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param USID the u s i d
+	* @param start the lower bound of the range of lectureserieses
+	* @param end the upper bound of the range of lectureserieses (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @return the ordered range of matching lectureserieses
+	* @throws SystemException if a system exception occurred
+	*/
+	public static java.util.List<de.uhh.l2g.plugins.model.Lectureseries> findByUSID(
+		java.lang.String USID, int start, int end,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getPersistence().findByUSID(USID, start, end, orderByComparator);
+	}
+
+	/**
+	* Returns the first lectureseries in the ordered set where USID = &#63;.
+	*
+	* @param USID the u s i d
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the first matching lectureseries
+	* @throws de.uhh.l2g.plugins.NoSuchLectureseriesException if a matching lectureseries could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	public static de.uhh.l2g.plugins.model.Lectureseries findByUSID_First(
+		java.lang.String USID,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException,
+			de.uhh.l2g.plugins.NoSuchLectureseriesException {
+		return getPersistence().findByUSID_First(USID, orderByComparator);
+	}
+
+	/**
+	* Returns the first lectureseries in the ordered set where USID = &#63;.
+	*
+	* @param USID the u s i d
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the first matching lectureseries, or <code>null</code> if a matching lectureseries could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	public static de.uhh.l2g.plugins.model.Lectureseries fetchByUSID_First(
+		java.lang.String USID,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getPersistence().fetchByUSID_First(USID, orderByComparator);
+	}
+
+	/**
+	* Returns the last lectureseries in the ordered set where USID = &#63;.
+	*
+	* @param USID the u s i d
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the last matching lectureseries
+	* @throws de.uhh.l2g.plugins.NoSuchLectureseriesException if a matching lectureseries could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	public static de.uhh.l2g.plugins.model.Lectureseries findByUSID_Last(
+		java.lang.String USID,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException,
+			de.uhh.l2g.plugins.NoSuchLectureseriesException {
+		return getPersistence().findByUSID_Last(USID, orderByComparator);
+	}
+
+	/**
+	* Returns the last lectureseries in the ordered set where USID = &#63;.
+	*
+	* @param USID the u s i d
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the last matching lectureseries, or <code>null</code> if a matching lectureseries could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	public static de.uhh.l2g.plugins.model.Lectureseries fetchByUSID_Last(
+		java.lang.String USID,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getPersistence().fetchByUSID_Last(USID, orderByComparator);
+	}
+
+	/**
+	* Returns the lectureserieses before and after the current lectureseries in the ordered set where USID = &#63;.
+	*
+	* @param lectureseriesId the primary key of the current lectureseries
+	* @param USID the u s i d
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the previous, current, and next lectureseries
+	* @throws de.uhh.l2g.plugins.NoSuchLectureseriesException if a lectureseries with the primary key could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	public static de.uhh.l2g.plugins.model.Lectureseries[] findByUSID_PrevAndNext(
+		long lectureseriesId, java.lang.String USID,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException,
+			de.uhh.l2g.plugins.NoSuchLectureseriesException {
+		return getPersistence()
+				   .findByUSID_PrevAndNext(lectureseriesId, USID,
+			orderByComparator);
+	}
+
+	/**
+	* Removes all the lectureserieses where USID = &#63; from the database.
+	*
+	* @param USID the u s i d
+	* @throws SystemException if a system exception occurred
+	*/
+	public static void removeByUSID(java.lang.String USID)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		getPersistence().removeByUSID(USID);
+	}
+
+	/**
+	* Returns the number of lectureserieses where USID = &#63;.
+	*
+	* @param USID the u s i d
+	* @return the number of matching lectureserieses
+	* @throws SystemException if a system exception occurred
+	*/
+	public static int countByUSID(java.lang.String USID)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getPersistence().countByUSID(USID);
+	}
+
+	/**
 	* Caches the lectureseries in the entity cache if it is enabled.
 	*
 	* @param lectureseries the lectureseries

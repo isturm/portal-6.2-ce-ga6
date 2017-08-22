@@ -66,6 +66,9 @@ public class LectureseriesWrapper implements Lectureseries,
 		attributes.put("latestVideoUploadDate", getLatestVideoUploadDate());
 		attributes.put("latestVideoGenerationDate",
 			getLatestVideoGenerationDate());
+		attributes.put("videoSort", getVideoSort());
+		attributes.put("USID", getUSID());
+		attributes.put("previewVideoId", getPreviewVideoId());
 
 		return attributes;
 	}
@@ -163,6 +166,24 @@ public class LectureseriesWrapper implements Lectureseries,
 
 		if (latestVideoGenerationDate != null) {
 			setLatestVideoGenerationDate(latestVideoGenerationDate);
+		}
+
+		Integer videoSort = (Integer)attributes.get("videoSort");
+
+		if (videoSort != null) {
+			setVideoSort(videoSort);
+		}
+
+		String USID = (String)attributes.get("USID");
+
+		if (USID != null) {
+			setUSID(USID);
+		}
+
+		Long previewVideoId = (Long)attributes.get("previewVideoId");
+
+		if (previewVideoId != null) {
+			setPreviewVideoId(previewVideoId);
 		}
 	}
 
@@ -487,6 +508,66 @@ public class LectureseriesWrapper implements Lectureseries,
 		_lectureseries.setLatestVideoGenerationDate(latestVideoGenerationDate);
 	}
 
+	/**
+	* Returns the video sort of this lectureseries.
+	*
+	* @return the video sort of this lectureseries
+	*/
+	@Override
+	public int getVideoSort() {
+		return _lectureseries.getVideoSort();
+	}
+
+	/**
+	* Sets the video sort of this lectureseries.
+	*
+	* @param videoSort the video sort of this lectureseries
+	*/
+	@Override
+	public void setVideoSort(int videoSort) {
+		_lectureseries.setVideoSort(videoSort);
+	}
+
+	/**
+	* Returns the u s i d of this lectureseries.
+	*
+	* @return the u s i d of this lectureseries
+	*/
+	@Override
+	public java.lang.String getUSID() {
+		return _lectureseries.getUSID();
+	}
+
+	/**
+	* Sets the u s i d of this lectureseries.
+	*
+	* @param USID the u s i d of this lectureseries
+	*/
+	@Override
+	public void setUSID(java.lang.String USID) {
+		_lectureseries.setUSID(USID);
+	}
+
+	/**
+	* Returns the preview video ID of this lectureseries.
+	*
+	* @return the preview video ID of this lectureseries
+	*/
+	@Override
+	public long getPreviewVideoId() {
+		return _lectureseries.getPreviewVideoId();
+	}
+
+	/**
+	* Sets the preview video ID of this lectureseries.
+	*
+	* @param previewVideoId the preview video ID of this lectureseries
+	*/
+	@Override
+	public void setPreviewVideoId(long previewVideoId) {
+		_lectureseries.setPreviewVideoId(previewVideoId);
+	}
+
 	@Override
 	public boolean isNew() {
 		return _lectureseries.isNew();
@@ -619,6 +700,16 @@ public class LectureseriesWrapper implements Lectureseries,
 	@Override
 	public void setType(java.lang.String type) {
 		_lectureseries.setType(type);
+	}
+
+	@Override
+	public java.lang.String getClosedAccessURI() {
+		return _lectureseries.getClosedAccessURI();
+	}
+
+	@Override
+	public java.lang.String getOpenAccessURI() {
+		return _lectureseries.getOpenAccessURI();
 	}
 
 	@Override

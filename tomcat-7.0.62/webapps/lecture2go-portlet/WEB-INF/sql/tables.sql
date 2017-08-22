@@ -74,7 +74,10 @@ create table LG_Lectureseries (
 	longDesc TEXT null,
 	latestOpenAccessVideoId LONG,
 	latestVideoUploadDate DATE null,
-	latestVideoGenerationDate VARCHAR(75) null
+	latestVideoGenerationDate VARCHAR(75) null,
+	videoSort INTEGER,
+	USID VARCHAR(75) null,
+	previewVideoId LONG
 );
 
 create table LG_Lectureseries_Category (

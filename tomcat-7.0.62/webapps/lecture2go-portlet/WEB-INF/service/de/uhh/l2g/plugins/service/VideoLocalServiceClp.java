@@ -215,6 +215,10 @@ public class VideoLocalServiceClp implements VideoLocalService {
 		_methodName43 = "getByHits";
 
 		_methodParameterTypes43 = new String[] {  };
+
+		_methodName44 = "getLatestClosedAccessVideoId";
+
+		_methodParameterTypes44 = new String[] { "java.lang.Long" };
 	}
 
 	@Override
@@ -1465,6 +1469,31 @@ public class VideoLocalServiceClp implements VideoLocalService {
 		return (java.util.List<de.uhh.l2g.plugins.model.Video>)ClpSerializer.translateOutput(returnObj);
 	}
 
+	@Override
+	public java.lang.Long getLatestClosedAccessVideoId(
+		java.lang.Long lectureseriesId) {
+		Object returnObj = null;
+
+		try {
+			returnObj = _invokableLocalService.invokeMethod(_methodName44,
+					_methodParameterTypes44,
+					new Object[] { ClpSerializer.translateInput(lectureseriesId) });
+		}
+		catch (Throwable t) {
+			t = ClpSerializer.translateThrowable(t);
+
+			if (t instanceof RuntimeException) {
+				throw (RuntimeException)t;
+			}
+			else {
+				throw new RuntimeException(t.getClass().getName() +
+					" is not a valid exception");
+			}
+		}
+
+		return (java.lang.Long)ClpSerializer.translateOutput(returnObj);
+	}
+
 	private InvokableLocalService _invokableLocalService;
 	private String _methodName0;
 	private String[] _methodParameterTypes0;
@@ -1552,4 +1581,6 @@ public class VideoLocalServiceClp implements VideoLocalService {
 	private String[] _methodParameterTypes42;
 	private String _methodName43;
 	private String[] _methodParameterTypes43;
+	private String _methodName44;
+	private String[] _methodParameterTypes44;
 }

@@ -42,4 +42,8 @@ public interface Lectureseries extends LectureseriesModel, PersistedModel {
 	public java.lang.String getType();
 
 	public void setType(java.lang.String type);
+
+	public java.lang.String getClosedAccessURI();
+
+	public java.lang.String getOpenAccessURI();
 }

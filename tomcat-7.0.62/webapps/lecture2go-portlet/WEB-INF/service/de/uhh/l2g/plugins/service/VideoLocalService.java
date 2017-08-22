@@ -369,4 +369,8 @@ public interface VideoLocalService extends BaseLocalService,
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public java.util.List<de.uhh.l2g.plugins.model.Video> getByHits();
+
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public java.lang.Long getLatestClosedAccessVideoId(
+		java.lang.Long lectureseriesId);
 }

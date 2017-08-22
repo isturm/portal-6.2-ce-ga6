@@ -45,6 +45,9 @@ public class LectureseriesSoap implements Serializable {
 		soapModel.setLatestOpenAccessVideoId(model.getLatestOpenAccessVideoId());
 		soapModel.setLatestVideoUploadDate(model.getLatestVideoUploadDate());
 		soapModel.setLatestVideoGenerationDate(model.getLatestVideoGenerationDate());
+		soapModel.setVideoSort(model.getVideoSort());
+		soapModel.setUSID(model.getUSID());
+		soapModel.setPreviewVideoId(model.getPreviewVideoId());
 
 		return soapModel;
 	}
@@ -217,6 +220,30 @@ public class LectureseriesSoap implements Serializable {
 		_latestVideoGenerationDate = latestVideoGenerationDate;
 	}
 
+	public int getVideoSort() {
+		return _videoSort;
+	}
+
+	public void setVideoSort(int videoSort) {
+		_videoSort = videoSort;
+	}
+
+	public String getUSID() {
+		return _USID;
+	}
+
+	public void setUSID(String USID) {
+		_USID = USID;
+	}
+
+	public long getPreviewVideoId() {
+		return _previewVideoId;
+	}
+
+	public void setPreviewVideoId(long previewVideoId) {
+		_previewVideoId = previewVideoId;
+	}
+
 	private String _number;
 	private String _eventType;
 	private long _categoryId;
@@ -232,4 +259,7 @@ public class LectureseriesSoap implements Serializable {
 	private long _latestOpenAccessVideoId;
 	private Date _latestVideoUploadDate;
 	private String _latestVideoGenerationDate;
+	private int _videoSort;
+	private String _USID;
+	private long _previewVideoId;
 }

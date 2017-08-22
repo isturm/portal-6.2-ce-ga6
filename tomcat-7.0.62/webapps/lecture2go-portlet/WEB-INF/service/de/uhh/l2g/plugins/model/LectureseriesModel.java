@@ -278,6 +278,49 @@ public interface LectureseriesModel extends BaseModel<Lectureseries> {
 	 */
 	public void setLatestVideoGenerationDate(String latestVideoGenerationDate);
 
+	/**
+	 * Returns the video sort of this lectureseries.
+	 *
+	 * @return the video sort of this lectureseries
+	 */
+	public int getVideoSort();
+
+	/**
+	 * Sets the video sort of this lectureseries.
+	 *
+	 * @param videoSort the video sort of this lectureseries
+	 */
+	public void setVideoSort(int videoSort);
+
+	/**
+	 * Returns the u s i d of this lectureseries.
+	 *
+	 * @return the u s i d of this lectureseries
+	 */
+	@AutoEscape
+	public String getUSID();
+
+	/**
+	 * Sets the u s i d of this lectureseries.
+	 *
+	 * @param USID the u s i d of this lectureseries
+	 */
+	public void setUSID(String USID);
+
+	/**
+	 * Returns the preview video ID of this lectureseries.
+	 *
+	 * @return the preview video ID of this lectureseries
+	 */
+	public long getPreviewVideoId();
+
+	/**
+	 * Sets the preview video ID of this lectureseries.
+	 *
+	 * @param previewVideoId the preview video ID of this lectureseries
+	 */
+	public void setPreviewVideoId(long previewVideoId);
+
 	@Override
 	public boolean isNew();
 
