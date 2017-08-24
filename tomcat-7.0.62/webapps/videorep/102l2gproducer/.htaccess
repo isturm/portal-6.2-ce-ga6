@@ -1,4 +1,0 @@
-# .htaccess-Datei zum Schutz der Files
-AuthType Basic
-AuthName 'Service-Bereich'
-AuthUserFile /usr/local/l2go/portal-6.2-ce-ga6/l2gomedia/security/.htusers
