@@ -34,6 +34,13 @@ create table LG_Host (
 	defaultHost INTEGER
 );
 
+create table LG_InstallWizard (
+	installWizardId LONG not null primary key,
+	wizartActive INTEGER,
+	groupId LONG,
+	companyId LONG
+);
+
 create table LG_Institution (
 	institutionId LONG not null primary key,
 	parentId LONG,

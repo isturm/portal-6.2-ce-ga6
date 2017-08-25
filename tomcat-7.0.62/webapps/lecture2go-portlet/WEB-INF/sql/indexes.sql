@@ -12,6 +12,8 @@ create index IX_24BB7F54 on LG_Host (companyId, groupId);
 create index IX_B56E8218 on LG_Host (groupId);
 create index IX_35EC15AF on LG_Host (groupId, hostId);
 
+create index IX_82A80786 on LG_InstallWizard (groupId, companyId);
+
 create index IX_7AB52C4E on LG_Institution (companyId);
 create unique index IX_7142401C on LG_Institution (companyId, groupId);
 create index IX_78986E50 on LG_Institution (groupId);
