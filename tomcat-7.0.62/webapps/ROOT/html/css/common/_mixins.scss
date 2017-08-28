@@ -1,5 +1,5 @@
 $breakpoint_phone: 768px !default;
-$breakpoint_tablet: 768px !default;
+$breakpoint_tablet: 980px !default;
 
 @mixin respond-to($types...) {
 	$maxWidth: -1;
