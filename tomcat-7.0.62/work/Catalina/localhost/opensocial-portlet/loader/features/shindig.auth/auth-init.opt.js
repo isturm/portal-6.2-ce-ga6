@@ -1,0 +1,1 @@
+shindig.auth=new shindig.Auth();

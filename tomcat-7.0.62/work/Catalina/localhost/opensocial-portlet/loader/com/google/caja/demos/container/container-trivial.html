@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!--
+ - Copyright (C) 2010 Google Inc.
+ -
+ - Licensed under the Apache License, Version 2.0 (the "License");
+ - you may not use this file except in compliance with the License.
+ - You may obtain a copy of the License at
+ -
+ -      http://www.apache.org/licenses/LICENSE-2.0
+ -
+ - Unless required by applicable law or agreed to in writing, software
+ - distributed under the License is distributed on an "AS IS" BASIS,
+ - WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ - See the License for the specific language governing permissions and
+ - limitations under the License.
+-->
+
+<html>
+  <head>
+    <title>Trivial Caja Container</title>
+    
+    <!-- Provides rules for visually confining vdoc-body___ elements -->
+    <link rel="stylesheet" href="caja-gadget.css" type="text/css">
+    
+    <script src="http://caja.appspot.com/caja.js"
+            type="text/javascript"></script>
+  </head>
+
+  <body>
+
+    <h1>Trivial Caja Container</h1>
+    
+    <p>This is a Caja container page. Assuming everything works, there is a Caja
+    gadget below. The orange border in this example indicates the boundaries of
+    the area which is under the control of the gadget.</p>
+
+    <div id="theGadget" style="border: .1em solid orange; padding: .2em;"></div>
+    <script type="text/javascript">
+        // Prepare the Caja library.
+        // This is an asynchronous load because it constructs an iframe which
+        // all the sandbox stuff is hidden in, so you have to provide a 
+        // callback.
+        loadCaja(function (caja) {
+
+          // There should be one Sandbox per gadget
+          var sandbox = new caja.hostTools.Sandbox();
+
+          // Specify the DOM node which is the virtual <body> of the gadget
+          sandbox.attach(document.getElementById("theGadget"));
+          
+          // Load the gadget
+          sandbox.run("gadget-trivial.html");
+          
+        }, {
+          // Specify the Caja server -- since we are using local files this
+          // must be a local server.
+          cajaServer: "http://localhost:8080/"
+        });
+    </script>
+
+    <p>See comments in the source of this page for more information.</p>
+</body> 
+</html>

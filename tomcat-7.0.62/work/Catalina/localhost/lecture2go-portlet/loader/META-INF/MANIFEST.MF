@@ -1,0 +1,188 @@
+Manifest-Version: 1.0
+Export-Package: org.springframework.web.bind;version="2.5.6";uses:="ja
+ vax.servlet,javax.servlet.http,org.springframework.beans,org.springfr
+ amework.validation",org.springframework.web.bind.annotation;version="
+ 2.5.6",org.springframework.web.bind.annotation.support;version="2.5.6
+ ";uses:="org.springframework.core,org.springframework.ui,org.springfr
+ amework.web.bind,org.springframework.web.bind.annotation,org.springfr
+ amework.web.bind.support,org.springframework.web.context.request",org
+ .springframework.web.bind.support;version="2.5.6";uses:="org.springfr
+ amework.beans,org.springframework.core,org.springframework.validation
+ ,org.springframework.web.bind,org.springframework.web.context.request
+ ",org.springframework.web.multipart;version="2.5.6";uses:="javax.serv
+ let.http",org.springframework.web.multipart.commons;version="2.5.6";u
+ ses:="javax.servlet,javax.servlet.http,org.apache.commons.fileupload,
+ org.apache.commons.fileupload.disk,org.springframework.core.io,org.sp
+ ringframework.web.multipart",org.springframework.web.multipart.suppor
+ t;version="2.5.6";uses:="javax.servlet,javax.servlet.http,org.springf
+ ramework.web.multipart",org.springframework.web.servlet;version="2.5.
+ 6";uses:="javax.servlet,javax.servlet.http,org.springframework.beans,
+ org.springframework.context,org.springframework.context.i18n,org.spri
+ ngframework.ui,org.springframework.ui.context,org.springframework.uti
+ l,org.springframework.web.context,org.springframework.web.multipart",
+ org.springframework.web.servlet.handler;version="2.5.6";uses:="javax.
+ servlet,javax.servlet.http,org.springframework.beans,org.springframew
+ ork.context,org.springframework.util,org.springframework.web.context.
+ request,org.springframework.web.servlet,org.springframework.web.util"
+ ,org.springframework.web.servlet.handler.metadata;version="2.5.6";use
+ s:="org.springframework.beans,org.springframework.beans.factory.confi
+ g",org.springframework.web.servlet.i18n;version="2.5.6";uses:="javax.
+ servlet,javax.servlet.http",org.springframework.web.servlet.mvc;versi
+ on="2.5.6";uses:="javax.servlet,javax.servlet.http,org.springframewor
+ k.beans,org.springframework.util,org.springframework.validation,org.s
+ pringframework.web.bind,org.springframework.web.bind.support,org.spri
+ ngframework.web.servlet,org.springframework.web.util",org.springframe
+ work.web.servlet.mvc.annotation;version="2.5.6";uses:="javax.servlet,
+ javax.servlet.http,org.springframework.core,org.springframework.ui,or
+ g.springframework.util,org.springframework.web.bind,org.springframewo
+ rk.web.bind.annotation,org.springframework.web.bind.annotation.suppor
+ t,org.springframework.web.bind.support,org.springframework.web.contex
+ t.request,org.springframework.web.servlet,org.springframework.web.ser
+ vlet.mvc.multiaction,org.springframework.web.util",org.springframewor
+ k.web.servlet.mvc.multiaction;version="2.5.6";uses:="javax.servlet,ja
+ vax.servlet.http,org.springframework.util,org.springframework.validat
+ ion,org.springframework.web.bind,org.springframework.web.bind.support
+ ,org.springframework.web.servlet,org.springframework.web.util",org.sp
+ ringframework.web.servlet.mvc.support;version="2.5.6",org.springframe
+ work.web.servlet.mvc.throwaway;version="2.5.6";uses:="javax.servlet.h
+ ttp,org.springframework.web.bind,org.springframework.web.servlet",org
+ .springframework.web.servlet.support;version="2.5.6";uses:="javax.ser
+ vlet,javax.servlet.http,javax.servlet.jsp,org.springframework.context
+ ,org.springframework.ui.context,org.springframework.validation,org.sp
+ ringframework.web.context,org.springframework.web.servlet,org.springf
+ ramework.web.util",org.springframework.web.servlet.tags;version="2.5.
+ 6";uses:="javax.servlet,javax.servlet.jsp,javax.servlet.jsp.tagext,or
+ g.springframework.context,org.springframework.validation,org.springfr
+ amework.web.servlet.support",org.springframework.web.servlet.tags.for
+ m;version="2.5.6";uses:="javax.servlet.jsp,javax.servlet.jsp.tagext,o
+ rg.springframework.web.servlet.support",org.springframework.web.servl
+ et.theme;version="2.5.6";uses:="javax.servlet,javax.servlet.http",org
+ .springframework.web.servlet.view;version="2.5.6";uses:="javax.servle
+ t,javax.servlet.http,org.springframework.beans,org.springframework.be
+ ans.factory,org.springframework.context,org.springframework.core.io,o
+ rg.springframework.web.servlet,org.springframework.web.servlet.suppor
+ t,org.springframework.web.util",org.springframework.web.servlet.view.
+ document;version="2.5.6";uses:="com.lowagie.text,com.lowagie.text.pdf
+ ,javax.servlet.http,jxl,jxl.write,org.apache.poi.hssf.usermodel",org.
+ springframework.web.servlet.view.freemarker;version="2.5.6";uses:="fr
+ eemarker.ext.jsp,freemarker.template,javax.servlet,javax.servlet.http
+ ,org.springframework.beans,org.springframework.context",org.springfra
+ mework.web.servlet.view.jasperreports;version="2.5.6";uses:="javax.se
+ rvlet.http,javax.sql,net.sf.jasperreports.engine,net.sf.jasperreports
+ .engine.design,org.springframework.context,org.springframework.core.i
+ o,org.springframework.web.servlet.view",org.springframework.web.servl
+ et.view.tiles2;version="2.5.6";uses:="javax.servlet,javax.servlet.htt
+ p,org.apache.tiles,org.apache.tiles.context,org.apache.tiles.preparer
+ ,org.springframework.web.context",org.springframework.web.servlet.vie
+ w.velocity;version="2.5.6";uses:="javax.servlet,javax.servlet.http,or
+ g.apache.velocity,org.apache.velocity.app,org.apache.velocity.context
+ ,org.apache.velocity.exception,org.springframework.beans,org.springfr
+ amework.context,org.springframework.web.servlet.view",org.springframe
+ work.web.servlet.view.xslt;version="2.5.6";uses:="javax.servlet.http,
+ javax.xml.transform,org.springframework.beans,org.springframework.con
+ text,org.springframework.core.io,org.springframework.web.servlet.view
+ "
+Implementation-Title: Spring Framework
+Spring-Version: 2.5.6
+Implementation-Version: 2.5.6
+Bundle-Name: Spring Web Servlet
+Created-By: 10.0-b23 (Sun Microsystems Inc.)
+Ant-Version: Apache Ant 1.7.0
+Bundle-Vendor: SpringSource
+Bundle-Version: 2.5.6
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.springframework.web.servlet
+Import-Package: com.lowagie.text;version="[2.0.8, 3.0.0)";resolution:=
+ optional,com.lowagie.text.pdf;version="[2.0.8, 3.0.0)";resolution:=op
+ tional,freemarker.cache;version="[2.3.12, 3.0.0)";resolution:=optiona
+ l,freemarker.core;version="[2.3.12, 3.0.0)";resolution:=optional,free
+ marker.ext.jsp;version="[2.3.12, 3.0.0)";resolution:=optional,freemar
+ ker.ext.servlet;version="[2.3.12, 3.0.0)";resolution:=optional,freema
+ rker.template;version="[2.3.12, 3.0.0)";resolution:=optional,javax.se
+ rvlet;version="[2.4.0, 3.0.0)",javax.servlet.http;version="[2.4.0, 3.
+ 0.0)",javax.servlet.jsp;version="[2.1.0, 3.0.0)";resolution:=optional
+ ,javax.servlet.jsp.jstl.core;version="[1.1.2, 2.0.0)";resolution:=opt
+ ional,javax.servlet.jsp.jstl.fmt;version="[1.1.2, 2.0.0)";resolution:
+ =optional,javax.servlet.jsp.tagext;version="[2.1.0, 3.0.0)";resolutio
+ n:=optional,javax.sql;resolution:=optional,javax.xml.transform;resolu
+ tion:=optional,javax.xml.transform.dom;resolution:=optional,javax.xml
+ .transform.stream;resolution:=optional,jxl;version="[2.6.6, 3.0.0)";r
+ esolution:=optional,jxl.write;version="[2.6.6, 3.0.0)";resolution:=op
+ tional,net.sf.jasperreports.engine;version="[2.0.5, 3.0.0)";resolutio
+ n:=optional,net.sf.jasperreports.engine.design;version="[2.0.5, 3.0.0
+ )";resolution:=optional,net.sf.jasperreports.engine.export;version="[
+ 2.0.5, 3.0.0)";resolution:=optional,net.sf.jasperreports.engine.util;
+ version="[2.0.5, 3.0.0)";resolution:=optional,net.sf.jasperreports.en
+ gine.xml;version="[2.0.5, 3.0.0)";resolution:=optional,org.apache.com
+ mons.attributes;version="[2.2.0, 3.0.0)";resolution:=optional,org.apa
+ che.commons.fileupload;version="[1.2.0, 2.0.0)";resolution:=optional,
+ org.apache.commons.fileupload.disk;version="[1.2.0, 2.0.0)";resolutio
+ n:=optional,org.apache.commons.fileupload.servlet;version="[1.2.0, 2.
+ 0.0)";resolution:=optional,org.apache.commons.logging;version="[1.0.4
+ , 2.0.0)",org.apache.poi.hssf.usermodel;version="[3.0.2.FINAL, 4.0.0)
+ ";resolution:=optional,org.apache.poi.poifs.filesystem;version="[3.0.
+ 2.FINAL, 4.0.0)";resolution:=optional,org.apache.tiles;version="[2.0.
+ 5, 3.0.0)";resolution:=optional,org.apache.tiles.access;version="[2.0
+ .5, 3.0.0)";resolution:=optional,org.apache.tiles.context;version="[2
+ .0.5.osgi, 3.0.0)";resolution:=optional,org.apache.tiles.definition;v
+ ersion="[2.0.5.osgi, 3.0.0)";resolution:=optional,org.apache.tiles.fa
+ ctory;version="[2.0.5.osgi, 3.0.0)";resolution:=optional,org.apache.t
+ iles.jsp.context;version="[2.0.5, 3.0.0)";resolution:=optional,org.ap
+ ache.tiles.locale.impl;version="[2.0.5.osgi, 3.0.0)";resolution:=opti
+ onal,org.apache.tiles.preparer;version="[2.0.5.osgi, 3.0.0)";resoluti
+ on:=optional,org.apache.tiles.servlet.context;version="[2.0.5.osgi, 3
+ .0.0)";resolution:=optional,org.apache.tiles.web.util;version="[2.0.5
+ .osgi, 3.0.0)";resolution:=optional,org.apache.velocity;version="[1.5
+ .0, 2.0.0)";resolution:=optional,org.apache.velocity.app;version="[1.
+ 5.0, 2.0.0)";resolution:=optional,org.apache.velocity.app.tools;versi
+ on="[1.5.0, 2.0.0)";resolution:=optional,org.apache.velocity.context;
+ version="[1.5.0, 2.0.0)";resolution:=optional,org.apache.velocity.exc
+ eption;version="[1.5.0, 2.0.0)";resolution:=optional,org.apache.veloc
+ ity.runtime.resource.loader;version="[1.5.0, 2.0.0)";resolution:=opti
+ onal,org.apache.velocity.tools.generic;version="[1.4.0, 2.0.0)";resol
+ ution:=optional,org.apache.velocity.tools.view;version="[1.4.0, 2.0.0
+ )";resolution:=optional,org.apache.velocity.tools.view.context;versio
+ n="[1.4.0, 2.0.0)";resolution:=optional,org.apache.velocity.tools.vie
+ w.servlet;version="[1.4.0, 2.0.0)";resolution:=optional,org.apache.ve
+ locity.tools.view.tools;version="[1.4.0, 2.0.0)";resolution:=optional
+ ,org.springframework.beans;version="[2.5.6, 2.5.6]";resolution:=optio
+ nal,org.springframework.beans.factory;version="[2.5.6, 2.5.6]";resolu
+ tion:=optional,org.springframework.beans.factory.config;version="[2.5
+ .6, 2.5.6]";resolution:=optional,org.springframework.beans.factory.ge
+ neric;version="[2.5.6, 2.5.6]";resolution:=optional,org.springframewo
+ rk.beans.factory.support;version="[2.5.6, 2.5.6]";resolution:=optiona
+ l,org.springframework.beans.factory.xml;version="[2.5.6, 2.5.6]";reso
+ lution:=optional,org.springframework.beans.propertyeditors;version="[
+ 2.5.6, 2.5.6]";resolution:=optional,org.springframework.context;versi
+ on="[2.5.6, 2.5.6]";resolution:=optional,org.springframework.context.
+ event;version="[2.5.6, 2.5.6]";resolution:=optional,org.springframewo
+ rk.context.i18n;version="[2.5.6, 2.5.6]";resolution:=optional,org.spr
+ ingframework.context.support;version="[2.5.6, 2.5.6]";resolution:=opt
+ ional,org.springframework.core;version="[2.5.6, 2.5.6]";resolution:=o
+ ptional,org.springframework.core.annotation;version="[2.5.6, 2.5.6]";
+ resolution:=optional,org.springframework.core.enums;version="[2.5.6, 
+ 2.5.6]";resolution:=optional,org.springframework.core.io;version="[2.
+ 5.6, 2.5.6]";resolution:=optional,org.springframework.core.io.support
+ ;version="[2.5.6, 2.5.6]";resolution:=optional,org.springframework.co
+ re.style;version="[2.5.6, 2.5.6]";resolution:=optional,org.springfram
+ ework.stereotype;version="[2.5.6, 2.5.6]";resolution:=optional,org.sp
+ ringframework.ui;version="[2.5.6, 2.5.6]";resolution:=optional,org.sp
+ ringframework.ui.context;version="[2.5.6, 2.5.6]";resolution:=optiona
+ l,org.springframework.ui.context.support;version="[2.5.6, 2.5.6]";res
+ olution:=optional,org.springframework.ui.freemarker;version="[2.5.6, 
+ 2.5.6]";resolution:=optional,org.springframework.ui.jasperreports;ver
+ sion="[2.5.6, 2.5.6]";resolution:=optional,org.springframework.ui.vel
+ ocity;version="[2.5.6, 2.5.6]";resolution:=optional,org.springframewo
+ rk.util;version="[2.5.6, 2.5.6]";resolution:=optional,org.springframe
+ work.util.xml;version="[2.5.6, 2.5.6]";resolution:=optional,org.sprin
+ gframework.validation;version="[2.5.6, 2.5.6]";resolution:=optional,o
+ rg.springframework.validation.support;version="[2.5.6, 2.5.6]";resolu
+ tion:=optional,org.springframework.web;version="[2.5.6, 2.5.6]";resol
+ ution:=optional,org.springframework.web.context;version="[2.5.6, 2.5.
+ 6]";resolution:=optional,org.springframework.web.context.request;vers
+ ion="[2.5.6, 2.5.6]";resolution:=optional,org.springframework.web.con
+ text.support;version="[2.5.6, 2.5.6]";resolution:=optional,org.spring
+ framework.web.filter;version="[2.5.6, 2.5.6]";resolution:=optional,or
+ g.springframework.web.util;version="[2.5.6, 2.5.6]";resolution:=optio
+ nal,org.w3c.dom;resolution:=optional,org.xml.sax;resolution:=optional
+

@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!--
+ - Copyright (C) 2010 Google Inc.
+ -
+ - Licensed under the Apache License, Version 2.0 (the "License");
+ - you may not use this file except in compliance with the License.
+ - You may obtain a copy of the License at
+ -
+ -      http://www.apache.org/licenses/LICENSE-2.0
+ -
+ - Unless required by applicable law or agreed to in writing, software
+ - distributed under the License is distributed on an "AS IS" BASIS,
+ - WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ - See the License for the specific language governing permissions and
+ - limitations under the License.
+-->
+
+<!-- This should be kept in sync with the InteractingModulesExample wiki page.
+     TODO(kpreid): At least, that used to be true. The info on that page is tied
+     to the old, explicit forms of loading Caja. What should we do now? -->
+
+<html>
+  <head>
+    <title>Caja interacting gadgets example</title>
+
+    <!-- Provides rules for visually confining gadget elements -->
+    <link rel="stylesheet" href="caja-gadget.css" type="text/css">
+    
+    <style type="text/css">
+      table { border-collapse: collapse; }
+      td { border: 1px solid black; padding: 1em; }
+    </style>
+    
+    <script type="text/javascript" src="caja.js"></script>
+  
+    <script type="text/javascript">
+      function loadGadgets(caja) {
+        var ___ = caja.___;
+        
+        // Some state to share between the gadgets
+        // The functions must be explicitly marked as safe to the Cajita runtime
+        // because this is not cajoled code as in a module.
+        var shared = (function (x) {
+          return { 
+              get: ___.markFuncFreeze(function () { return x; }),
+              set: ___.markFuncFreeze(function (y) { x = String(y); })
+            };
+        })("");
+        
+        // libP is a promise for a module function.
+        var libP = caja.hostTools.getLoad().async("gadget-library.js");
+        
+        function loadGadget(mid, elem, extraOuters) {
+
+          // There is one Sandbox per gadget.
+          var sandbox = new caja.hostTools.Sandbox();
+
+          // Grant access to the DOM
+          sandbox.attach(elem);
+          
+          // Wait for the library module to be loaded...
+          return caja.Q.when(libP, function (lib) {
+            
+            // Instantiating the library (running its code) has a side effect of
+            // defining the 'lib' object in imports.outers.
+            lib(sandbox.imports);
+            
+            // Add other specified objects to the outers.
+            for (var p in extraOuters) {
+              if (Object.prototype.hasOwnProperty.call(extraOuters, p)) {
+                // setPub makes the property readable from Cajita/Valija code
+                caja.cajita.setPub(sandbox.imports.outers, p, extraOuters[p]);
+              }
+            }
+            
+            // Actually run the gadget code.
+            return sandbox.run(mid);            
+          })
+        }
+        
+        loadGadget("gadget-set.html",
+                   document.getElementById("gadget1"),
+                   {set: shared.set})
+        
+        loadGadget("gadget-get.html",
+                   document.getElementById("gadget2"),
+                   {get: shared.get})
+        
+      }
+    </script>
+  </head>
+  <body onload="loadCaja(loadGadgets, {debug:true,cajaServer: 'http://localhost:8080/'})">
+    
+    <h1>Interacting Gadgets Example</h1>
+    
+    <p>This host page loads two gadgets (which should appear in the table below) and provides the left gadget a function "set", and the right gadget "get", by which they can communicate.</p>
+    
+    <table>
+      <tr>
+        <th>Writes</th>
+        <th>Reads</th>
+      </tr>
+      <tr>
+        <td><div id="gadget1"></div></td>
+        <td><div id="gadget2"></div></td>
+      </tr>
+    </table>
+
+    <p>See comments in the source of this page for more information.</p>
+
+  </body>
+</html>

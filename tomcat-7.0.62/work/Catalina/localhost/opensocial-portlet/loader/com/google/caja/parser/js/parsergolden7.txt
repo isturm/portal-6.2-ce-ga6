@@ -1,0 +1,47 @@
+Block
+  ExpressionStmt
+    ObjectConstructor
+      ValueProperty
+        StringLiteral : '1'
+        StringLiteral : 'the loneliest number'
+      ValueProperty
+        StringLiteral : '0'
+        StringLiteral : 'Yields a key "0".  WTF?'
+      ValueProperty
+        StringLiteral : '42'
+        StringLiteral : 'is the answer'
+      ValueProperty
+        StringLiteral : '1.23456789012345678901e+29'
+        StringLiteral : '8 digits stripped from key'
+      ValueProperty
+        StringLiteral : 'NaN'
+        StringLiteral : 'Strange but true'
+      ValueProperty
+        StringLiteral : 'Infinity'
+        StringLiteral : "and beyond!"
+      ValueProperty
+        StringLiteral : 'null'
+        NullLiteral : null
+      ValueProperty
+        StringLiteral : 'undefined'
+        SimpleOperation : NOT
+          Reference
+            Identifier : defined
+      ValueProperty
+        StringLiteral : 'false'
+        BooleanLiteral : false
+      ValueProperty
+        StringLiteral : ''
+        StringLiteral : ''
+      ValueProperty
+        StringLiteral : 'if'
+        StringLiteral : 'if'
+      ValueProperty
+        StringLiteral : 'function'
+        StringLiteral : 'function'
+      ValueProperty
+        StringLiteral : 'with'
+        StringLiteral : 'with'
+      ValueProperty
+        StringLiteral : 'debugger'
+        StringLiteral : 'debugger'
