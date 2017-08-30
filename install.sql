@@ -829,7 +829,7 @@ CREATE TABLE `BrowserTracker` (
 
 LOCK TABLES `BrowserTracker` WRITE;
 /*!40000 ALTER TABLE `BrowserTracker` DISABLE KEYS */;
-INSERT INTO `BrowserTracker` VALUES (20519,20199,151725074760),(22339,22320,1450940715702),(22502,22302,626868215892);
+INSERT INTO `BrowserTracker` VALUES (20519,20199,155817726188),(22339,22320,1450940715702),(22502,22302,626868215892);
 /*!40000 ALTER TABLE `BrowserTracker` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3531,7 +3531,7 @@ CREATE TABLE `LG_InstallWizard` (
 
 LOCK TABLES `LG_InstallWizard` WRITE;
 /*!40000 ALTER TABLE `LG_InstallWizard` DISABLE KEYS */;
-INSERT INTO `LG_InstallWizard` VALUES (1,0,20182,20155);
+INSERT INTO `LG_InstallWizard` VALUES (1,1,20182,20155);
 /*!40000 ALTER TABLE `LG_InstallWizard` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6477,7 +6477,7 @@ CREATE TABLE `Release_` (
 
 LOCK TABLES `Release_` WRITE;
 /*!40000 ALTER TABLE `Release_` DISABLE KEYS */;
-INSERT INTO `Release_` VALUES (1,'2016-09-21 13:37:54','2017-08-29 09:36:41','portal',6205,'2017-08-29 09:36:41',1,0,'You take the blue pill, the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill, you stay in Wonderland, and I show you how deep the rabbit hole goes.'),(20440,'2016-09-21 11:40:20','2017-08-29 09:37:09','marketplace-portlet',100,NULL,1,0,''),(20448,'2016-09-21 11:40:21','2017-08-29 09:37:10','calendar-portlet',102,NULL,1,0,''),(20453,'2016-09-21 11:40:23','2017-08-29 09:37:34','sync-web',101,NULL,1,0,''),(20467,'2016-09-21 11:40:28','2017-08-29 09:37:22','notifications-portlet',110,NULL,1,0,''),(20486,'2016-09-21 11:40:31','2017-08-29 09:37:15','kaleo-web',110,NULL,1,0,'');
+INSERT INTO `Release_` VALUES (1,'2016-09-21 13:37:54','2017-08-30 08:42:50','portal',6205,'2017-08-30 08:42:50',1,0,'You take the blue pill, the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill, you stay in Wonderland, and I show you how deep the rabbit hole goes.'),(20440,'2016-09-21 11:40:20','2017-08-30 08:43:11','marketplace-portlet',100,NULL,1,0,''),(20448,'2016-09-21 11:40:21','2017-08-30 08:43:13','calendar-portlet',102,NULL,1,0,''),(20453,'2016-09-21 11:40:23','2017-08-30 08:43:33','sync-web',101,NULL,1,0,''),(20467,'2016-09-21 11:40:28','2017-08-30 08:43:23','notifications-portlet',110,NULL,1,0,''),(20486,'2016-09-21 11:40:31','2017-08-30 08:43:17','kaleo-web',110,NULL,1,0,'');
 /*!40000 ALTER TABLE `Release_` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8327,7 +8327,7 @@ CREATE TABLE `User_` (
 
 LOCK TABLES `User_` WRITE;
 /*!40000 ALTER TABLE `User_` DISABLE KEYS */;
-INSERT INTO `User_` VALUES ('52dfdfa8-7b90-4f7b-b636-5a75ac057f29',20159,20155,'2016-09-21 11:38:13','2016-09-21 11:38:13',1,20160,'password',0,0,NULL,'5533ed38b5e33c076a804bb4bca644f9,9590828507537743bc166fef8cff8748,9590828507537743bc166fef8cff8748','','',0,'20159','default@liferay.com',0,0,'',0,'de_DE','Europe/Paris','Welcome!','','','','','','2016-09-21 11:38:13','',NULL,'',NULL,0,0,NULL,1,0,0),('a7abbb10-0eae-41d4-9452-817198550bb0',20199,20155,'2016-09-21 11:38:15','2017-08-29 09:52:18',0,20200,'{PBKDF2WITHHMACSHA1}AAAAoAAB9ABuIin0odJjWRxavnfvxqxheIdZIMCSajbbOzVo',1,0,'2017-08-29 09:41:31','194a0a44ebc6445953530b3f5d577209,eec8e7542e4c92cafe1255410fe87acb,a8eef7f65943e20fb65d5741b4e35f12','humel humel ?','mors mors',0,'administrator','administrator@lecture2go.uni-hamburg.de',0,-1,'',0,'de_DE','UTC','Willkommen Test Test!','','Root','','Lecture2Go','','2017-08-29 09:52:52','127.0.0.1','2017-08-29 09:44:05','127.0.0.1','2017-08-22 09:24:13',0,0,NULL,0,1,0),('8b55ee22-98da-4bcb-b9d8-e229874415f4',22302,20155,'2017-08-22 09:45:18','2017-08-29 09:51:23',0,22303,'{PBKDF2WITHHMACSHA1}AAAAoAAB9ADeYentYXrY9l+BBEKeHb4iVj3b9gOwIz8knF/8',1,0,'2017-08-29 09:51:24','','what-is-your-father\'s-middle-name','Bogidar',0,'admin','admin@lecture2go.uni-hamburg.de',0,-1,'',0,'de_DE','Europe/Paris','Willkommen Admin Demo!','','Admin','','Demo','','2017-08-24 06:48:53','127.0.0.1','2017-08-24 06:48:53','127.0.0.1','2017-08-29 09:43:13',3,0,NULL,0,0,0),('b725a21c-810f-40e1-a05c-d9ecc15a16dc',22311,20155,'2017-08-22 09:47:53','2017-08-22 09:48:44',0,22312,'{PBKDF2WITHHMACSHA1}AAAAoAAB9ACyXidFj9CDkbrq80fanDEnmQQk6XmUxJ103qdU',1,1,'2017-08-22 09:48:45','6e5679807bf4f5eab66a4e66f96f56c7,111e6c5208b8d5583b2c28f7369529fe,a1122f1f531da0e7c701190521dc8325','','',0,'coordinator','coordinator@lecture2go.uni-hamburg.de',0,-1,'',0,'de_DE','Europe/Paris','Willkommen Coordinator Demo!','','Coordinator','','Demo','','2017-08-29 09:43:31','127.0.0.1','2017-08-29 09:43:31','127.0.0.1',NULL,0,0,NULL,0,0,0),('63544523-3747-49ec-b8d9-b218ad472c84',22320,20155,'2017-08-22 09:49:27','2017-08-29 09:51:01',0,22321,'{PBKDF2WITHHMACSHA1}AAAAoAAB9AC5SH559zi2tDUlVp6WNhwhZ1b9f/YuiP4+cFUe',1,0,'2017-08-29 09:51:01','','what-is-your-father\'s-middle-name','Bogidar',0,'producer','producer@lecture2go.uni-hamburg.de',0,-1,'',0,'de_DE','Europe/Paris','Willkommen Producer Demo!','','Producer','','Demo','','2017-08-25 09:32:11','127.0.0.1','2017-08-22 12:42:25','127.0.0.1','2017-08-29 09:43:53',1,0,NULL,0,0,0);
+INSERT INTO `User_` VALUES ('52dfdfa8-7b90-4f7b-b636-5a75ac057f29',20159,20155,'2016-09-21 11:38:13','2016-09-21 11:38:13',1,20160,'password',0,0,NULL,'5533ed38b5e33c076a804bb4bca644f9,9590828507537743bc166fef8cff8748,9590828507537743bc166fef8cff8748','','',0,'20159','default@liferay.com',0,0,'',0,'de_DE','Europe/Paris','Welcome!','','','','','','2016-09-21 11:38:13','',NULL,'',NULL,0,0,NULL,1,0,0),('a7abbb10-0eae-41d4-9452-817198550bb0',20199,20155,'2016-09-21 11:38:15','2017-08-29 09:52:18',0,20200,'{PBKDF2WITHHMACSHA1}AAAAoAAB9ABuIin0odJjWRxavnfvxqxheIdZIMCSajbbOzVo',1,0,'2017-08-29 09:41:31','194a0a44ebc6445953530b3f5d577209,eec8e7542e4c92cafe1255410fe87acb,a8eef7f65943e20fb65d5741b4e35f12','humel humel ?','mors mors',0,'administrator','administrator@lecture2go.uni-hamburg.de',0,-1,'',0,'de_DE','UTC','Willkommen Test Test!','','Root','','Lecture2Go','','2017-08-30 08:45:51','127.0.0.1','2017-08-29 09:52:52','127.0.0.1','2017-08-22 09:24:13',0,0,NULL,0,1,0),('8b55ee22-98da-4bcb-b9d8-e229874415f4',22302,20155,'2017-08-22 09:45:18','2017-08-29 09:51:23',0,22303,'{PBKDF2WITHHMACSHA1}AAAAoAAB9ADeYentYXrY9l+BBEKeHb4iVj3b9gOwIz8knF/8',1,0,'2017-08-29 09:51:24','','what-is-your-father\'s-middle-name','Bogidar',0,'admin','admin@lecture2go.uni-hamburg.de',0,-1,'',0,'de_DE','Europe/Paris','Willkommen Admin Demo!','','Admin','','Demo','','2017-08-24 06:48:53','127.0.0.1','2017-08-24 06:48:53','127.0.0.1','2017-08-29 09:43:13',3,0,NULL,0,0,0),('b725a21c-810f-40e1-a05c-d9ecc15a16dc',22311,20155,'2017-08-22 09:47:53','2017-08-22 09:48:44',0,22312,'{PBKDF2WITHHMACSHA1}AAAAoAAB9ACyXidFj9CDkbrq80fanDEnmQQk6XmUxJ103qdU',1,1,'2017-08-22 09:48:45','6e5679807bf4f5eab66a4e66f96f56c7,111e6c5208b8d5583b2c28f7369529fe,a1122f1f531da0e7c701190521dc8325','','',0,'coordinator','coordinator@lecture2go.uni-hamburg.de',0,-1,'',0,'de_DE','Europe/Paris','Willkommen Coordinator Demo!','','Coordinator','','Demo','','2017-08-29 09:43:31','127.0.0.1','2017-08-29 09:43:31','127.0.0.1',NULL,0,0,NULL,0,0,0),('63544523-3747-49ec-b8d9-b218ad472c84',22320,20155,'2017-08-22 09:49:27','2017-08-29 09:51:01',0,22321,'{PBKDF2WITHHMACSHA1}AAAAoAAB9AC5SH559zi2tDUlVp6WNhwhZ1b9f/YuiP4+cFUe',1,0,'2017-08-29 09:51:01','','what-is-your-father\'s-middle-name','Bogidar',0,'producer','producer@lecture2go.uni-hamburg.de',0,-1,'',0,'de_DE','Europe/Paris','Willkommen Producer Demo!','','Producer','','Demo','','2017-08-25 09:32:11','127.0.0.1','2017-08-22 12:42:25','127.0.0.1','2017-08-29 09:43:53',1,0,NULL,0,0,0);
 /*!40000 ALTER TABLE `User_` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8826,4 +8826,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-29 11:57:00
+-- Dump completed on 2017-08-30 10:48:50
