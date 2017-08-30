@@ -3531,7 +3531,7 @@ CREATE TABLE `LG_InstallWizard` (
 
 LOCK TABLES `LG_InstallWizard` WRITE;
 /*!40000 ALTER TABLE `LG_InstallWizard` DISABLE KEYS */;
-INSERT INTO `LG_InstallWizard` VALUES (1,0,20182,20155);
+INSERT INTO `LG_InstallWizard` VALUES (1,1,20182,20155);
 /*!40000 ALTER TABLE `LG_InstallWizard` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8826,4 +8826,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-08-30 12:26:39
+-- Dump completed on 2017-08-30 12:34:39
