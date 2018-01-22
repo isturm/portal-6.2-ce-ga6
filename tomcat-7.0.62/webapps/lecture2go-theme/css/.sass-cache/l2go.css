@@ -2584,3 +2584,8 @@ strong, b, th, #kopf .sprachwechsel {
   width: 690px !important;
   margin-top: 2px; }
 
+.aui .alert.alert-block {
+  margin: auto;
+  max-width: 1096px;
+  padding: 0; }
+
