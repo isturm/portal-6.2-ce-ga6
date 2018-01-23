@@ -272,9 +272,7 @@ public class LicenseLocalServiceUtil {
 	}
 
 	public static de.uhh.l2g.plugins.model.License getByVideoId(
-		java.lang.Long videoId)
-		throws com.liferay.portal.kernel.exception.SystemException,
-			de.uhh.l2g.plugins.NoSuchLicenseException {
+		java.lang.Long videoId) {
 		return getService().getByVideoId(videoId);
 	}
 

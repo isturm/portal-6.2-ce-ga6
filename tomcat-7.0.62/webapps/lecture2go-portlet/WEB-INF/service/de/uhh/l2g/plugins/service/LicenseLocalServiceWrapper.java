@@ -281,9 +281,7 @@ public class LicenseLocalServiceWrapper implements LicenseLocalService,
 	}
 
 	@Override
-	public de.uhh.l2g.plugins.model.License getByVideoId(java.lang.Long videoId)
-		throws com.liferay.portal.kernel.exception.SystemException,
-			de.uhh.l2g.plugins.NoSuchLicenseException {
+	public de.uhh.l2g.plugins.model.License getByVideoId(java.lang.Long videoId) {
 		return _licenseLocalService.getByVideoId(videoId);
 	}
 
