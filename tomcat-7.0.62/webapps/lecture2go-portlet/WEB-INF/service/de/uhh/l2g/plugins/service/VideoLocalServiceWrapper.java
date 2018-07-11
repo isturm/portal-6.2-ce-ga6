@@ -464,6 +464,32 @@ public class VideoLocalServiceWrapper implements VideoLocalService,
 	}
 
 	/**
+	* Checks if the video has a related smil-file in the file system
+	*/
+	@Override
+	public boolean checkSmilFile(de.uhh.l2g.plugins.model.Video video) {
+		return _videoLocalService.checkSmilFile(video);
+	}
+
+	@Override
+	public boolean fileStringSegmentFoundInArray(java.lang.String file,
+		org.json.JSONArray jsonArray) {
+		return _videoLocalService.fileStringSegmentFoundInArray(file, jsonArray);
+	}
+
+	/**
+	* Checks if file is a symoblic link
+	*
+	* @param file the file to check
+	* @return true if file is sym link, false if not
+	* @throws IOException
+	*/
+	@Override
+	public boolean isSymlink(java.io.File file) throws java.io.IOException {
+		return _videoLocalService.isSymlink(file);
+	}
+
+	/**
 	 * @deprecated As of 6.1.0, replaced by {@link #getWrappedService}
 	 */
 	public VideoLocalService getWrappedVideoLocalService() {

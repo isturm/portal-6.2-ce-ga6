@@ -18,6 +18,8 @@ package de.uhh.l2g.plugins.service.persistence;
  * @author Iavor Sturm
  */
 public interface StatisticFinder {
+	public org.json.JSONObject findAllStatistics();
+
 	public int createVideoStatisticView();
 
 	public int removeVideoStatisticTable();

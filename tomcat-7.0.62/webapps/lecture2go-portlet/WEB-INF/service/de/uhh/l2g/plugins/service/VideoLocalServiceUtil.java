@@ -434,6 +434,30 @@ public class VideoLocalServiceUtil {
 		return getService().getLatestClosedAccessVideoId(lectureseriesId);
 	}
 
+	/**
+	* Checks if the video has a related smil-file in the file system
+	*/
+	public static boolean checkSmilFile(de.uhh.l2g.plugins.model.Video video) {
+		return getService().checkSmilFile(video);
+	}
+
+	public static boolean fileStringSegmentFoundInArray(java.lang.String file,
+		org.json.JSONArray jsonArray) {
+		return getService().fileStringSegmentFoundInArray(file, jsonArray);
+	}
+
+	/**
+	* Checks if file is a symoblic link
+	*
+	* @param file the file to check
+	* @return true if file is sym link, false if not
+	* @throws IOException
+	*/
+	public static boolean isSymlink(java.io.File file)
+		throws java.io.IOException {
+		return getService().isSymlink(file);
+	}
+
 	public static void clearService() {
 		_service = null;
 	}

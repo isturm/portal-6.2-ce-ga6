@@ -21,6 +21,10 @@ import com.liferay.portal.kernel.util.ReferenceRegistry;
  * @author Iavor Sturm
  */
 public class StatisticFinderUtil {
+	public static org.json.JSONObject findAllStatistics() {
+		return getFinder().findAllStatistics();
+	}
+
 	public static int createVideoStatisticView() {
 		return getFinder().createVideoStatisticView();
 	}

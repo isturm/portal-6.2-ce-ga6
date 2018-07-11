@@ -106,28 +106,28 @@ public class ScheduledThreadLocalServiceClpInvoker {
 				"de.uhh.l2g.plugins.model.ScheduledThread"
 			};
 
-		_methodName166 = "getBeanIdentifier";
+		_methodName160 = "getBeanIdentifier";
 
-		_methodParameterTypes166 = new String[] {  };
+		_methodParameterTypes160 = new String[] {  };
 
-		_methodName167 = "setBeanIdentifier";
+		_methodName161 = "setBeanIdentifier";
+
+		_methodParameterTypes161 = new String[] { "java.lang.String" };
+
+		_methodName167 = "getCronBySchedulerName";
 
 		_methodParameterTypes167 = new String[] { "java.lang.String" };
 
-		_methodName173 = "getCronBySchedulerName";
+		_methodName168 = "addScheduledThread";
 
-		_methodParameterTypes173 = new String[] { "java.lang.String" };
-
-		_methodName174 = "addScheduledThread";
-
-		_methodParameterTypes174 = new String[] {
+		_methodParameterTypes168 = new String[] {
 				"java.lang.String", "java.lang.String",
 				"com.liferay.portal.service.ServiceContext"
 			};
 
-		_methodName175 = "updateScheduledThread";
+		_methodName169 = "updateScheduledThread";
 
-		_methodParameterTypes175 = new String[] {
+		_methodParameterTypes169 = new String[] {
 				"java.lang.String", "java.lang.String",
 				"com.liferay.portal.service.ServiceContext"
 			};
@@ -222,32 +222,32 @@ public class ScheduledThreadLocalServiceClpInvoker {
 			return ScheduledThreadLocalServiceUtil.updateScheduledThread((de.uhh.l2g.plugins.model.ScheduledThread)arguments[0]);
 		}
 
-		if (_methodName166.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes166, parameterTypes)) {
+		if (_methodName160.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes160, parameterTypes)) {
 			return ScheduledThreadLocalServiceUtil.getBeanIdentifier();
 		}
 
-		if (_methodName167.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes167, parameterTypes)) {
+		if (_methodName161.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes161, parameterTypes)) {
 			ScheduledThreadLocalServiceUtil.setBeanIdentifier((java.lang.String)arguments[0]);
 
 			return null;
 		}
 
-		if (_methodName173.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes173, parameterTypes)) {
+		if (_methodName167.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes167, parameterTypes)) {
 			return ScheduledThreadLocalServiceUtil.getCronBySchedulerName((java.lang.String)arguments[0]);
 		}
 
-		if (_methodName174.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes174, parameterTypes)) {
+		if (_methodName168.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes168, parameterTypes)) {
 			return ScheduledThreadLocalServiceUtil.addScheduledThread((java.lang.String)arguments[0],
 				(java.lang.String)arguments[1],
 				(com.liferay.portal.service.ServiceContext)arguments[2]);
 		}
 
-		if (_methodName175.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes175, parameterTypes)) {
+		if (_methodName169.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes169, parameterTypes)) {
 			return ScheduledThreadLocalServiceUtil.updateScheduledThread((java.lang.String)arguments[0],
 				(java.lang.String)arguments[1],
 				(com.liferay.portal.service.ServiceContext)arguments[2]);
@@ -288,14 +288,14 @@ public class ScheduledThreadLocalServiceClpInvoker {
 	private String[] _methodParameterTypes14;
 	private String _methodName15;
 	private String[] _methodParameterTypes15;
-	private String _methodName166;
-	private String[] _methodParameterTypes166;
+	private String _methodName160;
+	private String[] _methodParameterTypes160;
+	private String _methodName161;
+	private String[] _methodParameterTypes161;
 	private String _methodName167;
 	private String[] _methodParameterTypes167;
-	private String _methodName173;
-	private String[] _methodParameterTypes173;
-	private String _methodName174;
-	private String[] _methodParameterTypes174;
-	private String _methodName175;
-	private String[] _methodParameterTypes175;
+	private String _methodName168;
+	private String[] _methodParameterTypes168;
+	private String _methodName169;
+	private String[] _methodParameterTypes169;
 }

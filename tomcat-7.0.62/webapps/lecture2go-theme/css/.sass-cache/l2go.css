@@ -295,7 +295,7 @@ mark {
   text-decoration: none; }
 
 p.smallitalic {
-  font-size: 9px;
+  font-size: 11px;
   font-style: italic; }
 
 .aui [class*="span"], .aui .uneditable-input[class*="span"], .aui .row-fluid [class*="span"] {
@@ -312,6 +312,9 @@ p.smallitalic {
 .aui .row-fluid [class*="span"]:first-child {
   float: left;
   margin-left: 0; }
+
+.force-underline {
+  text-decoration: underline !important; }
 
 .allcreators {
   font-size: smaller;
@@ -1158,9 +1161,7 @@ thead, th {
   margin: 5px; }
 
 #segment-input-cancel {
-  margin-left: 152px;
-  position: absolute;
-  top: 470px; }
+  float: right; }
 
 .aui .chaptertile {
   padding: 5px 0px;
@@ -1237,7 +1238,11 @@ thead, th {
 
 #set-segments {
   float: left;
-  margin-top: -17px !important; }
+  background: #faf9f9;
+  padding: 0 3px 0px 3px; }
+
+#_lgadminvideomanagement_WAR_lecture2goportlet_chortTitle {
+  width: 200px; }
 
 #segmentinput #com {
   margin-left: 31%; }
@@ -1793,7 +1798,7 @@ div.filter-menu-link span.icon-large.icon-remove {
 #tw img, #fb img {
   height: 12px !important; }
 
-#impressum, #disclaimer, #tw, #fb {
+#impressum, #disclaimer, #tw, #fb, #privacy-policy {
   font-family: TheSansUHHBold,sans-serif; }
 
 #license .control-group.form-inline {
@@ -1955,10 +1960,18 @@ div.filter-menu-link span.icon-large.icon-remove {
   margin-top: 55px; }
 
 #_lgadmininstitutionmanagement_WAR_lecture2goportlet_fm button {
-  margin-top: 26px; }
+  margin-top: 39px; }
 
 #_lgadmininstitutionmanagement_WAR_lecture2goportlet_curStreamingServerProtocol {
   width: 70px; }
+
+.btn.subdelete {
+  margin-left: 518px !important;
+  margin-top: -66px; }
+
+.btn.maindelete {
+  margin-left: 71px;
+  margin-top: -50px; }
 
 #_lgadmininstitutionmanagement_WAR_lecture2goportlet_protocol {
   width: 70px; }
@@ -2039,8 +2052,8 @@ div#streamingServerSettings div.accordion-heading.toggler-header.toggler-header-
 .sub-inst .title-text {
   color: #444 !important;
   float: left;
-  font-size: 14px;
-  padding: 0 8px 4px;
+  font-size: 13px;
+  padding: 0 1px 4px;
   text-shadow: 0 0 0 #777777 !important; }
 
 .admintile.wide.icons.creators {
@@ -2588,4 +2601,17 @@ strong, b, th, #kopf .sprachwechsel {
   margin: auto;
   max-width: 1096px;
   padding: 0; }
+
+.supportlink a {
+  font-size: 12px;
+  margin-top: 0px !important;
+  float: left;
+  font-style: normal;
+  width: 100%; }
+
+.conversion-running {
+  color: #33aadd; }
+
+.conversion-failed {
+  color: #c40017; }
 

@@ -219,6 +219,20 @@ public class VideoLocalServiceClp implements VideoLocalService {
 		_methodName44 = "getLatestClosedAccessVideoId";
 
 		_methodParameterTypes44 = new String[] { "java.lang.Long" };
+
+		_methodName45 = "checkSmilFile";
+
+		_methodParameterTypes45 = new String[] { "de.uhh.l2g.plugins.model.Video" };
+
+		_methodName46 = "fileStringSegmentFoundInArray";
+
+		_methodParameterTypes46 = new String[] {
+				"java.lang.String", "org.json.JSONArray"
+			};
+
+		_methodName47 = "isSymlink";
+
+		_methodParameterTypes47 = new String[] { "java.io.File" };
 	}
 
 	@Override
@@ -1494,6 +1508,87 @@ public class VideoLocalServiceClp implements VideoLocalService {
 		return (java.lang.Long)ClpSerializer.translateOutput(returnObj);
 	}
 
+	@Override
+	public boolean checkSmilFile(de.uhh.l2g.plugins.model.Video video) {
+		Object returnObj = null;
+
+		try {
+			returnObj = _invokableLocalService.invokeMethod(_methodName45,
+					_methodParameterTypes45,
+					new Object[] { ClpSerializer.translateInput(video) });
+		}
+		catch (Throwable t) {
+			t = ClpSerializer.translateThrowable(t);
+
+			if (t instanceof RuntimeException) {
+				throw (RuntimeException)t;
+			}
+			else {
+				throw new RuntimeException(t.getClass().getName() +
+					" is not a valid exception");
+			}
+		}
+
+		return ((Boolean)returnObj).booleanValue();
+	}
+
+	@Override
+	public boolean fileStringSegmentFoundInArray(java.lang.String file,
+		org.json.JSONArray jsonArray) {
+		Object returnObj = null;
+
+		try {
+			returnObj = _invokableLocalService.invokeMethod(_methodName46,
+					_methodParameterTypes46,
+					new Object[] {
+						ClpSerializer.translateInput(file),
+						
+					ClpSerializer.translateInput(jsonArray)
+					});
+		}
+		catch (Throwable t) {
+			t = ClpSerializer.translateThrowable(t);
+
+			if (t instanceof RuntimeException) {
+				throw (RuntimeException)t;
+			}
+			else {
+				throw new RuntimeException(t.getClass().getName() +
+					" is not a valid exception");
+			}
+		}
+
+		return ((Boolean)returnObj).booleanValue();
+	}
+
+	@Override
+	public boolean isSymlink(java.io.File file) throws java.io.IOException {
+		Object returnObj = null;
+
+		try {
+			returnObj = _invokableLocalService.invokeMethod(_methodName47,
+					_methodParameterTypes47,
+					new Object[] { ClpSerializer.translateInput(file) });
+		}
+		catch (Throwable t) {
+			t = ClpSerializer.translateThrowable(t);
+
+			if (t instanceof java.io.IOException) {
+				throw (java.io.IOException)t;
+			}
+
+			if (t instanceof RuntimeException) {
+				throw (RuntimeException)t;
+			}
+			else {
+				throw new RuntimeException(t.getClass().getName() +
+					" is not a valid exception");
+			}
+		}
+
+		return ((Boolean)returnObj).booleanValue();
+	}
+
 	private InvokableLocalService _invokableLocalService;
 	private String _methodName0;
 	private String[] _methodParameterTypes0;
@@ -1583,4 +1678,10 @@ public class VideoLocalServiceClp implements VideoLocalService {
 	private String[] _methodParameterTypes43;
 	private String _methodName44;
 	private String[] _methodParameterTypes44;
+	private String _methodName45;
+	private String[] _methodParameterTypes45;
+	private String _methodName46;
+	private String[] _methodParameterTypes46;
+	private String _methodName47;
+	private String[] _methodParameterTypes47;
 }

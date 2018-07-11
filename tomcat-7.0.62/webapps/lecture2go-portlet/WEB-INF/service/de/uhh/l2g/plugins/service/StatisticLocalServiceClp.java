@@ -114,58 +114,62 @@ public class StatisticLocalServiceClp implements StatisticLocalService {
 
 		_methodParameterTypes17 = new String[] { "java.lang.String" };
 
-		_methodName19 = "getByCompanyIdandGroupId";
+		_methodName19 = "getAllStatistics";
 
-		_methodParameterTypes19 = new String[] { "long", "long" };
+		_methodParameterTypes19 = new String[] {  };
 
-		_methodName20 = "getByStatisticId";
+		_methodName20 = "getByCompanyIdandGroupId";
 
-		_methodParameterTypes20 = new String[] { "long" };
+		_methodParameterTypes20 = new String[] { "long", "long" };
 
 		_methodName21 = "getByStatisticId";
 
-		_methodParameterTypes21 = new String[] { "long", "long", "long" };
+		_methodParameterTypes21 = new String[] { "long" };
 
-		_methodName22 = "removeVideoStatisticDefaultTable";
+		_methodName22 = "getByStatisticId";
 
-		_methodParameterTypes22 = new String[] {  };
+		_methodParameterTypes22 = new String[] { "long", "long", "long" };
 
-		_methodName23 = "addVideoStatisticView";
+		_methodName23 = "removeVideoStatisticDefaultTable";
 
 		_methodParameterTypes23 = new String[] {  };
 
-		_methodName24 = "addDefaultEntry";
+		_methodName24 = "addVideoStatisticView";
 
-		_methodParameterTypes24 = new String[] {
+		_methodParameterTypes24 = new String[] {  };
+
+		_methodName25 = "addDefaultEntry";
+
+		_methodParameterTypes25 = new String[] {
 				"com.liferay.portal.service.ServiceContext"
 			};
 
-		_methodName25 = "addEntry";
+		_methodName26 = "addEntry";
 
-		_methodParameterTypes25 = new String[] {
+		_methodParameterTypes26 = new String[] {
 				"int", "int", "com.liferay.portal.service.ServiceContext"
 			};
 
-		_methodName26 = "add";
+		_methodName27 = "add";
 
-		_methodParameterTypes26 = new String[] { "int", "int" };
+		_methodParameterTypes27 = new String[] { "int", "int" };
 
-		_methodName27 = "updateEntry";
+		_methodName28 = "updateEntry";
 
-		_methodParameterTypes27 = new String[] {
+		_methodParameterTypes28 = new String[] {
 				"long", "int", "int",
 				"com.liferay.portal.service.ServiceContext"
 			};
 
-		_methodName28 = "deleteLinkById";
+		_methodName29 = "deleteLinkById";
 
-		_methodParameterTypes28 = new String[] {
+		_methodParameterTypes29 = new String[] {
 				"long", "com.liferay.portal.service.ServiceContext"
 			};
 
-		_methodName29 = "updateCounter";
+		_methodName30 = "updateCounter";
 
-		_methodParameterTypes29 = new String[] {  };
+		_methodParameterTypes30 = new String[] {  };
 	}
 
 	@Override
@@ -715,6 +719,34 @@ public class StatisticLocalServiceClp implements StatisticLocalService {
 	}
 
 	@Override
+	public org.json.JSONObject getAllStatistics()
+		throws com.liferay.portal.kernel.exception.SystemException {
+		Object returnObj = null;
+
+		try {
+			returnObj = _invokableLocalService.invokeMethod(_methodName19,
+					_methodParameterTypes19, new Object[] {  });
+		}
+		catch (Throwable t) {
+			t = ClpSerializer.translateThrowable(t);
+
+			if (t instanceof com.liferay.portal.kernel.exception.SystemException) {
+				throw (com.liferay.portal.kernel.exception.SystemException)t;
+			}
+
+			if (t instanceof RuntimeException) {
+				throw (RuntimeException)t;
+			}
+			else {
+				throw new RuntimeException(t.getClass().getName() +
+					" is not a valid exception");
+			}
+		}
+
+		return (org.json.JSONObject)ClpSerializer.translateOutput(returnObj);
+	}
+
+	@Override
 	public java.util.List<de.uhh.l2g.plugins.model.Statistic> getByCompanyIdandGroupId(
 		long companyId, long groupId)
 		throws com.liferay.portal.kernel.exception.PortalException,
@@ -722,8 +754,8 @@ public class StatisticLocalServiceClp implements StatisticLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName19,
-					_methodParameterTypes19, new Object[] { companyId, groupId });
+			returnObj = _invokableLocalService.invokeMethod(_methodName20,
+					_methodParameterTypes20, new Object[] { companyId, groupId });
 		}
 		catch (Throwable t) {
 			t = ClpSerializer.translateThrowable(t);
@@ -755,8 +787,8 @@ public class StatisticLocalServiceClp implements StatisticLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName20,
-					_methodParameterTypes20, new Object[] { statisticId });
+			returnObj = _invokableLocalService.invokeMethod(_methodName21,
+					_methodParameterTypes21, new Object[] { statisticId });
 		}
 		catch (Throwable t) {
 			t = ClpSerializer.translateThrowable(t);
@@ -789,8 +821,8 @@ public class StatisticLocalServiceClp implements StatisticLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName21,
-					_methodParameterTypes21,
+			returnObj = _invokableLocalService.invokeMethod(_methodName22,
+					_methodParameterTypes22,
 					new Object[] { companyId, groupId, statisticId });
 		}
 		catch (Throwable t) {
@@ -821,8 +853,8 @@ public class StatisticLocalServiceClp implements StatisticLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName22,
-					_methodParameterTypes22, new Object[] {  });
+			returnObj = _invokableLocalService.invokeMethod(_methodName23,
+					_methodParameterTypes23, new Object[] {  });
 		}
 		catch (Throwable t) {
 			t = ClpSerializer.translateThrowable(t);
@@ -844,8 +876,8 @@ public class StatisticLocalServiceClp implements StatisticLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName23,
-					_methodParameterTypes23, new Object[] {  });
+			returnObj = _invokableLocalService.invokeMethod(_methodName24,
+					_methodParameterTypes24, new Object[] {  });
 		}
 		catch (Throwable t) {
 			t = ClpSerializer.translateThrowable(t);
@@ -870,8 +902,8 @@ public class StatisticLocalServiceClp implements StatisticLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName24,
-					_methodParameterTypes24,
+			returnObj = _invokableLocalService.invokeMethod(_methodName25,
+					_methodParameterTypes25,
 					new Object[] { ClpSerializer.translateInput(serviceContext) });
 		}
 		catch (Throwable t) {
@@ -906,8 +938,8 @@ public class StatisticLocalServiceClp implements StatisticLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName25,
-					_methodParameterTypes25,
+			returnObj = _invokableLocalService.invokeMethod(_methodName26,
+					_methodParameterTypes26,
 					new Object[] {
 						privateVideos,
 						
@@ -947,8 +979,8 @@ public class StatisticLocalServiceClp implements StatisticLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName26,
-					_methodParameterTypes26,
+			returnObj = _invokableLocalService.invokeMethod(_methodName27,
+					_methodParameterTypes27,
 					new Object[] { privateVideos, publicVideos });
 		}
 		catch (Throwable t) {
@@ -983,8 +1015,8 @@ public class StatisticLocalServiceClp implements StatisticLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName27,
-					_methodParameterTypes27,
+			returnObj = _invokableLocalService.invokeMethod(_methodName28,
+					_methodParameterTypes28,
 					new Object[] {
 						statisticId,
 						
@@ -1026,8 +1058,8 @@ public class StatisticLocalServiceClp implements StatisticLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName28,
-					_methodParameterTypes28,
+			returnObj = _invokableLocalService.invokeMethod(_methodName29,
+					_methodParameterTypes29,
 					new Object[] {
 						statisticId,
 						
@@ -1064,8 +1096,8 @@ public class StatisticLocalServiceClp implements StatisticLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName29,
-					_methodParameterTypes29, new Object[] {  });
+			returnObj = _invokableLocalService.invokeMethod(_methodName30,
+					_methodParameterTypes30, new Object[] {  });
 		}
 		catch (Throwable t) {
 			t = ClpSerializer.translateThrowable(t);
@@ -1149,4 +1181,6 @@ public class StatisticLocalServiceClp implements StatisticLocalService {
 	private String[] _methodParameterTypes28;
 	private String _methodName29;
 	private String[] _methodParameterTypes29;
+	private String _methodName30;
+	private String[] _methodParameterTypes30;
 }

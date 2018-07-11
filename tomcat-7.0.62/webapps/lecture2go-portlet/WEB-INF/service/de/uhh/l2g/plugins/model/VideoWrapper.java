@@ -853,6 +853,16 @@ public class VideoWrapper implements Video, ModelWrapper<Video> {
 	}
 
 	@Override
+	public org.json.JSONArray getJsonPlayerUris() {
+		return _video.getJsonPlayerUris();
+	}
+
+	@Override
+	public void setJsonPlayerUris(org.json.JSONArray jsonPlayerUris) {
+		_video.setJsonPlayerUris(jsonPlayerUris);
+	}
+
+	@Override
 	public java.util.ArrayList<java.lang.String> getPlayerUris() {
 		return _video.getPlayerUris();
 	}

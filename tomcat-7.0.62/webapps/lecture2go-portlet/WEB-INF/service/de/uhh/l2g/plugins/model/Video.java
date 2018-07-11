@@ -51,6 +51,10 @@ public interface Video extends VideoModel, PersistedModel {
 
 	public void setAccessPermitted(java.lang.Integer accessPermitted);
 
+	public org.json.JSONArray getJsonPlayerUris();
+
+	public void setJsonPlayerUris(org.json.JSONArray jsonPlayerUris);
+
 	public java.util.ArrayList<java.lang.String> getPlayerUris();
 
 	public void setPlayerUris(java.util.ArrayList<java.lang.String> playerUris);
