@@ -327,7 +327,7 @@ input, select {
   .aui .taglib-form-navigator > .form-steps > ul.form-navigator.well .tab .tab-label .number {
     background: #CCC;
     color: #FFF; }
-  @media (max-width: 979px) {
+  @media (max-width: 767px) {
     .aui .taglib-form-navigator .form-navigator-content {
       clear: both;
       float: none;

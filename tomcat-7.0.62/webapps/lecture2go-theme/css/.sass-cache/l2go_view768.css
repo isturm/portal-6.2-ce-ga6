@@ -2,6 +2,9 @@
   .noresponsive {
     display: none; }
 
+  #chapters span.time {
+    margin-top: -5px; }
+
   .btn.maindelete {
     margin-top: -42px !important;
     margin-left: 67px !important;

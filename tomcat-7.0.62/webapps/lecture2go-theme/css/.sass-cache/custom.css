@@ -327,7 +327,7 @@ input, select {
   .aui .taglib-form-navigator > .form-steps > ul.form-navigator.well .tab .tab-label .number {
     background: #CCC;
     color: #FFF; }
-  @media (max-width: 979px) {
+  @media (max-width: 767px) {
     .aui .taglib-form-navigator .form-navigator-content {
       clear: both;
       float: none;
@@ -985,14 +985,14 @@ input, select {
         background: #f9f9f9;
         line-height: inherit;
         padding: 6px 8px; }
-        @media (max-width: 979px) {
+        @media (max-width: 767px) {
           .aui .dockbar-split .dockbar .navbar-inner .nav-add-controls > li > a {
             background: transparent; } }
         .aui .dockbar-split .dockbar .navbar-inner .nav-add-controls > li > a:hover {
           background: #e9e9e9; }
         .aui .dockbar-split .dockbar .navbar-inner .nav-add-controls > li > a.toggle-controls-link {
           background: #92F545; }
-          @media (max-width: 979px) {
+          @media (max-width: 767px) {
             .aui .dockbar-split .dockbar .navbar-inner .nav-add-controls > li > a.toggle-controls-link {
               background: transparent; } }
   .aui .dockbar-split .dockbar .navbar-inner .nav li.dropdown.open > .dropdown-toggle {
@@ -1098,7 +1098,7 @@ input, select {
     padding: 10px; }
     .aui .modify-pages .lfr-nav-item .lfr-nav-child-toggle i {
       margin: 0; }
-    @media (max-width: 979px) {
+    @media (max-width: 767px) {
       .aui .modify-pages .lfr-nav-item .lfr-nav-child-toggle {
         line-height: 1em;
         padding: 14px;
@@ -1336,7 +1336,7 @@ input, select {
     -moz-box-shadow: none;
     box-shadow: none;
     text-shadow: none; }
-    @media (max-width: 979px) {
+    @media (max-width: 767px) {
       .aui .dockbar-split .dockbar .navbar-inner {
         background: #4e4e4e; } }
   .aui .lfr-hudcrumbs ul {
