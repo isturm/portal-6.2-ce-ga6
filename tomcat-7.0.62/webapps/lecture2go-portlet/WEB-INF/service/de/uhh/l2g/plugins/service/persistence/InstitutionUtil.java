@@ -3126,6 +3126,81 @@ public class InstitutionUtil {
 	}
 
 	/**
+	* Returns the institution where parentId = &#63; and companyId = &#63; or throws a {@link de.uhh.l2g.plugins.NoSuchInstitutionException} if it could not be found.
+	*
+	* @param parentId the parent ID
+	* @param companyId the company ID
+	* @return the matching institution
+	* @throws de.uhh.l2g.plugins.NoSuchInstitutionException if a matching institution could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	public static de.uhh.l2g.plugins.model.Institution findByParentIdAndCompanyId(
+		long parentId, long companyId)
+		throws com.liferay.portal.kernel.exception.SystemException,
+			de.uhh.l2g.plugins.NoSuchInstitutionException {
+		return getPersistence().findByParentIdAndCompanyId(parentId, companyId);
+	}
+
+	/**
+	* Returns the institution where parentId = &#63; and companyId = &#63; or returns <code>null</code> if it could not be found. Uses the finder cache.
+	*
+	* @param parentId the parent ID
+	* @param companyId the company ID
+	* @return the matching institution, or <code>null</code> if a matching institution could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	public static de.uhh.l2g.plugins.model.Institution fetchByParentIdAndCompanyId(
+		long parentId, long companyId)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getPersistence().fetchByParentIdAndCompanyId(parentId, companyId);
+	}
+
+	/**
+	* Returns the institution where parentId = &#63; and companyId = &#63; or returns <code>null</code> if it could not be found, optionally using the finder cache.
+	*
+	* @param parentId the parent ID
+	* @param companyId the company ID
+	* @param retrieveFromCache whether to use the finder cache
+	* @return the matching institution, or <code>null</code> if a matching institution could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	public static de.uhh.l2g.plugins.model.Institution fetchByParentIdAndCompanyId(
+		long parentId, long companyId, boolean retrieveFromCache)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getPersistence()
+				   .fetchByParentIdAndCompanyId(parentId, companyId,
+			retrieveFromCache);
+	}
+
+	/**
+	* Removes the institution where parentId = &#63; and companyId = &#63; from the database.
+	*
+	* @param parentId the parent ID
+	* @param companyId the company ID
+	* @return the institution that was removed
+	* @throws SystemException if a system exception occurred
+	*/
+	public static de.uhh.l2g.plugins.model.Institution removeByParentIdAndCompanyId(
+		long parentId, long companyId)
+		throws com.liferay.portal.kernel.exception.SystemException,
+			de.uhh.l2g.plugins.NoSuchInstitutionException {
+		return getPersistence().removeByParentIdAndCompanyId(parentId, companyId);
+	}
+
+	/**
+	* Returns the number of institutions where parentId = &#63; and companyId = &#63;.
+	*
+	* @param parentId the parent ID
+	* @param companyId the company ID
+	* @return the number of matching institutions
+	* @throws SystemException if a system exception occurred
+	*/
+	public static int countByParentIdAndCompanyId(long parentId, long companyId)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getPersistence().countByParentIdAndCompanyId(parentId, companyId);
+	}
+
+	/**
 	* Caches the institution in the entity cache if it is enabled.
 	*
 	* @param institution the institution
