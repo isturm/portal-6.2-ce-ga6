@@ -5130,11 +5130,6 @@ thead, th {
   max-width: 113px;
   width: 100%; }
 
-.aui #chapters {
-  margin-top: 10px;
-  padding-top: 0;
-  width: auto; }
-
 #segments-width {
   width: 811px; }
 
@@ -5146,13 +5141,7 @@ thead, th {
 #segment-input-cancel {
   float: right; }
 
-.aui .chaptertile {
-  padding: 5px 0px;
-  border-width: 0px 0px 1px;
-  border-style: solid;
-  border-color: #eee; }
-
-.aui .chaptertile:last-child {
+.chaptertile:last-child {
   border: none; }
 
 #chapters .chaptertile input {
@@ -5187,32 +5176,49 @@ thead, th {
   margin-top: -44px;
   font-size: 12px; }
 
-.format {
-  color: #d81b1b;
-  font-size: 10px;
-  padding: 0; }
+.aui #chapters {
+  margin-top: 10px;
+  padding-top: 0;
+  width: auto;
+  border: 1px 0 0 1px solid #eee; }
+
+.aui .chaptertile {
+  padding: 5px 0;
+  border-color: #eee;
+  border-width: 0 0 1px;
+  border-style: solid;
+  min-height: 55px; }
+
+li.chaptertile {
+  list-style: none; }
 
 .aui .chaptertile.active {
   color: #D81B1B;
   background: #eee; }
 
-.commenttile {
-  border-bottom: 1px solid #eee; }
-
-.commenttile div span.time {
+.aui .chaptertile .image {
+  width: 70px;
+  height: auto;
+  float: left;
   margin-left: 5px; }
 
-.commenttile:hover {
-  background: #f9f9f9; }
+.aui .chaptertile .title {
+  margin-left: 80px;
+  width: 85%;
+  line-height: 20px; }
 
-.commenttile > div {
-  cursor: pointer;
+.chaptertile:hover {
+  background: #f9f9f9 none repeat scroll 0 0;
+  cursor: pointer; }
+
+.format {
+  color: #d81b1b;
   font-size: 10px;
-  padding-left: 3px; }
+  padding: 0; }
 
-.commenttile input {
-  float: right;
-  margin-top: -21px; }
+.chaptertile.active {
+  color: #D81B1B;
+  background: #eee; }
 
 #segmentinput > div {
   float: left;
@@ -6035,7 +6041,7 @@ div#streamingServerSettings div.accordion-heading.toggler-header.toggler-header-
 .sub-inst .title-text {
   color: #444 !important;
   float: left;
-  font-size: 13px;
+  font-size: 14px;
   padding: 0 1px 4px;
   text-shadow: 0 0 0 #777777 !important; }
 
@@ -6630,7 +6636,6 @@ strong, b, th, #kopf .sprachwechsel {
     width: 100%; }
 
   .date.related {
-    position: absolute;
     right: 5px; }
 
   generation-date {
@@ -6679,7 +6684,7 @@ strong, b, th, #kopf .sprachwechsel {
     display: none; }
 
   .col-md-5 {
-    float: left;
+    float: none;
     margin-top: auto; }
 
   .player {
@@ -6808,9 +6813,6 @@ strong, b, th, #kopf .sprachwechsel {
     vertical-align: middle;
     width: 65px;
     height: 40px; }
-
-  .aui .chaptertile a span {
-    margin-top: -50px; }
 
   .add-new-creator-term-object {
     display: none;
@@ -6946,7 +6948,7 @@ strong, b, th, #kopf .sprachwechsel {
 
   .related {
     margin-left: auto;
-    width: auto; }
+    width: 100%; }
 
   #content {
     margin-left: 0px;
@@ -7144,12 +7146,12 @@ strong, b, th, #kopf .sprachwechsel {
     padding: 0 !important; } }
 /* < 480px */
 @media (max-width: 479px) {
-  .aui .chaptertile a span {
-    margin-top: -42px; }
-
   .video-image-big {
     height: 64px !important;
     width: 113px; }
+
+  .aui .chaptertile .title {
+    width: calc(85% - 30px); }
 
   .btn.maindelete {
     margin-top: -42px !important;

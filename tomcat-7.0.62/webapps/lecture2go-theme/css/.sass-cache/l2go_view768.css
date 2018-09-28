@@ -29,7 +29,6 @@
     width: 100%; }
 
   .date.related {
-    position: absolute;
     right: 5px; }
 
   generation-date {
@@ -78,7 +77,7 @@
     display: none; }
 
   .col-md-5 {
-    float: left;
+    float: none;
     margin-top: auto; }
 
   .player {
@@ -207,9 +206,6 @@
     vertical-align: middle;
     width: 65px;
     height: 40px; }
-
-  .aui .chaptertile a span {
-    margin-top: -50px; }
 
   .add-new-creator-term-object {
     display: none;
@@ -345,7 +341,7 @@
 
   .related {
     margin-left: auto;
-    width: auto; }
+    width: 100%; }
 
   #content {
     margin-left: 0px;

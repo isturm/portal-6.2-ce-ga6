@@ -332,6 +332,12 @@ public class VideoLocalServiceWrapper implements VideoLocalService,
 	}
 
 	@Override
+	public int countByLectureseries(java.lang.Long lectureseriesId)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _videoLocalService.countByLectureseries(lectureseriesId);
+	}
+
+	@Override
 	public java.util.List<de.uhh.l2g.plugins.model.Video> getByProducerAndLectureseries(
 		java.lang.Long producerId, java.lang.Long lectureseriesId)
 		throws com.liferay.portal.kernel.exception.SystemException {
@@ -371,6 +377,14 @@ public class VideoLocalServiceWrapper implements VideoLocalService,
 	public void createLastVideoList()
 		throws com.liferay.portal.kernel.exception.SystemException {
 		_videoLocalService.createLastVideoList();
+	}
+
+	@Override
+	public int countByLectureseriesAndOpenaccess(
+		java.lang.Long lectureseriesId, int openAccess)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _videoLocalService.countByLectureseriesAndOpenaccess(lectureseriesId,
+			openAccess);
 	}
 
 	@Override
