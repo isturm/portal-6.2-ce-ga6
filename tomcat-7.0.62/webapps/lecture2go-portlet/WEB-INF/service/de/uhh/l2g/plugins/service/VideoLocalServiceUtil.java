@@ -317,6 +317,11 @@ public class VideoLocalServiceUtil {
 		return getService().getByLectureseries(lectureseriesId);
 	}
 
+	public static int countByLectureseries(java.lang.Long lectureseriesId)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getService().countByLectureseries(lectureseriesId);
+	}
+
 	public static java.util.List<de.uhh.l2g.plugins.model.Video> getByProducerAndLectureseries(
 		java.lang.Long producerId, java.lang.Long lectureseriesId)
 		throws com.liferay.portal.kernel.exception.SystemException {
@@ -352,6 +357,14 @@ public class VideoLocalServiceUtil {
 	public static void createLastVideoList()
 		throws com.liferay.portal.kernel.exception.SystemException {
 		getService().createLastVideoList();
+	}
+
+	public static int countByLectureseriesAndOpenaccess(
+		java.lang.Long lectureseriesId, int openAccess)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getService()
+				   .countByLectureseriesAndOpenaccess(lectureseriesId,
+			openAccess);
 	}
 
 	public static java.util.List<de.uhh.l2g.plugins.model.Video> getByLectureseriesAndOpenaccess(
@@ -432,6 +445,30 @@ public class VideoLocalServiceUtil {
 	public static java.lang.Long getLatestClosedAccessVideoId(
 		java.lang.Long lectureseriesId) {
 		return getService().getLatestClosedAccessVideoId(lectureseriesId);
+	}
+
+	/**
+	* Checks if the video has a related smil-file in the file system
+	*/
+	public static boolean checkSmilFile(de.uhh.l2g.plugins.model.Video video) {
+		return getService().checkSmilFile(video);
+	}
+
+	public static boolean fileStringSegmentFoundInArray(java.lang.String file,
+		org.json.JSONArray jsonArray) {
+		return getService().fileStringSegmentFoundInArray(file, jsonArray);
+	}
+
+	/**
+	* Checks if file is a symoblic link
+	*
+	* @param file the file to check
+	* @return true if file is sym link, false if not
+	* @throws IOException
+	*/
+	public static boolean isSymlink(java.io.File file)
+		throws java.io.IOException {
+		return getService().isSymlink(file);
 	}
 
 	public static void clearService() {

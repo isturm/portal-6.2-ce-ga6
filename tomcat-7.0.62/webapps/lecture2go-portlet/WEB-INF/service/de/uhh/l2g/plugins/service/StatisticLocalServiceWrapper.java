@@ -283,6 +283,12 @@ public class StatisticLocalServiceWrapper implements StatisticLocalService,
 	}
 
 	@Override
+	public org.json.JSONObject getAllStatistics()
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _statisticLocalService.getAllStatistics();
+	}
+
+	@Override
 	public java.util.List<de.uhh.l2g.plugins.model.Statistic> getByCompanyIdandGroupId(
 		long companyId, long groupId)
 		throws com.liferay.portal.kernel.exception.PortalException,

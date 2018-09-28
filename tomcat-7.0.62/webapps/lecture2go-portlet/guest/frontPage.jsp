@@ -32,10 +32,10 @@ List<Institution> institutions = InstitutionLocalServiceUtil.getRootInstitutions
 InstallWizardManager installWizardManager = new InstallWizardManager(portletGroupId, company.getCompanyId());
 installWizardManager.installRepository();
 %>
-
+   
 <div class="front-page-teaser">
  	<div class="bg-video-container">
-		<video id="bg-vid" autoplay loop poster="/lecture2go-portlet/img/background_still.jpg" preload="none">
+		<video id="bg-vid" autoplay loop poster="/lecture2go-portlet/img/background_still.jpg" preload="none" muted>
 		    <!-- the video source is added dynamically to avoid unnecessary traffic -->
 		    <img src="/lecture2go-portlet/img/background_still.jpg">
 		</video>
@@ -47,7 +47,11 @@ installWizardManager.installRepository();
 	<div class="l2go-info-container">
 		<div class="l2go-info">
 			<div class="l2go-title">
-				Lecture<span class="orange">2</span>Go
+				<%if(company.getName().equals("Lecture2Go")){%>
+					Lecture<span class="orange">2</span>Go
+				<%}else{%>
+					<%=company.getName()%>
+				<%}%>
 			</div>
 			<div class="l2go-subtitle">
 				<p><liferay-ui:message key="l2go-description"/></p>

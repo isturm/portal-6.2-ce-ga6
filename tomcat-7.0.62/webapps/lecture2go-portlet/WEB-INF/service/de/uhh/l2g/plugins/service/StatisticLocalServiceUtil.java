@@ -275,6 +275,11 @@ public class StatisticLocalServiceUtil {
 		return getService().invokeMethod(name, parameterTypes, arguments);
 	}
 
+	public static org.json.JSONObject getAllStatistics()
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getService().getAllStatistics();
+	}
+
 	public static java.util.List<de.uhh.l2g.plugins.model.Statistic> getByCompanyIdandGroupId(
 		long companyId, long groupId)
 		throws com.liferay.portal.kernel.exception.PortalException,

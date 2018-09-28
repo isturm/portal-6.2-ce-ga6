@@ -24,17 +24,25 @@
 </portlet:actionURL>
 
 <%
-String tags= video.getTags().length()>0 ? " - "+video.getTags()+" - " : "";
-String pageTitle=video.getTitle() +" - "+lectureseries.getName()+" - "+CreatorLocalServiceUtil.getCommaSeparatedCreatorsByVideoIdAndMaxCreators(video.getVideoId(), 200) + " - Universität Hamburg" + tags;
-PortalUtil.setPageTitle(pageTitle, request);
+	String pageTitle = "";
 
-String companyName = company.getName();
-String portalURL = PrefsPropsUtil.getString(company.getCompanyId(),PropsKeys.DEFAULT_LANDING_PAGE_PATH);
+	if (video.getOpenAccess() == 1) {
+		String tags = video.getTags().length() > 0 ? " - " + video.getTags() + " - " : "";
+		pageTitle = video.getTitle() + " - " + lectureseries.getName() + " - " + CreatorLocalServiceUtil.getCommaSeparatedCreatorsByVideoIdAndMaxCreators(video.getVideoId(), 200) + " - Universität Hamburg" + tags;
+	} else {
+		pageTitle = company.getName();
+	}
 
-boolean isCitation2Go = false;
-if(timeStart>0 && timeEnd>timeStart && video.getCitation2go()==1)isCitation2Go=true;
+	PortalUtil.setPageTitle(pageTitle, request);
 
-String pageName = themeDisplay.getLayout().getName(themeDisplay.getLocale());
+	String companyName = company.getName();
+	String portalURL = PrefsPropsUtil.getString(company.getCompanyId(), PropsKeys.DEFAULT_LANDING_PAGE_PATH);
+
+	boolean isCitation2Go = false;
+	if (timeStart > 0 && timeEnd > timeStart && video.getCitation2go() == 1)
+		isCitation2Go = true;
+
+	String pageName = themeDisplay.getLayout().getName(themeDisplay.getLocale());
 %>
 
 <%if(video.getVideoId()>0){%>
@@ -72,13 +80,13 @@ String pageName = themeDisplay.getLayout().getName(themeDisplay.getLocale());
 									<portlet:param name="creatorId" value="0"/>
 								</portlet:actionURL>	
 								
-								<A HREF=<%=portalURL%>><%=companyName %></A><span class="uhh-icon-arrow-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> 
+								<A HREF="<%=portalURL%>"><%=companyName %></A><span class="uhh-icon-arrow-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> 
 								<A HREF="<%=backURL0%>"><%=pageName %></A><span class="uhh-icon-arrow-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> 
 								<A HREF="<%=backURL0%>"><%=rInst.getName() %></A> <span class="uhh-icon-arrow-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> 
 						    	<A HREF="<%=backURL1%>"><%=pInst.getName() %></A> <span class="uhh-icon-arrow-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> 
 						    	<A HREF="<%=backURL2%>"><%=insti.getName() %></A> 
 						    	<%if(lec.getLectureseriesId()>0) {%>
-					    		<span class="uhh-icon-arrow-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <SPAN><%=lec.getName()%></SPAN>
+					    			<span class="uhh-icon-arrow-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <SPAN><%=lec.getName()%></SPAN>
 					    		<%}%>
 						    	<br/>
 				    		<%}
@@ -118,11 +126,20 @@ String pageName = themeDisplay.getLayout().getName(themeDisplay.getLocale());
 							    	<br/> 
 					      		<%
 				    		}catch(Exception e){}
-				      }  		
+				      }  
+				      if (videoInstitutions.size()==0){
+				    	  Institution rootI = InstitutionLocalServiceUtil.getByParentIdAndCompanyId(0, company.getCompanyId());
+				    	  %>
+								<A HREF="/"><%=companyName %></A><span class="uhh-icon-arrow-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> 
+							    <A HREF="<%=backURL0%>"><%=pageName %></A><span class="uhh-icon-arrow-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> 				    	  
+							    <A HREF="<%=backURL0%>"><%=rootI.getName() %></A>
+							    <br/> 				    	  
+				    	  <%
+				      }
 			    	}
 			    	%>
 			    </div>
-			</div>
+			</div> 
 		<%}%>
 	
 		<h1><liferay-ui:message key="video-catalog"/></h1>
@@ -132,21 +149,24 @@ String pageName = themeDisplay.getLayout().getName(themeDisplay.getLocale());
 			  <%
 			    String title = video.getTitle();  	
 			  	Long lTermId = lectureseries.getTermId();
-			  	String termMetadata = "";
-			  	if(lTermId > 1)
-			  	{
-			  		termMetadata = " ("+TermLocalServiceUtil.getById(lTermId).getPrefix()+" "+TermLocalServiceUtil.getById(lTermId).getYear()+")";
-			  	}
-			  		String series = lectureseries.getName()+termMetadata;
+
+			  	String series = "";
+		  		String t = "";
+		  		try{
+		  			t = TermLocalServiceUtil.getById(lTermId).getPrefix()+" "+TermLocalServiceUtil.getById(lTermId).getYear();
+		  		}catch (Exception e){};
+			  		
+		  		if (t.trim().length()>0)series = lectureseries.getName() +"("+t+")";
+		  		else series= lectureseries.getName();
 			  	%>
 		       <c:if test="${relatedVideos.size()>1}"><div class="player"></c:if>
 			   <c:if test="${relatedVideos.size()<=1}"><div class="player-wide"></c:if>
 				<%@ include file="/player/includePlayer.jsp"%>
 				   <div class="license">
 				      <%if(videoLicense.getL2go()==1){%>
-				      	<a href="/license-l2go" title="<liferay-ui:message key='l2go-license-click-for-info'/>"><liferay-ui:message key="license"/>: <liferay-ui:message key='l2go-license'/></a>
+				      	<a href="/web/vod/licence-l2go" title="<liferay-ui:message key='l2go-license-click-for-info'/>"><liferay-ui:message key="license"/></a>
 				 	  <%}else{%>
-						<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" title="<liferay-ui:message key='cc-license-click-for-info'/>"><liferay-ui:message key="license"/>: <liferay-ui:message key='cy-nc-sa-license'/></a> 		
+						<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" title="<liferay-ui:message key='cc-license-click-for-info'/>"><liferay-ui:message key="license"/></a> 		
 				 	  <%}%>       
 				   </div>
 			       <div class="views"><liferay-ui:message key="views"/>: ${video.hits}</div>	
@@ -196,7 +216,7 @@ String pageName = themeDisplay.getLayout().getName(themeDisplay.getLocale());
 							    <%if(video.getOpenAccess()==1){%>
 							   	 	<li><a href="#share" data-toggle="tab"><liferay-ui:message key="share"/></a></li>
 							    <%}%>
-							    <li><a href="#support" data-toggle="tab"><liferay-ui:message key="support"/></a></li>
+							    
 							    <%if(video.isHasChapters()){ %>
 							    	<li><a href="#chapters" data-toggle="tab"><liferay-ui:message key="chapters"/></a></li>
 							    <%}%>				    
@@ -213,73 +233,8 @@ String pageName = themeDisplay.getLayout().getName(themeDisplay.getLocale());
 								        <p><%@ include file="/guest/includeShare.jsp" %></p>
 								    </div>
 							    <%}%>
-								    <div class="tab-pane" id="support">
-								        <p>
-											<%
-												Integer facultyId = (int)video.getRootInstitutionId();
-												String institut = "";
-												String option1 = PortalUtil.getOriginalServletRequest(request).getParameter("option1"); 
-												
-												switch(facultyId){
-													case 3: institut = "UHH-Jura";break;
-													case 4: institut = "UHH-WiSo";break;
-													case 5: institut = "UHH-Medizin";break;
-													case 6: institut = "UHH-EW";break;
-													case 7: institut = "UHH-GWiss";break;
-													case 8: institut = "UHH-MIN";break;
-													case 203: institut = "UHH-PB";break;
-													case 204: institut = "UHH-BWL";break;
-													default: institut = "Fakultätübergreifend";break;
-												}
-												
-												String url=video.getUrl();
-												if(video.getOpenAccess()==0)url=video.getSecureUrl();
-												
-												JSONObject jsn = new JSONObject();
-												jsn.put("institution",institut);
-												jsn.put("system","Lecture2Go");
-												jsn.put("role","Lecture2Go-Benutzer");
-												jsn.put("gender","");
-												jsn.put("firstname",PortalUtil.getOriginalServletRequest(request).getParameter("firstname"));
-												jsn.put("lastname",PortalUtil.getOriginalServletRequest(request).getParameter("lastname"));
-												jsn.put("email",PortalUtil.getOriginalServletRequest(request).getParameter("email"));
-												jsn.put("subject",url);
-												jsn.put("body",PortalUtil.getOriginalServletRequest(request).getParameter("body"));
-												jsn.put("ergebnis",PortalUtil.getOriginalServletRequest(request).getParameter("ergebnis"));
-												jsn.put("option1",option1);
-												jsn.put("result",PortalUtil.getOriginalServletRequest(request).getParameter("result"));
-												jsn.put("spamprotect",PortalUtil.getOriginalServletRequest(request).getParameter("spamprotect"));
-											%>
-											<div id="meta-share">
-												<%
-													SupportFormularClient sfc = new SupportFormularClient("mail4eLearnSupport",url,jsn.toString(),"");
-													out.print(sfc.getFormular());
-												%>
-												
-												<% 
-													// If support form was submitted, scroll down and select 'support' tab
-													if(option1!=null){
-														%>
-														<script type="text/javascript">
-															$(function() {
-																// activate contact tab
-																$("#tabs li a").eq(-1).click();
-																
-																// Scrolling must happen in onload, because otherwise the Player is not yet loaded and the position would be wrong
-																window.onload = function () {
-																	var pos = $("#tabs").offset().top;
-																	$('html, body').animate({scrollTop: pos - 10}, 1000, "easeInOutCubic");	
-																}
-																
-															 });
-														</script>
-														<%		
-													}
-												%>
-											</div>		        
-								    </div>
-		
-									<%if(video.isHasChapters() || video.isHasComments()){%>
+    		
+								<%if(video.isHasChapters() || video.isHasComments()){%>
 									    <div class="tab-pane" id="chapters">
 									    	<liferay-portlet:resourceURL id="showSegments" var="segmentsURL" />
 											<script type="text/javascript">
@@ -321,30 +276,17 @@ String pageName = themeDisplay.getLayout().getName(themeDisplay.getLocale());
 												function drawRow(segment) {
 												    if(segment.chapter==1){
 												    	// segment is a chapter
-												    	newRow='<div class="chaptertile" id="' + segment.segmentId + '" begin="' + segment.start + '" end="' + segment.end + '">'+
-														'<a><img width="130px" height="63px" class="imgsmall" title="watch this chapter" src="'+segment.image+'"></a>'+
-														'<span class="time">'+segment.start +' - '+segment.end+'</span><br/>'+
-														'<a><span class="segment-title">'+segment.title+'</span></a>';
-													}else{
-														// segment is a comment
-														newRow='<div class="commenttile" id="'+segment.segmentId+'" onload="alert('+segment.segmentId+')">'+
-											    		'<div>'+
-														'<b id="pf1_'+segment.segmentId+'">'+
-											    		'<span class="icon-small icon-plus" id="showr'+segment.segmentId+'" onclick="showSegment('+segment.segmentId+')"/>'+
-											    		'</b>'+
-											    		'<b id="pf2_'+segment.segmentId+'">'+
-											    		'<span class="icon-small icon-minus" id="hidr'+segment.segmentId+'" onclick="hideSegment('+segment.segmentId+')"/>'+
-											    		'</b>'+
-											    		'<span class="time">'+segment.start+'</span>'+
-											    		'<a><iavst class="white" begin="'+segment.start+'" end="'+segment.end+'"><span class="segment-title">'+segment.title+'</span></iavst></a>'+
-											    		'</div>';
-											    		if(segment.description >""){
-											    			newRow=newRow+'<b id="iav'+segment.segmentId+'"><span class="fs10"><div id="description"><em>'+segment.description+'</em></div></span></b>';
-											    		}
-													}
-													newRow=newRow+'</div>';
-													if(segment.chapter!=1){
-														newRow=newRow+'<script>YUI().use("node-base", function(Y) {Y.on("available", loadSegment('+segment.segmentId+'), "#'+segment.segmentId+'")})<\/script>';
+												    	newRow='<li class="chaptertile" id="' + segment.segmentId + '" begin="' + segment.start + '" end="' + segment.end + '">';
+												    	
+												    	newRow=newRow + '<div class="image">';
+												    	newRow=newRow + '<a><img src="'+segment.image+'"></a>';
+												    	newRow=newRow + '</div>';
+												    	
+												    	newRow=newRow + '<div class="title">';
+												    	newRow=newRow + '<a><b>' + segment.start +'</b> '+segment.title+'</a>';
+												    	newRow=newRow + '</div>';
+											    	
+											    	newRow=newRow + '</li>';
 													}
 													
 													if(segment.previousSegmentId == -1){
@@ -354,7 +296,7 @@ String pageName = themeDisplay.getLayout().getName(themeDisplay.getLocale());
 													}
 												}
 											</script>
-									    </div>
+									    </ul>
 							    	<%}%>
 							</div>    
 						</div>

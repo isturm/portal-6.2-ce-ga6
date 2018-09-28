@@ -140,85 +140,107 @@ public class VideoLocalServiceClp implements VideoLocalService {
 
 		_methodParameterTypes26 = new String[] { "java.lang.Long" };
 
-		_methodName27 = "getByProducerAndLectureseries";
+		_methodName27 = "countByLectureseries";
 
-		_methodParameterTypes27 = new String[] {
+		_methodParameterTypes27 = new String[] { "java.lang.Long" };
+
+		_methodName28 = "getByProducerAndLectureseries";
+
+		_methodParameterTypes28 = new String[] {
 				"java.lang.Long", "java.lang.Long"
 			};
 
-		_methodName28 = "getByProducerAndDownloadLink";
+		_methodName29 = "getByProducerAndDownloadLink";
 
-		_methodParameterTypes28 = new String[] { "java.lang.Long", "int" };
+		_methodParameterTypes29 = new String[] { "java.lang.Long", "int" };
 
-		_methodName29 = "getPopular";
+		_methodName30 = "getPopular";
 
-		_methodParameterTypes29 = new String[] { "int" };
+		_methodParameterTypes30 = new String[] { "int" };
 
-		_methodName30 = "getLatestVideos";
+		_methodName31 = "getLatestVideos";
 
-		_methodParameterTypes30 = new String[] {  };
+		_methodParameterTypes31 = new String[] {  };
 
-		_methodName31 = "getFullVideo";
-
-		_methodParameterTypes31 = new String[] { "java.lang.Long" };
-
-		_methodName32 = "getJSONVideo";
+		_methodName32 = "getFullVideo";
 
 		_methodParameterTypes32 = new String[] { "java.lang.Long" };
 
-		_methodName33 = "createLastVideoList";
+		_methodName33 = "getJSONVideo";
 
-		_methodParameterTypes33 = new String[] {  };
+		_methodParameterTypes33 = new String[] { "java.lang.Long" };
 
-		_methodName34 = "getByLectureseriesAndOpenaccess";
+		_methodName34 = "createLastVideoList";
 
-		_methodParameterTypes34 = new String[] { "java.lang.Long", "int" };
+		_methodParameterTypes34 = new String[] {  };
 
-		_methodName35 = "addPlayerUris2Video";
+		_methodName35 = "countByLectureseriesAndOpenaccess";
 
-		_methodParameterTypes35 = new String[] {
+		_methodParameterTypes35 = new String[] { "java.lang.Long", "int" };
+
+		_methodName36 = "getByLectureseriesAndOpenaccess";
+
+		_methodParameterTypes36 = new String[] { "java.lang.Long", "int" };
+
+		_methodName37 = "addPlayerUris2Video";
+
+		_methodParameterTypes37 = new String[] {
 				"de.uhh.l2g.plugins.model.Host",
 				"de.uhh.l2g.plugins.model.Video",
 				"de.uhh.l2g.plugins.model.Producer"
 			};
 
-		_methodName36 = "getBySecureUrl";
+		_methodName38 = "getBySecureUrl";
 
-		_methodParameterTypes36 = new String[] { "java.lang.String" };
+		_methodParameterTypes38 = new String[] { "java.lang.String" };
 
-		_methodName37 = "getAll";
-
-		_methodParameterTypes37 = new String[] {  };
-
-		_methodName38 = "getBySearchWord";
-
-		_methodParameterTypes38 = new String[] { "java.lang.String", "int" };
-
-		_methodName39 = "getByAllSearchWords";
+		_methodName39 = "getAll";
 
 		_methodParameterTypes39 = new String[] {  };
 
-		_methodName40 = "getBySearchWordAndLectureseriesId";
+		_methodName40 = "getBySearchWord";
 
-		_methodParameterTypes40 = new String[] {
+		_methodParameterTypes40 = new String[] { "java.lang.String", "int" };
+
+		_methodName41 = "getByAllSearchWords";
+
+		_methodParameterTypes41 = new String[] {  };
+
+		_methodName42 = "getBySearchWordAndLectureseriesId";
+
+		_methodParameterTypes42 = new String[] {
 				"java.lang.String", "java.lang.Long"
 			};
 
-		_methodName41 = "getByHits";
-
-		_methodParameterTypes41 = new String[] { "java.lang.Long" };
-
-		_methodName42 = "getByHitsAndOpenAccess";
-
-		_methodParameterTypes42 = new String[] { "java.lang.Long" };
-
 		_methodName43 = "getByHits";
 
-		_methodParameterTypes43 = new String[] {  };
+		_methodParameterTypes43 = new String[] { "java.lang.Long" };
 
-		_methodName44 = "getLatestClosedAccessVideoId";
+		_methodName44 = "getByHitsAndOpenAccess";
 
 		_methodParameterTypes44 = new String[] { "java.lang.Long" };
+
+		_methodName45 = "getByHits";
+
+		_methodParameterTypes45 = new String[] {  };
+
+		_methodName46 = "getLatestClosedAccessVideoId";
+
+		_methodParameterTypes46 = new String[] { "java.lang.Long" };
+
+		_methodName47 = "checkSmilFile";
+
+		_methodParameterTypes47 = new String[] { "de.uhh.l2g.plugins.model.Video" };
+
+		_methodName48 = "fileStringSegmentFoundInArray";
+
+		_methodParameterTypes48 = new String[] {
+				"java.lang.String", "org.json.JSONArray"
+			};
+
+		_methodName49 = "isSymlink";
+
+		_methodParameterTypes49 = new String[] { "java.io.File" };
 	}
 
 	@Override
@@ -995,14 +1017,43 @@ public class VideoLocalServiceClp implements VideoLocalService {
 	}
 
 	@Override
-	public java.util.List<de.uhh.l2g.plugins.model.Video> getByProducerAndLectureseries(
-		java.lang.Long producerId, java.lang.Long lectureseriesId)
+	public int countByLectureseries(java.lang.Long lectureseriesId)
 		throws com.liferay.portal.kernel.exception.SystemException {
 		Object returnObj = null;
 
 		try {
 			returnObj = _invokableLocalService.invokeMethod(_methodName27,
 					_methodParameterTypes27,
+					new Object[] { ClpSerializer.translateInput(lectureseriesId) });
+		}
+		catch (Throwable t) {
+			t = ClpSerializer.translateThrowable(t);
+
+			if (t instanceof com.liferay.portal.kernel.exception.SystemException) {
+				throw (com.liferay.portal.kernel.exception.SystemException)t;
+			}
+
+			if (t instanceof RuntimeException) {
+				throw (RuntimeException)t;
+			}
+			else {
+				throw new RuntimeException(t.getClass().getName() +
+					" is not a valid exception");
+			}
+		}
+
+		return ((Integer)returnObj).intValue();
+	}
+
+	@Override
+	public java.util.List<de.uhh.l2g.plugins.model.Video> getByProducerAndLectureseries(
+		java.lang.Long producerId, java.lang.Long lectureseriesId)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		Object returnObj = null;
+
+		try {
+			returnObj = _invokableLocalService.invokeMethod(_methodName28,
+					_methodParameterTypes28,
 					new Object[] {
 						ClpSerializer.translateInput(producerId),
 						
@@ -1035,8 +1086,8 @@ public class VideoLocalServiceClp implements VideoLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName28,
-					_methodParameterTypes28,
+			returnObj = _invokableLocalService.invokeMethod(_methodName29,
+					_methodParameterTypes29,
 					new Object[] {
 						ClpSerializer.translateInput(producerId),
 						
@@ -1067,8 +1118,8 @@ public class VideoLocalServiceClp implements VideoLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName29,
-					_methodParameterTypes29, new Object[] { limit });
+			returnObj = _invokableLocalService.invokeMethod(_methodName30,
+					_methodParameterTypes30, new Object[] { limit });
 		}
 		catch (Throwable t) {
 			t = ClpSerializer.translateThrowable(t);
@@ -1090,8 +1141,8 @@ public class VideoLocalServiceClp implements VideoLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName30,
-					_methodParameterTypes30, new Object[] {  });
+			returnObj = _invokableLocalService.invokeMethod(_methodName31,
+					_methodParameterTypes31, new Object[] {  });
 		}
 		catch (Throwable t) {
 			t = ClpSerializer.translateThrowable(t);
@@ -1113,8 +1164,8 @@ public class VideoLocalServiceClp implements VideoLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName31,
-					_methodParameterTypes31,
+			returnObj = _invokableLocalService.invokeMethod(_methodName32,
+					_methodParameterTypes32,
 					new Object[] { ClpSerializer.translateInput(videoId) });
 		}
 		catch (Throwable t) {
@@ -1137,8 +1188,8 @@ public class VideoLocalServiceClp implements VideoLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName32,
-					_methodParameterTypes32,
+			returnObj = _invokableLocalService.invokeMethod(_methodName33,
+					_methodParameterTypes33,
 					new Object[] { ClpSerializer.translateInput(videoId) });
 		}
 		catch (Throwable t) {
@@ -1160,8 +1211,8 @@ public class VideoLocalServiceClp implements VideoLocalService {
 	public void createLastVideoList()
 		throws com.liferay.portal.kernel.exception.SystemException {
 		try {
-			_invokableLocalService.invokeMethod(_methodName33,
-				_methodParameterTypes33, new Object[] {  });
+			_invokableLocalService.invokeMethod(_methodName34,
+				_methodParameterTypes34, new Object[] {  });
 		}
 		catch (Throwable t) {
 			t = ClpSerializer.translateThrowable(t);
@@ -1181,14 +1232,48 @@ public class VideoLocalServiceClp implements VideoLocalService {
 	}
 
 	@Override
+	public int countByLectureseriesAndOpenaccess(
+		java.lang.Long lectureseriesId, int openAccess)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		Object returnObj = null;
+
+		try {
+			returnObj = _invokableLocalService.invokeMethod(_methodName35,
+					_methodParameterTypes35,
+					new Object[] {
+						ClpSerializer.translateInput(lectureseriesId),
+						
+					openAccess
+					});
+		}
+		catch (Throwable t) {
+			t = ClpSerializer.translateThrowable(t);
+
+			if (t instanceof com.liferay.portal.kernel.exception.SystemException) {
+				throw (com.liferay.portal.kernel.exception.SystemException)t;
+			}
+
+			if (t instanceof RuntimeException) {
+				throw (RuntimeException)t;
+			}
+			else {
+				throw new RuntimeException(t.getClass().getName() +
+					" is not a valid exception");
+			}
+		}
+
+		return ((Integer)returnObj).intValue();
+	}
+
+	@Override
 	public java.util.List<de.uhh.l2g.plugins.model.Video> getByLectureseriesAndOpenaccess(
 		java.lang.Long lectureseriesId, int openAccess)
 		throws com.liferay.portal.kernel.exception.SystemException {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName34,
-					_methodParameterTypes34,
+			returnObj = _invokableLocalService.invokeMethod(_methodName36,
+					_methodParameterTypes36,
 					new Object[] {
 						ClpSerializer.translateInput(lectureseriesId),
 						
@@ -1219,8 +1304,8 @@ public class VideoLocalServiceClp implements VideoLocalService {
 		de.uhh.l2g.plugins.model.Video video,
 		de.uhh.l2g.plugins.model.Producer producer) {
 		try {
-			_invokableLocalService.invokeMethod(_methodName35,
-				_methodParameterTypes35,
+			_invokableLocalService.invokeMethod(_methodName37,
+				_methodParameterTypes37,
 				new Object[] {
 					ClpSerializer.translateInput(host),
 					
@@ -1249,8 +1334,8 @@ public class VideoLocalServiceClp implements VideoLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName36,
-					_methodParameterTypes36,
+			returnObj = _invokableLocalService.invokeMethod(_methodName38,
+					_methodParameterTypes38,
 					new Object[] { ClpSerializer.translateInput(surl) });
 		}
 		catch (Throwable t) {
@@ -1282,8 +1367,8 @@ public class VideoLocalServiceClp implements VideoLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName37,
-					_methodParameterTypes37, new Object[] {  });
+			returnObj = _invokableLocalService.invokeMethod(_methodName39,
+					_methodParameterTypes39, new Object[] {  });
 		}
 		catch (Throwable t) {
 			t = ClpSerializer.translateThrowable(t);
@@ -1311,8 +1396,8 @@ public class VideoLocalServiceClp implements VideoLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName38,
-					_methodParameterTypes38,
+			returnObj = _invokableLocalService.invokeMethod(_methodName40,
+					_methodParameterTypes40,
 					new Object[] { ClpSerializer.translateInput(word), limit });
 		}
 		catch (Throwable t) {
@@ -1340,8 +1425,8 @@ public class VideoLocalServiceClp implements VideoLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName39,
-					_methodParameterTypes39, new Object[] {  });
+			returnObj = _invokableLocalService.invokeMethod(_methodName41,
+					_methodParameterTypes41, new Object[] {  });
 		}
 		catch (Throwable t) {
 			t = ClpSerializer.translateThrowable(t);
@@ -1369,8 +1454,8 @@ public class VideoLocalServiceClp implements VideoLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName40,
-					_methodParameterTypes40,
+			returnObj = _invokableLocalService.invokeMethod(_methodName42,
+					_methodParameterTypes42,
 					new Object[] {
 						ClpSerializer.translateInput(word),
 						
@@ -1402,8 +1487,8 @@ public class VideoLocalServiceClp implements VideoLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName41,
-					_methodParameterTypes41,
+			returnObj = _invokableLocalService.invokeMethod(_methodName43,
+					_methodParameterTypes43,
 					new Object[] { ClpSerializer.translateInput(hits) });
 		}
 		catch (Throwable t) {
@@ -1427,8 +1512,8 @@ public class VideoLocalServiceClp implements VideoLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName42,
-					_methodParameterTypes42,
+			returnObj = _invokableLocalService.invokeMethod(_methodName44,
+					_methodParameterTypes44,
 					new Object[] { ClpSerializer.translateInput(hits) });
 		}
 		catch (Throwable t) {
@@ -1451,8 +1536,8 @@ public class VideoLocalServiceClp implements VideoLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName43,
-					_methodParameterTypes43, new Object[] {  });
+			returnObj = _invokableLocalService.invokeMethod(_methodName45,
+					_methodParameterTypes45, new Object[] {  });
 		}
 		catch (Throwable t) {
 			t = ClpSerializer.translateThrowable(t);
@@ -1475,8 +1560,8 @@ public class VideoLocalServiceClp implements VideoLocalService {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName44,
-					_methodParameterTypes44,
+			returnObj = _invokableLocalService.invokeMethod(_methodName46,
+					_methodParameterTypes46,
 					new Object[] { ClpSerializer.translateInput(lectureseriesId) });
 		}
 		catch (Throwable t) {
@@ -1492,6 +1577,87 @@ public class VideoLocalServiceClp implements VideoLocalService {
 		}
 
 		return (java.lang.Long)ClpSerializer.translateOutput(returnObj);
+	}
+
+	@Override
+	public boolean checkSmilFile(de.uhh.l2g.plugins.model.Video video) {
+		Object returnObj = null;
+
+		try {
+			returnObj = _invokableLocalService.invokeMethod(_methodName47,
+					_methodParameterTypes47,
+					new Object[] { ClpSerializer.translateInput(video) });
+		}
+		catch (Throwable t) {
+			t = ClpSerializer.translateThrowable(t);
+
+			if (t instanceof RuntimeException) {
+				throw (RuntimeException)t;
+			}
+			else {
+				throw new RuntimeException(t.getClass().getName() +
+					" is not a valid exception");
+			}
+		}
+
+		return ((Boolean)returnObj).booleanValue();
+	}
+
+	@Override
+	public boolean fileStringSegmentFoundInArray(java.lang.String file,
+		org.json.JSONArray jsonArray) {
+		Object returnObj = null;
+
+		try {
+			returnObj = _invokableLocalService.invokeMethod(_methodName48,
+					_methodParameterTypes48,
+					new Object[] {
+						ClpSerializer.translateInput(file),
+						
+					ClpSerializer.translateInput(jsonArray)
+					});
+		}
+		catch (Throwable t) {
+			t = ClpSerializer.translateThrowable(t);
+
+			if (t instanceof RuntimeException) {
+				throw (RuntimeException)t;
+			}
+			else {
+				throw new RuntimeException(t.getClass().getName() +
+					" is not a valid exception");
+			}
+		}
+
+		return ((Boolean)returnObj).booleanValue();
+	}
+
+	@Override
+	public boolean isSymlink(java.io.File file) throws java.io.IOException {
+		Object returnObj = null;
+
+		try {
+			returnObj = _invokableLocalService.invokeMethod(_methodName49,
+					_methodParameterTypes49,
+					new Object[] { ClpSerializer.translateInput(file) });
+		}
+		catch (Throwable t) {
+			t = ClpSerializer.translateThrowable(t);
+
+			if (t instanceof java.io.IOException) {
+				throw (java.io.IOException)t;
+			}
+
+			if (t instanceof RuntimeException) {
+				throw (RuntimeException)t;
+			}
+			else {
+				throw new RuntimeException(t.getClass().getName() +
+					" is not a valid exception");
+			}
+		}
+
+		return ((Boolean)returnObj).booleanValue();
 	}
 
 	private InvokableLocalService _invokableLocalService;
@@ -1583,4 +1749,14 @@ public class VideoLocalServiceClp implements VideoLocalService {
 	private String[] _methodParameterTypes43;
 	private String _methodName44;
 	private String[] _methodParameterTypes44;
+	private String _methodName45;
+	private String[] _methodParameterTypes45;
+	private String _methodName46;
+	private String[] _methodParameterTypes46;
+	private String _methodName47;
+	private String[] _methodParameterTypes47;
+	private String _methodName48;
+	private String[] _methodParameterTypes48;
+	private String _methodName49;
+	private String[] _methodParameterTypes49;
 }

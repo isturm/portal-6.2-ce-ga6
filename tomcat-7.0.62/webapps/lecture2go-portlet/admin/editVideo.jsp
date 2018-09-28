@@ -30,6 +30,8 @@
 <liferay-portlet:resourceURL id="updateNumberOfProductions" var="updateNumberOfProductionsURL" />
 <liferay-portlet:resourceURL id="updateThumbnail" var="updateThumbnailURL" />
 <liferay-portlet:resourceURL id="getJSONVideo" var="getJSONVideoURL" />
+<liferay-portlet:resourceURL id="convertVideo" var="convertVideoURL" />
+<liferay-portlet:resourceURL id="updateHtaccess" var="updateHtaccessURL" />
 
 <%
 	String actionURL = "";
@@ -81,6 +83,7 @@
 	Map<Term, List<Lectureseries>> lectureseriesAsTreeList = new TreeMap<Term, List<Lectureseries>>();
 	if(reqVideo.getVideoId()>0)lectureseriesAsTreeList = LectureseriesLocalServiceUtil.getFilteredByApprovedSemesterFacultyProducerAsTreeMapSortedByTerm(1, (long) 0, (long) 0, reqVideo.getProducerId());
 	else lectureseriesAsTreeList = LectureseriesLocalServiceUtil.getFilteredByApprovedSemesterFacultyProducerAsTreeMapSortedByTerm(1, (long) 0, (long) 0, reqProducer.getProducerId());
+
 %>
 
 <script id="htmlTitle" type="text/x-tmpl">
@@ -313,7 +316,7 @@
 						<div>
 							<%if(reqLicense.getL2go()==1){%><aui:input name="license"  id="uhhl2go" label="" value="uhhl2go" checked="true" type="radio"/><%}%>
 							<%if(reqLicense.getL2go()==0){%><aui:input name="license" id="uhhl2go" label="" value="uhhl2go" type="radio"/><%}%>
-							<a href="/license" target="_blank"><liferay-ui:message key="lecture2go-licence"/> </a>	 	      	      
+							<a href="/web/vod/licence-l2go" target="_blank"><liferay-ui:message key="lecture2go-licence"/> </a>	 	      	      
 						</div>	
 						<div>		
 							<%if(reqLicense.getCcbyncsa()==1){%><aui:input name="license" label="" id="ccbyncsa" value="ccbyncsa" checked="true" type="radio" /><%}%>
@@ -480,10 +483,12 @@ $(function () {
         	   	var f1 = "mp4";
            		var f2 = "mp3";
            		var f3 = vars[0].fileName;
+           		//mp4 file
            		if(f3.indexOf(f1) > -1){
 	           		updateVideoFileName(vars[0]);
 	           		validate();
            		}
+           		//mp3 file, do not trigger the post processing
            		if(f3.indexOf(f2) > -1){
 	           		updateVideoFileName(vars[0]);
 	           		validate();
@@ -493,23 +498,29 @@ $(function () {
 				var f1 = vars[0].fileName;
 				var f2 = defaultContainer();
 				var f3 = "mp4";
+				//for mp3 and mp4 files
 				if(f1.indexOf(f2) > -1 || f1.indexOf(f3) > -1){
 	           		updateVideoFileName(vars[0]);
 	           		validate();
 				}
            }
            
+           //htaccess update function for physical file protectiom
+           updateHtaccess();
+           
+           //htaccess update function for physical file protectiom
+           updateHtaccess();
        	   var st = false;
            
-       	   player.remove();
+       	   jwplayer().remove();
            //initialize and show player
             setTimeout(
 	           function(){
 	        	   initializePlayer();
-	        	   player.seek(0);
-	           	   player.on('play',function(){
+	        	   jwplayer().seek(0);
+	        	   jwplayer().on('play',function(){
 	            		  if(st==false){
-	            			   player.pause();
+	            			  jwplayer().pause();
 	            			   st=true;
 	            		  }
 	     		   });	        	   
@@ -602,7 +613,7 @@ function isFirstUpload(){
 		  url: "<%=isFirstUploadURL%>",
 		  dataType: 'json',
 		  data: {
-		 	   	<portlet:namespace/>videoId: "<%=reqVideo.getVideoId()%>",
+		 	   	<portlet:namespace/>videoId: "<%=reqVideo.getVideoId()%>"
 		  },
 		  global: false,
 		  async:false,
@@ -631,6 +642,24 @@ function videoFileNameExistsInDatabase (fileName){
 	return ret;
 }
 
+function updateHtaccess (){
+	var ret = 0;
+	$.ajax({
+		  type: "POST",
+		  url: "<%=updateHtaccessURL%>",
+		  dataType: 'json',
+		  data: {
+			  <portlet:namespace/>videoId: "<%=reqVideo.getVideoId()%>"
+		  },
+		  global: false,
+		  async: false,
+		  success: function(data) {
+		    ret = 1;
+		  }
+	});
+	return ret;
+}
+
 function updateVideoFileName(file){
 	AUI().use('aui-io-request', 'aui-node',
 		function(A){
@@ -642,13 +671,35 @@ function updateVideoFileName(file){
 				 	   	<portlet:namespace/>videoId: A.one('#<portlet:namespace/>videoId').get('value'),
 				 	   	<portlet:namespace/>fileName: file.fileName,
 				 	   	<portlet:namespace/>secureFileName: file.secureFileName,
-				 	   	<portlet:namespace/>generationDate: file.generationDate,
+				 	   	<portlet:namespace/>generationDate: file.generationDate
 			 	},
 			 	//get server response
 				on: {
 					   success: function() {
 					     var jsonResponse = this.get('responseData');
 					     toggleShare();
+					   }
+				}
+			});	
+		}
+	);
+}
+
+function convertVideo(){
+	AUI().use('aui-io-request', 'aui-node',
+		function(A){
+			A.io.request('<%=convertVideoURL%>', {
+		 	dataType: 'json',
+		 	method: 'POST',
+			 	//send data to server
+			 	data: {
+			 		<portlet:namespace/>videoId: A.one('#<portlet:namespace/>videoId').get('value'),
+			 		// may be filled with instructions (workflow to use etc.)
+			 	},
+			 	//get server response
+				on: {
+					   success: function() {
+					     var jsonResponse = this.get('responseData');					     
 					   }
 				}
 			});	
@@ -834,7 +885,7 @@ function deleteFile(fileName){
 		    	  	$("#first-title").show();
 		    	  	$("#<portlet:namespace/>meta-ebene").hide();
 		        }
-		        player.remove();
+		        jwplayer().remove();
 		        //initialize and show player
 			    initializePlayer();
 		        //hide date fild
@@ -1040,7 +1091,7 @@ function updateThumbnail(){
 		  url: "<%=updateThumbnailURL%>",
 		  dataType: 'json',
 		  data: {
-		 	   	<portlet:namespace/>inputTime: Math.floor(player.getPosition()),
+		 	   	<portlet:namespace/>inputTime: Math.floor(jwplayer().getPosition()),
 		 	   	<portlet:namespace/>videoId: "<%=reqVideo.getVideoId()%>",
 		  },
 		  global: false,

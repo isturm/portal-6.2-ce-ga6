@@ -27,6 +27,7 @@ create index IX_63B03BE9 on LG_Institution (level, typ, groupId);
 create index IX_582427D9 on LG_Institution (name);
 create index IX_755E10F1 on LG_Institution (name, groupId);
 create index IX_40A7A033 on LG_Institution (parentId);
+create index IX_E325615 on LG_Institution (parentId, companyId);
 create index IX_61742A2C on LG_Institution (sort);
 create index IX_ACBFFBFE on LG_Institution (sort, groupId);
 create index IX_C968E6A1 on LG_Institution (typ);

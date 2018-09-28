@@ -295,7 +295,7 @@ mark {
   text-decoration: none; }
 
 p.smallitalic {
-  font-size: 9px;
+  font-size: 11px;
   font-style: italic; }
 
 .aui [class*="span"], .aui .uneditable-input[class*="span"], .aui .row-fluid [class*="span"] {
@@ -312,6 +312,9 @@ p.smallitalic {
 .aui .row-fluid [class*="span"]:first-child {
   float: left;
   margin-left: 0; }
+
+.force-underline {
+  text-decoration: underline !important; }
 
 .allcreators {
   font-size: smaller;
@@ -1144,11 +1147,6 @@ thead, th {
   max-width: 113px;
   width: 100%; }
 
-.aui #chapters {
-  margin-top: 10px;
-  padding-top: 0;
-  width: auto; }
-
 #segments-width {
   width: 811px; }
 
@@ -1158,17 +1156,9 @@ thead, th {
   margin: 5px; }
 
 #segment-input-cancel {
-  margin-left: 152px;
-  position: absolute;
-  top: 470px; }
+  float: right; }
 
-.aui .chaptertile {
-  padding: 5px 0px;
-  border-width: 0px 0px 1px;
-  border-style: solid;
-  border-color: #eee; }
-
-.aui .chaptertile:last-child {
+.chaptertile:last-child {
   border: none; }
 
 #chapters .chaptertile input {
@@ -1203,32 +1193,49 @@ thead, th {
   margin-top: -44px;
   font-size: 12px; }
 
-.format {
-  color: #d81b1b;
-  font-size: 10px;
-  padding: 0; }
+.aui #chapters {
+  margin-top: 10px;
+  padding-top: 0;
+  width: auto;
+  border: 1px 0 0 1px solid #eee; }
+
+.aui .chaptertile {
+  padding: 5px 0;
+  border-color: #eee;
+  border-width: 0 0 1px;
+  border-style: solid;
+  min-height: 55px; }
+
+li.chaptertile {
+  list-style: none; }
 
 .aui .chaptertile.active {
   color: #D81B1B;
   background: #eee; }
 
-.commenttile {
-  border-bottom: 1px solid #eee; }
-
-.commenttile div span.time {
+.aui .chaptertile .image {
+  width: 70px;
+  height: auto;
+  float: left;
   margin-left: 5px; }
 
-.commenttile:hover {
-  background: #f9f9f9; }
+.aui .chaptertile .title {
+  margin-left: 80px;
+  width: 85%;
+  line-height: 20px; }
 
-.commenttile > div {
-  cursor: pointer;
+.chaptertile:hover {
+  background: #f9f9f9 none repeat scroll 0 0;
+  cursor: pointer; }
+
+.format {
+  color: #d81b1b;
   font-size: 10px;
-  padding-left: 3px; }
+  padding: 0; }
 
-.commenttile input {
-  float: right;
-  margin-top: -21px; }
+.chaptertile.active {
+  color: #D81B1B;
+  background: #eee; }
 
 #segmentinput > div {
   float: left;
@@ -1237,7 +1244,11 @@ thead, th {
 
 #set-segments {
   float: left;
-  margin-top: -17px !important; }
+  background: #faf9f9;
+  padding: 0 3px 0px 3px; }
+
+#_lgadminvideomanagement_WAR_lecture2goportlet_chortTitle {
+  width: 200px; }
 
 #segmentinput #com {
   margin-left: 31%; }
@@ -1793,7 +1804,7 @@ div.filter-menu-link span.icon-large.icon-remove {
 #tw img, #fb img {
   height: 12px !important; }
 
-#impressum, #disclaimer, #tw, #fb {
+#impressum, #disclaimer, #tw, #fb, #privacy-policy {
   font-family: TheSansUHHBold,sans-serif; }
 
 #license .control-group.form-inline {
@@ -1955,10 +1966,18 @@ div.filter-menu-link span.icon-large.icon-remove {
   margin-top: 55px; }
 
 #_lgadmininstitutionmanagement_WAR_lecture2goportlet_fm button {
-  margin-top: 26px; }
+  margin-top: 39px; }
 
 #_lgadmininstitutionmanagement_WAR_lecture2goportlet_curStreamingServerProtocol {
   width: 70px; }
+
+.btn.subdelete {
+  margin-left: 518px !important;
+  margin-top: -66px; }
+
+.btn.maindelete {
+  margin-left: 71px;
+  margin-top: -50px; }
 
 #_lgadmininstitutionmanagement_WAR_lecture2goportlet_protocol {
   width: 70px; }
@@ -2040,7 +2059,7 @@ div#streamingServerSettings div.accordion-heading.toggler-header.toggler-header-
   color: #444 !important;
   float: left;
   font-size: 14px;
-  padding: 0 8px 4px;
+  padding: 0 1px 4px;
   text-shadow: 0 0 0 #777777 !important; }
 
 .admintile.wide.icons.creators {
@@ -2583,4 +2602,22 @@ strong, b, th, #kopf .sprachwechsel {
 #thumbnail-content #player1 {
   width: 690px !important;
   margin-top: 2px; }
+
+.aui .alert.alert-block {
+  margin: auto;
+  max-width: 1096px;
+  padding: 0; }
+
+.supportlink a {
+  font-size: 12px;
+  margin-top: 0px !important;
+  float: left;
+  font-style: normal;
+  width: 100%; }
+
+.conversion-running {
+  color: #33aadd; }
+
+.conversion-failed {
+  color: #c40017; }
 

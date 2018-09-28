@@ -666,9 +666,7 @@ public class LicenseLocalServiceClp implements LicenseLocalService {
 	}
 
 	@Override
-	public de.uhh.l2g.plugins.model.License getByVideoId(java.lang.Long videoId)
-		throws com.liferay.portal.kernel.exception.SystemException,
-			de.uhh.l2g.plugins.NoSuchLicenseException {
+	public de.uhh.l2g.plugins.model.License getByVideoId(java.lang.Long videoId) {
 		Object returnObj = null;
 
 		try {
@@ -678,14 +676,6 @@ public class LicenseLocalServiceClp implements LicenseLocalService {
 		}
 		catch (Throwable t) {
 			t = ClpSerializer.translateThrowable(t);
-
-			if (t instanceof com.liferay.portal.kernel.exception.SystemException) {
-				throw (com.liferay.portal.kernel.exception.SystemException)t;
-			}
-
-			if (t instanceof de.uhh.l2g.plugins.NoSuchLicenseException) {
-				throw (de.uhh.l2g.plugins.NoSuchLicenseException)t;
-			}
 
 			if (t instanceof RuntimeException) {
 				throw (RuntimeException)t;

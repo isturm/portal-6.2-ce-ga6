@@ -1,4 +1,26 @@
-<script type="text/javascript">jwplayer.key="";</script>
+<style>
+<!--
+.jw-reset.jw-settings-content-item {
+    line-height: 13px;
+}
+
+.jw-breakpoint-4 .jw-settings-menu, .jw-breakpoint-3 .jw-settings-menu {
+    width: 220px;
+}
+
+.jwplayer .jw-rightclick.jw-open {
+    display: none;
+}
+
+.jw-icon.jw-icon-inline.jw-button-color.jw-reset.jw-icon-cc.jw-settings-submenu-button {
+	display: none !important;
+}
+
+.jw-icon.jw-icon-inline.jw-button-color.jw-reset.jw-settings-captions.jw-submenu-captions {
+	display: none !important;
+}
+-->
+</style>
 
 <script>
     $(function() {
@@ -8,6 +30,18 @@
         // Die Adresse des Web- und Videoservers ermitteln
         var server = "#";
 
+        // Diese Funktion wird genutzt um die Url Parameter auszulesen
+        var getUrlParameter = function(sParam){
+            var sPageURL = window.location.search.substring(1);
+            var sURLVariables = sPageURL.split('&');
+            for (var i = 0; i < sURLVariables.length; i++){
+                var sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == sParam){
+                    return sParameterName[1];
+                }
+            }
+        };
+        
         // Start- und Endzeit der Zitatfunktion ermitteln (Durch die URL Parameter)
         var frameStart = getUrlParameter('start');
         var frameEnd = getUrlParameter('end');
@@ -20,60 +54,40 @@
 	        frameEnd = <%=timeEnd%>;		
 		}
 		
-        var playerUri1 ="${video.playerUris.get(0)}";
-        var playerUri2 ="${video.playerUris.get(1)}";
-        var playerUri3 ="${video.playerUris.get(2)}";
-        var playerUri4 ="${video.playerUris.get(3)}";
-        var playerUri5 ="${video.playerUris.get(4)}";
-        
-
-        //hack for HLS in firefox and mp3
-        var containerFormat = "${video.containerFormat}";
-        var isFirefox = typeof InstallTrigger !== 'undefined';
-        var downloadAllowed = "${video.downloadLink}";
-        if(containerFormat.indexOf("mp3") !== -1 && isFirefox && downloadAllowed.indexOf("1")!==-1){
-        	var playerUri = playerUri1;
-        	playerUri1 = playerUri3;
-        	playerUri3 = playerUri;
-        }
-        //
-        
 		var vttFile ="${video.vttChapterFile}";
 		
         // Hier wird der JW-Player initialisiert
         // Interessant ist hierbei, dass es mehrere Quellen geben kann
-        jwplayer('player1').setup({
+        var pla = jwplayer('player1').setup({
             width: "100%",
             aspectratio: "16:9",
+            playbackRateControls: [0.75, 1, 1.25, 1.5],
             image: "${video.image}",
-            sources: [
-            	{ file: playerUri1 },
-            	{ file: playerUri2 },
-            	{ file: playerUri3 },
-            	{ file: playerUri4 },
-            	{ file: playerUri5 }
-            ],
+            cast: {},
+            sources: ${video.jsonPlayerUris},
             tracks: [{
                 file: vttFile,
                 kind:'chapters'
             }],
             hlshtml: true,
             androidhls: true
-        }).onReady(function() {
+        });
+        
+        pla.on('ready', function(){
 
-         	// Inputfelder fÃ¼r Start und Ende der Zitate / Kapitel speichern 
+         	// Inputfelder für Start und Ende der Zitate / Kapitel speichern 
             var $inputTimeStart = $("#<portlet:namespace></portlet:namespace>timeStart").val("");
             var $inputTimeEnd = $("#<portlet:namespace></portlet:namespace>timeEnd").val("");
             var $citation = $("#<portlet:namespace></portlet:namespace>citation").val("");
             var $citationiframe = $("#<portlet:namespace></portlet:namespace>citationiframe").val("");
 
             var $chapters = $('#chapters');
-            var $chapterDivs = $chapters.find("div.chaptertile");
+            var $chapterDivs = $chapters.find("li.chaptertile");
             
-            // Chapter ids und Zeiten in Object fÃ¼r spÃ¤tere Abfragen speichern
+            // Chapter ids und Zeiten in Object für spätere Abfragen speichern
             var chapters = [];
             for (var i = 0; i < $chapterDivs.length; i++) {
-            	// Array chapters enthÃ¤lt Triple aus id, Anfangs- und Endzeit der Kapitel
+            	// Array chapters enthält Triple aus id, Anfangs- und Endzeit der Kapitel
             	var chapter = {
             			id : $chapterDivs.eq(i).attr("id"),
             			begin : timeToSeconds($chapterDivs.eq(i).attr("begin")),
@@ -84,13 +98,13 @@
 
             if (frameStart && frameEnd) {
                 // Sollten sich die Start- und Endzeit in den URL Parametern befinden
-                // wird in diesen Abschnitt dafÃ¼r gesorgt das man auch nur das Entsprechende
+                // wird in diesen Abschnitt dafür gesorgt das man auch nur das Entsprechende
                 // Videomaterial zu sehen bekommt
 
 
-                // iOS und Android unterstÃ¼tzen seek nur wenn der Nutzer
+                // iOS und Android unterstützen seek nur wenn der Nutzer
                 // selbst manuell das vide gestartet hat. Wir werden den start des Zitates
-                // spÃ¤ter anders lÃ¶sen
+                // später anders lösen
                 if (!isTouchDevice) {
                 	jwplayer().on('firstFrame', function() { 
                 		jwplayer().play();
@@ -100,15 +114,14 @@
             }
 
                 
-            // Event listener alle 100 ms wÃ¤hrend playback
-            jwplayer().onTime( function(event){
-
-                // Sicher stellen, dass der gewÃ¤hlte Zeitraum eingehalten wird
+            // Event listener alle 100 ms während playback
+            pla.on('time', function(event) {
+                // Sicher stellen, dass der gewählte Zeitraum eingehalten wird
 
                 var pos =  Math.floor(event.position);
 
                 if (pos < frameStart && isTouchDevice) {
-                    // Nur unter iOS und Android nÃ¶tig,
+                    // Nur unter iOS und Android nötig,
                     jwplayer().seek(frameStart);
                 } else if (pos > frameEnd) {
                     jwplayer().seek(frameStart);
@@ -135,11 +148,11 @@
                 }
             });
 
-            // Diese Stelle ist wiederum nur auf PC nÃ¶tig.
+            // Diese Stelle ist wiederum nur auf PC nötig.
             // Hiermit wird verhindert, dass der Nutzer per Tastatur
             // aus den Zitatsbereich herausspult
             if (!isTouchDevice) {
-                jwplayer().onSeek( function(event){
+            	pla.on('seek', function(event) {
                     var pos =  event.position;
 
                     if (Math.ceil(pos) < Math.ceil(frameStart) || Math.ceil(pos) > Math.ceil(frameEnd)) {
@@ -153,7 +166,7 @@
         
         	// Sollte der Nutzer auf die Kapitel klicken,
             // wird zur entsprechenden Stelle gesprungen
-            $chapters.find('div.chaptertile').on('click', function(event) {
+            $chapters.find('li.chaptertile').on('click', function(event) {
                 
             	$(this).addClass("active").siblings().removeClass("active");
             	var sec = $(this).attr("begin");
@@ -165,9 +178,8 @@
             	event.stopPropagation();
             });
 
-            // Im nachfolgenden Abschnitt wird den Nutzer ermÃ¶glicht
+            // Im nachfolgenden Abschnitt wird den Nutzer ermöglicht
             // eigene Zitate zu erstellen und zu teilen
-            var player = jwplayer();
 
             var startFrameTime = undefined;
             var endFrameTime = undefined;
@@ -176,7 +188,7 @@
 
             // Benutzer setzt Start des Clips
             $inputTimeStart.click(function() {
-                	startFrameTime = Math.round(player.getPosition());
+                	startFrameTime = Math.round(jwplayer().getPosition());
                     startTimeStr = secondsToTime(Math.floor(startFrameTime));
 
                     $inputTimeStart.val(startTimeStr);
@@ -196,7 +208,7 @@
 
             // Benutzer setzt Ende des Clips
             $inputTimeEnd.click(function() {
-            	endFrameTime = player.getPosition();
+            	endFrameTime = jwplayer().getPosition();
                 EndTimeStr = secondsToTime(Math.floor(endFrameTime));
 
                 $inputTimeEnd.val(EndTimeStr);
@@ -229,5 +241,3 @@
 </script>
 
 <div id="player1"></div>
-
-

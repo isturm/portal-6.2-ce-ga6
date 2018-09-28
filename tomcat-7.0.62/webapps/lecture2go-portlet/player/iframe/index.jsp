@@ -1,3 +1,4 @@
+<%@page import="java.util.ArrayList"%>
 <%@page import="java.lang.reflect.Array"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org   /TR/html4/loose.dtd">
@@ -5,37 +6,40 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<script type="text/javascript" src="/lecture2go-portlet/js/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="/lecture2go-portlet/js/citation2go.js"></script>
-	<script type="text/javascript" src="/lecture2go-portlet/player/jwplayer-7.9.3/jwplayer.js"></script>
-	<script type="text/javascript">jwplayer.key="";</script>
-	
+<!-- for self hostet player 
+	<script type="text/javascript" src="/lecture2go-portlet/player/jwplayer-7.12.13/jwplayer.js"></script>
+	<script type="text/javascript">jwplayer.key="get-your-licence-from-jw-player";</script>
+!-->
+<!-- for cloud hosted player -->
+	<script type="text/javascript" src="https://content.jwplatform.com/libraries/meCDJ4WV.js"></script>
+<!-- for cloud hosted end -->
 	<title>Lecture2o-Embed</title>
 	<style type="text/css">
-	
+
 		.jw-controlbar-center-group {
 		    width: 100% !important;
 		    padding: 0 .5em;
 		}
-		
+
 		.jw-controlbar {
 		    width: calc(100% - 100px) !important;
 		}
-	
+
 		.jw-background-color {
-    		background-color: rgba(33, 33, 33, 0.8);
+   		background-color: rgba(33, 33, 33, 0.8);
 		}
 
 		.jw-skin-seven .jw-dock-button {
 		    border-radius: 0em !important;
 		}
-	
+
 		.jw-dock-button.jw-background-color.jw-reset {
 		    bottom: -40px;
 		    margin: 0 0 0 -11px;
 		    position: absolute;
 		    width: 100%;
 		}
-	
+
 		.jw-icon.jw-dock-image.jw-reset::before {
 		    color: #fff;
 		    content: "Lecture2Go";
@@ -45,7 +49,7 @@
 		    font-weight: bold;
 		    margin-right: 8px;
 		    margin-top: 11px;
-		}		
+		}
 
 		.jw-overlay::before {
 		    background-color: rgba(0, 0, 0, 0);
@@ -63,92 +67,125 @@
 		    margin-right: 5px !important;
 		    font-size: 14px !important;
 		}
-	
+
 		.jw-skin-seven .jw-dock .jw-overlay, .jw-skin-seven .jw-skip {
 		    border-radius: 0em !important;
 		}
-			
-		.jw-dock-image:hover {
-    		opacity: 1;
-		}
-		
-	</style>
 
+		.jw-dock-image:hover {
+   		opacity: 1;
+		}
+
+	</style>
+	<script type="text/javascript">
+		function getOpenAccess(){
+			console.log("sgsdfg");
+			var oa = $("#openaccess").attr('value');
+			return oa;
+		}
+		function getParentUrl() {
+		    var isInIframe = (parent !== window),
+		        parentUrl = "null";
+		    if (isInIframe) {
+		        parentUrl = document.referrer;
+		    }
+		    return parentUrl;
+		}
+
+		function securityCheck(){
+			if(getOpenAccess().indexOf("1")>-1){
+				//load page
+			}else{
+				//stop loading page if not uni request
+				if(getParentUrl().indexOf("uni-hamburg")==-1 || getParentUrl().indexOf("null")==0){
+					window.stop();
+					document.write('<script type="text/undefined">')
+				}
+			}
+		}
+		$(document).ready(function(){
+			securityCheck();
+		});
+
+	</script>
 </head>
 
 <%@ page import="de.uhh.l2g.plugins.service.VideoLocalServiceUtil"%>
 <%@ page import="de.uhh.l2g.plugins.model.Video"%>
 <%@ page import="de.uhh.l2g.plugins.model.impl.VideoImpl"%>
 
+
 <%
 	Video video = new VideoImpl();
 	Long videoId = new Long(0);
 	String start = null;
 	String end = null;
-	
-	try{
-		videoId = new Long(request.getParameter("v"));
-		video = VideoLocalServiceUtil.getFullVideo(videoId);
-	}catch(Exception e){
-		try{
-			String[] s = request.getQueryString().split("/");
-			videoId = new Long(s[0].split("=")[1]);
-			video = VideoLocalServiceUtil.getFullVideo(videoId);
-			start = s[1];
-			end = s[2];
-		}catch(Exception a){}
-	}
-%>
+	String[] al = new String[3];
+	String[] s = new String[3];
 
+	try{//parameter is long
+		videoId = new Long(request.getParameter("v"));
+	}catch(NumberFormatException e){//parameter is path
+		al = request.getParameter("v").split("/");
+		// it can be on open access or closed access video !!!
+
+		//for a closesed access video, check this
+		//don't forget cases in commsy like this -> 37l2gbar8265/00.000_video-22005_2017-10-06_13-00.mp4
+		if(al.length==1){
+			int t =  al[0].split("_").length;
+			if(t==4)videoId = VideoLocalServiceUtil.getByFilename(al[0]).iterator().next().getVideoId();
+			else videoId = VideoLocalServiceUtil.getBySecureUrl(al[0]).getVideoId();
+		}
+		if(al.length==2){
+			int t =  al[1].split("_").length;
+			if(t==4)videoId = VideoLocalServiceUtil.getByFilename(al[1]).iterator().next().getVideoId();
+			else videoId = VideoLocalServiceUtil.getBySecureUrl(al[1]).getVideoId();
+		}
+
+		//has time parameters
+		if(al.length==3){
+			try{
+				s = request.getQueryString().split("/");
+				videoId = new Long(s[0].split("=")[1]);
+				start = s[1];
+				end = s[2];
+			}catch(Exception a){}
+		}
+	}
+	//only for open access and requests from CommSy accesseble
+	video = VideoLocalServiceUtil.getFullVideo(videoId);
+%>
 <body>
+<input type="hidden" id="openaccess" name="openaccess" value="<%=video.getOpenAccess()%>">
+
 	<%if(video.getVideoId()>0){ %>
+
 		<div id="player1"></div>
 		<script>
 					var isCitation=false;
 					// herausfinden ob es ein tablet/smartphone ist
 			        var isTouchDevice = 'ontouchstart' in document.documentElement;
-					
+
 			        // Start- und Endzeit der Zitatfunktion ermitteln (Durch die URL Parameter)
 			        var fs=<%=start%>;
 			        var fe= <%=end%>;
-			        
+
 			        if(fs>0 && fe>0 && fe>fs){
 				        var frameStart = <%=start%>;
 				        var frameEnd = <%=end%>;
 				        isCitation = true;
 			        }
-			        
-					var vttChapterFile ="<%=video.getVttChapterFile()%>";
-					var playerUri1 ="<%=video.getPlayerUris().get(0)%>";
-			        var playerUri2 ="<%=video.getPlayerUris().get(1)%>";
-			        var playerUri3 ="<%=video.getPlayerUris().get(2)%>";
-			        var playerUri4 ="<%=video.getPlayerUris().get(3)%>";
-			        var playerUri5 ="<%=video.getPlayerUris().get(4)%>";
 
-			        //hack for HLS in firefox and mp3
-			        var containerFormat = "<%=video.getContainerFormat()%>";
-			        var isFirefox = typeof InstallTrigger !== 'undefined';
-			        var downloadAllowed = "<%=video.getDownloadLink()%>";
-			        if(containerFormat.indexOf("mp3") !== -1 && isFirefox && downloadAllowed.indexOf("1")!==-1){
-			        	var playerUri = playerUri1;
-			        	playerUri1 = playerUri3;
-			        	playerUri3 = playerUri;
-			        }
+					var vttChapterFile ="<%=video.getVttChapterFile()%>";
 			        //
-			        
+
 					var img = "<%=video.getImage()%>";
 			        jwplayer('player1').setup({
 			            width: "100%",
-        			    height: "100%",
+       			    	height: "100%",
 			            aspectratio: "16:9",
 			            image: img,
-			            sources: [
-			                  	{ file: playerUri1 },
-			                	{ file: playerUri2 },
-			                	{ file: playerUri3 },
-			                	{ file: playerUri4 },
-			                	{ file: playerUri5 }
-			            ],
+			            sources: <%=video.getJsonPlayerUris()%>,
 			            tracks: [{
 			               			file: vttChapterFile,
 			                		kind:'chapters'
@@ -168,13 +205,13 @@
 			                // selbst manuell das vide gestartet hat. Wir werden den start des Zitates
 			                // später anders lösen
 			                if (!isTouchDevice) {
-			                	jwplayer().on('firstFrame', function() { 
+			                	jwplayer().on('firstFrame', function() {
 			                		jwplayer().play();
 			                		jwplayer().seek(frameStart);
 			                	});
 			                }
 			            }
-			                
+
 			            // Event listener alle 100 ms während playback
 			            jwplayer().onTime( function(event){
 
@@ -214,7 +251,7 @@
 			        	tit="Zitat2Go";
 			        }
 			        jwplayer().addButton(
-			        	"", 
+			        	"",
 			        	"Dieses Video auf Lecture2Go ansehen",
 			        	function() {
 			        		//stop player
@@ -229,7 +266,7 @@
 			            },
 			            tit
 			        )
-								        
+
 		</script>
 	<%}%>
 </body>

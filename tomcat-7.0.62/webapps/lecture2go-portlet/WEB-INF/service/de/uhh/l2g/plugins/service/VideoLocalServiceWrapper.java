@@ -332,6 +332,12 @@ public class VideoLocalServiceWrapper implements VideoLocalService,
 	}
 
 	@Override
+	public int countByLectureseries(java.lang.Long lectureseriesId)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _videoLocalService.countByLectureseries(lectureseriesId);
+	}
+
+	@Override
 	public java.util.List<de.uhh.l2g.plugins.model.Video> getByProducerAndLectureseries(
 		java.lang.Long producerId, java.lang.Long lectureseriesId)
 		throws com.liferay.portal.kernel.exception.SystemException {
@@ -371,6 +377,14 @@ public class VideoLocalServiceWrapper implements VideoLocalService,
 	public void createLastVideoList()
 		throws com.liferay.portal.kernel.exception.SystemException {
 		_videoLocalService.createLastVideoList();
+	}
+
+	@Override
+	public int countByLectureseriesAndOpenaccess(
+		java.lang.Long lectureseriesId, int openAccess)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _videoLocalService.countByLectureseriesAndOpenaccess(lectureseriesId,
+			openAccess);
 	}
 
 	@Override
@@ -461,6 +475,32 @@ public class VideoLocalServiceWrapper implements VideoLocalService,
 	public java.lang.Long getLatestClosedAccessVideoId(
 		java.lang.Long lectureseriesId) {
 		return _videoLocalService.getLatestClosedAccessVideoId(lectureseriesId);
+	}
+
+	/**
+	* Checks if the video has a related smil-file in the file system
+	*/
+	@Override
+	public boolean checkSmilFile(de.uhh.l2g.plugins.model.Video video) {
+		return _videoLocalService.checkSmilFile(video);
+	}
+
+	@Override
+	public boolean fileStringSegmentFoundInArray(java.lang.String file,
+		org.json.JSONArray jsonArray) {
+		return _videoLocalService.fileStringSegmentFoundInArray(file, jsonArray);
+	}
+
+	/**
+	* Checks if file is a symoblic link
+	*
+	* @param file the file to check
+	* @return true if file is sym link, false if not
+	* @throws IOException
+	*/
+	@Override
+	public boolean isSymlink(java.io.File file) throws java.io.IOException {
+		return _videoLocalService.isSymlink(file);
 	}
 
 	/**

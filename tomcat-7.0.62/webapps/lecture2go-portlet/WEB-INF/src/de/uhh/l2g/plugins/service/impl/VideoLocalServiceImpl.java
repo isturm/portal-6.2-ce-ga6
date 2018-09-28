@@ -15,6 +15,8 @@
 package de.uhh.l2g.plugins.service.impl;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -56,6 +58,7 @@ import de.uhh.l2g.plugins.service.SegmentLocalServiceUtil;
 import de.uhh.l2g.plugins.service.base.VideoLocalServiceBaseImpl;
 import de.uhh.l2g.plugins.service.persistence.VideoFinderUtil;
 import de.uhh.l2g.plugins.util.FFmpegManager;
+import de.uhh.l2g.plugins.util.ProzessManager;
 
 /**
  * The implementation of the video local service.
@@ -119,6 +122,10 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 		List<Video> vl = videoPersistence.findByLectureseries(lectureseriesId);
 		List<Video> rvl = getSortedVideoList(vl, lectureseriesId);
 		return rvl;
+	}
+
+	public int countByLectureseries(Long lectureseriesId) throws SystemException {
+		return videoPersistence.countByLectureseries(lectureseriesId);
 	}
 
 	public List<Video> getByProducerAndLectureseries(Long producerId, Long lectureseriesId) throws SystemException {
@@ -231,6 +238,7 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 				objectVideo.setImageMedium(img);
 			}
 		}
+		
 		// date
 		// extract time and date from the originalFileName
 		String[] parameter = objectVideo.getGenerationDate().split("\\_");
@@ -289,9 +297,9 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 		try {
 			institution = institutionPersistence.findByPrimaryKey(objectVideo.getRootInstitutionId());
 		} catch (NoSuchInstitutionException e) {
-//			e.printStackTrace();
+//			//e.printStackTrace();
 		} catch (SystemException e) {
-//			e.printStackTrace();
+//			//e.printStackTrace();
 		}
 		try {
 			if (webhome.contains("localhost"))
@@ -342,7 +350,29 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 			pth = PropsUtil.get("lecture2go.downloadserver.web.root")+"/servlet-file-download/getFile?downloadAllowed="+objectVideo.getDownloadLink()+"&downloadPath=/"+objectHost.getName()+"/"+objectProducer.getHomeDir()+"/";
 		}
 		String downMp3Link = pth+preff+".mp3";
-		String downMp4Link = pth+preff+".mp4";
+		
+		// check if file with download-suffix exists, if not create it
+		// (this may happen if a file was set to be downloaded before the smil file existed)
+		if(objectVideo.getDownloadLink()==1 && checkSmilFile(objectVideo)){
+			File file = new File(PropsUtil.get("lecture2go.media.repository") + "/" + objectHost.getServerRoot() + "/" + objectProducer.getHomeDir() + "/" + preff+PropsUtil.get("lecture2go.videoprocessing.downloadsuffix")+".mp4");
+			try {
+				if (!isSymlink(file)) {
+					ProzessManager pm = new ProzessManager();
+					pm.createSymLinkToDownloadableFile(objectHost, objectVideo, objectProducer);
+				}
+			} catch (Exception e) {
+				//e.printStackTrace();
+			} 
+		}
+		
+		// the link the the downloadable mp4 can vary, if there is a smil file for adaptive streaming, the video with the download suffix is used
+		String downMp4Link;
+		if (checkSmilFile(objectVideo) && (objectVideo.getOpenAccess()==0)) {
+			downMp4Link = pth+preff+PropsUtil.get("lecture2go.videoprocessing.downloadsuffix")+".mp4";
+		} else {
+			downMp4Link = pth+preff+".mp4";
+		}
+		//String downMp4Link = pth+preff+".mp4";
 		String downM4vLink = pth+preff+".m4v";
 		String downM4aLink = pth+preff+".m4a";
 		String downWebmLink = pth+preff+".webm";
@@ -388,7 +418,14 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 				if(objectVideo.getOpenAccess()==1){
 					embedHtml5="<video width='647' height='373' controls><source src='"+PropsUtil.get("lecture2go.downloadserver.web.root")+"/abo/"+objectVideo.getPreffix()+".mp4"+"' type='video/mp4'>Your browser does not support the video tag.</video>";
 				}else{
-					embedHtml5="<video width='647' height='373' controls><source src='"+PropsUtil.get("lecture2go.downloadserver.web.root")+"/videorep/"+objectHost.getServerRoot()+"/"+objectProducer.getHomeDir()+"/"+objectVideo.getSecureFilename()+"' type='video/mp4'>Your browser does not support the video tag.</video>";
+					// the link the the downloadable mp4 can vary, if there is a smil file for adaptive streaming, the video with the download suffix is used
+					String videoFileName = "";
+					if (checkSmilFile(objectVideo)) {
+						videoFileName = objectVideo.getSPreffix() + PropsUtil.get("lecture2go.videoprocessing.downloadsuffix") + ".mp4";
+					} else {
+						videoFileName = objectVideo.getSecureFilename();
+					}
+					embedHtml5="<video width='647' height='373' controls><source src='"+PropsUtil.get("lecture2go.downloadserver.web.root")+"/videorep/"+objectHost.getServerRoot()+"/"+objectProducer.getHomeDir()+"/"+videoFileName+"' type='video/mp4'>Your browser does not support the video tag.</video>";
 				}
 			}else{
 				if(objectVideo.getOpenAccess()==1){
@@ -402,9 +439,9 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 		//embed commsy
 		String embedCommsy="";
 		if(objectVideo.getOpenAccess()==1){
-			embedCommsy ="(:lecture2go "+objectVideo.getRootInstitutionId() + "l2g" + objectProducer.getHomeDir()+"/"+objectVideo.getFilename()+":)";
+			embedCommsy ="(:lecture2go "+objectVideo.getVideoId()+":)";
 		}else{
-			embedCommsy ="(:lecture2go "+objectVideo.getRootInstitutionId() + "l2g" + objectProducer.getHomeDir()+"/"+objectVideo.getSecureFilename()+":)";
+			embedCommsy ="(:lecture2go "+objectVideo.getSPreffix()+":)";
 		}
 		objectVideo.setEmbedCommsy(embedCommsy);
 		
@@ -432,7 +469,7 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 				jsonoMp4.put("type", "mp4");
 				json.put(jsonoMp4);
 			} catch (JSONException e) {
-//				e.printStackTrace();
+//				//e.printStackTrace();
 			}
 		}
 
@@ -445,7 +482,7 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 				jsonoMp3.put("type", "mp3");
 				json.put(jsonoMp3);
 			} catch (JSONException e) {
-//				e.printStackTrace();
+//				//e.printStackTrace();
 			}
 		}
 		
@@ -458,7 +495,7 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 				jsonoM4a.put("type", "m4a");
 				json.put(jsonoM4a);
 			} catch (JSONException e) {
-//				e.printStackTrace();
+//				//e.printStackTrace();
 			} 
 		}
 
@@ -471,7 +508,7 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 				jsonoM4v.put("type", "m4v");
 				json.put(jsonoM4v);
 			} catch (JSONException e) {
-//				e.printStackTrace();
+//				//e.printStackTrace();
 			}
 		}
 		
@@ -484,7 +521,7 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 				pdf.put("type", "pdf");
 				json.put(pdf);
 			} catch (JSONException e) {
-//				e.printStackTrace();
+//				//e.printStackTrace();
 			}
 		}
 		
@@ -497,7 +534,7 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 				flv.put("type", "flv");
 				json.put(flv);
 			} catch (JSONException e) {
-//				e.printStackTrace();
+//				//e.printStackTrace();
 			}
 		}
 		
@@ -510,7 +547,7 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 				ogg.put("type", "ogg");
 				json.put(ogg);
 			} catch (JSONException e) {
-//				e.printStackTrace();
+//				//e.printStackTrace();
 			}
 		}
 		
@@ -523,7 +560,7 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 				webm.put("type", "webm");
 				json.put(webm);
 			} catch (JSONException e) {
-//				e.printStackTrace();
+//				//e.printStackTrace();
 			}
 		}
 		return json;
@@ -543,6 +580,10 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 		}
 	}
 
+	public int countByLectureseriesAndOpenaccess(Long lectureseriesId, int openAccess) throws SystemException{
+		return videoPersistence.countByLectureseriesAndOpenaccess(lectureseriesId, openAccess);
+	}
+	
 	public List<Video> getByLectureseriesAndOpenaccess(Long lectureseriesId, int openAccess) throws SystemException{
 		List<Video> vl = new ArrayList<Video>();
 		if(lectureseriesId!=0)vl=videoPersistence.findByLectureseriesAndOpenaccess(lectureseriesId, openAccess);	
@@ -570,7 +611,7 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 	**/
 	public void addPlayerUris2Video(Host host, Video video, Producer producer){
 		ArrayList<String> playerUris = new ArrayList<String>();
-		String  mediaRep = PropsUtil.get("lecture2go.media.repository") + "/" + host.getServerRoot() + "/" + producer.getHomeDir();
+		JSONArray playerUrisSortedJSON = new JSONArray();
 		
 		String l2go_path = video.getRootInstitutionId() + "l2g" + producer.getHomeDir();
 		
@@ -587,18 +628,15 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 			String playerUri = "";
 			playerUri += uris.get(i);
 			if(video.getOpenAccess()==1){
-				//check for smil file
-				String smilPath = mediaRep + "/" + video.getPreffix()+".smil";
-				File smilFile = new File(smilPath);
-				if(smilFile.isFile()) playerUri = playerUri.replace("[smilfile]", video.getPreffix()+".smil");
+				if (checkSmilFile(video)) {
+					playerUri = playerUri.replace("[smilfile]", video.getPreffix()+".smil");
+				}
 				playerUri = playerUri.replace("[filename]", video.getFilename());
 			}else{
-				//check for smil file
-				String smilPath = mediaRep + "/" + video.getSPreffix()+".smil";
-				File smilFile = new File(smilPath);				
-				if(smilFile.isFile()) playerUri = playerUri.replace("[smilfile]", video.getSPreffix()+".smil");
+				if (checkSmilFile(video)) {
+					playerUri = playerUri.replace("[smilfile]", video.getSPreffix()+".smil");
+				}
 				playerUri = playerUri.replace("[filename]", video.getSecureFilename());
-				
 			}
 			//
 			playerUri = playerUri.replace("[host]", host.getStreamer());
@@ -608,13 +646,42 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 			playerUri = playerUri.replace("[port]", host.getPort()+"");
 			//
 			if( playerUri.length()>0 && !playerUri.contains("[") && !playerUri.contains("]") )playerUris.add(playerUri);
-			else playerUris.add("null");
+			
 		}
-		//sort player uris 
+		//sort player with priority set in the portal-ext.properties
 		for(int i=0; i<playerUris.size();i++){
-			if(playerUris.get(i).contains("null"))playerUris.set(i, playerUris.get(i+1));
+			String uri = playerUris.get(i);
+			//json object
+			JSONObject o = new JSONObject();
+			//container
+			String container ="";
+			int l = uri.trim().split("\\.").length;
+			container = uri.trim().split("\\.")[l-1];
+			String downloadServ = PropsUtil.get("lecture2go.downloadserver.web.root");
+
+			//check player files!
+			boolean smilFileAllowed = (uri.contains("vod/_definst/smil") && checkSmilFile(video) && container.contains("m3u8"));
+			boolean hlsStreamingAllowed = ((uri.contains("vod/_definst/mp4") || uri.contains("vod/_definst/mp3"))  && !checkSmilFile(video));
+			boolean downloadAllowed = (uri.contains(downloadServ) && video.getDownloadLink()==1);
+			boolean rtspAllowed = (uri.contains("rtsp"));
+
+			if(smilFileAllowed || hlsStreamingAllowed || downloadAllowed || rtspAllowed){
+				//custom case for download allowed 
+				//and oper or closed case
+				if(downloadAllowed && video.getOpenAccess()==0){
+					uri=downloadServ+"/down/"+l2go_path+"/"+video.getSecureFilename();
+				}
+				try {
+					o.put("file", uri);
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					//e.printStackTrace();
+				}
+				playerUrisSortedJSON.put(o);
+			}
 		}
-		video.setPlayerUris(playerUris);
+		//
+		video.setJsonPlayerUris(playerUrisSortedJSON);
 	}
 	
 	public Video getBySecureUrl(String surl) throws NoSuchVideoException, SystemException{
@@ -634,7 +701,10 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 	}	
 
 	public List<Video> getBySearchWordAndLectureseriesId(String word, Long lectureseriesId) throws SystemException{
-		return VideoFinderUtil.findVideosBySearchWordAndLectureseriesId(word, lectureseriesId);
+		List<Video> vl = new ArrayList<Video>();
+		if(lectureseriesId!=0)vl=VideoFinderUtil.findVideosBySearchWordAndLectureseriesId(word, lectureseriesId);	
+		List<Video> rvl = getSortedVideoList(vl, lectureseriesId);		
+		return rvl;
 	}	
 	
 	public List<Video> getByHits(Long hits){
@@ -656,7 +726,7 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 			try {
 				v=super.updateVideo(video);
 			} catch (SystemException e) {
-				e.printStackTrace();
+				//e.printStackTrace();
 			}
 		return v;
 	}
@@ -679,7 +749,7 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 			Lectureseries lectureseriesObject = lectureseriesPersistence.findByPrimaryKey(lectureseriesId);
 			sortVideo = lectureseriesObject.getVideoSort();
 		} catch (NoSuchModelException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		
 		// Sort by generation date
@@ -704,8 +774,62 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 		try {
 			vl = getByLectureseriesAndOpenaccess(lectureseriesId,0);
 		} catch (SystemException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		return vl.get(0).getVideoId();
+	}
+	
+	/**
+	 * Checks if the video has a related smil-file in the file system
+	 */
+	public boolean checkSmilFile(Video video) {
+		Host host = new HostImpl();
+		try {
+			host = HostLocalServiceUtil.getHost(video.getHostId());
+		} catch (PortalException e1) {
+//			e1.printStackTrace();
+		} catch (SystemException e1) {
+//			e1.printStackTrace();
+		}
+		Producer producer = new ProducerImpl();
+		try {
+			producer = producerPersistence.findByPrimaryKey(video.getProducerId());
+		} catch (NoSuchProducerException e1) {
+//			e1.printStackTrace();
+		} catch (SystemException e1) {
+//			e1.printStackTrace();
+		}
+		String  mediaRep = PropsUtil.get("lecture2go.media.repository") + "/" + host.getServerRoot() + "/" + producer.getHomeDir();
+
+		// set prefix according to openaccess filename or secured
+		String prefix = video.getOpenAccess()==1 ? video.getPreffix() : video.getSPreffix();
+		String smilPath = mediaRep + "/" + prefix +".smil";
+		File smilFile = new File(smilPath);
+		return smilFile.isFile();
+	}
+
+	public boolean fileStringSegmentFoundInArray(String file, JSONArray jsonArray){
+		boolean ret = false;
+		for(int i=0;i<jsonArray.length();i++){
+			try {
+				Object o = jsonArray.get(i);
+				int df = 0;
+				df++;
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				//e.printStackTrace();
+			}
+		}
+		return ret;
+	}
+
+	/**
+	 * Checks if file is a symoblic link
+	 * @param file the file to check
+	 * @return true if file is sym link, false if not
+	 * @throws IOException
+	 */
+	public boolean isSymlink(File file) throws IOException {
+		return Files.isSymbolicLink(file.toPath());
 	}
 }

@@ -284,6 +284,9 @@ public interface VideoLocalService extends BaseLocalService,
 		java.lang.Long lectureseriesId)
 		throws com.liferay.portal.kernel.exception.SystemException;
 
+	public int countByLectureseries(java.lang.Long lectureseriesId)
+		throws com.liferay.portal.kernel.exception.SystemException;
+
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public java.util.List<de.uhh.l2g.plugins.model.Video> getByProducerAndLectureseries(
 		java.lang.Long producerId, java.lang.Long lectureseriesId)
@@ -307,6 +310,10 @@ public interface VideoLocalService extends BaseLocalService,
 	public org.json.JSONArray getJSONVideo(java.lang.Long videoId);
 
 	public void createLastVideoList()
+		throws com.liferay.portal.kernel.exception.SystemException;
+
+	public int countByLectureseriesAndOpenaccess(
+		java.lang.Long lectureseriesId, int openAccess)
 		throws com.liferay.portal.kernel.exception.SystemException;
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
@@ -373,4 +380,22 @@ public interface VideoLocalService extends BaseLocalService,
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public java.lang.Long getLatestClosedAccessVideoId(
 		java.lang.Long lectureseriesId);
+
+	/**
+	* Checks if the video has a related smil-file in the file system
+	*/
+	public boolean checkSmilFile(de.uhh.l2g.plugins.model.Video video);
+
+	public boolean fileStringSegmentFoundInArray(java.lang.String file,
+		org.json.JSONArray jsonArray);
+
+	/**
+	* Checks if file is a symoblic link
+	*
+	* @param file the file to check
+	* @return true if file is sym link, false if not
+	* @throws IOException
+	*/
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public boolean isSymlink(java.io.File file) throws java.io.IOException;
 }

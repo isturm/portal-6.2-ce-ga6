@@ -83,9 +83,9 @@ public class OpenAccessVideos extends MVCPortlet {
 					}
 					
 				} catch (PortalException e) {
-					e.printStackTrace();
+					//e.printStackTrace();
 				} catch (SystemException e) {
-					e.printStackTrace();
+					//e.printStackTrace();
 				}
 				writeJSON(resourceRequest, resourceResponse, ja);
 			}			
@@ -170,7 +170,7 @@ public class OpenAccessVideos extends MVCPortlet {
 	    	try{
 	    		lectureseries = LectureseriesLocalServiceUtil.getLectureseries(objectId);
 	    		if(!secLink){
-	    			video = VideoLocalServiceUtil.getFullVideo(lectureseries.getLatestOpenAccessVideoId());
+	    			video = VideoLocalServiceUtil.getFullVideo(lectureseries.getPreviewVideoId());
 	    		}else{
 	    			Long videoId = VideoLocalServiceUtil.getLatestClosedAccessVideoId(objectId);
 	    			video = VideoLocalServiceUtil.getFullVideo(videoId);
@@ -218,12 +218,10 @@ public class OpenAccessVideos extends MVCPortlet {
 			} catch (SystemException e) {}
 		    
 		    //license for video
-		    
 		    License l = new LicenseImpl();
 		    try {
 				l = LicenseLocalServiceUtil.getByVideoId(video.getVideoId());
-			} catch (NoSuchLicenseException e) {
-			} catch (SystemException e) {}
+			} catch (Exception e) {} 
 		    
 		    //update video hits
 		    Long hits = video.getHits();

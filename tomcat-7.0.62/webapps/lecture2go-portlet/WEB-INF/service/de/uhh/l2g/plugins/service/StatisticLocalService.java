@@ -251,6 +251,10 @@ public interface StatisticLocalService extends BaseLocalService,
 		throws java.lang.Throwable;
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public org.json.JSONObject getAllStatistics()
+		throws com.liferay.portal.kernel.exception.SystemException;
+
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public java.util.List<de.uhh.l2g.plugins.model.Statistic> getByCompanyIdandGroupId(
 		long companyId, long groupId)
 		throws com.liferay.portal.kernel.exception.PortalException,

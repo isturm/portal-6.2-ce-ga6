@@ -19,7 +19,10 @@ import com.liferay.util.dao.orm.CustomSQLUtil;
 import de.uhh.l2g.plugins.model.Lectureseries;
 import de.uhh.l2g.plugins.model.Video;
 import de.uhh.l2g.plugins.model.impl.LectureseriesImpl;
+import de.uhh.l2g.plugins.service.LectureseriesLocalServiceUtil;
+import de.uhh.l2g.plugins.service.VideoLocalServiceUtil;
 import de.uhh.l2g.plugins.service.Video_LectureseriesLocalServiceUtil;
+import de.uhh.l2g.plugins.service.VideohitlistLocalServiceUtil;
 
 public class LectureseriesFinderImpl extends BasePersistenceImpl<Lectureseries> implements LectureseriesFinder {
 
@@ -58,7 +61,7 @@ public class LectureseriesFinderImpl extends BasePersistenceImpl<Lectureseries> 
 			try {
 				throw new SystemException(e);
 			} catch (SystemException se) {
-				se.printStackTrace();
+				//e.printStackTrace();
 			}
 		} finally {
 			closeSession(session);
@@ -98,7 +101,7 @@ public class LectureseriesFinderImpl extends BasePersistenceImpl<Lectureseries> 
 			try {
 				throw new SystemException(e);
 			} catch (SystemException se) {
-				se.printStackTrace();
+				//e.printStackTrace();
 			}
 		} finally {
 			closeSession(session);
@@ -136,7 +139,7 @@ public class LectureseriesFinderImpl extends BasePersistenceImpl<Lectureseries> 
 			try {
 				throw new SystemException(e);
 			} catch (SystemException se) {
-				se.printStackTrace();
+				//e.printStackTrace();
 			}
 		} finally {
 			closeSession(session);
@@ -221,7 +224,7 @@ public class LectureseriesFinderImpl extends BasePersistenceImpl<Lectureseries> 
 			try {
 				throw new SystemException(e);
 			} catch (SystemException se) {
-				se.printStackTrace();
+				//e.printStackTrace();
 			}
 		} finally {
 			closeSession(session);
@@ -369,7 +372,7 @@ public class LectureseriesFinderImpl extends BasePersistenceImpl<Lectureseries> 
 			try {
 				throw new SystemException(e);
 			} catch (SystemException se) {
-				se.printStackTrace();
+				//e.printStackTrace();
 			}
 		} finally {
 			closeSession(session);
@@ -405,12 +408,17 @@ public class LectureseriesFinderImpl extends BasePersistenceImpl<Lectureseries> 
 				l.setLatestVideoUploadDate(date);
 			}catch (Exception e){}
 			try{
-				Integer nV = Video_LectureseriesLocalServiceUtil.getNumberOfVideosByLectureseries(l.getLectureseriesId());
-				Integer nOAV = Video_LectureseriesLocalServiceUtil.getNumberOfVideosByLectureseriesAndOpenAccess(l.getLectureseriesId(), 1);
-				
+				Integer nV = VideoLocalServiceUtil.countByLectureseries(l.getLectureseriesId());
 				l.setNumberOfVideos(nV);
-				l.setNumberOfOpenAccessVideos(nOAV);
-			}catch (Exception e){}
+			}catch (Exception e){
+				int i = 0;
+			}
+			try{
+				Integer nOAV = VideoLocalServiceUtil.countByLectureseriesAndOpenaccess(l.getLectureseriesId(), 1);
+ 				l.setNumberOfOpenAccessVideos(nOAV);
+			}catch (Exception e){
+				int i = 0;
+			}
 			// 
 			ll.add(l);
 		}

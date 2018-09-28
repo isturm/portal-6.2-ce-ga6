@@ -22,17 +22,10 @@ String backURL = request.getAttribute("backURL").toString();
 			</div>
 			
 			<div id="set-segments">
-				<div id="segmentinput">
-					<div>
-						<aui:input name="segment" value="1" type="radio" label="" id="chapter" helpMessage="wath-is-chapter" checked="true"/>	
-						<liferay-ui:message key="chapter"/>
-					</div>
-	
-					<div id="com">
-						<aui:input name="segment" value="0" type="radio" label="" id="comment" helpMessage="wath-is-segment"/>
-						<liferay-ui:message key="comment"/> 
-					</div>
-				</div>
+				
+				<aui:input name="segment" value="1" type="hidden" id="chapter"/>
+				
+				<aui:input name="segment" value="0" type="hidden" id="comment"/>
 				
 				<aui:input name="chortTitle" label="title" required="true" id="chortTitle"/>
 				
@@ -49,6 +42,7 @@ String backURL = request.getAttribute("backURL").toString();
 				</div>
 				
 				<aui:input name="videoId" type="hidden" value="<%=reqVideo.getVideoId()%>"/>
+				
 				<div id="ignore"><aui:input type="text" name="dummy" required="true"/></div>
 				
 				<div id="segment-input-add">
@@ -127,43 +121,28 @@ String backURL = request.getAttribute("backURL").toString();
 	    }
 	}
 
-	function drawRow(segment) {
-		newRow='<span class="icon-large icon-remove" alt="delete" onclick="deleteSegment('+segment.segmentId+')" ></span>';
-	    if(segment.chapter==1){
-	    	// segment is a chapter
-	    	newRow=newRow+'<div class="chaptertile" id="' + segment.segmentId + '" begin="' + segment.start + '" end="' + segment.end + '">'+
-			'<a><img width="130px" height="63px" class="imgsmall" title="watch this chapter" src="'+segment.image+'"></a>'+
-			'<span class="time">'+segment.start +' - '+segment.end+'</span><br/>'+
-			'<a><span class="segment-title">'+segment.title+'</span></a>';
-		}else{
-			// segment is a comment
-			newRow=newRow+'<div class="commenttile" id="'+segment.segmentId+'" onload="alert('+segment.segmentId+')">'+
-    		'<div>'+
-			'<b id="pf1_'+segment.segmentId+'">'+
-    		'<span class="icon-small icon-plus" id="showr'+segment.segmentId+'" onclick="showSegment('+segment.segmentId+')"/>'+
-    		'</b>'+
-    		'<b id="pf2_'+segment.segmentId+'">'+
-    		'<span class="icon-small icon-minus" id="hidr'+segment.segmentId+'" onclick="hideSegment('+segment.segmentId+')"/>'+
-    		'</b>'+
-    		'<span class="time">'+segment.start+'</span>'+
-    		'<a><iavst class="white" begin="'+segment.start+'" end="'+segment.end+'"><span class="segment-title">'+segment.title+'</span></iavst></a>'+
-    		'</div>';
-    		if(segment.description >""){
-    			newRow=newRow+'<b id="iav'+segment.segmentId+'"><span class="fs10"><div id="description"><em>'+segment.description+'</em></div></span></b>';
-    		}
+		function drawRow(segment) {
+		    if(segment.chapter==1){
+		    	// segment is a chapter
+		    	newRow='<li class="chaptertile" id="' + segment.segmentId + '" begin="' + segment.start + '" end="' + segment.end + '">';
+		    	newRow=newRow + '<div class="icon-large icon-remove" alt="delete" onclick="deleteSegment('+segment.segmentId+')" ></div>';
+		    	newRow=newRow + '<div class="image">';
+		    	newRow=newRow + '<a><img src="'+segment.image+'"></a>';
+		    	newRow=newRow + '</div>';
+		    	
+		    	newRow=newRow + '<div class="title">';
+		    	newRow=newRow + '<a><b>' + segment.start +'</b> '+segment.title+'</a>';
+		    	newRow=newRow + '</div>';
+	    	
+	    	newRow=newRow + '</li>';
+			}
+			
+			if(segment.previousSegmentId == -1){
+				$("#chapters").append(newRow);
+			}else{
+				$(newRow).insertAfter("#"+ segment.previousSegmentId);
+			}
 		}
-		newRow=newRow+'</div>';
-		
-		if(segment.chapter!=1){
-			newRow=newRow+'<script>YUI().use("node-base", function(Y) {Y.on("available", loadSegment('+segment.segmentId+'), "#'+segment.segmentId+'")})<\/script>';
-		}
-		
-		if(segment.previousSegmentId == -1){
-			$("#chapters").append(newRow);
-		}else{
-			$(newRow).insertAfter("#"+ segment.previousSegmentId);
-		}
-	}
 	
 	AUI().use(
 			'aui-node',
@@ -196,8 +175,8 @@ String backURL = request.getAttribute("backURL").toString();
 						 	   	<portlet:namespace/>timeStart: timeStart,
 						 	   	<portlet:namespace/>timeEnd: timeEnd,
 						 	   	<portlet:namespace/>text: A.one('#<portlet:namespace/>text').get('value'),
-						 	   	<portlet:namespace/>chapter: A.one('#<portlet:namespace/>chapter').get('checked'),
-						 	   	<portlet:namespace/>comment: A.one('#<portlet:namespace/>comment').get('checked'),
+						 	   	<portlet:namespace/>chapter: true,
+						 	   	<portlet:namespace/>comment: false,
 						 	   	<portlet:namespace/>videoId: A.one('#<portlet:namespace/>videoId').get('value'),
 					 	},
 					 	//get server response
