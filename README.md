@@ -4,3 +4,6 @@ The [media and distribution portal](https://lecture2go.uni-hamburg.de) software 
 
 For further information visit our web page http://lecture2go-open-source.rrz.uni-hamburg.de
 
+Change Log
+==========
+Bugfix Package LG_5005 on Friday, September 28, 2018
