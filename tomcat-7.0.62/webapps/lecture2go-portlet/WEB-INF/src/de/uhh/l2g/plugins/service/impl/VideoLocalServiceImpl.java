@@ -1,3 +1,4 @@
+
 /**
  * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
  *
@@ -17,9 +18,14 @@ package de.uhh.l2g.plugins.service.impl;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.GregorianCalendar;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
@@ -88,6 +94,10 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 	 */
 	public List<Video> getByOpenAccess(int bool) throws SystemException {
 		return videoPersistence.findByOpenAccess(bool);
+	}
+
+	public int getByOpenAccessAndUploadedFile(int bool) throws SystemException {
+		return	videoPersistence.countByOpenAccessAndUploadedFile(bool);
 	}
 
 	public Video getLatestOpenAccessVideoForLectureseries(Long lectureseriesId) {
@@ -226,7 +236,23 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 				if (!FFmpegManager.thumbnailsExists(objectVideo)) {
 					// create thumbnail
 					String thumbnailLocation = PropsUtil.get("lecture2go.images.system.path") + "/" + image;
-					FFmpegManager.createThumbnail(videoPfad, thumbnailLocation);
+					//duration in seconds 
+					String myDateString = objectVideo.getDuration();
+					//SimpleDateFormat sdf = new SimpleDateFormat("hh:mm:ss");
+					//the above commented line was changed to the one below, as per Grodriguez's pertinent comment:
+					SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+					try {
+						java.util.Date date = sdf.parse(myDateString);
+						Calendar calendar = GregorianCalendar.getInstance(); // creates a new calendar instance
+						calendar.setTime(date);   // assigns calendar to given date 
+						int hour = calendar.get(Calendar.HOUR);
+						int min = calendar.get(Calendar.MINUTE);
+						int sec = calendar.get(Calendar.SECOND);
+						int dur = hour+sec+min;
+						FFmpegManager.createThumbnail(videoPfad, thumbnailLocation, dur/2);
+					} catch (ParseException e) {
+						// TODO Auto-generated catch block
+					}
 				}
 				objectVideo.setImage(PropsUtil.get("lecture2go.web.root") + "/images/" + image);
 				objectVideo.setImageSmall(PropsUtil.get("lecture2go.web.root") + "/images/" + imageSmall);
@@ -738,12 +764,13 @@ public class VideoLocalServiceImpl extends VideoLocalServiceBaseImpl {
 		
 		if(vl == null || lectureseriesId < 1)
 			return sortedVideoList;
-	
+		
 		ListIterator<Video> vli = vl.listIterator();
 		while(vli.hasNext()){
 			Video objectVideo = getFullVideo(vli.next().getVideoId());
 			if(objectVideo.getFilename().trim().length()>0)sortedVideoList.add(objectVideo);
 		}
+
 		int sortVideo = 0;
 		try {
 			Lectureseries lectureseriesObject = lectureseriesPersistence.findByPrimaryKey(lectureseriesId);

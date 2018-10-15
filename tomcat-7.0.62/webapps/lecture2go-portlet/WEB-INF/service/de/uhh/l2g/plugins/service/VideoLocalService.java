@@ -254,6 +254,10 @@ public interface VideoLocalService extends BaseLocalService,
 		int bool) throws com.liferay.portal.kernel.exception.SystemException;
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public int getByOpenAccessAndUploadedFile(int bool)
+		throws com.liferay.portal.kernel.exception.SystemException;
+
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public de.uhh.l2g.plugins.model.Video getLatestOpenAccessVideoForLectureseries(
 		java.lang.Long lectureseriesId);
 

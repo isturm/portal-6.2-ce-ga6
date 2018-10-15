@@ -76,8 +76,6 @@ public class Institution_HostClp extends BaseModelImpl<Institution_Host>
 		attributes.put("institutionHostId", getInstitutionHostId());
 		attributes.put("institutionId", getInstitutionId());
 		attributes.put("hostId", getHostId());
-		attributes.put("groupId", getGroupId());
-		attributes.put("companyId", getCompanyId());
 
 		return attributes;
 	}
@@ -100,18 +98,6 @@ public class Institution_HostClp extends BaseModelImpl<Institution_Host>
 
 		if (hostId != null) {
 			setHostId(hostId);
-		}
-
-		Long groupId = (Long)attributes.get("groupId");
-
-		if (groupId != null) {
-			setGroupId(groupId);
-		}
-
-		Long companyId = (Long)attributes.get("companyId");
-
-		if (companyId != null) {
-			setCompanyId(companyId);
 		}
 	}
 
@@ -178,52 +164,6 @@ public class Institution_HostClp extends BaseModelImpl<Institution_Host>
 				Method method = clazz.getMethod("setHostId", long.class);
 
 				method.invoke(_institution_HostRemoteModel, hostId);
-			}
-			catch (Exception e) {
-				throw new UnsupportedOperationException(e);
-			}
-		}
-	}
-
-	@Override
-	public long getGroupId() {
-		return _groupId;
-	}
-
-	@Override
-	public void setGroupId(long groupId) {
-		_groupId = groupId;
-
-		if (_institution_HostRemoteModel != null) {
-			try {
-				Class<?> clazz = _institution_HostRemoteModel.getClass();
-
-				Method method = clazz.getMethod("setGroupId", long.class);
-
-				method.invoke(_institution_HostRemoteModel, groupId);
-			}
-			catch (Exception e) {
-				throw new UnsupportedOperationException(e);
-			}
-		}
-	}
-
-	@Override
-	public long getCompanyId() {
-		return _companyId;
-	}
-
-	@Override
-	public void setCompanyId(long companyId) {
-		_companyId = companyId;
-
-		if (_institution_HostRemoteModel != null) {
-			try {
-				Class<?> clazz = _institution_HostRemoteModel.getClass();
-
-				Method method = clazz.getMethod("setCompanyId", long.class);
-
-				method.invoke(_institution_HostRemoteModel, companyId);
 			}
 			catch (Exception e) {
 				throw new UnsupportedOperationException(e);
@@ -305,8 +245,6 @@ public class Institution_HostClp extends BaseModelImpl<Institution_Host>
 		clone.setInstitutionHostId(getInstitutionHostId());
 		clone.setInstitutionId(getInstitutionId());
 		clone.setHostId(getHostId());
-		clone.setGroupId(getGroupId());
-		clone.setCompanyId(getCompanyId());
 
 		return clone;
 	}
@@ -359,7 +297,7 @@ public class Institution_HostClp extends BaseModelImpl<Institution_Host>
 
 	@Override
 	public String toString() {
-		StringBundler sb = new StringBundler(11);
+		StringBundler sb = new StringBundler(7);
 
 		sb.append("{institutionHostId=");
 		sb.append(getInstitutionHostId());
@@ -367,10 +305,6 @@ public class Institution_HostClp extends BaseModelImpl<Institution_Host>
 		sb.append(getInstitutionId());
 		sb.append(", hostId=");
 		sb.append(getHostId());
-		sb.append(", groupId=");
-		sb.append(getGroupId());
-		sb.append(", companyId=");
-		sb.append(getCompanyId());
 		sb.append("}");
 
 		return sb.toString();
@@ -378,7 +312,7 @@ public class Institution_HostClp extends BaseModelImpl<Institution_Host>
 
 	@Override
 	public String toXmlString() {
-		StringBundler sb = new StringBundler(19);
+		StringBundler sb = new StringBundler(13);
 
 		sb.append("<model><model-name>");
 		sb.append("de.uhh.l2g.plugins.model.Institution_Host");
@@ -396,14 +330,6 @@ public class Institution_HostClp extends BaseModelImpl<Institution_Host>
 			"<column><column-name>hostId</column-name><column-value><![CDATA[");
 		sb.append(getHostId());
 		sb.append("]]></column-value></column>");
-		sb.append(
-			"<column><column-name>groupId</column-name><column-value><![CDATA[");
-		sb.append(getGroupId());
-		sb.append("]]></column-value></column>");
-		sb.append(
-			"<column><column-name>companyId</column-name><column-value><![CDATA[");
-		sb.append(getCompanyId());
-		sb.append("]]></column-value></column>");
 
 		sb.append("</model>");
 
@@ -413,8 +339,6 @@ public class Institution_HostClp extends BaseModelImpl<Institution_Host>
 	private long _institutionHostId;
 	private long _institutionId;
 	private long _hostId;
-	private long _groupId;
-	private long _companyId;
 	private BaseModel<?> _institution_HostRemoteModel;
 	private Class<?> _clpSerializerClass = de.uhh.l2g.plugins.service.ClpSerializer.class;
 }

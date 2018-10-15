@@ -683,16 +683,6 @@ public class LectureseriesWrapper implements Lectureseries,
 	}
 
 	@Override
-	public void setNumberOfVideos(int numberOfVideos) {
-		_lectureseries.setNumberOfVideos(numberOfVideos);
-	}
-
-	@Override
-	public void setNumberOfOpenAccessVideos(int numberOfOpenAccessVideos) {
-		_lectureseries.setNumberOfOpenAccessVideos(numberOfOpenAccessVideos);
-	}
-
-	@Override
 	public java.lang.String getType() {
 		return _lectureseries.getType();
 	}

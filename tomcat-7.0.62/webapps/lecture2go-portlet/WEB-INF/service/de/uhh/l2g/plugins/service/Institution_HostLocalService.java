@@ -255,12 +255,6 @@ public interface Institution_HostLocalService extends BaseLocalService,
 		throws java.lang.Throwable;
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public java.util.List<de.uhh.l2g.plugins.model.Institution_Host> getByGroupId(
-		long groupId)
-		throws com.liferay.portal.kernel.exception.PortalException,
-			com.liferay.portal.kernel.exception.SystemException;
-
-	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public de.uhh.l2g.plugins.model.Host getByInstitutionId(long institutionId)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException;
@@ -271,40 +265,31 @@ public interface Institution_HostLocalService extends BaseLocalService,
 			com.liferay.portal.kernel.exception.SystemException;
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public de.uhh.l2g.plugins.model.Host getByGroupIdAndInstitutionId(
-		long companyId, long groupId, long institutionId)
+	public de.uhh.l2g.plugins.model.Institution_Host getLinkByInstitutionId(
+		long institutionId)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException;
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public de.uhh.l2g.plugins.model.Institution_Host getLinkByGroupIdAndInstitutionId(
-		long groupId, long institutionId)
+	public java.util.List<de.uhh.l2g.plugins.model.Institution> getByHostId(
+		long hostId)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException;
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public java.util.List<de.uhh.l2g.plugins.model.Institution> getByGroupIdAndHostId(
-		long groupId, long hostId)
+	public java.util.List<de.uhh.l2g.plugins.model.Institution_Host> getListByHostId(
+		long hostId)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException;
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public java.util.List<de.uhh.l2g.plugins.model.Institution_Host> getListByGroupIdAndHostId(
-		long groupId, long hostId)
+	public int getByHostIdCount(long hostId)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException;
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public int getByGroupIdAndHostIdCount(long groupId, long hostId)
-		throws com.liferay.portal.kernel.exception.PortalException,
-			com.liferay.portal.kernel.exception.SystemException;
-
-	/**
-	* Actually this should never give a list because, there can be only one host per isntitution
-	*/
-	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public java.util.List<de.uhh.l2g.plugins.model.Institution_Host> getListByGroupIdAndInstitutionId(
-		long companyId, long groupId, long institutionId)
+	public java.util.List<de.uhh.l2g.plugins.model.Institution_Host> getListByInstitutionId(
+		long institutionId)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException;
 
@@ -312,7 +297,7 @@ public interface Institution_HostLocalService extends BaseLocalService,
 	* Assume one Institution has at most one Host that remains constant
 	*/
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public long getDefaultInstitutionHostId(long companyId, long groupId);
+	public long getDefaultInstitutionHostId();
 
 	/**
 	* if not added with Institution
@@ -339,8 +324,7 @@ public interface Institution_HostLocalService extends BaseLocalService,
 			com.liferay.portal.kernel.exception.SystemException;
 
 	public de.uhh.l2g.plugins.model.Institution_Host deleteLinkById(
-		long institutionHostId,
-		com.liferay.portal.service.ServiceContext serviceContext)
+		long institutionHostId)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException;
 

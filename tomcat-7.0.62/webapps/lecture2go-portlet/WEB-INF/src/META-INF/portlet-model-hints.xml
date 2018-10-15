@@ -53,8 +53,6 @@
 		<field name="name" type="String">
 			<hint-collection name="SHORTTEXT" />
 		</field>
-		<field name="groupId" type="long" />
-		<field name="companyId" type="long" />
 		<field name="defaultHost" type="int" />
 	</model>
 	<model name="de.uhh.l2g.plugins.model.InstallWizard">
@@ -77,15 +75,11 @@
 		</field>
 		<field name="level" type="int" />
 		<field name="sort" type="int" />
-		<field name="groupId" type="long" />
-		<field name="companyId" type="long" />
 	</model>
 	<model name="de.uhh.l2g.plugins.model.Institution_Host">
 		<field name="institutionHostId" type="long" />
 		<field name="institutionId" type="long" />
 		<field name="hostId" type="long" />
-		<field name="groupId" type="long" />
-		<field name="companyId" type="long" />
 	</model>
 	<model name="de.uhh.l2g.plugins.model.Lastvideolist">
 		<field name="lastvideolistId" type="int" />

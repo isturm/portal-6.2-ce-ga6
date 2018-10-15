@@ -286,6 +286,12 @@ public class VideoLocalServiceWrapper implements VideoLocalService,
 	}
 
 	@Override
+	public int getByOpenAccessAndUploadedFile(int bool)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return _videoLocalService.getByOpenAccessAndUploadedFile(bool);
+	}
+
+	@Override
 	public de.uhh.l2g.plugins.model.Video getLatestOpenAccessVideoForLectureseries(
 		java.lang.Long lectureseriesId) {
 		return _videoLocalService.getLatestOpenAccessVideoForLectureseries(lectureseriesId);

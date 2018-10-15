@@ -428,6 +428,184 @@ public class TermUtil {
 	}
 
 	/**
+	* Returns all the terms where prefix = &#63; and year = &#63;.
+	*
+	* @param prefix the prefix
+	* @param year the year
+	* @return the matching terms
+	* @throws SystemException if a system exception occurred
+	*/
+	public static java.util.List<de.uhh.l2g.plugins.model.Term> findByPrefixAndYear(
+		java.lang.String prefix, java.lang.String year)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getPersistence().findByPrefixAndYear(prefix, year);
+	}
+
+	/**
+	* Returns a range of all the terms where prefix = &#63; and year = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link de.uhh.l2g.plugins.model.impl.TermModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param prefix the prefix
+	* @param year the year
+	* @param start the lower bound of the range of terms
+	* @param end the upper bound of the range of terms (not inclusive)
+	* @return the range of matching terms
+	* @throws SystemException if a system exception occurred
+	*/
+	public static java.util.List<de.uhh.l2g.plugins.model.Term> findByPrefixAndYear(
+		java.lang.String prefix, java.lang.String year, int start, int end)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getPersistence().findByPrefixAndYear(prefix, year, start, end);
+	}
+
+	/**
+	* Returns an ordered range of all the terms where prefix = &#63; and year = &#63;.
+	*
+	* <p>
+	* Useful when paginating results. Returns a maximum of <code>end - start</code> instances. <code>start</code> and <code>end</code> are not primary keys, they are indexes in the result set. Thus, <code>0</code> refers to the first result in the set. Setting both <code>start</code> and <code>end</code> to {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS} will return the full result set. If <code>orderByComparator</code> is specified, then the query will include the given ORDER BY logic. If <code>orderByComparator</code> is absent and pagination is required (<code>start</code> and <code>end</code> are not {@link com.liferay.portal.kernel.dao.orm.QueryUtil#ALL_POS}), then the query will include the default ORDER BY logic from {@link de.uhh.l2g.plugins.model.impl.TermModelImpl}. If both <code>orderByComparator</code> and pagination are absent, for performance reasons, the query will not have an ORDER BY clause and the returned result set will be sorted on by the primary key in an ascending order.
+	* </p>
+	*
+	* @param prefix the prefix
+	* @param year the year
+	* @param start the lower bound of the range of terms
+	* @param end the upper bound of the range of terms (not inclusive)
+	* @param orderByComparator the comparator to order the results by (optionally <code>null</code>)
+	* @return the ordered range of matching terms
+	* @throws SystemException if a system exception occurred
+	*/
+	public static java.util.List<de.uhh.l2g.plugins.model.Term> findByPrefixAndYear(
+		java.lang.String prefix, java.lang.String year, int start, int end,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getPersistence()
+				   .findByPrefixAndYear(prefix, year, start, end,
+			orderByComparator);
+	}
+
+	/**
+	* Returns the first term in the ordered set where prefix = &#63; and year = &#63;.
+	*
+	* @param prefix the prefix
+	* @param year the year
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the first matching term
+	* @throws de.uhh.l2g.plugins.NoSuchTermException if a matching term could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	public static de.uhh.l2g.plugins.model.Term findByPrefixAndYear_First(
+		java.lang.String prefix, java.lang.String year,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException,
+			de.uhh.l2g.plugins.NoSuchTermException {
+		return getPersistence()
+				   .findByPrefixAndYear_First(prefix, year, orderByComparator);
+	}
+
+	/**
+	* Returns the first term in the ordered set where prefix = &#63; and year = &#63;.
+	*
+	* @param prefix the prefix
+	* @param year the year
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the first matching term, or <code>null</code> if a matching term could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	public static de.uhh.l2g.plugins.model.Term fetchByPrefixAndYear_First(
+		java.lang.String prefix, java.lang.String year,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getPersistence()
+				   .fetchByPrefixAndYear_First(prefix, year, orderByComparator);
+	}
+
+	/**
+	* Returns the last term in the ordered set where prefix = &#63; and year = &#63;.
+	*
+	* @param prefix the prefix
+	* @param year the year
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the last matching term
+	* @throws de.uhh.l2g.plugins.NoSuchTermException if a matching term could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	public static de.uhh.l2g.plugins.model.Term findByPrefixAndYear_Last(
+		java.lang.String prefix, java.lang.String year,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException,
+			de.uhh.l2g.plugins.NoSuchTermException {
+		return getPersistence()
+				   .findByPrefixAndYear_Last(prefix, year, orderByComparator);
+	}
+
+	/**
+	* Returns the last term in the ordered set where prefix = &#63; and year = &#63;.
+	*
+	* @param prefix the prefix
+	* @param year the year
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the last matching term, or <code>null</code> if a matching term could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	public static de.uhh.l2g.plugins.model.Term fetchByPrefixAndYear_Last(
+		java.lang.String prefix, java.lang.String year,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getPersistence()
+				   .fetchByPrefixAndYear_Last(prefix, year, orderByComparator);
+	}
+
+	/**
+	* Returns the terms before and after the current term in the ordered set where prefix = &#63; and year = &#63;.
+	*
+	* @param termId the primary key of the current term
+	* @param prefix the prefix
+	* @param year the year
+	* @param orderByComparator the comparator to order the set by (optionally <code>null</code>)
+	* @return the previous, current, and next term
+	* @throws de.uhh.l2g.plugins.NoSuchTermException if a term with the primary key could not be found
+	* @throws SystemException if a system exception occurred
+	*/
+	public static de.uhh.l2g.plugins.model.Term[] findByPrefixAndYear_PrevAndNext(
+		long termId, java.lang.String prefix, java.lang.String year,
+		com.liferay.portal.kernel.util.OrderByComparator orderByComparator)
+		throws com.liferay.portal.kernel.exception.SystemException,
+			de.uhh.l2g.plugins.NoSuchTermException {
+		return getPersistence()
+				   .findByPrefixAndYear_PrevAndNext(termId, prefix, year,
+			orderByComparator);
+	}
+
+	/**
+	* Removes all the terms where prefix = &#63; and year = &#63; from the database.
+	*
+	* @param prefix the prefix
+	* @param year the year
+	* @throws SystemException if a system exception occurred
+	*/
+	public static void removeByPrefixAndYear(java.lang.String prefix,
+		java.lang.String year)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		getPersistence().removeByPrefixAndYear(prefix, year);
+	}
+
+	/**
+	* Returns the number of terms where prefix = &#63; and year = &#63;.
+	*
+	* @param prefix the prefix
+	* @param year the year
+	* @return the number of matching terms
+	* @throws SystemException if a system exception occurred
+	*/
+	public static int countByPrefixAndYear(java.lang.String prefix,
+		java.lang.String year)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getPersistence().countByPrefixAndYear(prefix, year);
+	}
+
+	/**
 	* Caches the term in the entity cache if it is enabled.
 	*
 	* @param term the term

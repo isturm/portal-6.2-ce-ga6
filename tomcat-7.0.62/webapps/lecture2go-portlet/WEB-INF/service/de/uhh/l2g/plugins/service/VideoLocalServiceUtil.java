@@ -276,6 +276,11 @@ public class VideoLocalServiceUtil {
 		return getService().getByOpenAccess(bool);
 	}
 
+	public static int getByOpenAccessAndUploadedFile(int bool)
+		throws com.liferay.portal.kernel.exception.SystemException {
+		return getService().getByOpenAccessAndUploadedFile(bool);
+	}
+
 	public static de.uhh.l2g.plugins.model.Video getLatestOpenAccessVideoForLectureseries(
 		java.lang.Long lectureseriesId) {
 		return getService()

@@ -98,34 +98,6 @@ public interface Institution_HostModel extends BaseModel<Institution_Host> {
 	 */
 	public void setHostId(long hostId);
 
-	/**
-	 * Returns the group ID of this institution_ host.
-	 *
-	 * @return the group ID of this institution_ host
-	 */
-	public long getGroupId();
-
-	/**
-	 * Sets the group ID of this institution_ host.
-	 *
-	 * @param groupId the group ID of this institution_ host
-	 */
-	public void setGroupId(long groupId);
-
-	/**
-	 * Returns the company ID of this institution_ host.
-	 *
-	 * @return the company ID of this institution_ host
-	 */
-	public long getCompanyId();
-
-	/**
-	 * Sets the company ID of this institution_ host.
-	 *
-	 * @param companyId the company ID of this institution_ host
-	 */
-	public void setCompanyId(long companyId);
-
 	@Override
 	public boolean isNew();
 

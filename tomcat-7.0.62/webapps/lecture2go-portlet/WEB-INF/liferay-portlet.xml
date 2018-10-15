@@ -158,7 +158,7 @@
 			<scheduler-event-listener-class>de.uhh.l2g.plugins.util.VideohitlistScheduler</scheduler-event-listener-class>
 			<trigger>
 				<cron>
-					<cron-trigger-value>0 0 11 * * ?</cron-trigger-value>
+					<cron-trigger-value>0 */30 * * * ?</cron-trigger-value>
 				</cron>
 			</trigger>
 		</scheduler-entry>
@@ -168,6 +168,15 @@
 			<trigger>
 				<cron>
 					<cron-trigger-value>0 */5 * * * ?</cron-trigger-value>
+				</cron>
+			</trigger>
+		</scheduler-entry>
+		<scheduler-entry>
+			<scheduler-description>This scheduler is used to collect Statistical Data from Database</scheduler-description>
+			<scheduler-event-listener-class>de.uhh.l2g.plugins.util.TermScheduler</scheduler-event-listener-class>
+			<trigger>
+				<cron>
+					<cron-trigger-value>0 0 0,12 ? * *</cron-trigger-value>
 				</cron>
 			</trigger>
 		</scheduler-entry>

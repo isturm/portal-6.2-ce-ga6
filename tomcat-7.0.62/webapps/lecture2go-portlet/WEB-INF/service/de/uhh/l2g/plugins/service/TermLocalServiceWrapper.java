@@ -307,6 +307,14 @@ public class TermLocalServiceWrapper implements TermLocalService,
 		_termLocalService.deleteById(id);
 	}
 
+	@Override
+	public java.util.List<de.uhh.l2g.plugins.model.Term> getByPrefixAndYear(
+		java.lang.String prefix, java.lang.String year)
+		throws com.liferay.portal.NoSuchModelException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return _termLocalService.getByPrefixAndYear(prefix, year);
+	}
+
 	/**
 	 * @deprecated As of 6.1.0, replaced by {@link #getWrappedService}
 	 */
