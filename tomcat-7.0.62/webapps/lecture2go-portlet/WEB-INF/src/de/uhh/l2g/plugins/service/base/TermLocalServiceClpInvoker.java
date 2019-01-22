@@ -125,6 +125,12 @@ public class TermLocalServiceClpInvoker {
 		_methodName169 = "deleteById";
 
 		_methodParameterTypes169 = new String[] { "java.lang.Long" };
+
+		_methodName170 = "getByPrefixAndYear";
+
+		_methodParameterTypes170 = new String[] {
+				"java.lang.String", "java.lang.String"
+			};
 	}
 
 	public Object invokeMethod(String name, String[] parameterTypes,
@@ -251,6 +257,12 @@ public class TermLocalServiceClpInvoker {
 			return null;
 		}
 
+		if (_methodName170.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes170, parameterTypes)) {
+			return TermLocalServiceUtil.getByPrefixAndYear((java.lang.String)arguments[0],
+				(java.lang.String)arguments[1]);
+		}
+
 		throw new UnsupportedOperationException();
 	}
 
@@ -298,4 +310,6 @@ public class TermLocalServiceClpInvoker {
 	private String[] _methodParameterTypes168;
 	private String _methodName169;
 	private String[] _methodParameterTypes169;
+	private String _methodName170;
+	private String[] _methodParameterTypes170;
 }

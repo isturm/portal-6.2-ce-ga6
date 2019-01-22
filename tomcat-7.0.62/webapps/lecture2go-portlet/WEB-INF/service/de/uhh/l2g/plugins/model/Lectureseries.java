@@ -35,10 +35,6 @@ public interface Lectureseries extends LectureseriesModel, PersistedModel {
 
 	public int getNumberOfOpenAccessVideos();
 
-	public void setNumberOfVideos(int numberOfVideos);
-
-	public void setNumberOfOpenAccessVideos(int numberOfOpenAccessVideos);
-
 	public java.lang.String getType();
 
 	public void setType(java.lang.String type);

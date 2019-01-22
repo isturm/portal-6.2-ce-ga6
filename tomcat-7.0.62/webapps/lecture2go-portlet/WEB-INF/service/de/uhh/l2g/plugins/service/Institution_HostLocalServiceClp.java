@@ -116,79 +116,69 @@ public class Institution_HostLocalServiceClp
 
 		_methodParameterTypes17 = new String[] { "java.lang.String" };
 
-		_methodName19 = "getByGroupId";
+		_methodName19 = "getByInstitutionId";
 
 		_methodParameterTypes19 = new String[] { "long" };
 
-		_methodName20 = "getByInstitutionId";
+		_methodName20 = "getByInstitution";
 
 		_methodParameterTypes20 = new String[] { "long" };
 
-		_methodName21 = "getByInstitution";
+		_methodName21 = "getLinkByInstitutionId";
 
 		_methodParameterTypes21 = new String[] { "long" };
 
-		_methodName22 = "getByGroupIdAndInstitutionId";
+		_methodName22 = "getByHostId";
 
-		_methodParameterTypes22 = new String[] { "long", "long", "long" };
+		_methodParameterTypes22 = new String[] { "long" };
 
-		_methodName23 = "getLinkByGroupIdAndInstitutionId";
+		_methodName23 = "getListByHostId";
 
-		_methodParameterTypes23 = new String[] { "long", "long" };
+		_methodParameterTypes23 = new String[] { "long" };
 
-		_methodName24 = "getByGroupIdAndHostId";
+		_methodName24 = "getByHostIdCount";
 
-		_methodParameterTypes24 = new String[] { "long", "long" };
+		_methodParameterTypes24 = new String[] { "long" };
 
-		_methodName25 = "getListByGroupIdAndHostId";
+		_methodName25 = "getListByInstitutionId";
 
-		_methodParameterTypes25 = new String[] { "long", "long" };
+		_methodParameterTypes25 = new String[] { "long" };
 
-		_methodName26 = "getByGroupIdAndHostIdCount";
+		_methodName26 = "getDefaultInstitutionHostId";
 
-		_methodParameterTypes26 = new String[] { "long", "long" };
+		_methodParameterTypes26 = new String[] {  };
 
-		_methodName27 = "getListByGroupIdAndInstitutionId";
+		_methodName27 = "addDefaultInstitutionHost";
 
-		_methodParameterTypes27 = new String[] { "long", "long", "long" };
+		_methodParameterTypes27 = new String[] {
+				"long", "long", "com.liferay.portal.service.ServiceContext"
+			};
 
-		_methodName28 = "getDefaultInstitutionHostId";
+		_methodName28 = "addEntry";
 
-		_methodParameterTypes28 = new String[] { "long", "long" };
+		_methodParameterTypes28 = new String[] {
+				"long", "long", "com.liferay.portal.service.ServiceContext"
+			};
 
-		_methodName29 = "addDefaultInstitutionHost";
+		_methodName29 = "updateEntry";
 
 		_methodParameterTypes29 = new String[] {
 				"long", "long", "com.liferay.portal.service.ServiceContext"
 			};
 
-		_methodName30 = "addEntry";
+		_methodName30 = "deleteLinkById";
 
-		_methodParameterTypes30 = new String[] {
-				"long", "long", "com.liferay.portal.service.ServiceContext"
-			};
+		_methodParameterTypes30 = new String[] { "long" };
 
-		_methodName31 = "updateEntry";
+		_methodName31 = "deleteLinkByInstitution";
 
 		_methodParameterTypes31 = new String[] {
-				"long", "long", "com.liferay.portal.service.ServiceContext"
-			};
-
-		_methodName32 = "deleteLinkById";
-
-		_methodParameterTypes32 = new String[] {
-				"long", "com.liferay.portal.service.ServiceContext"
-			};
-
-		_methodName33 = "deleteLinkByInstitution";
-
-		_methodParameterTypes33 = new String[] {
 				"de.uhh.l2g.plugins.model.Institution", "long", "long"
 			};
 
-		_methodName34 = "updateCounter";
+		_methodName32 = "updateCounter";
 
-		_methodParameterTypes34 = new String[] {  };
+		_methodParameterTypes32 = new String[] {  };
 	}
 
 	@Override
@@ -745,15 +735,14 @@ public class Institution_HostLocalServiceClp
 	}
 
 	@Override
-	public java.util.List<de.uhh.l2g.plugins.model.Institution_Host> getByGroupId(
-		long groupId)
+	public de.uhh.l2g.plugins.model.Host getByInstitutionId(long institutionId)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException {
 		Object returnObj = null;
 
 		try {
 			returnObj = _invokableLocalService.invokeMethod(_methodName19,
-					_methodParameterTypes19, new Object[] { groupId });
+					_methodParameterTypes19, new Object[] { institutionId });
 		}
 		catch (Throwable t) {
 			t = ClpSerializer.translateThrowable(t);
@@ -775,11 +764,11 @@ public class Institution_HostLocalServiceClp
 			}
 		}
 
-		return (java.util.List<de.uhh.l2g.plugins.model.Institution_Host>)ClpSerializer.translateOutput(returnObj);
+		return (de.uhh.l2g.plugins.model.Host)ClpSerializer.translateOutput(returnObj);
 	}
 
 	@Override
-	public de.uhh.l2g.plugins.model.Host getByInstitutionId(long institutionId)
+	public de.uhh.l2g.plugins.model.Host getByInstitution(long institutionId)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException {
 		Object returnObj = null;
@@ -812,7 +801,8 @@ public class Institution_HostLocalServiceClp
 	}
 
 	@Override
-	public de.uhh.l2g.plugins.model.Host getByInstitution(long institutionId)
+	public de.uhh.l2g.plugins.model.Institution_Host getLinkByInstitutionId(
+		long institutionId)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException {
 		Object returnObj = null;
@@ -841,89 +831,19 @@ public class Institution_HostLocalServiceClp
 			}
 		}
 
-		return (de.uhh.l2g.plugins.model.Host)ClpSerializer.translateOutput(returnObj);
+		return (de.uhh.l2g.plugins.model.Institution_Host)ClpSerializer.translateOutput(returnObj);
 	}
 
 	@Override
-	public de.uhh.l2g.plugins.model.Host getByGroupIdAndInstitutionId(
-		long companyId, long groupId, long institutionId)
+	public java.util.List<de.uhh.l2g.plugins.model.Institution> getByHostId(
+		long hostId)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException {
 		Object returnObj = null;
 
 		try {
 			returnObj = _invokableLocalService.invokeMethod(_methodName22,
-					_methodParameterTypes22,
-					new Object[] { companyId, groupId, institutionId });
-		}
-		catch (Throwable t) {
-			t = ClpSerializer.translateThrowable(t);
-
-			if (t instanceof com.liferay.portal.kernel.exception.PortalException) {
-				throw (com.liferay.portal.kernel.exception.PortalException)t;
-			}
-
-			if (t instanceof com.liferay.portal.kernel.exception.SystemException) {
-				throw (com.liferay.portal.kernel.exception.SystemException)t;
-			}
-
-			if (t instanceof RuntimeException) {
-				throw (RuntimeException)t;
-			}
-			else {
-				throw new RuntimeException(t.getClass().getName() +
-					" is not a valid exception");
-			}
-		}
-
-		return (de.uhh.l2g.plugins.model.Host)ClpSerializer.translateOutput(returnObj);
-	}
-
-	@Override
-	public de.uhh.l2g.plugins.model.Institution_Host getLinkByGroupIdAndInstitutionId(
-		long groupId, long institutionId)
-		throws com.liferay.portal.kernel.exception.PortalException,
-			com.liferay.portal.kernel.exception.SystemException {
-		Object returnObj = null;
-
-		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName23,
-					_methodParameterTypes23,
-					new Object[] { groupId, institutionId });
-		}
-		catch (Throwable t) {
-			t = ClpSerializer.translateThrowable(t);
-
-			if (t instanceof com.liferay.portal.kernel.exception.PortalException) {
-				throw (com.liferay.portal.kernel.exception.PortalException)t;
-			}
-
-			if (t instanceof com.liferay.portal.kernel.exception.SystemException) {
-				throw (com.liferay.portal.kernel.exception.SystemException)t;
-			}
-
-			if (t instanceof RuntimeException) {
-				throw (RuntimeException)t;
-			}
-			else {
-				throw new RuntimeException(t.getClass().getName() +
-					" is not a valid exception");
-			}
-		}
-
-		return (de.uhh.l2g.plugins.model.Institution_Host)ClpSerializer.translateOutput(returnObj);
-	}
-
-	@Override
-	public java.util.List<de.uhh.l2g.plugins.model.Institution> getByGroupIdAndHostId(
-		long groupId, long hostId)
-		throws com.liferay.portal.kernel.exception.PortalException,
-			com.liferay.portal.kernel.exception.SystemException {
-		Object returnObj = null;
-
-		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName24,
-					_methodParameterTypes24, new Object[] { groupId, hostId });
+					_methodParameterTypes22, new Object[] { hostId });
 		}
 		catch (Throwable t) {
 			t = ClpSerializer.translateThrowable(t);
@@ -949,15 +869,15 @@ public class Institution_HostLocalServiceClp
 	}
 
 	@Override
-	public java.util.List<de.uhh.l2g.plugins.model.Institution_Host> getListByGroupIdAndHostId(
-		long groupId, long hostId)
+	public java.util.List<de.uhh.l2g.plugins.model.Institution_Host> getListByHostId(
+		long hostId)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName25,
-					_methodParameterTypes25, new Object[] { groupId, hostId });
+			returnObj = _invokableLocalService.invokeMethod(_methodName23,
+					_methodParameterTypes23, new Object[] { hostId });
 		}
 		catch (Throwable t) {
 			t = ClpSerializer.translateThrowable(t);
@@ -983,14 +903,14 @@ public class Institution_HostLocalServiceClp
 	}
 
 	@Override
-	public int getByGroupIdAndHostIdCount(long groupId, long hostId)
+	public int getByHostIdCount(long hostId)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName26,
-					_methodParameterTypes26, new Object[] { groupId, hostId });
+			returnObj = _invokableLocalService.invokeMethod(_methodName24,
+					_methodParameterTypes24, new Object[] { hostId });
 		}
 		catch (Throwable t) {
 			t = ClpSerializer.translateThrowable(t);
@@ -1016,16 +936,15 @@ public class Institution_HostLocalServiceClp
 	}
 
 	@Override
-	public java.util.List<de.uhh.l2g.plugins.model.Institution_Host> getListByGroupIdAndInstitutionId(
-		long companyId, long groupId, long institutionId)
+	public java.util.List<de.uhh.l2g.plugins.model.Institution_Host> getListByInstitutionId(
+		long institutionId)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName27,
-					_methodParameterTypes27,
-					new Object[] { companyId, groupId, institutionId });
+			returnObj = _invokableLocalService.invokeMethod(_methodName25,
+					_methodParameterTypes25, new Object[] { institutionId });
 		}
 		catch (Throwable t) {
 			t = ClpSerializer.translateThrowable(t);
@@ -1051,12 +970,12 @@ public class Institution_HostLocalServiceClp
 	}
 
 	@Override
-	public long getDefaultInstitutionHostId(long companyId, long groupId) {
+	public long getDefaultInstitutionHostId() {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName28,
-					_methodParameterTypes28, new Object[] { companyId, groupId });
+			returnObj = _invokableLocalService.invokeMethod(_methodName26,
+					_methodParameterTypes26, new Object[] {  });
 		}
 		catch (Throwable t) {
 			t = ClpSerializer.translateThrowable(t);
@@ -1082,8 +1001,8 @@ public class Institution_HostLocalServiceClp
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName29,
-					_methodParameterTypes29,
+			returnObj = _invokableLocalService.invokeMethod(_methodName27,
+					_methodParameterTypes27,
 					new Object[] {
 						defaultInstitutionId,
 						
@@ -1124,8 +1043,8 @@ public class Institution_HostLocalServiceClp
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName30,
-					_methodParameterTypes30,
+			returnObj = _invokableLocalService.invokeMethod(_methodName28,
+					_methodParameterTypes28,
 					new Object[] {
 						institutionId,
 						
@@ -1166,8 +1085,8 @@ public class Institution_HostLocalServiceClp
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName31,
-					_methodParameterTypes31,
+			returnObj = _invokableLocalService.invokeMethod(_methodName29,
+					_methodParameterTypes29,
 					new Object[] {
 						institutionId,
 						
@@ -1201,20 +1120,14 @@ public class Institution_HostLocalServiceClp
 
 	@Override
 	public de.uhh.l2g.plugins.model.Institution_Host deleteLinkById(
-		long institutionHostId,
-		com.liferay.portal.service.ServiceContext serviceContext)
+		long institutionHostId)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException {
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName32,
-					_methodParameterTypes32,
-					new Object[] {
-						institutionHostId,
-						
-					ClpSerializer.translateInput(serviceContext)
-					});
+			returnObj = _invokableLocalService.invokeMethod(_methodName30,
+					_methodParameterTypes30, new Object[] { institutionHostId });
 		}
 		catch (Throwable t) {
 			t = ClpSerializer.translateThrowable(t);
@@ -1248,8 +1161,8 @@ public class Institution_HostLocalServiceClp
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName33,
-					_methodParameterTypes33,
+			returnObj = _invokableLocalService.invokeMethod(_methodName31,
+					_methodParameterTypes31,
 					new Object[] {
 						ClpSerializer.translateInput(institution),
 						
@@ -1288,8 +1201,8 @@ public class Institution_HostLocalServiceClp
 		Object returnObj = null;
 
 		try {
-			returnObj = _invokableLocalService.invokeMethod(_methodName34,
-					_methodParameterTypes34, new Object[] {  });
+			returnObj = _invokableLocalService.invokeMethod(_methodName32,
+					_methodParameterTypes32, new Object[] {  });
 		}
 		catch (Throwable t) {
 			t = ClpSerializer.translateThrowable(t);
@@ -1379,8 +1292,4 @@ public class Institution_HostLocalServiceClp
 	private String[] _methodParameterTypes31;
 	private String _methodName32;
 	private String[] _methodParameterTypes32;
-	private String _methodName33;
-	private String[] _methodParameterTypes33;
-	private String _methodName34;
-	private String[] _methodParameterTypes34;
 }

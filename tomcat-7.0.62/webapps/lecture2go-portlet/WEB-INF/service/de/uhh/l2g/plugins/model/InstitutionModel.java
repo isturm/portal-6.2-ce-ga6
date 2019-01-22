@@ -158,34 +158,6 @@ public interface InstitutionModel extends BaseModel<Institution> {
 	 */
 	public void setSort(int sort);
 
-	/**
-	 * Returns the group ID of this institution.
-	 *
-	 * @return the group ID of this institution
-	 */
-	public long getGroupId();
-
-	/**
-	 * Sets the group ID of this institution.
-	 *
-	 * @param groupId the group ID of this institution
-	 */
-	public void setGroupId(long groupId);
-
-	/**
-	 * Returns the company ID of this institution.
-	 *
-	 * @return the company ID of this institution
-	 */
-	public long getCompanyId();
-
-	/**
-	 * Sets the company ID of this institution.
-	 *
-	 * @param companyId the company ID of this institution
-	 */
-	public void setCompanyId(long companyId);
-
 	@Override
 	public boolean isNew();
 

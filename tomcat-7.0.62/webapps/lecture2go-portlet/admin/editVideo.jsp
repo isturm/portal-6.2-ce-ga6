@@ -31,7 +31,9 @@
 <liferay-portlet:resourceURL id="updateThumbnail" var="updateThumbnailURL" />
 <liferay-portlet:resourceURL id="getJSONVideo" var="getJSONVideoURL" />
 <liferay-portlet:resourceURL id="convertVideo" var="convertVideoURL" />
+<liferay-portlet:resourceURL id="getVideoConversionStatus" var="getVideoConversionStatusURL" />
 <liferay-portlet:resourceURL id="updateHtaccess" var="updateHtaccessURL" />
+
 
 <%
 	String actionURL = "";
@@ -41,7 +43,7 @@
 		institutions = InstitutionLocalServiceUtil.getAllSortedAsTree(com.liferay.portal.kernel.dao.orm.QueryUtil.ALL_POS , com.liferay.portal.kernel.dao.orm.QueryUtil.ALL_POS);
 		permissionCoordinator = false;
 	}
-	if(permissionCoordinator)institutions = InstitutionLocalServiceUtil.getByParent(CoordinatorLocalServiceUtil.getCoordinator(remoteUser.getUserId()).getInstitutionId());
+	if(permissionCoordinator)institutions = InstitutionLocalServiceUtil.getByParentIdMap(CoordinatorLocalServiceUtil.getCoordinator(remoteUser.getUserId()).getInstitutionId());
 
 	String[] languages = LanguageUtil.get(pageContext, "languages-for-select").split(",");
 	String languageId="";
@@ -69,7 +71,7 @@
 	try{categories = CategoryLocalServiceUtil.getAllCategories(com.liferay.portal.kernel.dao.orm.QueryUtil.ALL_POS , com.liferay.portal.kernel.dao.orm.QueryUtil.ALL_POS);}catch(Exception e){}
 
 	Map<String,String> subInstitutions = new LinkedHashMap<String, String>();
-	subInstitutions = InstitutionLocalServiceUtil.getByParent(reqVideo.getRootInstitutionId());
+	subInstitutions = InstitutionLocalServiceUtil.getByParentIdMap(reqVideo.getRootInstitutionId());
 	List<Institution> producersSubInstitutions = InstitutionLocalServiceUtil.getByParentId(reqProducer.getInstitutionId());
 	ListIterator<Institution> itPSI = producersSubInstitutions.listIterator();
 	//video upload path
@@ -119,7 +121,7 @@
     	value: new Date(),
     	maxDate: '+1970/01/30',
     	minDate: false,
-    	step:10
+    	step:15
     });
   });
 </script>
@@ -155,6 +157,7 @@
 						<div id="progress" class="progress">
 					    	<div class="bar" style="width: 0%;"></div>
 						</div>
+						
 						<table id="uploaded-files" class="table"></table>
 					</div>
 				</aui:layout>
@@ -316,7 +319,7 @@
 						<div>
 							<%if(reqLicense.getL2go()==1){%><aui:input name="license"  id="uhhl2go" label="" value="uhhl2go" checked="true" type="radio"/><%}%>
 							<%if(reqLicense.getL2go()==0){%><aui:input name="license" id="uhhl2go" label="" value="uhhl2go" type="radio"/><%}%>
-							<a href="/web/vod/licence-l2go" target="_blank"><liferay-ui:message key="lecture2go-licence"/> </a>	 	      	      
+							<a href="/license" target="_blank"><liferay-ui:message key="lecture2go-licence"/> </a>	 	      	      
 						</div>	
 						<div>		
 							<%if(reqLicense.getCcbyncsa()==1){%><aui:input name="license" label="" id="ccbyncsa" value="ccbyncsa" checked="true" type="radio" /><%}%>
@@ -455,9 +458,6 @@ $(function () {
 	            if (data.originalFiles[i]['type'].length && !acceptFileTypes.test(data.originalFiles[i]['type'])) {
 	                uploadErrors.push('<liferay-ui:message key="not-an-accepted-file-type"/>');
 	            }
-	            if ( data.originalFiles[i]['size'] > 5368709120) { //5 GB
-	                uploadErrors.push('<liferay-ui:message key="max-file-size"/>');
-	            }
 			}
 
           	//check for first upload
@@ -504,9 +504,6 @@ $(function () {
 	           		validate();
 				}
            }
-           
-           //htaccess update function for physical file protectiom
-           updateHtaccess();
            
            //htaccess update function for physical file protectiom
            updateHtaccess();
@@ -678,28 +675,6 @@ function updateVideoFileName(file){
 					   success: function() {
 					     var jsonResponse = this.get('responseData');
 					     toggleShare();
-					   }
-				}
-			});	
-		}
-	);
-}
-
-function convertVideo(){
-	AUI().use('aui-io-request', 'aui-node',
-		function(A){
-			A.io.request('<%=convertVideoURL%>', {
-		 	dataType: 'json',
-		 	method: 'POST',
-			 	//send data to server
-			 	data: {
-			 		<portlet:namespace/>videoId: A.one('#<portlet:namespace/>videoId').get('value'),
-			 		// may be filled with instructions (workflow to use etc.)
-			 	},
-			 	//get server response
-				on: {
-					   success: function() {
-					     var jsonResponse = this.get('responseData');					     
 					   }
 				}
 			});	
@@ -884,6 +859,7 @@ function deleteFile(fileName){
 		    	  	$("#date-time").hide();
 		    	  	$("#first-title").show();
 		    	  	$("#<portlet:namespace/>meta-ebene").hide();
+		    	  	$(".conversion").html('');
 		        }
 		        jwplayer().remove();
 		        //initialize and show player
@@ -908,7 +884,7 @@ function updateCreatorOnServer(jsonArray) {
 		 	   	<portlet:namespace/>videoId: "<%=reqVideo.getVideoId()%>",
 		  },
 		  global: false,
-		  async:false,
+		  async: true,
 		  success: function(data) {
 		    //remove all creators 
 		    $( "#creators" ).empty();
@@ -1120,7 +1096,7 @@ AUI().use('aui-node',
 			function(A){
 				toggleCitationAllowed(citationAllowed.get('checked'))
 			}
-	)
+	);
     
     subInstitutionId.on(
           'change',
@@ -1135,7 +1111,6 @@ AUI().use('aui-node',
  
   }
 );
-
 
 </script>
 
@@ -1153,12 +1128,13 @@ AUI().use('aui-node',
     $(function () {
     	$('#<portlet:namespace></portlet:namespace>cancel').click(function(){
     		   window.location.href="<%=backURL.toString()%>";
-    	})
+    	});
     	var vars = <%=VideoLocalServiceUtil.getJSONVideo(reqVideo.getVideoId()).toString()%>;
         console.log(vars);
         $.template( "filesTemplate", $("#template") );
         $.tmpl( "filesTemplate", vars ).appendTo( ".table" );
     });
 </script>
+
 
 <%@include file="includeCreatorTemplates.jsp" %>

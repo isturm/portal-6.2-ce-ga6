@@ -1,9 +1,7 @@
-<%@page import="de.uhh.l2g.plugins.util.RepositoryManager"%>
 <%@page import="de.uhh.l2g.plugins.model.impl.InstitutionImpl"%>
 <%@page import="com.liferay.portlet.journal.service.JournalArticleLocalServiceUtil"%>
 <%@page import="com.liferay.portlet.journal.model.JournalArticle"%>
 <%@page import="com.liferay.portal.kernel.workflow.WorkflowConstants"%>
-<%@page import="de.uhh.l2g.plugins.util.InstallWizardManager"%>
 <%@include file="/init.jsp"%>
 <%
 Long institutionId = new Long(0);
@@ -28,11 +26,9 @@ ListIterator<Video> pli = popular.listIterator();
 //get all root (1st level) institutions with open access videos
 List<Institution> institutions = InstitutionLocalServiceUtil.getRootInstitutionsByOpenAccessVideos();
 
-//this proceeds only if the install wizart is activ
-InstallWizardManager installWizardManager = new InstallWizardManager(portletGroupId, company.getCompanyId());
-installWizardManager.installRepository();
+
 %>
-   
+
 <div class="front-page-teaser">
  	<div class="bg-video-container">
 		<video id="bg-vid" autoplay loop poster="/lecture2go-portlet/img/background_still.jpg" preload="none" muted>
@@ -47,11 +43,7 @@ installWizardManager.installRepository();
 	<div class="l2go-info-container">
 		<div class="l2go-info">
 			<div class="l2go-title">
-				<%if(company.getName().equals("Lecture2Go")){%>
-					Lecture<span class="orange">2</span>Go
-				<%}else{%>
-					<%=company.getName()%>
-				<%}%>
+				Lecture<span class="orange">2</span>Go
 			</div>
 			<div class="l2go-subtitle">
 				<p><liferay-ui:message key="l2go-description"/></p>
@@ -105,11 +97,20 @@ installWizardManager.installRepository();
 									Video vid = new VideoImpl();
 									if(lectser.getLatestOpenAccessVideoId()<0){
 										isVideo = true;
-										vid = VideoLocalServiceUtil.getFullVideo(lectser.getLectureseriesId());
+										try {
+											vid = VideoLocalServiceUtil.getVideo(lectser.getLectureseriesId());
+										} catch (Exception e) {
+											
+										}
 										oId = vid.getVideoId()+"";
 									}else{
 										oId = lectser.getLectureseriesId()+"";
-										vid = VideoLocalServiceUtil.getFullVideo(lectser.getLatestOpenAccessVideoId());
+										try {
+											vid = VideoLocalServiceUtil.getVideo(lectser.getLatestOpenAccessVideoId());
+										} catch (Exception e) {
+											
+										}
+
 									}
 
 									List<Video_Institution> vi = Video_InstitutionLocalServiceUtil.getByVideo(vid.getVideoId());
@@ -191,8 +192,13 @@ installWizardManager.installRepository();
 								while(pli.hasNext()){
 									Video video = pli.next();
 									
-									Video vid = VideoLocalServiceUtil.getFullVideo(video.getVideoId());
-									
+									Video vid = new VideoImpl();
+									try {
+										vid = VideoLocalServiceUtil.getVideo(video.getVideoId());
+									} catch (Exception e) {
+										
+									}
+
 									boolean isVideo = (vid.getLectureseriesId() < 0);
 
 									String creators = CreatorLocalServiceUtil.getCommaSeparatedCreatorsByVideoIdAndMaxCreators(vid.getVideoId(),3);

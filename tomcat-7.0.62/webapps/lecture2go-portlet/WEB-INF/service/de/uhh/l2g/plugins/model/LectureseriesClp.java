@@ -668,22 +668,6 @@ public class LectureseriesClp extends BaseModelImpl<Lectureseries>
 	}
 
 	@Override
-	public void setNumberOfVideos(int numberOfVideos) {
-		try {
-			String methodName = "setNumberOfVideos";
-
-			Class<?>[] parameterTypes = new Class<?>[] { int.class };
-
-			Object[] parameterValues = new Object[] { numberOfVideos };
-
-			invokeOnRemoteModel(methodName, parameterTypes, parameterValues);
-		}
-		catch (Exception e) {
-			throw new UnsupportedOperationException(e);
-		}
-	}
-
-	@Override
 	public int getNumberOfVideos() {
 		try {
 			String methodName = "getNumberOfVideos";
@@ -710,22 +694,6 @@ public class LectureseriesClp extends BaseModelImpl<Lectureseries>
 			Class<?>[] parameterTypes = new Class<?>[] { java.lang.String.class };
 
 			Object[] parameterValues = new Object[] { type };
-
-			invokeOnRemoteModel(methodName, parameterTypes, parameterValues);
-		}
-		catch (Exception e) {
-			throw new UnsupportedOperationException(e);
-		}
-	}
-
-	@Override
-	public void setNumberOfOpenAccessVideos(int numberOfOpenAccessVideos) {
-		try {
-			String methodName = "setNumberOfOpenAccessVideos";
-
-			Class<?>[] parameterTypes = new Class<?>[] { int.class };
-
-			Object[] parameterValues = new Object[] { numberOfOpenAccessVideos };
 
 			invokeOnRemoteModel(methodName, parameterTypes, parameterValues);
 		}

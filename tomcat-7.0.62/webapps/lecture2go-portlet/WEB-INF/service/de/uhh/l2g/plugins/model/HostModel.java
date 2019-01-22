@@ -146,34 +146,6 @@ public interface HostModel extends BaseModel<Host> {
 	public void setName(String name);
 
 	/**
-	 * Returns the group ID of this host.
-	 *
-	 * @return the group ID of this host
-	 */
-	public long getGroupId();
-
-	/**
-	 * Sets the group ID of this host.
-	 *
-	 * @param groupId the group ID of this host
-	 */
-	public void setGroupId(long groupId);
-
-	/**
-	 * Returns the company ID of this host.
-	 *
-	 * @return the company ID of this host
-	 */
-	public long getCompanyId();
-
-	/**
-	 * Sets the company ID of this host.
-	 *
-	 * @param companyId the company ID of this host
-	 */
-	public void setCompanyId(long companyId);
-
-	/**
 	 * Returns the default host of this host.
 	 *
 	 * @return the default host of this host

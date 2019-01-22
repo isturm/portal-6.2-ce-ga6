@@ -56,8 +56,6 @@ public class InstitutionWrapper implements Institution,
 		attributes.put("www", getWww());
 		attributes.put("level", getLevel());
 		attributes.put("sort", getSort());
-		attributes.put("groupId", getGroupId());
-		attributes.put("companyId", getCompanyId());
 
 		return attributes;
 	}
@@ -104,18 +102,6 @@ public class InstitutionWrapper implements Institution,
 
 		if (sort != null) {
 			setSort(sort);
-		}
-
-		Long groupId = (Long)attributes.get("groupId");
-
-		if (groupId != null) {
-			setGroupId(groupId);
-		}
-
-		Long companyId = (Long)attributes.get("companyId");
-
-		if (companyId != null) {
-			setCompanyId(companyId);
 		}
 	}
 
@@ -277,46 +263,6 @@ public class InstitutionWrapper implements Institution,
 	@Override
 	public void setSort(int sort) {
 		_institution.setSort(sort);
-	}
-
-	/**
-	* Returns the group ID of this institution.
-	*
-	* @return the group ID of this institution
-	*/
-	@Override
-	public long getGroupId() {
-		return _institution.getGroupId();
-	}
-
-	/**
-	* Sets the group ID of this institution.
-	*
-	* @param groupId the group ID of this institution
-	*/
-	@Override
-	public void setGroupId(long groupId) {
-		_institution.setGroupId(groupId);
-	}
-
-	/**
-	* Returns the company ID of this institution.
-	*
-	* @return the company ID of this institution
-	*/
-	@Override
-	public long getCompanyId() {
-		return _institution.getCompanyId();
-	}
-
-	/**
-	* Sets the company ID of this institution.
-	*
-	* @param companyId the company ID of this institution
-	*/
-	@Override
-	public void setCompanyId(long companyId) {
-		_institution.setCompanyId(companyId);
 	}
 
 	@Override

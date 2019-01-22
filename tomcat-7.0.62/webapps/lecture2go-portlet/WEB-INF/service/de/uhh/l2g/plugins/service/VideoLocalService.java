@@ -254,6 +254,10 @@ public interface VideoLocalService extends BaseLocalService,
 		int bool) throws com.liferay.portal.kernel.exception.SystemException;
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public int getByOpenAccessAndUploadedFile(int bool)
+		throws com.liferay.portal.kernel.exception.SystemException;
+
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public de.uhh.l2g.plugins.model.Video getLatestOpenAccessVideoForLectureseries(
 		java.lang.Long lectureseriesId);
 
@@ -303,8 +307,10 @@ public interface VideoLocalService extends BaseLocalService,
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public java.util.List<de.uhh.l2g.plugins.model.Video> getLatestVideos();
 
-	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public de.uhh.l2g.plugins.model.Video getFullVideo(java.lang.Long videoId);
+	public void createThumbnailsIfNotExisting(java.lang.Long videoId);
+
+	public void createSymLinkToDownloadableFileIfNotExisting(
+		java.lang.Long videoId);
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public org.json.JSONArray getJSONVideo(java.lang.Long videoId);
@@ -339,9 +345,7 @@ public interface VideoLocalService extends BaseLocalService,
 	* lecture2go.uri4.player.template=${lecture2go.downloadserver.web.root}/abo/[filename]
 	* lecture2go.uri5.player.template=rtsp://[host]:[port]/vod/_definst/[ext]:[l2go_path]/[filename]
 	*/
-	public void addPlayerUris2Video(de.uhh.l2g.plugins.model.Host host,
-		de.uhh.l2g.plugins.model.Video video,
-		de.uhh.l2g.plugins.model.Producer producer);
+	public void addPlayerUris2Video(de.uhh.l2g.plugins.model.Video video);
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public de.uhh.l2g.plugins.model.Video getBySecureUrl(java.lang.String surl)

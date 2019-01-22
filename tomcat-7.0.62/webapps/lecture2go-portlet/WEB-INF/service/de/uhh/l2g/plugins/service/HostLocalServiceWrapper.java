@@ -286,64 +286,39 @@ public class HostLocalServiceWrapper implements HostLocalService,
 	}
 
 	@Override
+	public int countAll() {
+		return _hostLocalService.countAll();
+	}
+
+	@Override
+	public java.util.List<de.uhh.l2g.plugins.model.Host> getAll() {
+		return _hostLocalService.getAll();
+	}
+
+	@Override
+	public java.util.List<de.uhh.l2g.plugins.model.Host> getAll(int start,
+		int end) {
+		return _hostLocalService.getAll(start, end);
+	}
+
+	@Override
 	public de.uhh.l2g.plugins.model.Host getByHostId(long hostId)
 		throws com.liferay.portal.kernel.exception.SystemException {
 		return _hostLocalService.getByHostId(hostId);
 	}
 
 	@Override
-	public java.util.List<de.uhh.l2g.plugins.model.Host> getByGroupId(
-		long groupId)
-		throws com.liferay.portal.kernel.exception.SystemException {
-		return _hostLocalService.getByGroupId(groupId);
-	}
-
-	@Override
-	public java.util.List<de.uhh.l2g.plugins.model.Host> getByGroupId(
-		long groupId, int start, int end)
-		throws com.liferay.portal.kernel.exception.SystemException {
-		return _hostLocalService.getByGroupId(groupId, start, end);
-	}
-
-	@Override
-	public int getByGroupIdCount(long groupId)
-		throws com.liferay.portal.kernel.exception.SystemException {
-		return _hostLocalService.getByGroupIdCount(groupId);
-	}
-
-	@Override
-	public de.uhh.l2g.plugins.model.Host getByGroupIdAndHostId(long groupId,
-		long hostId) throws com.liferay.portal.kernel.exception.SystemException {
-		return _hostLocalService.getByGroupIdAndHostId(groupId, hostId);
-	}
-
-	@Override
-	public java.util.List<de.uhh.l2g.plugins.model.Host> getByCompanyIdAndGroupId(
-		long companyId, long groupId)
-		throws com.liferay.portal.kernel.exception.SystemException {
-		return _hostLocalService.getByCompanyIdAndGroupId(companyId, groupId);
-	}
-
-	@Override
-	public de.uhh.l2g.plugins.model.Host getByDefault(long companyId,
-		long groupId)
-		throws com.liferay.portal.kernel.exception.SystemException {
-		return _hostLocalService.getByDefault(companyId, groupId);
-	}
-
-	@Override
-	public long getDefaultHostId(long companyId, long groupId)
-		throws com.liferay.portal.kernel.exception.SystemException {
-		return _hostLocalService.getDefaultHostId(companyId, groupId);
+	public de.uhh.l2g.plugins.model.Host getDefaultHost() {
+		return _hostLocalService.getDefaultHost();
 	}
 
 	/**
 	* Host is locked if it is linked to an institution
 	*/
 	@Override
-	public int getLockingElements(long groupId, long hostId)
+	public int getLockingElements(long hostId)
 		throws com.liferay.portal.kernel.exception.SystemException {
-		return _hostLocalService.getLockingElements(groupId, hostId);
+		return _hostLocalService.getLockingElements(hostId);
 	}
 
 	/**
@@ -359,23 +334,20 @@ public class HostLocalServiceWrapper implements HostLocalService,
 
 	@Override
 	public de.uhh.l2g.plugins.model.Host addHost(java.lang.String name,
-		java.lang.String streamLocation, java.lang.String protocol, int port,
-		com.liferay.portal.service.ServiceContext serviceContext)
+		java.lang.String streamLocation, java.lang.String protocol, int port)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException {
-		return _hostLocalService.addHost(name, streamLocation, protocol, port,
-			serviceContext);
+		return _hostLocalService.addHost(name, streamLocation, protocol, port);
 	}
 
 	@Override
 	public de.uhh.l2g.plugins.model.Host updateHost(long hostId,
 		java.lang.String name, java.lang.String streamLocation,
-		java.lang.String protocol, int port,
-		com.liferay.portal.service.ServiceContext serviceContext)
+		java.lang.String protocol, int port)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException {
 		return _hostLocalService.updateHost(hostId, name, streamLocation,
-			protocol, port, serviceContext);
+			protocol, port);
 	}
 
 	/**

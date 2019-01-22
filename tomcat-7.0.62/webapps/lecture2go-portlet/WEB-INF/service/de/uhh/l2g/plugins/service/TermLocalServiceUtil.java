@@ -296,6 +296,13 @@ public class TermLocalServiceUtil {
 		getService().deleteById(id);
 	}
 
+	public static java.util.List<de.uhh.l2g.plugins.model.Term> getByPrefixAndYear(
+		java.lang.String prefix, java.lang.String year)
+		throws com.liferay.portal.NoSuchModelException,
+			com.liferay.portal.kernel.exception.SystemException {
+		return getService().getByPrefixAndYear(prefix, year);
+	}
+
 	public static void clearService() {
 		_service = null;
 	}

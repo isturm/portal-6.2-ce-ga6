@@ -78,8 +78,6 @@ public class HostClp extends BaseModelImpl<Host> implements Host {
 		attributes.put("port", getPort());
 		attributes.put("serverRoot", getServerRoot());
 		attributes.put("name", getName());
-		attributes.put("groupId", getGroupId());
-		attributes.put("companyId", getCompanyId());
 		attributes.put("defaultHost", getDefaultHost());
 
 		return attributes;
@@ -121,18 +119,6 @@ public class HostClp extends BaseModelImpl<Host> implements Host {
 
 		if (name != null) {
 			setName(name);
-		}
-
-		Long groupId = (Long)attributes.get("groupId");
-
-		if (groupId != null) {
-			setGroupId(groupId);
-		}
-
-		Long companyId = (Long)attributes.get("companyId");
-
-		if (companyId != null) {
-			setCompanyId(companyId);
 		}
 
 		Integer defaultHost = (Integer)attributes.get("defaultHost");
@@ -281,52 +267,6 @@ public class HostClp extends BaseModelImpl<Host> implements Host {
 	}
 
 	@Override
-	public long getGroupId() {
-		return _groupId;
-	}
-
-	@Override
-	public void setGroupId(long groupId) {
-		_groupId = groupId;
-
-		if (_hostRemoteModel != null) {
-			try {
-				Class<?> clazz = _hostRemoteModel.getClass();
-
-				Method method = clazz.getMethod("setGroupId", long.class);
-
-				method.invoke(_hostRemoteModel, groupId);
-			}
-			catch (Exception e) {
-				throw new UnsupportedOperationException(e);
-			}
-		}
-	}
-
-	@Override
-	public long getCompanyId() {
-		return _companyId;
-	}
-
-	@Override
-	public void setCompanyId(long companyId) {
-		_companyId = companyId;
-
-		if (_hostRemoteModel != null) {
-			try {
-				Class<?> clazz = _hostRemoteModel.getClass();
-
-				Method method = clazz.getMethod("setCompanyId", long.class);
-
-				method.invoke(_hostRemoteModel, companyId);
-			}
-			catch (Exception e) {
-				throw new UnsupportedOperationException(e);
-			}
-		}
-	}
-
-	@Override
 	public int getDefaultHost() {
 		return _defaultHost;
 	}
@@ -424,8 +364,6 @@ public class HostClp extends BaseModelImpl<Host> implements Host {
 		clone.setPort(getPort());
 		clone.setServerRoot(getServerRoot());
 		clone.setName(getName());
-		clone.setGroupId(getGroupId());
-		clone.setCompanyId(getCompanyId());
 		clone.setDefaultHost(getDefaultHost());
 
 		return clone;
@@ -477,7 +415,7 @@ public class HostClp extends BaseModelImpl<Host> implements Host {
 
 	@Override
 	public String toString() {
-		StringBundler sb = new StringBundler(19);
+		StringBundler sb = new StringBundler(15);
 
 		sb.append("{hostId=");
 		sb.append(getHostId());
@@ -491,10 +429,6 @@ public class HostClp extends BaseModelImpl<Host> implements Host {
 		sb.append(getServerRoot());
 		sb.append(", name=");
 		sb.append(getName());
-		sb.append(", groupId=");
-		sb.append(getGroupId());
-		sb.append(", companyId=");
-		sb.append(getCompanyId());
 		sb.append(", defaultHost=");
 		sb.append(getDefaultHost());
 		sb.append("}");
@@ -504,7 +438,7 @@ public class HostClp extends BaseModelImpl<Host> implements Host {
 
 	@Override
 	public String toXmlString() {
-		StringBundler sb = new StringBundler(31);
+		StringBundler sb = new StringBundler(25);
 
 		sb.append("<model><model-name>");
 		sb.append("de.uhh.l2g.plugins.model.Host");
@@ -535,14 +469,6 @@ public class HostClp extends BaseModelImpl<Host> implements Host {
 		sb.append(getName());
 		sb.append("]]></column-value></column>");
 		sb.append(
-			"<column><column-name>groupId</column-name><column-value><![CDATA[");
-		sb.append(getGroupId());
-		sb.append("]]></column-value></column>");
-		sb.append(
-			"<column><column-name>companyId</column-name><column-value><![CDATA[");
-		sb.append(getCompanyId());
-		sb.append("]]></column-value></column>");
-		sb.append(
 			"<column><column-name>defaultHost</column-name><column-value><![CDATA[");
 		sb.append(getDefaultHost());
 		sb.append("]]></column-value></column>");
@@ -558,8 +484,6 @@ public class HostClp extends BaseModelImpl<Host> implements Host {
 	private int _port;
 	private String _serverRoot;
 	private String _name;
-	private long _groupId;
-	private long _companyId;
 	private int _defaultHost;
 	private BaseModel<?> _hostRemoteModel;
 	private Class<?> _clpSerializerClass = de.uhh.l2g.plugins.service.ClpSerializer.class;

@@ -54,8 +54,6 @@ public class HostWrapper implements Host, ModelWrapper<Host> {
 		attributes.put("port", getPort());
 		attributes.put("serverRoot", getServerRoot());
 		attributes.put("name", getName());
-		attributes.put("groupId", getGroupId());
-		attributes.put("companyId", getCompanyId());
 		attributes.put("defaultHost", getDefaultHost());
 
 		return attributes;
@@ -97,18 +95,6 @@ public class HostWrapper implements Host, ModelWrapper<Host> {
 
 		if (name != null) {
 			setName(name);
-		}
-
-		Long groupId = (Long)attributes.get("groupId");
-
-		if (groupId != null) {
-			setGroupId(groupId);
-		}
-
-		Long companyId = (Long)attributes.get("companyId");
-
-		if (companyId != null) {
-			setCompanyId(companyId);
 		}
 
 		Integer defaultHost = (Integer)attributes.get("defaultHost");
@@ -256,46 +242,6 @@ public class HostWrapper implements Host, ModelWrapper<Host> {
 	@Override
 	public void setName(java.lang.String name) {
 		_host.setName(name);
-	}
-
-	/**
-	* Returns the group ID of this host.
-	*
-	* @return the group ID of this host
-	*/
-	@Override
-	public long getGroupId() {
-		return _host.getGroupId();
-	}
-
-	/**
-	* Sets the group ID of this host.
-	*
-	* @param groupId the group ID of this host
-	*/
-	@Override
-	public void setGroupId(long groupId) {
-		_host.setGroupId(groupId);
-	}
-
-	/**
-	* Returns the company ID of this host.
-	*
-	* @return the company ID of this host
-	*/
-	@Override
-	public long getCompanyId() {
-		return _host.getCompanyId();
-	}
-
-	/**
-	* Sets the company ID of this host.
-	*
-	* @param companyId the company ID of this host
-	*/
-	@Override
-	public void setCompanyId(long companyId) {
-		_host.setCompanyId(companyId);
 	}
 
 	/**

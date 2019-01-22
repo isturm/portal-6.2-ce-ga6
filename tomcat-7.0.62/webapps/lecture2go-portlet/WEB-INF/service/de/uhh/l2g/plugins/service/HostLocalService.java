@@ -253,47 +253,27 @@ public interface HostLocalService extends BaseLocalService, InvokableLocalServic
 	public de.uhh.l2g.plugins.model.Host getByInstitution(long institutionId)
 		throws com.liferay.portal.kernel.exception.SystemException;
 
+	public int countAll();
+
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public java.util.List<de.uhh.l2g.plugins.model.Host> getAll();
+
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public java.util.List<de.uhh.l2g.plugins.model.Host> getAll(int start,
+		int end);
+
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
 	public de.uhh.l2g.plugins.model.Host getByHostId(long hostId)
 		throws com.liferay.portal.kernel.exception.SystemException;
 
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public java.util.List<de.uhh.l2g.plugins.model.Host> getByGroupId(
-		long groupId)
-		throws com.liferay.portal.kernel.exception.SystemException;
-
-	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public java.util.List<de.uhh.l2g.plugins.model.Host> getByGroupId(
-		long groupId, int start, int end)
-		throws com.liferay.portal.kernel.exception.SystemException;
-
-	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public int getByGroupIdCount(long groupId)
-		throws com.liferay.portal.kernel.exception.SystemException;
-
-	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public de.uhh.l2g.plugins.model.Host getByGroupIdAndHostId(long groupId,
-		long hostId) throws com.liferay.portal.kernel.exception.SystemException;
-
-	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public java.util.List<de.uhh.l2g.plugins.model.Host> getByCompanyIdAndGroupId(
-		long companyId, long groupId)
-		throws com.liferay.portal.kernel.exception.SystemException;
-
-	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public de.uhh.l2g.plugins.model.Host getByDefault(long companyId,
-		long groupId)
-		throws com.liferay.portal.kernel.exception.SystemException;
-
-	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public long getDefaultHostId(long companyId, long groupId)
-		throws com.liferay.portal.kernel.exception.SystemException;
+	public de.uhh.l2g.plugins.model.Host getDefaultHost();
 
 	/**
 	* Host is locked if it is linked to an institution
 	*/
 	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public int getLockingElements(long groupId, long hostId)
+	public int getLockingElements(long hostId)
 		throws com.liferay.portal.kernel.exception.SystemException;
 
 	/**
@@ -305,15 +285,13 @@ public interface HostLocalService extends BaseLocalService, InvokableLocalServic
 			com.liferay.portal.kernel.exception.SystemException;
 
 	public de.uhh.l2g.plugins.model.Host addHost(java.lang.String name,
-		java.lang.String streamLocation, java.lang.String protocol, int port,
-		com.liferay.portal.service.ServiceContext serviceContext)
+		java.lang.String streamLocation, java.lang.String protocol, int port)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException;
 
 	public de.uhh.l2g.plugins.model.Host updateHost(long hostId,
 		java.lang.String name, java.lang.String streamLocation,
-		java.lang.String protocol, int port,
-		com.liferay.portal.service.ServiceContext serviceContext)
+		java.lang.String protocol, int port)
 		throws com.liferay.portal.kernel.exception.PortalException,
 			com.liferay.portal.kernel.exception.SystemException;
 

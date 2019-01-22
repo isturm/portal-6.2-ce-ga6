@@ -266,4 +266,10 @@ public interface TermLocalService extends BaseLocalService, InvokableLocalServic
 	public void deleteById(java.lang.Long id)
 		throws com.liferay.portal.NoSuchModelException,
 			com.liferay.portal.kernel.exception.SystemException;
+
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public java.util.List<de.uhh.l2g.plugins.model.Term> getByPrefixAndYear(
+		java.lang.String prefix, java.lang.String year)
+		throws com.liferay.portal.NoSuchModelException,
+			com.liferay.portal.kernel.exception.SystemException;
 }

@@ -41,13 +41,26 @@ var videoProcessor = {
 		                   "</span>"
 		                 ].join("\n")).add(videoProcessor.getToolTipHtml());
 	},
-	convert: function(namespace, convertVideoURL, videoConversionStatusURL, id) {
-		$('*[data-video-id="'+id+'"]').html(videoProcessor.getConversionInitializedHtml());
+	convert: function(namespace, convertVideoURL, videoConversionStatusURL, id, workflow, additionalProperties) {
+		$videoconversionNode = $('*[data-video-id="'+id+'"]');
+		$videoconversionNode.html(videoProcessor.getConversionInitializedHtml());
 		AUI().use('aui-io-request', 'aui-node',
 			function(A){
 				var videoId = namespace + "videoId";
+				var workflowDescriptor = namespace + "workflow";
+				var additionalPropertiesDescriptor = namespace + "additionalProperties";
+				
 				var dataForPost = {};
 				dataForPost[videoId] = id;
+				if (typeof workflow != "undefined") {
+					// if there is a non-default workflow specified, send it
+					dataForPost[workflowDescriptor] = workflow;
+				}
+				if (typeof additionalProperties != "undefined") {
+					// if there is are workflow variables specified, send them
+					dataForPost[additionalPropertiesDescriptor] = additionalProperties;
+				}
+
 				A.io.request(convertVideoURL, {
 				 	dataType: 'json',
 				 	method: 'POST',
@@ -56,7 +69,13 @@ var videoProcessor = {
 				 	//get server response
 					on: {
 						   success: function() {
-							   videoProcessor.pollStatus(namespace, videoConversionStatusURL, convertVideoURL, id);
+							   var success = this.get('responseData').status;
+							   if (success) {
+								   videoProcessor.pollStatus(namespace, videoConversionStatusURL, convertVideoURL, id);
+							   } else {
+									$videoconversionNode.html(videoProcessor.getConversionFailedHtml(namespace, convertVideoURL, videoConversionStatusURL, id));
+							   }
+
 						   }
 					}
 				});	

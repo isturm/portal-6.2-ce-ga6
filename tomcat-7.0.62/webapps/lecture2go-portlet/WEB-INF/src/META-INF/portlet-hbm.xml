@@ -71,8 +71,6 @@
 		<property name="port" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
 		<property name="serverRoot" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
-		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
-		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
 		<property name="defaultHost" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
 	</class>
 	<class name="de.uhh.l2g.plugins.model.impl.InstallWizardImpl" table="LG_InstallWizard">
@@ -95,8 +93,6 @@
 		<property name="www" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 		<property name="level" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
 		<property name="sort" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
-		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
-		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
 	</class>
 	<class name="de.uhh.l2g.plugins.model.impl.Institution_HostImpl" table="LG_Institution_Host">
 		<cache usage="read-write" />
@@ -105,8 +101,6 @@
 		</id>
 		<property name="institutionId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
 		<property name="hostId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
-		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
-		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
 	</class>
 	<class name="de.uhh.l2g.plugins.model.impl.LastvideolistImpl" table="LG_Lastvideolist">
 		<cache usage="read-write" />

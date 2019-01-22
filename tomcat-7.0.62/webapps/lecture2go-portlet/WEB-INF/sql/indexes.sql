@@ -9,8 +9,13 @@ create index IX_8BEDCA83 on LG_Creator (lastName);
 create index IX_2CE50242 on LG_Creator (middleName);
 
 create index IX_24BB7F54 on LG_Host (companyId, groupId);
+create index IX_95D61FE7 on LG_Host (defaultHost);
 create index IX_B56E8218 on LG_Host (groupId);
 create index IX_35EC15AF on LG_Host (groupId, hostId);
+create index IX_59DDB869 on LG_Host (hostId);
+create index IX_7AC3E911 on LG_Host (name);
+create index IX_59D003DE on LG_Host (protocol);
+create index IX_65FFE033 on LG_Host (streamer);
 
 create index IX_82A80786 on LG_InstallWizard (groupId, companyId);
 
@@ -98,6 +103,7 @@ create index IX_6D2C99CC on LG_Tagcloud (objectClassType, objectId);
 create index IX_385A2033 on LG_Tagcloud (objectId);
 
 create index IX_4A54301C on LG_Term (prefix);
+create index IX_A731640D on LG_Term (prefix, year);
 create index IX_16F89D07 on LG_Term (year);
 
 create index IX_D1B2A998 on LG_Video (filename);
