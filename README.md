@@ -6,4 +6,7 @@ For further information visit our web page http://lecture2go-open-source.rrz.uni
 
 Change Log
 ==========
-Bugfix Package LG_5005 on Friday, September 28, 2018
+
+Bug Fix Package [master-v.1-b5050] on  October 11th, 2018
+
+Bug Fix Package [master-v.1-b5005] on September 28th, 2018
