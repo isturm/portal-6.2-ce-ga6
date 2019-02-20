@@ -100,35 +100,35 @@ public class TermLocalServiceClpInvoker {
 
 		_methodParameterTypes15 = new String[] { "de.uhh.l2g.plugins.model.Term" };
 
-		_methodName160 = "getBeanIdentifier";
+		_methodName156 = "getBeanIdentifier";
 
-		_methodParameterTypes160 = new String[] {  };
+		_methodParameterTypes156 = new String[] {  };
 
-		_methodName161 = "setBeanIdentifier";
+		_methodName157 = "setBeanIdentifier";
 
-		_methodParameterTypes161 = new String[] { "java.lang.String" };
+		_methodParameterTypes157 = new String[] { "java.lang.String" };
 
-		_methodName166 = "getAllSemesters";
+		_methodName162 = "getAllSemesters";
 
-		_methodParameterTypes166 = new String[] {  };
+		_methodParameterTypes162 = new String[] {  };
 
-		_methodName167 = "getById";
+		_methodName163 = "getById";
 
-		_methodParameterTypes167 = new String[] { "java.lang.Long" };
+		_methodParameterTypes163 = new String[] { "java.lang.Long" };
 
-		_methodName168 = "getTermsFromLectureseriesIdsAndVideoIds";
+		_methodName164 = "getTermsFromLectureseriesIdsAndVideoIds";
 
-		_methodParameterTypes168 = new String[] {
+		_methodParameterTypes164 = new String[] {
 				"java.util.ArrayList", "java.util.ArrayList"
 			};
 
-		_methodName169 = "deleteById";
+		_methodName165 = "deleteById";
 
-		_methodParameterTypes169 = new String[] { "java.lang.Long" };
+		_methodParameterTypes165 = new String[] { "java.lang.Long" };
 
-		_methodName170 = "getByPrefixAndYear";
+		_methodName166 = "getByPrefixAndYear";
 
-		_methodParameterTypes170 = new String[] {
+		_methodParameterTypes166 = new String[] {
 				"java.lang.String", "java.lang.String"
 			};
 	}
@@ -222,43 +222,43 @@ public class TermLocalServiceClpInvoker {
 			return TermLocalServiceUtil.updateTerm((de.uhh.l2g.plugins.model.Term)arguments[0]);
 		}
 
-		if (_methodName160.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes160, parameterTypes)) {
+		if (_methodName156.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes156, parameterTypes)) {
 			return TermLocalServiceUtil.getBeanIdentifier();
 		}
 
-		if (_methodName161.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes161, parameterTypes)) {
+		if (_methodName157.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes157, parameterTypes)) {
 			TermLocalServiceUtil.setBeanIdentifier((java.lang.String)arguments[0]);
+
+			return null;
+		}
+
+		if (_methodName162.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes162, parameterTypes)) {
+			return TermLocalServiceUtil.getAllSemesters();
+		}
+
+		if (_methodName163.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes163, parameterTypes)) {
+			return TermLocalServiceUtil.getById((java.lang.Long)arguments[0]);
+		}
+
+		if (_methodName164.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes164, parameterTypes)) {
+			return TermLocalServiceUtil.getTermsFromLectureseriesIdsAndVideoIds((java.util.ArrayList<java.lang.Long>)arguments[0],
+				(java.util.ArrayList<java.lang.Long>)arguments[1]);
+		}
+
+		if (_methodName165.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes165, parameterTypes)) {
+			TermLocalServiceUtil.deleteById((java.lang.Long)arguments[0]);
 
 			return null;
 		}
 
 		if (_methodName166.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes166, parameterTypes)) {
-			return TermLocalServiceUtil.getAllSemesters();
-		}
-
-		if (_methodName167.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes167, parameterTypes)) {
-			return TermLocalServiceUtil.getById((java.lang.Long)arguments[0]);
-		}
-
-		if (_methodName168.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes168, parameterTypes)) {
-			return TermLocalServiceUtil.getTermsFromLectureseriesIdsAndVideoIds((java.util.ArrayList<java.lang.Long>)arguments[0],
-				(java.util.ArrayList<java.lang.Long>)arguments[1]);
-		}
-
-		if (_methodName169.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes169, parameterTypes)) {
-			TermLocalServiceUtil.deleteById((java.lang.Long)arguments[0]);
-
-			return null;
-		}
-
-		if (_methodName170.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes170, parameterTypes)) {
 			return TermLocalServiceUtil.getByPrefixAndYear((java.lang.String)arguments[0],
 				(java.lang.String)arguments[1]);
 		}
@@ -298,18 +298,18 @@ public class TermLocalServiceClpInvoker {
 	private String[] _methodParameterTypes14;
 	private String _methodName15;
 	private String[] _methodParameterTypes15;
-	private String _methodName160;
-	private String[] _methodParameterTypes160;
-	private String _methodName161;
-	private String[] _methodParameterTypes161;
+	private String _methodName156;
+	private String[] _methodParameterTypes156;
+	private String _methodName157;
+	private String[] _methodParameterTypes157;
+	private String _methodName162;
+	private String[] _methodParameterTypes162;
+	private String _methodName163;
+	private String[] _methodParameterTypes163;
+	private String _methodName164;
+	private String[] _methodParameterTypes164;
+	private String _methodName165;
+	private String[] _methodParameterTypes165;
 	private String _methodName166;
 	private String[] _methodParameterTypes166;
-	private String _methodName167;
-	private String[] _methodParameterTypes167;
-	private String _methodName168;
-	private String[] _methodParameterTypes168;
-	private String _methodName169;
-	private String[] _methodParameterTypes169;
-	private String _methodName170;
-	private String[] _methodParameterTypes170;
 }

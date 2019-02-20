@@ -106,35 +106,35 @@ public class Lectureseries_InstitutionLocalServiceClpInvoker {
 				"de.uhh.l2g.plugins.model.Lectureseries_Institution"
 			};
 
-		_methodName160 = "getBeanIdentifier";
+		_methodName156 = "getBeanIdentifier";
 
-		_methodParameterTypes160 = new String[] {  };
+		_methodParameterTypes156 = new String[] {  };
 
-		_methodName161 = "setBeanIdentifier";
+		_methodName157 = "setBeanIdentifier";
 
-		_methodParameterTypes161 = new String[] { "java.lang.String" };
+		_methodParameterTypes157 = new String[] { "java.lang.String" };
 
-		_methodName166 = "removeByLectureseriesId";
+		_methodName162 = "removeByLectureseriesId";
 
-		_methodParameterTypes166 = new String[] { "java.lang.Long" };
+		_methodParameterTypes162 = new String[] { "java.lang.Long" };
 
-		_methodName167 = "removeByacilityId";
+		_methodName163 = "removeByacilityId";
 
-		_methodParameterTypes167 = new String[] { "java.lang.Long" };
+		_methodParameterTypes163 = new String[] { "java.lang.Long" };
 
-		_methodName168 = "institutionAssignedToLectureseries";
+		_methodName164 = "institutionAssignedToLectureseries";
 
-		_methodParameterTypes168 = new String[] {
+		_methodParameterTypes164 = new String[] {
 				"de.uhh.l2g.plugins.model.Lectureseries_Institution"
 			};
 
-		_methodName169 = "getByLectureseries";
+		_methodName165 = "getByLectureseries";
 
-		_methodParameterTypes169 = new String[] { "long" };
+		_methodParameterTypes165 = new String[] { "long" };
 
-		_methodName170 = "findFirstByLectureseriesIdAndInstitutionId";
+		_methodName166 = "findFirstByLectureseriesIdAndInstitutionId";
 
-		_methodParameterTypes170 = new String[] { "long", "long" };
+		_methodParameterTypes166 = new String[] { "long", "long" };
 	}
 
 	public Object invokeMethod(String name, String[] parameterTypes,
@@ -226,40 +226,40 @@ public class Lectureseries_InstitutionLocalServiceClpInvoker {
 			return Lectureseries_InstitutionLocalServiceUtil.updateLectureseries_Institution((de.uhh.l2g.plugins.model.Lectureseries_Institution)arguments[0]);
 		}
 
-		if (_methodName160.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes160, parameterTypes)) {
+		if (_methodName156.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes156, parameterTypes)) {
 			return Lectureseries_InstitutionLocalServiceUtil.getBeanIdentifier();
 		}
 
-		if (_methodName161.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes161, parameterTypes)) {
+		if (_methodName157.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes157, parameterTypes)) {
 			Lectureseries_InstitutionLocalServiceUtil.setBeanIdentifier((java.lang.String)arguments[0]);
 
 			return null;
 		}
 
-		if (_methodName166.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes166, parameterTypes)) {
+		if (_methodName162.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes162, parameterTypes)) {
 			return Lectureseries_InstitutionLocalServiceUtil.removeByLectureseriesId((java.lang.Long)arguments[0]);
 		}
 
-		if (_methodName167.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes167, parameterTypes)) {
+		if (_methodName163.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes163, parameterTypes)) {
 			return Lectureseries_InstitutionLocalServiceUtil.removeByacilityId((java.lang.Long)arguments[0]);
 		}
 
-		if (_methodName168.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes168, parameterTypes)) {
+		if (_methodName164.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes164, parameterTypes)) {
 			return Lectureseries_InstitutionLocalServiceUtil.institutionAssignedToLectureseries((de.uhh.l2g.plugins.model.Lectureseries_Institution)arguments[0]);
 		}
 
-		if (_methodName169.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes169, parameterTypes)) {
+		if (_methodName165.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes165, parameterTypes)) {
 			return Lectureseries_InstitutionLocalServiceUtil.getByLectureseries(((Long)arguments[0]).longValue());
 		}
 
-		if (_methodName170.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes170, parameterTypes)) {
+		if (_methodName166.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes166, parameterTypes)) {
 			return Lectureseries_InstitutionLocalServiceUtil.findFirstByLectureseriesIdAndInstitutionId(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue());
 		}
@@ -299,18 +299,18 @@ public class Lectureseries_InstitutionLocalServiceClpInvoker {
 	private String[] _methodParameterTypes14;
 	private String _methodName15;
 	private String[] _methodParameterTypes15;
-	private String _methodName160;
-	private String[] _methodParameterTypes160;
-	private String _methodName161;
-	private String[] _methodParameterTypes161;
+	private String _methodName156;
+	private String[] _methodParameterTypes156;
+	private String _methodName157;
+	private String[] _methodParameterTypes157;
+	private String _methodName162;
+	private String[] _methodParameterTypes162;
+	private String _methodName163;
+	private String[] _methodParameterTypes163;
+	private String _methodName164;
+	private String[] _methodParameterTypes164;
+	private String _methodName165;
+	private String[] _methodParameterTypes165;
 	private String _methodName166;
 	private String[] _methodParameterTypes166;
-	private String _methodName167;
-	private String[] _methodParameterTypes167;
-	private String _methodName168;
-	private String[] _methodParameterTypes168;
-	private String _methodName169;
-	private String[] _methodParameterTypes169;
-	private String _methodName170;
-	private String[] _methodParameterTypes170;
 }

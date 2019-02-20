@@ -73,7 +73,6 @@ import de.uhh.l2g.plugins.service.VideoLocalServiceUtil;
 import de.uhh.l2g.plugins.service.Video_CategoryLocalServiceUtil;
 import de.uhh.l2g.plugins.service.Video_CreatorLocalServiceUtil;
 import de.uhh.l2g.plugins.service.Video_InstitutionLocalServiceUtil;
-import de.uhh.l2g.plugins.service.Video_LectureseriesLocalServiceUtil;
 import de.uhh.l2g.plugins.service.VideohitlistLocalServiceUtil;
 
 public class ProzessManager {
@@ -88,13 +87,6 @@ public class ProzessManager {
 		
 		video.setDownloadLink(0);
 		VideoLocalServiceUtil.updateVideo(video);
-		
-		if (VideoLocalServiceUtil.checkSmilFile(video)) {
-			String prefix = video.getOpenAccess()==1 ? video.getPreffix() : video.getSPreffix();
-			// delete old download symbolic link with secure file name if existing
-			File downloadSymLink = new File(PropsUtil.get("lecture2go.media.repository") + "/" + host.getServerRoot() + "/" + producer.getHomeDir() + "/" + prefix + PropsUtil.get("lecture2go.videoprocessing.downloadsuffix") + ".mp4");
-			downloadSymLink.delete();
-		}
 		
 		//remove symbolic links
 		removeSymbolicLinks(video);
@@ -112,15 +104,6 @@ public class ProzessManager {
 		Producer producer = ProducerLocalServiceUtil.getProducer(video.getProducerId());
 		
 		video.setDownloadLink(1);
-		
-		// if there is a smil file, create a symlink to the video file which has a reasonable bitrate
-		if (VideoLocalServiceUtil.checkSmilFile(video)) {
-			try {
-				createSymLinkToDownloadableFile(host, video, producer);
-			} catch (Exception e) {
-				//e.printStackTrace();
-			}
-		}
 		
 		VideoLocalServiceUtil.updateVideo(video);
 		//symbolic links for download
@@ -338,9 +321,6 @@ public class ProzessManager {
 			e1.printStackTrace();
 		}
 
-		// delete video_lectureseries
-		Video_LectureseriesLocalServiceUtil.removeByVideoId(video.getVideoId());
-				
 		// delete video_institution
 		Video_InstitutionLocalServiceUtil.removeByVideoId(video.getVideoId());
 				
@@ -701,7 +681,7 @@ public class ProzessManager {
 	 * @throws FileNotFoundException
 	 * @throws DocumentException
 	 */
-	private String getFileNameOfVideoWithReasonableBitrate(Host host, Video video, Producer producer) throws FileNotFoundException, DocumentException {
+	public String getFileNameOfVideoWithReasonableBitrate(Host host, Video video, Producer producer) throws FileNotFoundException, DocumentException {
 		final int targetBitrate = Integer.parseInt(PropsUtil.get("lecture2go.videoprocessing.targetdownloadbitrate"));
 		String filename = "";
 

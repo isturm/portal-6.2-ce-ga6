@@ -52,7 +52,6 @@ import de.uhh.l2g.plugins.model.VideoClp;
 import de.uhh.l2g.plugins.model.Video_CategoryClp;
 import de.uhh.l2g.plugins.model.Video_CreatorClp;
 import de.uhh.l2g.plugins.model.Video_InstitutionClp;
-import de.uhh.l2g.plugins.model.Video_LectureseriesClp;
 import de.uhh.l2g.plugins.model.VideohitlistClp;
 
 import java.io.ObjectInputStream;
@@ -237,10 +236,6 @@ public class ClpSerializer {
 
 		if (oldModelClassName.equals(Video_InstitutionClp.class.getName())) {
 			return translateInputVideo_Institution(oldModel);
-		}
-
-		if (oldModelClassName.equals(Video_LectureseriesClp.class.getName())) {
-			return translateInputVideo_Lectureseries(oldModel);
 		}
 
 		if (oldModelClassName.equals(VideohitlistClp.class.getName())) {
@@ -530,17 +525,6 @@ public class ClpSerializer {
 		Video_InstitutionClp oldClpModel = (Video_InstitutionClp)oldModel;
 
 		BaseModel<?> newModel = oldClpModel.getVideo_InstitutionRemoteModel();
-
-		newModel.setModelAttributes(oldClpModel.getModelAttributes());
-
-		return newModel;
-	}
-
-	public static Object translateInputVideo_Lectureseries(
-		BaseModel<?> oldModel) {
-		Video_LectureseriesClp oldClpModel = (Video_LectureseriesClp)oldModel;
-
-		BaseModel<?> newModel = oldClpModel.getVideo_LectureseriesRemoteModel();
 
 		newModel.setModelAttributes(oldClpModel.getModelAttributes());
 
@@ -1569,43 +1553,6 @@ public class ClpSerializer {
 		}
 
 		if (oldModelClassName.equals(
-					"de.uhh.l2g.plugins.model.impl.Video_LectureseriesImpl")) {
-			return translateOutputVideo_Lectureseries(oldModel);
-		}
-		else if (oldModelClassName.endsWith("Clp")) {
-			try {
-				ClassLoader classLoader = ClpSerializer.class.getClassLoader();
-
-				Method getClpSerializerClassMethod = oldModelClass.getMethod(
-						"getClpSerializerClass");
-
-				Class<?> oldClpSerializerClass = (Class<?>)getClpSerializerClassMethod.invoke(oldModel);
-
-				Class<?> newClpSerializerClass = classLoader.loadClass(oldClpSerializerClass.getName());
-
-				Method translateOutputMethod = newClpSerializerClass.getMethod("translateOutput",
-						BaseModel.class);
-
-				Class<?> oldModelModelClass = oldModel.getModelClass();
-
-				Method getRemoteModelMethod = oldModelClass.getMethod("get" +
-						oldModelModelClass.getSimpleName() + "RemoteModel");
-
-				Object oldRemoteModel = getRemoteModelMethod.invoke(oldModel);
-
-				BaseModel<?> newModel = (BaseModel<?>)translateOutputMethod.invoke(null,
-						oldRemoteModel);
-
-				return newModel;
-			}
-			catch (Throwable t) {
-				if (_log.isInfoEnabled()) {
-					_log.info("Unable to translate " + oldModelClassName, t);
-				}
-			}
-		}
-
-		if (oldModelClassName.equals(
 					"de.uhh.l2g.plugins.model.impl.VideohitlistImpl")) {
 			return translateOutputVideohitlist(oldModel);
 		}
@@ -1868,11 +1815,6 @@ public class ClpSerializer {
 		if (className.equals(
 					"de.uhh.l2g.plugins.NoSuchVideo_InstitutionException")) {
 			return new de.uhh.l2g.plugins.NoSuchVideo_InstitutionException();
-		}
-
-		if (className.equals(
-					"de.uhh.l2g.plugins.NoSuchVideo_LectureseriesException")) {
-			return new de.uhh.l2g.plugins.NoSuchVideo_LectureseriesException();
 		}
 
 		if (className.equals("de.uhh.l2g.plugins.NoSuchVideohitlistException")) {
@@ -2152,17 +2094,6 @@ public class ClpSerializer {
 		newModel.setModelAttributes(oldModel.getModelAttributes());
 
 		newModel.setVideo_InstitutionRemoteModel(oldModel);
-
-		return newModel;
-	}
-
-	public static Object translateOutputVideo_Lectureseries(
-		BaseModel<?> oldModel) {
-		Video_LectureseriesClp newModel = new Video_LectureseriesClp();
-
-		newModel.setModelAttributes(oldModel.getModelAttributes());
-
-		newModel.setVideo_LectureseriesRemoteModel(oldModel);
 
 		return newModel;
 	}

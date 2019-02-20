@@ -63,8 +63,6 @@
 	<bean id="de.uhh.l2g.plugins.service.persistence.Video_CreatorPersistence" class="de.uhh.l2g.plugins.service.persistence.Video_CreatorPersistenceImpl" parent="basePersistence" />
 	<bean id="de.uhh.l2g.plugins.service.Video_InstitutionLocalService" class="de.uhh.l2g.plugins.service.impl.Video_InstitutionLocalServiceImpl" />
 	<bean id="de.uhh.l2g.plugins.service.persistence.Video_InstitutionPersistence" class="de.uhh.l2g.plugins.service.persistence.Video_InstitutionPersistenceImpl" parent="basePersistence" />
-	<bean id="de.uhh.l2g.plugins.service.Video_LectureseriesLocalService" class="de.uhh.l2g.plugins.service.impl.Video_LectureseriesLocalServiceImpl" />
-	<bean id="de.uhh.l2g.plugins.service.persistence.Video_LectureseriesPersistence" class="de.uhh.l2g.plugins.service.persistence.Video_LectureseriesPersistenceImpl" parent="basePersistence" />
 	<bean id="de.uhh.l2g.plugins.service.VideohitlistLocalService" class="de.uhh.l2g.plugins.service.impl.VideohitlistLocalServiceImpl" />
 	<bean id="de.uhh.l2g.plugins.service.persistence.VideohitlistPersistence" class="de.uhh.l2g.plugins.service.persistence.VideohitlistPersistenceImpl" parent="basePersistence" />
 </beans>

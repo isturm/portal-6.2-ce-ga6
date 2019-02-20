@@ -370,8 +370,14 @@ public class VideoLocalServiceWrapper implements VideoLocalService,
 	}
 
 	@Override
-	public de.uhh.l2g.plugins.model.Video getFullVideo(java.lang.Long videoId) {
-		return _videoLocalService.getFullVideo(videoId);
+	public void createThumbnailsIfNotExisting(java.lang.Long videoId) {
+		_videoLocalService.createThumbnailsIfNotExisting(videoId);
+	}
+
+	@Override
+	public void createSymLinkToDownloadableFileIfNotExisting(
+		java.lang.Long videoId) {
+		_videoLocalService.createSymLinkToDownloadableFileIfNotExisting(videoId);
 	}
 
 	@Override
@@ -420,10 +426,8 @@ public class VideoLocalServiceWrapper implements VideoLocalService,
 	* lecture2go.uri5.player.template=rtsp://[host]:[port]/vod/_definst/[ext]:[l2go_path]/[filename]
 	*/
 	@Override
-	public void addPlayerUris2Video(de.uhh.l2g.plugins.model.Host host,
-		de.uhh.l2g.plugins.model.Video video,
-		de.uhh.l2g.plugins.model.Producer producer) {
-		_videoLocalService.addPlayerUris2Video(host, video, producer);
+	public void addPlayerUris2Video(de.uhh.l2g.plugins.model.Video video) {
+		_videoLocalService.addPlayerUris2Video(video);
 	}
 
 	@Override

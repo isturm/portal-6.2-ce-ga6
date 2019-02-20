@@ -69,7 +69,6 @@ import de.uhh.l2g.plugins.service.TagcloudLocalServiceUtil;
 import de.uhh.l2g.plugins.service.TermLocalServiceUtil;
 import de.uhh.l2g.plugins.service.VideoLocalServiceUtil;
 import de.uhh.l2g.plugins.service.Video_InstitutionLocalServiceUtil;
-import de.uhh.l2g.plugins.service.Video_LectureseriesLocalServiceUtil;
 import de.uhh.l2g.plugins.util.EmailManager;
 import de.uhh.l2g.plugins.util.FileManager;
 import de.uhh.l2g.plugins.util.Htaccess;
@@ -108,7 +107,6 @@ public class AdminLectureSeriesManagement extends MVCPortlet {
 			Lectureseries_InstitutionLocalServiceUtil.removeByLectureseriesId(lId);//institution
 			Producer_LectureseriesLocalServiceUtil.removeByLectureseriesId(lId);//producer
 			VideoLocalServiceUtil.unlinkLectureseriesFromVideos(lId);//video
-			Video_LectureseriesLocalServiceUtil.removeByLectureseriesId(lId);//video links to lecture series
 			TagcloudLocalServiceUtil.deleteByObjectId(lId);//tag cloud
 		} catch (PortalException e) {
 			//e.printStackTrace();
@@ -485,19 +483,29 @@ public class AdminLectureSeriesManagement extends MVCPortlet {
 		int a = 1;
 		while(ittLect.hasNext()){
 			Lectureseries l = ittLect.next();
-			Video v = VideoLocalServiceUtil.getFullVideo(l.getLatestOpenAccessVideoId());
-			// generate RSS
-			LOG.info("Generate RSS" +a+" fol lecture series with ID: "+l.getLectureseriesId()+" and latest open access video with ID: "+v.getVideoId());
-			ProzessManager pm = new ProzessManager();
-			for (String f: FileManager.MEDIA_FORMATS) {           
+			try {
 				try {
-					pm.generateRSS(v, f);
+					Video v = VideoLocalServiceUtil.getVideo(l.getLatestOpenAccessVideoId());
+				
+					// generate RSS
+					LOG.info("Generate RSS" +a+" fol lecture series with ID: "+l.getLectureseriesId()+" and latest open access video with ID: "+v.getVideoId());
+					ProzessManager pm = new ProzessManager();
+					for (String f: FileManager.MEDIA_FORMATS) {           
+						try {
+							pm.generateRSS(v, f);
+						} catch (Exception e) {
+							//e.printStackTrace();
+						} 
+					}
 				} catch (Exception e) {
-					//e.printStackTrace();
-				} 
-			}		
-			LOG.info("RSS "+a+" generated");
-			a++;
+					
+				}
+				LOG.info("RSS "+a+" generated");
+				a++;
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 	

@@ -295,12 +295,6 @@
 		<field name="institutionId" type="long" />
 		<field name="institutionParentId" type="long" />
 	</model>
-	<model name="de.uhh.l2g.plugins.model.Video_Lectureseries">
-		<field name="videoLectureseriesId" type="long" />
-		<field name="videoId" type="long" />
-		<field name="lectureseriesId" type="long" />
-		<field name="openAccess" type="int" />
-	</model>
 	<model name="de.uhh.l2g.plugins.model.Videohitlist">
 		<field name="videohitlistId" type="long" />
 		<field name="hitsPerDay" type="long" />

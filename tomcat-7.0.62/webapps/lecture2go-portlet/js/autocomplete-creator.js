@@ -82,8 +82,20 @@ function getJSONCreator (data){
 }
 
 
+var creatorsArray = [];
+
+function getJsonCreatorsArray(){
+	loadCreators();
+	return creatorsArray;
+}
+
 function updateCreators(){
-	var jsonArray = [];
+	loadCreators();
+	updateCreatorOnServer(creatorsArray);
+}
+
+var creatorsArray = [];
+function loadCreators(){
 	$('#creators').children().each(function(n){
 		var parameters = {};
 		var $div = $(this);
@@ -95,7 +107,7 @@ function updateCreators(){
 			parameters['middleName'] = $div.find('input[name = '+namespace+'middleName]').val();
 			parameters['jobTitle'] = $div.find('input[name = '+namespace+'jobTitle]').val();
 			parameters['gender'] = "";
-			parameters['fullName'] = (parameters['jobTitle']+" "+(parameters['firstName']+" "+parameters['middleName']))+" "+parameters['lastName']);
+			parameters['fullName'] = (parameters['jobTitle'].trim()+" "+(parameters['firstName'].trim()+" "+parameters['middleName'].trim()).trim()+" "+parameters['lastName'].trim()).trim();
 		}else{
 			parameters['creatorId'] = "0";
 			parameters['firstName'] = $div.find('input[name = '+namespace+'firstName]').val().trim();
@@ -107,8 +119,7 @@ function updateCreators(){
 		}
 		console.log(parameters);
 		if(parameters['firstName'].length>0 && parameters['lastName'].length>0){
-			jsonArray[n]=parameters;
+			creatorsArray[n]=parameters;
 		}
-	});
-	updateCreatorOnServer(jsonArray);
+	});	
 }

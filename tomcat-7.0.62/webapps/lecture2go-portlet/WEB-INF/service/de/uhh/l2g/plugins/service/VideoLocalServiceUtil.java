@@ -350,9 +350,13 @@ public class VideoLocalServiceUtil {
 		return getService().getLatestVideos();
 	}
 
-	public static de.uhh.l2g.plugins.model.Video getFullVideo(
+	public static void createThumbnailsIfNotExisting(java.lang.Long videoId) {
+		getService().createThumbnailsIfNotExisting(videoId);
+	}
+
+	public static void createSymLinkToDownloadableFileIfNotExisting(
 		java.lang.Long videoId) {
-		return getService().getFullVideo(videoId);
+		getService().createSymLinkToDownloadableFileIfNotExisting(videoId);
 	}
 
 	public static org.json.JSONArray getJSONVideo(java.lang.Long videoId) {
@@ -397,10 +401,8 @@ public class VideoLocalServiceUtil {
 	* lecture2go.uri4.player.template=${lecture2go.downloadserver.web.root}/abo/[filename]
 	* lecture2go.uri5.player.template=rtsp://[host]:[port]/vod/_definst/[ext]:[l2go_path]/[filename]
 	*/
-	public static void addPlayerUris2Video(de.uhh.l2g.plugins.model.Host host,
-		de.uhh.l2g.plugins.model.Video video,
-		de.uhh.l2g.plugins.model.Producer producer) {
-		getService().addPlayerUris2Video(host, video, producer);
+	public static void addPlayerUris2Video(de.uhh.l2g.plugins.model.Video video) {
+		getService().addPlayerUris2Video(video);
 	}
 
 	public static de.uhh.l2g.plugins.model.Video getBySecureUrl(

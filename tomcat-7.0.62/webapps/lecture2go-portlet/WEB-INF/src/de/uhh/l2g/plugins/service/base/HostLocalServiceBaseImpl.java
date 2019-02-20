@@ -68,7 +68,6 @@ import de.uhh.l2g.plugins.service.persistence.VideoPersistence;
 import de.uhh.l2g.plugins.service.persistence.Video_CategoryPersistence;
 import de.uhh.l2g.plugins.service.persistence.Video_CreatorPersistence;
 import de.uhh.l2g.plugins.service.persistence.Video_InstitutionPersistence;
-import de.uhh.l2g.plugins.service.persistence.Video_LectureseriesPersistence;
 import de.uhh.l2g.plugins.service.persistence.VideohitlistPersistence;
 
 import java.io.Serializable;
@@ -1465,44 +1464,6 @@ public abstract class HostLocalServiceBaseImpl extends BaseLocalServiceImpl
 	}
 
 	/**
-	 * Returns the video_ lectureseries local service.
-	 *
-	 * @return the video_ lectureseries local service
-	 */
-	public de.uhh.l2g.plugins.service.Video_LectureseriesLocalService getVideo_LectureseriesLocalService() {
-		return video_LectureseriesLocalService;
-	}
-
-	/**
-	 * Sets the video_ lectureseries local service.
-	 *
-	 * @param video_LectureseriesLocalService the video_ lectureseries local service
-	 */
-	public void setVideo_LectureseriesLocalService(
-		de.uhh.l2g.plugins.service.Video_LectureseriesLocalService video_LectureseriesLocalService) {
-		this.video_LectureseriesLocalService = video_LectureseriesLocalService;
-	}
-
-	/**
-	 * Returns the video_ lectureseries persistence.
-	 *
-	 * @return the video_ lectureseries persistence
-	 */
-	public Video_LectureseriesPersistence getVideo_LectureseriesPersistence() {
-		return video_LectureseriesPersistence;
-	}
-
-	/**
-	 * Sets the video_ lectureseries persistence.
-	 *
-	 * @param video_LectureseriesPersistence the video_ lectureseries persistence
-	 */
-	public void setVideo_LectureseriesPersistence(
-		Video_LectureseriesPersistence video_LectureseriesPersistence) {
-		this.video_LectureseriesPersistence = video_LectureseriesPersistence;
-	}
-
-	/**
 	 * Returns the videohitlist local service.
 	 *
 	 * @return the videohitlist local service
@@ -1840,10 +1801,6 @@ public abstract class HostLocalServiceBaseImpl extends BaseLocalServiceImpl
 	protected de.uhh.l2g.plugins.service.Video_InstitutionLocalService video_InstitutionLocalService;
 	@BeanReference(type = Video_InstitutionPersistence.class)
 	protected Video_InstitutionPersistence video_InstitutionPersistence;
-	@BeanReference(type = de.uhh.l2g.plugins.service.Video_LectureseriesLocalService.class)
-	protected de.uhh.l2g.plugins.service.Video_LectureseriesLocalService video_LectureseriesLocalService;
-	@BeanReference(type = Video_LectureseriesPersistence.class)
-	protected Video_LectureseriesPersistence video_LectureseriesPersistence;
 	@BeanReference(type = de.uhh.l2g.plugins.service.VideohitlistLocalService.class)
 	protected de.uhh.l2g.plugins.service.VideohitlistLocalService videohitlistLocalService;
 	@BeanReference(type = VideohitlistPersistence.class)

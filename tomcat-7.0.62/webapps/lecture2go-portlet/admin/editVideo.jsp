@@ -31,7 +31,10 @@
 <liferay-portlet:resourceURL id="updateThumbnail" var="updateThumbnailURL" />
 <liferay-portlet:resourceURL id="getJSONVideo" var="getJSONVideoURL" />
 <liferay-portlet:resourceURL id="convertVideo" var="convertVideoURL" />
+<liferay-portlet:resourceURL id="getVideoConversionStatus" var="getVideoConversionStatusURL" />
 <liferay-portlet:resourceURL id="updateHtaccess" var="updateHtaccessURL" />
+<liferay-portlet:resourceURL id="updateAll" var="updateAllURL" />
+
 
 <%
 	String actionURL = "";
@@ -155,6 +158,16 @@
 						<div id="progress" class="progress">
 					    	<div class="bar" style="width: 0%;"></div>
 						</div>
+						<c:if test='<%= PropsUtil.contains("lecture2go.videoprocessing.provider")%>'>
+							<c:if test="<%= permissionChecker.isOmniadmin() %>">
+								<!-- the admin has a button to start postprocessing manually -->
+								<div id="postprocessing" style="margin-bottom: 20px;">
+									<span class="conversion" data-video-id="<%=reqVideo.getVideoId()%>">
+									</span>
+									<aui:button type="button" id="start-postprocessing" value="Start Postprocessing"/>
+								</div>
+							</c:if>
+						</c:if>
 						<table id="uploaded-files" class="table"></table>
 					</div>
 				</aui:layout>
@@ -316,7 +329,7 @@
 						<div>
 							<%if(reqLicense.getL2go()==1){%><aui:input name="license"  id="uhhl2go" label="" value="uhhl2go" checked="true" type="radio"/><%}%>
 							<%if(reqLicense.getL2go()==0){%><aui:input name="license" id="uhhl2go" label="" value="uhhl2go" type="radio"/><%}%>
-							<a href="/web/vod/licence-l2go" target="_blank"><liferay-ui:message key="lecture2go-licence"/> </a>	 	      	      
+							<a href="/license" target="_blank"><liferay-ui:message key="lecture2go-licence"/> </a>	 	      	      
 						</div>	
 						<div>		
 							<%if(reqLicense.getCcbyncsa()==1){%><aui:input name="license" label="" id="ccbyncsa" value="ccbyncsa" checked="true" type="radio" /><%}%>
@@ -382,7 +395,7 @@
 				</script>
 				<br/>		
 				<aui:button-row>
-					<aui:button type="submit" value="apply-changes" onclick="applyAllMetadataChanges()" cssClass="btn-primary"/>
+					<aui:button type="submit" value="apply-changes" onclick="updateAllMetadata();" cssClass="btn-primary"/>
 					<aui:button type="cancel" value="back" name="cancel"/>
 				</aui:button-row>
 				
@@ -504,9 +517,6 @@ $(function () {
 	           		validate();
 				}
            }
-           
-           //htaccess update function for physical file protectiom
-           updateHtaccess();
            
            //htaccess update function for physical file protectiom
            updateHtaccess();
@@ -677,29 +687,11 @@ function updateVideoFileName(file){
 				on: {
 					   success: function() {
 					     var jsonResponse = this.get('responseData');
-					     toggleShare();
-					   }
-				}
-			});	
-		}
-	);
-}
+						 <c:if test='<%= PropsUtil.contains("lecture2go.videoprocessing.provider")%>'>
+					     	videoProcessor.convert('<portlet:namespace/>','<%=convertVideoURL%>','<%=getVideoConversionStatusURL%>',<%=reqVideo.getVideoId()%>);
+						 </c:if>
 
-function convertVideo(){
-	AUI().use('aui-io-request', 'aui-node',
-		function(A){
-			A.io.request('<%=convertVideoURL%>', {
-		 	dataType: 'json',
-		 	method: 'POST',
-			 	//send data to server
-			 	data: {
-			 		<portlet:namespace/>videoId: A.one('#<portlet:namespace/>videoId').get('value'),
-			 		// may be filled with instructions (workflow to use etc.)
-			 	},
-			 	//get server response
-				on: {
-					   success: function() {
-					     var jsonResponse = this.get('responseData');					     
+					     toggleShare();
 					   }
 				}
 			});	
@@ -752,6 +744,7 @@ function updateMetadata(){
 				 	   	<portlet:namespace/>categoryId: categoryId,
 				 	   	<portlet:namespace/>termId: termId,
 				 	   	<portlet:namespace/>password: A.one('#<portlet:namespace/>password').get('value'),
+				 	    <portlet:namespace/>description: descData
 			 	},
 			 	async:true,
 			 	//get server response
@@ -788,6 +781,63 @@ function updateLicense(data){
 	);
 }
 
+function updateAllMetadata(){
+	validate();//inpul correct?
+	var license = $("input[name=<portlet:namespace/>license]:checked").val();
+	var creatorsJsonArray = JSON.stringify(getJsonCreatorsArray());
+	var jsonSubInstitutionsArray = JSON.stringify(getJsonSubInstitutionsArray());
+	var termId=0;
+	var categoryId=0;
+	var chebox;
+	//
+	$('#<portlet:namespace/>citationAllowedCheckbox').prop("checked") ? chebox=1 : chebox=0;
+	
+	if (!$("#options").is(':hidden')) {
+		   termId = $('#<portlet:namespace/>termId').val();
+		   categoryId = $('#<portlet:namespace/>categoryId').val();
+	}
+	if($("#<portlet:namespace/>title").val() && $("#creators > div").length>0){
+		//action
+		$.ajax({
+			url: "${updateAllURL}",
+			method: "POST",
+			dataType: "json",
+			data: {
+					//metadata start
+					"<portlet:namespace/>videoId": "<%=reqVideo.getVideoId()%>",
+	            	"<portlet:namespace/>description": descData,
+	            	"<portlet:namespace/>license": license,
+	            	"<portlet:namespace/>creatorsJsonArray": creatorsJsonArray,  
+	            	"<portlet:namespace/>subInstitutions": jsonSubInstitutionsArray,
+			 	   	"<portlet:namespace/>lectureseriesId": $('#<portlet:namespace/>lectureseriesId').val(),
+			 	   	"<portlet:namespace/>language": $('#<portlet:namespace/>language').val(),
+			 	   	"<portlet:namespace/>title": $('#<portlet:namespace/>title').val(),
+			 	   	"<portlet:namespace/>tags": $('#<portlet:namespace/>tags').val(),
+			 	   	"<portlet:namespace/>publisher": $('#<portlet:namespace/>publisher').val(),
+			 	   	"<portlet:namespace/>citationAllowedCheckbox": chebox,
+			 	   	"<portlet:namespace/>categoryId": categoryId,
+			 	   	"<portlet:namespace/>termId": termId,
+			 	   	"<portlet:namespace/>password": $('#<portlet:namespace/>password').val()
+			 	   	//metadata end
+	 		},
+			success: function(res) {
+				 //reset creator class
+				 $("#creators-custom").css({"background-color": "white", "color": "#555555"});
+				 $("#creators-custom .control-label").css({"color": "#488f06"});
+			     $("#metadata-upload #creators").css({"color": "#488f06"});
+	           	 //update the thumb nail
+	           	 updateThumbnail();
+	           	 //json object
+	           	 if(res.errorsCount==0){
+	           		 alert("<liferay-ui:message key='changes-applied'/>");	                		 
+	           	 }else{
+	           		 alert("<liferay-ui:message key='changes-applied-with-warnings'/>");
+	           	 }
+			}
+		});
+	}
+} 
+
 function applyAllMetadataChanges(){
 	AUI().use(
 			'aui-node',
@@ -796,11 +846,9 @@ function applyAllMetadataChanges(){
 				if($("#<portlet:namespace/>title").val() && $("#creators > div").length>0){
 					// Select the node(s) using a css selector string
 				    var license = A.one("input[name=<portlet:namespace/>license]:checked").get("value");
-				    //alert(license2.get('value'));
-				    updateDescription(descData);
+				    //updateDescription(descData);
 				    updateLicense(license);
 				    updateCreators();
-				    updateSubInstitutions();
 				    updateMetadata();//last place, important!
 				 	//reset creator class
 				    $("#creators-custom").css({"background-color": "white", "color": "#555555"});
@@ -845,7 +893,7 @@ function updateDescription(data){
 			 	//send data to server
 			 	data: {
 				 	   	<portlet:namespace/>description: data,
-				 	   	<portlet:namespace/>videoId: A.one('#<portlet:namespace/>videoId').get('value'),
+				 	    <portlet:namespace/>videoId: "<%=reqVideo.getVideoId()%>"
 			 	},
 			 	async:true,
 			 	//get server response
@@ -884,6 +932,7 @@ function deleteFile(fileName){
 		    	  	$("#date-time").hide();
 		    	  	$("#first-title").show();
 		    	  	$("#<portlet:namespace/>meta-ebene").hide();
+		    	  	$(".conversion").html('');
 		        }
 		        jwplayer().remove();
 		        //initialize and show player
@@ -1057,6 +1106,19 @@ function getDateTime(){
 	  return ret;
 }
 
+function getJsonSubInstitutionsArray(){
+	var namespace="<portlet:namespace/>";
+	var jsonArray = [];
+	$('.subInstitutions').children().each(function(n){
+		var parameters = {};
+		var $div = $(this);
+		var id = $div.attr('id');
+		parameters['institutionId'] = id;
+		jsonArray[n]=parameters;
+	});
+	return jsonArray;
+}
+
 function updateSubInstitutions(){
 	var namespace="<portlet:namespace/>";
 	var jsonArray = [];
@@ -1136,6 +1198,18 @@ AUI().use('aui-node',
   }
 );
 
+<c:if test='<%= PropsUtil.contains("lecture2go.videoprocessing.provider")%>'>
+	$('#start-postprocessing').click(function(){
+		videoProcessor.convert('<portlet:namespace/>','<%=convertVideoURL%>', '<%=getVideoConversionStatusURL%>', <%=reqVideo.getVideoId()%>);
+	});
+	AUI().ready('', function(A){
+		// check conversion status
+		videoProcessor.pollStatus('<portlet:namespace/>','<%=getVideoConversionStatusURL%>','<%=convertVideoURL%>',<%=reqVideo.getVideoId()%>);
+	});
+</c:if>
+
+
+
 </script>
 
 <!-- Template -->
@@ -1159,5 +1233,6 @@ AUI().use('aui-node',
         $.tmpl( "filesTemplate", vars ).appendTo( ".table" );
     });
 </script>
+
 
 <%@include file="includeCreatorTemplates.jsp" %>
