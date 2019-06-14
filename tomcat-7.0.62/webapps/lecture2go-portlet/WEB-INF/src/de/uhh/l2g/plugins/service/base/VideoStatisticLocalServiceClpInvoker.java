@@ -106,21 +106,21 @@ public class VideoStatisticLocalServiceClpInvoker {
 				"de.uhh.l2g.plugins.model.VideoStatistic"
 			};
 
-		_methodName166 = "getBeanIdentifier";
+		_methodName162 = "getBeanIdentifier";
 
-		_methodParameterTypes166 = new String[] {  };
+		_methodParameterTypes162 = new String[] {  };
 
-		_methodName167 = "setBeanIdentifier";
+		_methodName163 = "setBeanIdentifier";
 
-		_methodParameterTypes167 = new String[] { "java.lang.String" };
+		_methodParameterTypes163 = new String[] { "java.lang.String" };
 
-		_methodName172 = "getByCompanyIdAndGroupId";
+		_methodName168 = "getByCompanyIdAndGroupId";
 
-		_methodParameterTypes172 = new String[] { "long", "long" };
+		_methodParameterTypes168 = new String[] { "long", "long" };
 
-		_methodName173 = "getAllStatistics";
+		_methodName169 = "getAllStatistics";
 
-		_methodParameterTypes173 = new String[] {  };
+		_methodParameterTypes169 = new String[] {  };
 	}
 
 	public Object invokeMethod(String name, String[] parameterTypes,
@@ -212,26 +212,26 @@ public class VideoStatisticLocalServiceClpInvoker {
 			return VideoStatisticLocalServiceUtil.updateVideoStatistic((de.uhh.l2g.plugins.model.VideoStatistic)arguments[0]);
 		}
 
-		if (_methodName166.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes166, parameterTypes)) {
+		if (_methodName162.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes162, parameterTypes)) {
 			return VideoStatisticLocalServiceUtil.getBeanIdentifier();
 		}
 
-		if (_methodName167.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes167, parameterTypes)) {
+		if (_methodName163.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes163, parameterTypes)) {
 			VideoStatisticLocalServiceUtil.setBeanIdentifier((java.lang.String)arguments[0]);
 
 			return null;
 		}
 
-		if (_methodName172.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes172, parameterTypes)) {
+		if (_methodName168.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes168, parameterTypes)) {
 			return VideoStatisticLocalServiceUtil.getByCompanyIdAndGroupId(((Long)arguments[0]).longValue(),
 				((Long)arguments[1]).longValue());
 		}
 
-		if (_methodName173.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes173, parameterTypes)) {
+		if (_methodName169.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes169, parameterTypes)) {
 			return VideoStatisticLocalServiceUtil.getAllStatistics();
 		}
 
@@ -270,12 +270,12 @@ public class VideoStatisticLocalServiceClpInvoker {
 	private String[] _methodParameterTypes14;
 	private String _methodName15;
 	private String[] _methodParameterTypes15;
-	private String _methodName166;
-	private String[] _methodParameterTypes166;
-	private String _methodName167;
-	private String[] _methodParameterTypes167;
-	private String _methodName172;
-	private String[] _methodParameterTypes172;
-	private String _methodName173;
-	private String[] _methodParameterTypes173;
+	private String _methodName162;
+	private String[] _methodParameterTypes162;
+	private String _methodName163;
+	private String[] _methodParameterTypes163;
+	private String _methodName168;
+	private String[] _methodParameterTypes168;
+	private String _methodName169;
+	private String[] _methodParameterTypes169;
 }

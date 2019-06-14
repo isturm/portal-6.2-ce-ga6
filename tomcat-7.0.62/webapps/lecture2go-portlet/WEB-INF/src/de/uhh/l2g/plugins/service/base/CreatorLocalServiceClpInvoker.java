@@ -142,39 +142,43 @@ public class CreatorLocalServiceClpInvoker {
 
 		_methodParameterTypes169 = new String[] { "java.lang.Long" };
 
-		_methodName170 = "getCommaSeparatedCreatorsByVideoIdAndMaxCreators";
+		_methodName170 = "updateAllCreatorsForLectureseriesOverTheAssigenedVideosByLectureseriesId";
 
-		_methodParameterTypes170 = new String[] { "java.lang.Long", "int" };
+		_methodParameterTypes170 = new String[] {  };
 
-		_methodName171 = "getCommaSeparatedLinkedCreatorsByVideoIdAndMaxCreators";
+		_methodName171 = "getCommaSeparatedCreatorsByVideoIdAndMaxCreators";
 
 		_methodParameterTypes171 = new String[] { "java.lang.Long", "int" };
 
-		_methodName174 = "getJSONCreatorsByVideoId";
+		_methodName172 = "getCommaSeparatedLinkedCreatorsByVideoIdAndMaxCreators";
 
-		_methodParameterTypes174 = new String[] { "java.lang.Long" };
+		_methodParameterTypes172 = new String[] { "java.lang.Long", "int" };
 
-		_methodName175 = "getJSONCreatorsByLectureseriesId";
+		_methodName175 = "getJSONCreatorsByVideoId";
 
 		_methodParameterTypes175 = new String[] { "java.lang.Long" };
 
-		_methodName176 = "getJSONCreator";
+		_methodName176 = "getJSONCreatorsByLectureseriesId";
 
 		_methodParameterTypes176 = new String[] { "java.lang.Long" };
 
-		_methodName177 = "getByFullName";
+		_methodName177 = "getJSONCreator";
 
-		_methodParameterTypes177 = new String[] { "java.lang.String" };
+		_methodParameterTypes177 = new String[] { "java.lang.Long" };
 
-		_methodName178 = "getCreatorsFromLectureseriesIdsAndVideoIds";
+		_methodName178 = "getByFullName";
 
-		_methodParameterTypes178 = new String[] {
+		_methodParameterTypes178 = new String[] { "java.lang.String" };
+
+		_methodName179 = "getCreatorsFromLectureseriesIdsAndVideoIds";
+
+		_methodParameterTypes179 = new String[] {
 				"java.util.ArrayList", "java.util.ArrayList"
 			};
 
-		_methodName179 = "deleteById";
+		_methodName180 = "deleteById";
 
-		_methodParameterTypes179 = new String[] { "java.lang.Long" };
+		_methodParameterTypes180 = new String[] { "java.lang.Long" };
 	}
 
 	public Object invokeMethod(String name, String[] parameterTypes,
@@ -322,44 +326,51 @@ public class CreatorLocalServiceClpInvoker {
 
 		if (_methodName170.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes170, parameterTypes)) {
-			return CreatorLocalServiceUtil.getCommaSeparatedCreatorsByVideoIdAndMaxCreators((java.lang.Long)arguments[0],
-				((Integer)arguments[1]).intValue());
+			CreatorLocalServiceUtil.updateAllCreatorsForLectureseriesOverTheAssigenedVideosByLectureseriesId();
+
+			return null;
 		}
 
 		if (_methodName171.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes171, parameterTypes)) {
+			return CreatorLocalServiceUtil.getCommaSeparatedCreatorsByVideoIdAndMaxCreators((java.lang.Long)arguments[0],
+				((Integer)arguments[1]).intValue());
+		}
+
+		if (_methodName172.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes172, parameterTypes)) {
 			return CreatorLocalServiceUtil.getCommaSeparatedLinkedCreatorsByVideoIdAndMaxCreators((java.lang.Long)arguments[0],
 				((Integer)arguments[1]).intValue());
 		}
 
-		if (_methodName174.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes174, parameterTypes)) {
-			return CreatorLocalServiceUtil.getJSONCreatorsByVideoId((java.lang.Long)arguments[0]);
-		}
-
 		if (_methodName175.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes175, parameterTypes)) {
-			return CreatorLocalServiceUtil.getJSONCreatorsByLectureseriesId((java.lang.Long)arguments[0]);
+			return CreatorLocalServiceUtil.getJSONCreatorsByVideoId((java.lang.Long)arguments[0]);
 		}
 
 		if (_methodName176.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes176, parameterTypes)) {
-			return CreatorLocalServiceUtil.getJSONCreator((java.lang.Long)arguments[0]);
+			return CreatorLocalServiceUtil.getJSONCreatorsByLectureseriesId((java.lang.Long)arguments[0]);
 		}
 
 		if (_methodName177.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes177, parameterTypes)) {
-			return CreatorLocalServiceUtil.getByFullName((java.lang.String)arguments[0]);
+			return CreatorLocalServiceUtil.getJSONCreator((java.lang.Long)arguments[0]);
 		}
 
 		if (_methodName178.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes178, parameterTypes)) {
-			return CreatorLocalServiceUtil.getCreatorsFromLectureseriesIdsAndVideoIds((java.util.ArrayList<java.lang.Long>)arguments[0],
-				(java.util.ArrayList<java.lang.Long>)arguments[1]);
+			return CreatorLocalServiceUtil.getByFullName((java.lang.String)arguments[0]);
 		}
 
 		if (_methodName179.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes179, parameterTypes)) {
+			return CreatorLocalServiceUtil.getCreatorsFromLectureseriesIdsAndVideoIds((java.util.ArrayList<java.lang.Long>)arguments[0],
+				(java.util.ArrayList<java.lang.Long>)arguments[1]);
+		}
+
+		if (_methodName180.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes180, parameterTypes)) {
 			CreatorLocalServiceUtil.deleteById((java.lang.Long)arguments[0]);
 
 			return null;
@@ -424,8 +435,8 @@ public class CreatorLocalServiceClpInvoker {
 	private String[] _methodParameterTypes170;
 	private String _methodName171;
 	private String[] _methodParameterTypes171;
-	private String _methodName174;
-	private String[] _methodParameterTypes174;
+	private String _methodName172;
+	private String[] _methodParameterTypes172;
 	private String _methodName175;
 	private String[] _methodParameterTypes175;
 	private String _methodName176;
@@ -436,4 +447,6 @@ public class CreatorLocalServiceClpInvoker {
 	private String[] _methodParameterTypes178;
 	private String _methodName179;
 	private String[] _methodParameterTypes179;
+	private String _methodName180;
+	private String[] _methodParameterTypes180;
 }

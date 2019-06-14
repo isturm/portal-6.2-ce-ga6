@@ -110,13 +110,9 @@ public class LicenseLocalServiceClpInvoker {
 
 		_methodParameterTypes157 = new String[] { "java.lang.String" };
 
-		_methodName162 = "getByVideoId";
+		_methodName162 = "getBySelectable";
 
-		_methodParameterTypes162 = new String[] { "java.lang.Long" };
-
-		_methodName163 = "deleteByVideoId";
-
-		_methodParameterTypes163 = new String[] { "java.lang.Long" };
+		_methodParameterTypes162 = new String[] { "boolean" };
 	}
 
 	public Object invokeMethod(String name, String[] parameterTypes,
@@ -222,12 +218,7 @@ public class LicenseLocalServiceClpInvoker {
 
 		if (_methodName162.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes162, parameterTypes)) {
-			return LicenseLocalServiceUtil.getByVideoId((java.lang.Long)arguments[0]);
-		}
-
-		if (_methodName163.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes163, parameterTypes)) {
-			return LicenseLocalServiceUtil.deleteByVideoId((java.lang.Long)arguments[0]);
+			return LicenseLocalServiceUtil.getBySelectable(((Boolean)arguments[0]).booleanValue());
 		}
 
 		throw new UnsupportedOperationException();
@@ -271,6 +262,4 @@ public class LicenseLocalServiceClpInvoker {
 	private String[] _methodParameterTypes157;
 	private String _methodName162;
 	private String[] _methodParameterTypes162;
-	private String _methodName163;
-	private String[] _methodParameterTypes163;
 }

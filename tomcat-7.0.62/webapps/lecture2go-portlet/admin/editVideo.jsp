@@ -2,6 +2,7 @@
 
 <jsp:useBean id="reqLectureseriesList" type="java.util.List<de.uhh.l2g.plugins.model.Lectureseries>" scope="request" />
 <jsp:useBean id="reqLectureseries" type="de.uhh.l2g.plugins.model.Lectureseries" scope="request" />
+<jsp:useBean id="reqLicenseList" type="java.util.List<de.uhh.l2g.plugins.model.License>" scope="request" />
 <jsp:useBean id="reqLicense" type="de.uhh.l2g.plugins.model.License" scope="request" />
 <jsp:useBean id="reqProducer" type="de.uhh.l2g.plugins.model.Producer" scope="request" />
 <jsp:useBean id="video" type="de.uhh.l2g.plugins.model.Video" scope="request" />
@@ -11,7 +12,6 @@
 
 <liferay-portlet:resourceURL id="updateMetadata" var="updateURL" />
 <liferay-portlet:resourceURL id="updateDescription" var="updateDescriptionURL" />
-<liferay-portlet:resourceURL id="updateLicense" var="updateLicenseURL" />
 <liferay-portlet:resourceURL id="updateVideoFileName" var="updateVideoFileNameURL" />
 <liferay-portlet:resourceURL id="videoFileNameExists" var="videoFileNameExistsURL" />
 <liferay-portlet:resourceURL id="deleteFile" var="deleteFileURL" />
@@ -33,6 +33,7 @@
 <liferay-portlet:resourceURL id="convertVideo" var="convertVideoURL" />
 <liferay-portlet:resourceURL id="getVideoConversionStatus" var="getVideoConversionStatusURL" />
 <liferay-portlet:resourceURL id="updateHtaccess" var="updateHtaccessURL" />
+<liferay-portlet:resourceURL id="handleVttUpload" var="handleVttUploadURL" />
 <liferay-portlet:resourceURL id="updateAll" var="updateAllURL" />
 
 
@@ -121,10 +122,10 @@
     	dayOfWeekStart : 1,
     	lang:'en',
     	startDate:	new Date(),
-    	value: "<%=video.getGenerationDate()%>",
+    	value: "<%=video.getGenerationDate().equals("") ? new Date() : video.getGenerationDate() %>",
     	maxDate: '+1970/01/30',
     	minDate: false,
-    	step:5
+    	step: 15
     });
   });
 
@@ -176,16 +177,6 @@ function loadDateTimepickerToFirstTitle(){
 						<div id="progress" class="progress">
 					    	<div class="bar" style="width: 0%;"></div>
 						</div>
-						<c:if test='<%= PropsUtil.contains("lecture2go.videoprocessing.provider")%>'>
-							<c:if test="<%= permissionChecker.isOmniadmin() %>">
-								<!-- the admin has a button to start postprocessing manually -->
-								<div id="postprocessing" style="margin-bottom: 20px;">
-									<span class="conversion" data-video-id="<%=reqVideo.getVideoId()%>">
-									</span>
-									<aui:button type="button" id="start-postprocessing" value="Start Postprocessing"/>
-								</div>
-							</c:if>
-						</c:if>
 						<table id="uploaded-files" class="table"></table>
 					</div>
 				</aui:layout>
@@ -344,16 +335,25 @@ function loadDateTimepickerToFirstTitle(){
 						<liferay-ui:message key="license"/>
 					</label>
 					<div id="license-content">
-						<div>
-							<%if(reqLicense.getL2go()==1){%><aui:input name="license"  id="uhhl2go" label="" value="uhhl2go" checked="true" type="radio"/><%}%>
-							<%if(reqLicense.getL2go()==0){%><aui:input name="license" id="uhhl2go" label="" value="uhhl2go" type="radio"/><%}%>
-							<a href="/license" target="_blank"><liferay-ui:message key="lecture2go-licence"/> </a>	 	      	      
-						</div>	
-						<div>		
-							<%if(reqLicense.getCcbyncsa()==1){%><aui:input name="license" label="" id="ccbyncsa" value="ccbyncsa" checked="true" type="radio" /><%}%>
-							<%if(reqLicense.getCcbyncsa()==0){%><aui:input name="license" label="" id="ccbyncsa" value="ccbyncsa" type="radio"/><%}%>
-							<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank"> <liferay-ui:message key="cc-license-click-for-info"/> </a>
-						</div>
+						<c:forEach items="<%=reqLicenseList %>" var="license">
+							<c:choose>
+								<c:when test="${license.selectable}" >
+								<div>
+									<aui:input name="license" label="" value="${license.licenseId}" checked="${license.licenseId == reqLicense.licenseId ? 'true' : 'false'}" type="radio"/>
+									<a href="${license.url}" title="${license.fullName}" target="_blank">${license.shortIdentifier} </a>	 	      
+								</div>
+								</c:when>
+							    <c:otherwise>
+							    	<!-- previously chosen but not selectable any more -->
+							    	<c:if test="${license.licenseId == reqLicense.licenseId}">
+							    		<div>
+							    			<aui:input name="license" label="" value="${license.licenseId}" checked="true" type="radio" disabled="true"/>
+											<a href="${license.url}" class="disabled" title="${license.fullName}" target="_blank">${license.shortIdentifier} </a>	
+							    		</div>
+							    	</c:if>
+								</c:otherwise>
+							</c:choose>	
+						</c:forEach>
 					</div>
 				</div>
 				<script>
@@ -460,7 +460,7 @@ $(function () {
 		$options.hide();
 	}
 	
-	autocompleteCreator($("#<portlet:namespace/>creator"));
+	autocompleteCreator($("#<portlet:namespace/>creator"), validate);
 });
 
 function toggleLectureseries(){
@@ -480,15 +480,16 @@ $(function () {
         dataType: 'json',
         add: function(e, data) {
             var uploadErrors = [];
-			var acceptFileTypes = /(mp4|m4v|m4a|audio\/mp3|audio\/mpeg|audio|pdf)$/i;//file types
+			var acceptFileTypes = /(mp4|m4v|m4a|audio\/mp3|audio\/mpeg|audio|pdf|vtt)$/i;//file types
 			
 			for(i=0;i<data.originalFiles.length; i++){
 	            if (data.originalFiles[i]['type'].length && !acceptFileTypes.test(data.originalFiles[i]['type'])) {
 	                uploadErrors.push('<liferay-ui:message key="not-an-accepted-file-type"/>');
 	            }
-	            if ( data.originalFiles[i]['size'] > 5368709120) { //5 GB
-	                uploadErrors.push('<liferay-ui:message key="max-file-size"/>');
-	            }
+	            //
+	            //if ( data.originalFiles[i]['size'] > 5368709120) { //5 GB
+	            //    uploadErrors.push('<liferay-ui:message key="max-file-size"/>');
+	            //}
 			}
 
           	//check for first upload
@@ -535,6 +536,9 @@ $(function () {
 	           		validate();
 				}
            }
+           
+           // handle subtitle file if existing
+           handleVttUpload();
            
            //htaccess update function for physical file protectiom
            updateHtaccess();
@@ -688,6 +692,24 @@ function updateHtaccess (){
 	return ret;
 }
 
+function handleVttUpload (){
+	var ret = 0;
+	$.ajax({
+		  type: "POST",
+		  url: "<%=handleVttUploadURL%>",
+		  dataType: 'json',
+		  data: {
+			  <portlet:namespace/>videoId: "<%=reqVideo.getVideoId()%>"
+		  },
+		  global: false,
+		  async: false,
+		  success: function(data) {
+		    ret = 1;
+		  }
+	});
+	return ret;
+}
+
 function updateVideoFileName(file){
 	AUI().use('aui-io-request', 'aui-node',
 		function(A){
@@ -705,9 +727,6 @@ function updateVideoFileName(file){
 				on: {
 					   success: function() {
 					     var jsonResponse = this.get('responseData');
-						 <c:if test='<%= PropsUtil.contains("lecture2go.videoprocessing.provider")%>'>
-					     	videoProcessor.convert('<portlet:namespace/>','<%=convertVideoURL%>','<%=getVideoConversionStatusURL%>',<%=reqVideo.getVideoId()%>);
-						 </c:if>
 
 					     toggleShare();
 					   }
@@ -762,30 +781,8 @@ function updateMetadata(){
 				 	   	<portlet:namespace/>categoryId: categoryId,
 				 	   	<portlet:namespace/>termId: termId,
 				 	   	<portlet:namespace/>password: A.one('#<portlet:namespace/>password').get('value'),
-				 	    <portlet:namespace/>description: descData
-			 	},
-			 	async:true,
-			 	//get server response
-				on: {
-					   success: function() {
-					     var jsonResponse = this.get('responseData');
-					   }
-				}
-			});	
-		}
-	);
-}
-
-function updateLicense(data){	
-	AUI().use('aui-io-request', 'aui-node',
-		function(A){
-			A.io.request('<%=updateLicenseURL%>', {
-		 	dataType: 'json',
-		 	method: 'POST',
-			 	//send data to server
-			 	data: {
-				 	   	<portlet:namespace/>license: data,
-				 	   	<portlet:namespace/>videoId: A.one('#<portlet:namespace/>videoId').get('value'),
+				 	    <portlet:namespace/>description: descData,
+				 	    <portlet:namespace/>licenseId: A.one("input[name=<portlet:namespace/>license]:checked").get("value")
 			 	},
 			 	async:true,
 			 	//get server response
@@ -840,10 +837,8 @@ function updateAllMetadata(){
 			 	   	//metadata end
 	 		},
 			success: function(res) {
-				 //reset creator class
-				 $("#creators-custom").css({"background-color": "white", "color": "#555555"});
-				 $("#creators-custom .control-label").css({"color": "#488f06"});
-			     $("#metadata-upload #creators").css({"color": "#488f06"});
+				 // required creator field color needs to be set manually 
+				 $("#creators-custom .control-group").removeClass("error").addClass("success");
 	           	 //update the thumb nail
 	           	 updateThumbnail();
 	           	 //json object
@@ -863,16 +858,11 @@ function applyAllMetadataChanges(){
 			function(A) {
 				validate();//inpul correct?
 				if($("#<portlet:namespace/>title").val() && $("#creators > div").length>0){
-					// Select the node(s) using a css selector string
-				    var license = A.one("input[name=<portlet:namespace/>license]:checked").get("value");
 				    //updateDescription(descData);
-				    updateLicense(license);
 				    updateCreators();
 				    updateMetadata();//last place, important!
-				 	//reset creator class
-				    $("#creators-custom").css({"background-color": "white", "color": "#555555"});
-				    $("#creators-custom .control-label").css({"color": "#488f06"});
-				    $("#metadata-upload #creators").css({"color": "#488f06"});
+				 	// required creator field color needs to be set manually 
+				 	$("#creators-custom .control-group").removeClass("error").addClass("success");
 					updateThumbnail();
 				    alert("<liferay-ui:message key='changes-applied'/>");					
 				}
@@ -886,9 +876,9 @@ function validate(){
 			'aui-node',
 			function(A) {
 				if($("#creators > div").length==0){
-				    //update creator class
-				    $("#creators-custom").css({"background-color": "#b50303", "color": "white"});
-				    $("#creators-custom .control-label").css({"color": "white"});
+				    // required creator field color needs to be set manually 
+				 	$("#creators-custom .control-group").removeClass("success").addClass("error");
+
 					$('html, body').animate({
 		                   scrollTop: $("#creators-custom").offset().top
 		               }, 1000);
@@ -897,6 +887,8 @@ function validate(){
 			        }	
 					//alert("<liferay-ui:message key='please-add-creators'/>");
 				}else{
+					// required creator field color needs to be set manually 
+					$("#creators-custom .control-group").removeClass("error").addClass("success");
 					$('#<portlet:namespace></portlet:namespace>cancel').show();
 				}
 			}
@@ -976,7 +968,7 @@ function updateCreatorOnServer(jsonArray) {
 		 	   	<portlet:namespace/>videoId: "<%=reqVideo.getVideoId()%>",
 		  },
 		  global: false,
-		  async:false,
+		  async: true,
 		  success: function(data) {
 		    //remove all creators 
 		    $( "#creators" ).empty();
@@ -1187,6 +1179,7 @@ var c = 0;
 
 function remb(c){
 	$("#"+c).remove();
+	validate();
 }
 
 AUI().use('aui-node',
@@ -1216,18 +1209,6 @@ AUI().use('aui-node',
  
   }
 );
-
-<c:if test='<%= PropsUtil.contains("lecture2go.videoprocessing.provider")%>'>
-	$('#start-postprocessing').click(function(){
-		videoProcessor.convert('<portlet:namespace/>','<%=convertVideoURL%>', '<%=getVideoConversionStatusURL%>', <%=reqVideo.getVideoId()%>);
-	});
-	AUI().ready('', function(A){
-		// check conversion status
-		videoProcessor.pollStatus('<portlet:namespace/>','<%=getVideoConversionStatusURL%>','<%=convertVideoURL%>',<%=reqVideo.getVideoId()%>);
-	});
-</c:if>
-
-
 
 </script>
 

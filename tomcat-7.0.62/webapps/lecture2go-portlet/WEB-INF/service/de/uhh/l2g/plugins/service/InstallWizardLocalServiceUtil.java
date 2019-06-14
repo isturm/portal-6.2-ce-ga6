@@ -275,13 +275,6 @@ public class InstallWizardLocalServiceUtil {
 		return getService().invokeMethod(name, parameterTypes, arguments);
 	}
 
-	public static de.uhh.l2g.plugins.model.InstallWizard getById(
-		java.lang.Long id)
-		throws com.liferay.portal.NoSuchModelException,
-			com.liferay.portal.kernel.exception.SystemException {
-		return getService().getById(id);
-	}
-
 	public static void clearService() {
 		_service = null;
 	}

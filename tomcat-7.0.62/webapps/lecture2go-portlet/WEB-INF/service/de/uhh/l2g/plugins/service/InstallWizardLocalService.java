@@ -253,9 +253,4 @@ public interface InstallWizardLocalService extends BaseLocalService,
 	public java.lang.Object invokeMethod(java.lang.String name,
 		java.lang.String[] parameterTypes, java.lang.Object[] arguments)
 		throws java.lang.Throwable;
-
-	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
-	public de.uhh.l2g.plugins.model.InstallWizard getById(java.lang.Long id)
-		throws com.liferay.portal.NoSuchModelException,
-			com.liferay.portal.kernel.exception.SystemException;
 }

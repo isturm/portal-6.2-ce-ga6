@@ -16,12 +16,12 @@ String searchQuery = "";
 //get latest 
 //-lecture series = lectureseriesId>0
 //-videos = lectureseriesId<0
-//example -> top 10
+//example -> top 12
 List<Lectureseries> latest = LectureseriesLocalServiceUtil.getLatest(12);
 ListIterator<Lectureseries> lli = latest.listIterator();
 
 //get popular videos
-//example -> top 10
+//example -> top 12
 List<Video> popular = VideoLocalServiceUtil.getPopular(12);
 ListIterator<Video> pli = popular.listIterator();
 
@@ -67,26 +67,6 @@ installWizardManager.installRepository();
 
 
 <div id="front-page-content">
-	<% 
-		// this is a temporary solution to show a web content for important news below the teaser
-		String articleId = "78499";
-		long groupId = themeDisplay.getLayout().getGroupId();
-				
-		// check if the article is approved, if not there will be not 'lead-box'-div
-		boolean articleApproved = true;
-		try {
-			JournalArticle j = JournalArticleLocalServiceUtil.getLatestArticle(groupId, articleId, WorkflowConstants.STATUS_APPROVED);
-		} catch(Exception e) {
-			articleApproved = false;
-		}
-		
-	%>
-	<c:if test='<%=articleApproved %>'>
-		<div class="lead-box">
-			<liferay-ui:journal-article articleId="<%=articleId%>" groupId="<%=groupId%>"/>
-		</div>
-	</c:if>
-	
 <!-- new videos -->
 	<div class="news">
 		<h4><liferay-ui:message key="last-added"/></h4>

@@ -14,10 +14,6 @@
 
 package de.uhh.l2g.plugins.service.impl;
 
-import com.liferay.portal.NoSuchModelException;
-import com.liferay.portal.kernel.exception.SystemException;
-
-import de.uhh.l2g.plugins.model.InstallWizard;
 import de.uhh.l2g.plugins.service.base.InstallWizardLocalServiceBaseImpl;
 
 /**
@@ -41,9 +37,4 @@ public class InstallWizardLocalServiceImpl
 	 *
 	 * Never reference this interface directly. Always use {@link de.uhh.l2g.plugins.service.InstallWizardLocalServiceUtil} to access the install wizard local service.
 	 */
-	
-	public InstallWizard getById(Long id) throws SystemException, NoSuchModelException{
-		InstallWizard w = installWizardPersistence.findByPrimaryKey(id);
-		return w;
-	}	
 }

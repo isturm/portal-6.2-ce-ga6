@@ -463,7 +463,8 @@ p.smallitalic {
   width: 93%; }
 
 #metadata-upload {
-  margin-top: 14px; }
+  margin-top: 14px;
+  overflow: auto; }
 
 .path {
   width: 100%;
@@ -1128,12 +1129,11 @@ thead, th {
   opacity: 0.9; }
 
 #embed {
-  float: left;
-  margin-bottom: 50px;
   width: 100%; }
 
-#permissions, #embed, #license, #_lgadminvideomanagement_WAR_lecture2goportlet_metadata, #embed {
-  margin-top: 50px; }
+#permissions, #embed, #license, #_lgadminvideomanagement_WAR_lecture2goportlet_metadata, #embed, #postprocessing, #video-thumbnail {
+  margin-top: 50px;
+  overflow: auto; }
 
 #embedForm {
   float: left;
@@ -1590,7 +1590,6 @@ input#_lgadminlectureseriesmanagement_WAR_lecture2goportlet_lastName {
   cursor: pointer; }
 
 #license {
-  float: left;
   margin-bottom: 10px;
   width: 100%; }
 
@@ -1608,7 +1607,6 @@ input#_lgadminlectureseriesmanagement_WAR_lecture2goportlet_lastName {
   margin-left: 20px; }
 
 #permissions {
-  float: left;
   width: 100%; }
 
 .ta .cke_1.cke.cke_reset.cke_chrome {
@@ -1809,7 +1807,8 @@ div.filter-menu-link span.icon-large.icon-remove {
 
 #license .control-group.form-inline {
   float: left;
-  margin-top: 0; }
+  margin-top: 0;
+  margin-left: 2px; }
 
 .aui .navbar-fixed-top, .aui .navbar-fixed-bottom, .aui .navbar-static-top {
   margin-left: 0;
@@ -2620,4 +2619,54 @@ strong, b, th, #kopf .sprachwechsel {
 
 .conversion-failed {
   color: #c40017; }
+
+#postprocessing-content label.control-label {
+  float: left;
+  width: 180px; }
+
+#postprocessing-content input[type=text] {
+  width: 500px;
+  min-width: 240px; }
+
+#postprocessing-content input[type="radio"], #postprocessing-content input[type="checkbox"] {
+  margin-top: 9px;
+  margin-right: 8px; }
+
+#video-caption-previewimage-speakerslides {
+  margin: 10px 0;
+  width: 45%; }
+
+#video-caption-previewimage-speakeronly {
+  margin: 10px 0;
+  width: 691px; }
+
+#postprocessing .control-group.form-inline {
+  margin-left: 2px; }
+
+#postprocessing-content label.radio {
+  float: left;
+  margin-right: 30px; }
+
+label[for=_lgadminvideomanagement_WAR_lecture2goportlet_speakerleft]:before {
+  content: url("/lecture2go-portlet/img/layout-speaker-left_small.png");
+  vertical-align: -13%; }
+
+label[for=_lgadminvideomanagement_WAR_lecture2goportlet_speakerright]:before {
+  content: url("/lecture2go-portlet/img/layout-speaker-right_small.png");
+  vertical-align: -13%; }
+
+label[for=_lgadminvideomanagement_WAR_lecture2goportlet_speakeronly]:before {
+  content: url("/lecture2go-portlet/img/layout-speaker-only_small.png");
+  vertical-align: -13%; }
+
+#start-video-caption-postprocessing-area {
+  margin-top: 20px; }
+
+#start-video-caption-postprocessing.disabled {
+  background-color: #eaeaea;
+  color: inherit;
+  cursor: not-allowed; }
+
+.disabled {
+  color: #eaeaea !important; }
 

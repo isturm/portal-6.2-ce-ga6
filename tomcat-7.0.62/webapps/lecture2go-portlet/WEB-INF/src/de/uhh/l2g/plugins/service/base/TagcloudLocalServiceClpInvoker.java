@@ -138,9 +138,17 @@ public class TagcloudLocalServiceClpInvoker {
 
 		_methodParameterTypes166 = new String[] {  };
 
-		_methodName167 = "generateForAllVideos";
+		_methodName167 = "generateForLectureseries";
 
-		_methodParameterTypes167 = new String[] {  };
+		_methodParameterTypes167 = new String[] { "java.lang.Long" };
+
+		_methodName168 = "generateForAllVideos";
+
+		_methodParameterTypes168 = new String[] {  };
+
+		_methodName169 = "generateForVideo";
+
+		_methodParameterTypes169 = new String[] { "java.lang.Long" };
 	}
 
 	public Object invokeMethod(String name, String[] parameterTypes,
@@ -282,7 +290,21 @@ public class TagcloudLocalServiceClpInvoker {
 
 		if (_methodName167.equals(name) &&
 				Arrays.deepEquals(_methodParameterTypes167, parameterTypes)) {
+			TagcloudLocalServiceUtil.generateForLectureseries((java.lang.Long)arguments[0]);
+
+			return null;
+		}
+
+		if (_methodName168.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes168, parameterTypes)) {
 			TagcloudLocalServiceUtil.generateForAllVideos();
+
+			return null;
+		}
+
+		if (_methodName169.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes169, parameterTypes)) {
+			TagcloudLocalServiceUtil.generateForVideo((java.lang.Long)arguments[0]);
 
 			return null;
 		}
@@ -338,4 +360,8 @@ public class TagcloudLocalServiceClpInvoker {
 	private String[] _methodParameterTypes166;
 	private String _methodName167;
 	private String[] _methodParameterTypes167;
+	private String _methodName168;
+	private String[] _methodParameterTypes168;
+	private String _methodName169;
+	private String[] _methodParameterTypes169;
 }

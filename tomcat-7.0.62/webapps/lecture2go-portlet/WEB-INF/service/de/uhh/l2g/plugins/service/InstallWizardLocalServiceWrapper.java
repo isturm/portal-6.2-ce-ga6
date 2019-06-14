@@ -288,13 +288,6 @@ public class InstallWizardLocalServiceWrapper
 			arguments);
 	}
 
-	@Override
-	public de.uhh.l2g.plugins.model.InstallWizard getById(java.lang.Long id)
-		throws com.liferay.portal.NoSuchModelException,
-			com.liferay.portal.kernel.exception.SystemException {
-		return _installWizardLocalService.getById(id);
-	}
-
 	/**
 	 * @deprecated As of 6.1.0, replaced by {@link #getWrappedService}
 	 */

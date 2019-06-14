@@ -11,7 +11,7 @@
 .jwplayer .jw-rightclick.jw-open {
     display: none;
 }
-
+/*
 .jw-icon.jw-icon-inline.jw-button-color.jw-reset.jw-icon-cc.jw-settings-submenu-button {
 	display: none !important;
 }
@@ -19,6 +19,7 @@
 .jw-icon.jw-icon-inline.jw-button-color.jw-reset.jw-settings-captions.jw-submenu-captions {
 	display: none !important;
 }
+*/
 -->
 </style>
 
@@ -54,7 +55,6 @@
 	        frameEnd = <%=timeEnd%>;		
 		}
 		
-		var vttFile ="${video.vttChapterFile}";
 		
         // Hier wird der JW-Player initialisiert
         // Interessant ist hierbei, dass es mehrere Quellen geben kann
@@ -65,10 +65,9 @@
             image: "${video.image}",
             cast: {},
             sources: ${video.jsonPlayerUris},
-            tracks: [{
-                file: vttFile,
-                kind:'chapters'
-            }],
+            <c:if test="${video.hasCaption || video.hasChapters}">
+	            tracks: ${video.jsonPlayerTracks},
+            </c:if>
             hlshtml: true,
             androidhls: true
         });
@@ -172,6 +171,7 @@
             	var sec = $(this).attr("begin");
             	sec = timeToSeconds(sec);
                 jwplayer().seek(sec);
+                $("html, body").animate({ scrollTop: 0 }, "slow");
             });
             
             $chapters.find("input[alt='delete']").on("click", function(event) {
@@ -236,7 +236,27 @@
             	$citationiframe.val(iframe);
             }
         });
+        
+    	/* this is a workaround for our jwplayer version which renders captions wrong when video is fullscreen on the iphone */
+		var isIphone = jwplayer().getEnvironment().OS.iPhone;
+    	// full screen event is triggered when entering or exiting fullscreen
+    	jwplayer().on('fullscreen', function(){
+    		if (isIphone) {
+    			if (jwplayer().getFullscreen()) {
+    			    var screenHeight = window.screen.availHeight;
+    			    // set the font size in relation to the screenHeight
+    			    var fontSize = Math.round(screenHeight * 0.07);
+    		        jwplayer().setCaptions({"fontSize": fontSize});
+    			} else {
+    				// not fullscreen, reset the font size
+    				jwplayer().setCaptions({"fontSize": "initial"});
+    			}
+    		}
+    	});
+    	/* end workaround */
     });
+    
+
 
 </script>
 
