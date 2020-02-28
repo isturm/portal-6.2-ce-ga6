@@ -11,7 +11,7 @@
 		<header-portlet-javascript>/js/bootstrap.min.js</header-portlet-javascript>
 		<header-portlet-javascript>/js/jquery.socialshareprivacy.js</header-portlet-javascript>
 		<header-portlet-javascript>/js/jquery.cookie.js</header-portlet-javascript>
-		<header-portlet-javascript>https://cdn.jwplayer.com/libraries/aVr2lJgW.js</header-portlet-javascript>
+		<header-portlet-javascript>/player/jwplayer-8.4.1/jwplayer.js</header-portlet-javascript>
 		<header-portlet-javascript>/js/mediaCheck-min.js</header-portlet-javascript>
 		<header-portlet-javascript>/js/readmore.min.js</header-portlet-javascript>
 		<header-portlet-javascript>/js/jquery.dotdotdot.min.js</header-portlet-javascript>
@@ -27,8 +27,9 @@
 		<header-portlet-javascript>/js/upload/jquery.fileupload.js</header-portlet-javascript>
 		<header-portlet-javascript>/js/upload/jquery.iframe-transport.js</header-portlet-javascript>
 		<header-portlet-javascript>/js/jquery.datetimepicker.js</header-portlet-javascript>
-		<header-portlet-javascript>https://cdn.jwplayer.com/libraries/aVr2lJgW.js</header-portlet-javascript>
+		<header-portlet-javascript>/player/jwplayer-8.4.1/jwplayer.js</header-portlet-javascript>
 		<header-portlet-javascript>/js/jwplayer.custom.util.js</header-portlet-javascript>
+		<footer-portlet-javascript>/js/videoprocessor.js</footer-portlet-javascript>
 		<footer-portlet-javascript>/js/autocomplete-creator.js</footer-portlet-javascript>
 	</portlet>
 	<portlet>
@@ -73,7 +74,7 @@
 		<header-portlet-javascript>/js/jquery.socialshareprivacy.js</header-portlet-javascript>
 		<header-portlet-javascript>/js/qrc.js</header-portlet-javascript>
 		<header-portlet-javascript>/js/jquery.cookie.js</header-portlet-javascript>
-		<header-portlet-javascript>https://cdn.jwplayer.com/libraries/aVr2lJgW.js</header-portlet-javascript>
+		<header-portlet-javascript>/player/jwplayer-8.4.1/jwplayer.js</header-portlet-javascript>
 		<header-portlet-javascript>/js/mediaCheck-min.js</header-portlet-javascript>
 		<header-portlet-javascript>/js/readmore.min.js</header-portlet-javascript>
 		<header-portlet-javascript>/js/jquery.dotdotdot.min.js</header-portlet-javascript>
@@ -112,13 +113,13 @@
 		<add-default-resource>true</add-default-resource>
 	</portlet>
 	<!--
-	    1. Seconds
-	    2. Minutes
-	    3. Hours
-	    4. Day-of-Month
-	    5. Month
-	    6. Day-of-Week
-	    7. Year (optional field)
+		1. Seconds
+		2. Minutes
+		3. Hours
+		4. Day-of-Month
+		5. Month
+		6. Day-of-Week
+		7. Year (optional field)
 		**Expression** 	**Meaning**
 		0 0 12 * * ? 	Fire at 12pm (noon) every day
 		0 15 10 ? * * 	Fire at 10:15am every day
@@ -140,7 +141,7 @@
 		0 15 10 ? * 6#3 	Fire at 10:15am on the third Friday of every month
 		0 0 12 1/5 * ? 	Fire at 12pm (noon) every 5 days every month, starting on the first day of the month.
 		0 11 11 11 11 ? 	Fire every November 11th at 11:11am.
-	 -->
+		-->
 	<portlet>
 		<portlet-name>lg-admin-thread-management</portlet-name>
 		<icon>/icon.png</icon>
