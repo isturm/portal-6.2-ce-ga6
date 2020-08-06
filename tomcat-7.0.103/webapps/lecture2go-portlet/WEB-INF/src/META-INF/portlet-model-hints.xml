@@ -1,0 +1,382 @@
+<?xml version="1.0"?>
+
+<!--
+  License
+
+  The Lecture2Go software is based on the liferay portal 6.2-ga6
+  <http://www.liferay.com> (Copyright notice see below)
+
+  Lecture2Go <http://lecture2go.uni-hamburg.de> is an open source
+  platform for media management and distribution. Our goal is to
+  support the free access to knowledge because this is a component
+  of each democratic society. The open source software is aimed at
+  academic institutions and has to strengthen the blended learning.
+
+  All Lecture2Go plugins are continuously being developed and improved.
+  For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
+
+  Copyright (c) 2013 - present University of Hamburg / Computer and Data Center (RRZ)
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  GNU General Public License for more details.
+
+
+  You should have received a copy of the GNU General Public License
+  along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+  +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++
+
+  The Liferay Plugins SDK:
+
+  Copyright (c) 2000-present Liferay, Inc. All rights reserved.
+
+  This library is free software; you can redistribute it and/or modify it under
+  the terms of the GNU Lesser General Public License as published by the Free
+  Software Foundation; either version 2.1 of the License, or (at your option)
+  any later version.
+
+  This library is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+  FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+  details.
+
+  Third Party Software
+
+  Lecture2Go uses third-party libraries which may be distributed under different licenses
+  to the above (but are compatible with the used GPL license). Informations about these
+  licenses and copyright informations are mostly detailed in the library source code or jars themselves.
+  You must agree to the terms of these licenses, in addition to  the above Lecture2Go source code license,
+  in order to use this software.
+-->
+<model-hints>
+	<hint-collection name="TEXTAREA">
+		<hint name="max-length">2000000</hint>
+	</hint-collection>
+	<hint-collection name="SHORTTEXT">
+		<hint name="max-length">4000</hint>
+	</hint-collection>
+	<model name="de.uhh.l2g.plugins.model.Category">
+		<field name="categoryId" type="long" />
+		<field name="parentId" type="long" />
+		<field name="languageId" type="String" />
+		<field name="name" type="String" />
+		<field name="translation" type="String" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.Coordinator">
+		<field name="coordinatorId" type="long" />
+		<field name="institutionId" type="long" />
+		<field name="officeId" type="long" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.Creator">
+		<field name="creatorId" type="long" />
+		<field name="firstName" type="String">
+			<hint-collection name="SHORTTEXT" />
+		</field>
+		<field name="lastName" type="String">
+			<hint-collection name="SHORTTEXT" />
+		</field>
+		<field name="middleName" type="String">
+			<hint-collection name="SHORTTEXT" />
+		</field>
+		<field name="jobTitle" type="String">
+			<hint-collection name="SHORTTEXT" />
+		</field>
+		<field name="gender" type="String" />
+		<field name="fullName" type="String">
+			<hint-collection name="SHORTTEXT" />
+		</field>
+		<field name="affiliation" type="String" />
+		<field name="orcidId" type="String" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.Host">
+		<field name="hostId" type="long" />
+		<field name="protocol" type="String">
+			<hint-collection name="SHORTTEXT" />
+		</field>
+		<field name="streamer" type="String">
+			<hint-collection name="SHORTTEXT" />
+		</field>
+		<field name="port" type="int" />
+		<field name="serverRoot" type="String">
+			<hint-collection name="SHORTTEXT" />
+		</field>
+		<field name="name" type="String">
+			<hint-collection name="SHORTTEXT" />
+		</field>
+		<field name="defaultHost" type="int" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.InstallWizard">
+		<field name="installWizardId" type="long" />
+		<field name="wizartActive" type="int" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.Institution">
+		<field name="institutionId" type="long" />
+		<field name="parentId" type="long" />
+		<field name="name" type="String">
+			<hint-collection name="SHORTTEXT" />
+		</field>
+		<field name="typ" type="String">
+			<hint-collection name="SHORTTEXT" />
+		</field>
+		<field name="www" type="String">
+			<hint-collection name="SHORTTEXT" />
+		</field>
+		<field name="level" type="int" />
+		<field name="sort" type="int" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.Institution_Host">
+		<field name="institutionHostId" type="long" />
+		<field name="institutionId" type="long" />
+		<field name="hostId" type="long" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.Lastvideolist">
+		<field name="lastvideolistId" type="int" />
+		<field name="videoId" type="long" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.Lectureseries">
+		<field name="number" type="String" />
+		<field name="eventType" type="String">
+			<hint-collection name="SHORTTEXT" />
+		</field>
+		<field name="categoryId" type="long" />
+		<field name="name" type="String">
+			<hint-collection name="SHORTTEXT" />
+		</field>
+		<field name="shortDesc" type="String">
+			<hint-collection name="TEXTAREA" />
+		</field>
+		<field name="termId" type="long" />
+		<field name="language" type="String">
+			<hint-collection name="SHORTTEXT" />
+		</field>
+		<field name="facultyName" type="String">
+			<hint-collection name="SHORTTEXT" />
+		</field>
+		<field name="lectureseriesId" type="long" />
+		<field name="password" type="String">
+			<hint-collection name="SHORTTEXT" />
+		</field>
+		<field name="approved" type="int" />
+		<field name="longDesc" type="String">
+			<hint-collection name="TEXTAREA" />
+		</field>
+		<field name="latestOpenAccessVideoId" type="long" />
+		<field name="latestVideoUploadDate" type="Date" />
+		<field name="latestVideoGenerationDate" type="String" />
+		<field name="videoSort" type="int" />
+		<field name="USID" type="String" />
+		<field name="previewVideoId" type="long" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.Lectureseries_Category">
+		<field name="lectureseriesCategoryId" type="long" />
+		<field name="categoryId" type="long" />
+		<field name="lectureseriesId" type="long" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.Lectureseries_Creator">
+		<field name="lectureseriesCreatorId" type="long" />
+		<field name="lectureseriesId" type="long" />
+		<field name="creatorId" type="long" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.Lectureseries_Institution">
+		<field name="lectureseriesInstitutionId" type="long" />
+		<field name="lectureseriesId" type="long" />
+		<field name="institutionId" type="long" />
+		<field name="institutionParentId" type="long" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.License">
+		<field name="licenseId" type="long" />
+		<field name="fullName" type="String" />
+		<field name="shortIdentifier" type="String" />
+		<field name="url" type="String" />
+		<field name="schemeName" type="String" />
+		<field name="schemeUrl" type="String" />
+		<field name="selectable" type="boolean" />
+		<field name="description" type="String" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.Metadata">
+		<field name="metadataId" type="long" />
+		<field name="type" type="String" />
+		<field name="language" type="String" />
+		<field name="title" type="String">
+			<hint-collection name="SHORTTEXT" />
+		</field>
+		<field name="subject" type="String">
+			<hint-collection name="SHORTTEXT" />
+		</field>
+		<field name="description" type="String">
+			<hint-collection name="TEXTAREA" />
+		</field>
+		<field name="publisher" type="String">
+			<hint-collection name="SHORTTEXT" />
+		</field>
+	</model>
+	<model name="de.uhh.l2g.plugins.model.OaiRecord">
+		<field name="oaiRecordId" type="long" />
+		<field name="videoId" type="long" />
+		<field name="identifier" type="String" />
+		<field name="datestamp" type="Date" />
+		<field name="deleted" type="boolean" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.OaiRecord_OaiSet">
+		<field name="oaiRecordOaiSetId" type="long" />
+		<field name="oaiRecordId" type="long" />
+		<field name="oaiSetId" type="long" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.OaiSet">
+		<field name="oaiSetId" type="long" />
+		<field name="setSpec" type="String" />
+		<field name="setName" type="String" />
+		<field name="setDescription" type="String" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.Office">
+		<field name="officeId" type="long" />
+		<field name="name" type="String" />
+		<field name="www" type="String">
+			<hint-collection name="SHORTTEXT" />
+		</field>
+		<field name="email" type="String" />
+		<field name="institutionId" type="long" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.Producer">
+		<field name="producerId" type="long" />
+		<field name="idNum" type="String" />
+		<field name="homeDir" type="String" />
+		<field name="hostId" type="long" />
+		<field name="institutionId" type="long" />
+		<field name="numberOfProductions" type="long" />
+		<field name="approved" type="int" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.Producer_Lectureseries">
+		<field name="producerLectureseriesId" type="long" />
+		<field name="lectureseriesId" type="long" />
+		<field name="producerId" type="long" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.ScheduledThread">
+		<field name="scheduledThreadId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="schedulerClassName" type="String" />
+		<field name="cronText" type="String" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.Segment">
+		<field name="segmentId" type="long" />
+		<field name="videoId" type="long" />
+		<field name="start" type="String" />
+		<field name="title" type="String">
+			<hint-collection name="SHORTTEXT" />
+		</field>
+		<field name="description" type="String">
+			<hint-collection name="TEXTAREA" />
+		</field>
+		<field name="end" type="String" />
+		<field name="chapter" type="int" />
+		<field name="userId" type="long" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.Statistic">
+		<field name="createDate" type="Date" />
+		<field name="publicVideos" type="int" />
+		<field name="privateVideos" type="int" />
+		<field name="autofillRow" type="int" />
+		<field name="statisticId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.Sys">
+		<field name="sysId" type="int" />
+		<field name="version" type="String">
+			<hint-collection name="SHORTTEXT" />
+		</field>
+		<field name="setupWizard" type="int" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.Tagcloud">
+		<field name="tagcloudId" type="long" />
+		<field name="objectClassType" type="String" />
+		<field name="objectId" type="long" />
+		<field name="tags" type="String">
+			<hint-collection name="TEXTAREA" />
+		</field>
+	</model>
+	<model name="de.uhh.l2g.plugins.model.Term">
+		<field name="termId" type="long" />
+		<field name="parentId" type="long" />
+		<field name="languageId" type="String" />
+		<field name="prefix" type="String" />
+		<field name="year" type="String" />
+		<field name="translation" type="String" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.Video">
+		<field name="videoId" type="long" />
+		<field name="title" type="String">
+			<hint-collection name="SHORTTEXT" />
+		</field>
+		<field name="lectureseriesId" type="long" />
+		<field name="producerId" type="long" />
+		<field name="containerFormat" type="String" />
+		<field name="filename" type="String">
+			<hint-collection name="TEXTAREA" />
+		</field>
+		<field name="resolution" type="String" />
+		<field name="duration" type="String" />
+		<field name="hostId" type="long" />
+		<field name="fileSize" type="String" />
+		<field name="generationDate" type="String" />
+		<field name="openAccess" type="int" />
+		<field name="downloadLink" type="int">
+			<hint-collection name="SHORTTEXT" />
+		</field>
+		<field name="metadataId" type="long" />
+		<field name="secureFilename" type="String" />
+		<field name="hits" type="long" />
+		<field name="uploadDate" type="Date" />
+		<field name="permittedToSegment" type="int" />
+		<field name="rootInstitutionId" type="long" />
+		<field name="citation2go" type="int" />
+		<field name="termId" type="long" />
+		<field name="tags" type="String">
+			<hint-collection name="TEXTAREA" />
+		</field>
+		<field name="password" type="String" />
+		<field name="licenseId" type="long" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.Video_Category">
+		<field name="videoCategoryId" type="long" />
+		<field name="videoId" type="long" />
+		<field name="categoryId" type="long" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.Video_Creator">
+		<field name="videoCreatorId" type="long" />
+		<field name="creatorId" type="long" />
+		<field name="videoId" type="long" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.Video_Institution">
+		<field name="videoInstitutionId" type="long" />
+		<field name="videoId" type="long" />
+		<field name="institutionId" type="long" />
+		<field name="institutionParentId" type="long" />
+	</model>
+	<model name="de.uhh.l2g.plugins.model.Videohitlist">
+		<field name="videohitlistId" type="long" />
+		<field name="hitsPerDay" type="long" />
+		<field name="hitsPerWeek" type="long" />
+		<field name="hitsPerMonth" type="long" />
+		<field name="hitsPerYear" type="long" />
+		<field name="videoId" type="long" />
+	</model>
+</model-hints>

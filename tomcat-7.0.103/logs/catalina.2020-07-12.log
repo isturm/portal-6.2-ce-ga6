@@ -1,0 +1,3 @@
+Jul 12, 2020 2:52:13 PM org.apache.tomcat.util.http.Cookies processCookieHeader
+INFO: Cookies: Invalid cookie. Value not a token or quoted value
+ Note: further occurrences of Cookie errors will be logged at DEBUG level.
