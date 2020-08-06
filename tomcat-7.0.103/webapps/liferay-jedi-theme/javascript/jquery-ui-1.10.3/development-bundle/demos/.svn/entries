@@ -1,0 +1,190 @@
+9
+
+dir
+108
+svn://lecture2go-entwicklung.rrz.uni-hamburg.de/var/svn/l2g/l2g/tomcat-6.0.18/webapps/liferay-jedi-theme/javascript/jquery-ui-1.10.3/development-bundle/demos
+svn://lecture2go-entwicklung.rrz.uni-hamburg.de/var/svn/l2g
+
+
+
+2014-03-20T09:28:41.294884Z
+108
+iavor
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ad7aaaf8-4c76-11e3-a063-4390f93c9a59
+
+
+
+
+
+
+0
+
+.sass-cache
+dir
+
+accordion
+dir
+
+addClass
+dir
+
+animate
+dir
+
+autocomplete
+dir
+
+button
+dir
+
+datepicker
+dir
+
+demos.css
+file
+
+
+
+
+2014-03-18T13:25:06.000000Z
+c7fc917de57fba6b610ad6191fc1a28a
+2014-03-20T09:28:41.294884Z
+108
+iavor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+287
+
+dialog
+dir
+
+draggable
+dir
+
+droppable
+dir
+
+effect
+dir
+
+hide
+dir
+
+images
+dir
+
+index.html
+file
+
+
+
+
+2014-03-18T13:25:06.000000Z
+ea28419d5769b2115f79bfd4243bc83e
+2014-03-20T09:28:41.294884Z
+108
+iavor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1287
+
+menu
+dir
+
+position
+dir
+
+progressbar
+dir
+
+removeClass
+dir
+
+resizable
+dir
+
+selectable
+dir
+
+show
+dir
+
+slider
+dir
+
+sortable
+dir
+
+spinner
+dir
+
+switchClass
+dir
+
+tabs
+dir
+
+toggle
+dir
+
+toggleClass
+dir
+
+tooltip
+dir
+
+widget
+dir
+

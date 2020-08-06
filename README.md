@@ -3,11 +3,14 @@ Lecture2Go Plugins
 
 This software is based on the Liferay 6.2 http://www.liferay.com
 
-Lecture2Go http://lecture2go.uni-hamburg.de is an open source platform for media management and distribution. Our goal is to support the free access to knowledge. This software solution is aimed at academic institutions and has to strengthen the blended learning. All Lecture2Go plugins are continuously being developed and improved. For more installation details details please visit https://lecture2go.uni-hamburg.de/l2go/-/get/v/21978 or contact our support uhh.lecture2go@uni-hamburg.de. We help you to get it runnig!
+Lecture2Go http://lecture2go.uni-hamburg.de is an open source platform for media management and distribution. Our goal is to support the free access to knowledge. This software solution is aimed at academic institutions and has to strengthen the blended learning. All Lecture2Go plugins are continuously being developed and improved. For more details please visit http://lecture2go-open-source.rrz.uni-hamburg.de 
 
 
 Change Log
 ==============
+
+Bug Fix and Feature Package [master-v.2-b5226] on Thursday, Augus 06, 2020
+
 Bug Fix and Feature Package [master-v.1-b5226] on Thursday, February 27, 2020
 
 Bug Fix and Feature Package [master-v.1-b5162] on Friday, June 14, 2019
