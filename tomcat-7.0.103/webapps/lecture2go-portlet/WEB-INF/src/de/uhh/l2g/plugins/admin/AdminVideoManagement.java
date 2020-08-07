@@ -1,59 +1,3 @@
-/*******************************************************************************
- * License
- * 
- * The Lecture2Go software is based on the liferay portal 6.2-ga6
- * <http://www.liferay.com> (Copyright notice see below)
- * 
- * Lecture2Go <http://lecture2go.uni-hamburg.de> is an open source
- * platform for media management and distribution. Our goal is to
- * support the free access to knowledge because this is a component
- * of each democratic society. The open source software is aimed at
- * academic institutions and has to strengthen the blended learning.
- * 
- * All Lecture2Go plugins are continuously being developed and improved.
- * For more details please visit <http://lecture2go-open-source.rrz.uni-hamburg.de>
- * 
- * Copyright (c) 2013 - present University of Hamburg / Computer and Data Center (RRZ)
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- * 
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- * 
- * +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++ +++
- * 
- * The Liferay Plugins SDK:
- * 
- * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
- * 
- * This library is free software; you can redistribute it and/or modify it under
- * the terms of the GNU Lesser General Public License as published by the Free
- * Software Foundation; either version 2.1 of the License, or (at your option)
- * any later version.
- * 
- * This library is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
- * details.
- * 
- * Third Party Software
- * 
- * Lecture2Go uses third-party libraries which may be distributed under different licenses 
- * to the above (but are compatible with the used GPL license). Informations about these 
- * licenses and copyright informations are mostly detailed in the library source code or jars themselves. 
- * You must agree to the terms of these licenses, in addition to  the above Lecture2Go source code license, 
- * in order to use this software.
- ******************************************************************************/
 package de.uhh.l2g.plugins.admin;
 
 import java.io.File;
@@ -133,7 +77,6 @@ import de.uhh.l2g.plugins.service.Video_InstitutionLocalServiceUtil;
 import de.uhh.l2g.plugins.util.FFmpegManager;
 import de.uhh.l2g.plugins.util.FileManager;
 import de.uhh.l2g.plugins.util.Htaccess;
-import de.uhh.l2g.plugins.util.OaiPmhManager;
 import de.uhh.l2g.plugins.util.ProzessManager;
 import de.uhh.l2g.plugins.util.Security;
 import de.uhh.l2g.plugins.util.VideoGenerationDateComparator;
@@ -547,9 +490,6 @@ public class AdminVideoManagement extends MVCPortlet {
 					// another workflow is specified, use this
 					isVideoConversionStarted = VideoProcessorManager.startVideoConversion(video.getVideoId(), workflow, additionalProperties);
 				}
-				//create thumbnails if not existing, this may be necessary if the thumbnails were generated and deleted by the video-processor (happens with the video caption integration)
-				VideoLocalServiceUtil.createThumbnailsIfNotExisting(video.getVideoId());
-				
 				if (isVideoConversionStarted) {
 					json.put("status", Boolean.TRUE);
 				} else {
@@ -568,18 +508,6 @@ public class AdminVideoManagement extends MVCPortlet {
 				String videoConversionStatus = VideoProcessorManager.getSimpleVideoConversionStatusForVideoId(video.getVideoId());
 				
 				json.put("videoConversionStatus", videoConversionStatus);
-			}
-			writeJSON(resourceRequest, resourceResponse, json);
-		}
-		
-		if(resourceID.equals("getVideoConversionWorkflow")){
-			JSONObject json = JSONFactoryUtil.createJSONObject();
-			// get the video conversion workflow
-			if (PropsUtil.contains("lecture2go.videoprocessing.provider")) {
-				String videoConversionUrl = PropsUtil.get("lecture2go.videoprocessing.provider.videoconversion");
-				String videoConversionWorkflow = VideoProcessorManager.getVideoConversionWorkflow(video.getVideoId());
-				
-				json.put("videoConversionWorkflow", videoConversionWorkflow);
 			}
 			writeJSON(resourceRequest, resourceResponse, json);
 		}
@@ -617,9 +545,6 @@ public class AdminVideoManagement extends MVCPortlet {
 						String jobTitle = creator.getString("jobTitle");
 						String gender = creator.getString("gender");
 						String fullName = creator.getString("fullName");
-						String affiliation = creator.getString("affiliation");
-						String orcidId = creator.getString("orcidId");
-
 
 						Video_Creator vc = Video_CreatorLocalServiceUtil.createVideo_Creator(0);
 						Long newCreatorId = new Long(0);
@@ -639,8 +564,6 @@ public class AdminVideoManagement extends MVCPortlet {
 								c.setJobTitle(jobTitle);
 								c.setGender(gender);
 								c.setFullName(fullName);
-								c.setAffiliation(affiliation);
-								c.setOrcidId(orcidId);
 								newCreatorId = CreatorLocalServiceUtil.addCreator(c).getCreatorId();
 							} else {
 								newCreatorId = cL.listIterator().next().getCreatorId();
@@ -852,9 +775,6 @@ public class AdminVideoManagement extends MVCPortlet {
 				} 
 			}	 	    
 	 	    //metadata end
-			
-			// update the video in the OAI-PMH repository if existing
-			OaiPmhManager.modify(video.getVideoId());
 	 	    
 			//return errors cont result after update
 			JSONObject jo = JSONFactoryUtil.createJSONObject();
@@ -1054,9 +974,6 @@ public class AdminVideoManagement extends MVCPortlet {
 			} catch (SystemException e) {
 				////e.printStackTrace();
 			}
-			
-			// update the video in the OAI-PMH repository if existing
-			OaiPmhManager.modify(video.getVideoId());
 		}
 		
 		if (resourceID.equals("handleVttUpload")) {
@@ -1401,11 +1318,6 @@ public class AdminVideoManagement extends MVCPortlet {
 						//e.printStackTrace();
 					}
 			}
-			
-			// clean up symbolic links for the deleted file if there are any (e.g. download-folder, caption-folder)
-			ProzessManager pm = new ProzessManager();
-			pm.removeSymbolicLinksForSingularFileIfExisting(fileName);
-		
 			writeJSON(resourceRequest, resourceResponse, jarr);
 		}
 		
@@ -1428,13 +1340,6 @@ public class AdminVideoManagement extends MVCPortlet {
 			writeJSON(resourceRequest, resourceResponse, json);			
 		}
 		
-		if(resourceID.equals("getJSONAllCreators")){
-			
-			JSONArray json = CreatorLocalServiceUtil.getJSONCreatorsByVideoId(video.getVideoId());
-			
-			writeJSON(resourceRequest, resourceResponse, json);			
-		}
-		
 		if(resourceID.equals("updateCreators")){
 			String creators = ParamUtil.getString(resourceRequest, "creator");
 			try {
@@ -1452,8 +1357,6 @@ public class AdminVideoManagement extends MVCPortlet {
 						String jobTitle = creator.getString("jobTitle");
 						String gender = creator.getString("gender");
 						String fullName = creator.getString("fullName");
-						String affiliation = creator.getString("affiliation");
-						String orcidId = creator.getString("orcidId");
 						
 						Video_Creator vc = new Video_CreatorImpl();
 						Long newCreatorId = new Long(0);
@@ -1472,8 +1375,6 @@ public class AdminVideoManagement extends MVCPortlet {
 								c.setJobTitle(jobTitle);
 								c.setGender(gender);
 								c.setFullName(fullName);
-								c.setAffiliation(affiliation);
-								c.setOrcidId(orcidId);
 								newCreatorId = CreatorLocalServiceUtil.addCreator(c).getCreatorId();
 							}else{
 								newCreatorId = cL.listIterator().next().getCreatorId();
@@ -1570,9 +1471,6 @@ public class AdminVideoManagement extends MVCPortlet {
 		} catch (IOException e) {
 			//e.printStackTrace();
 		}
-		
-		// unpublish the video in the OAI-PMH repository if existing
-		OaiPmhManager.unpublish(video.getVideoId());
 	}
 	
 	public void lockVideo(ActionRequest request, ActionResponse response){

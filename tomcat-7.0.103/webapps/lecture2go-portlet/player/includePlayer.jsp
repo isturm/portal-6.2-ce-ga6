@@ -1,5 +1,3 @@
-<script type="text/javascript">jwplayer.key="your-licence-here";</script>
-
 <style>
 <!--
 .jw-reset.jw-settings-content-item {
@@ -64,25 +62,19 @@
             width: "100%",
             aspectratio: "16:9",
             playbackRateControls: [0.75, 1, 1.25, 1.5],
+            image: "${video.image}",
             cast: {},
-            playlist: [{
-                <c:if test="${video.is360()}">
-                        stereomode: 'monoscopic',
-                </c:if>
-                image: "${video.image}",
-                sources: ${video.jsonPlayerUris},
-                <c:if test="${video.hasCaption || video.hasChapters}">
-                        tracks: ${video.jsonPlayerTracks},
-                </c:if>
-            }],
-
+            sources: ${video.jsonPlayerUris},
+            <c:if test="${video.hasCaption || video.hasChapters}">
+	            tracks: ${video.jsonPlayerTracks},
+            </c:if>
             hlshtml: true,
             androidhls: true
         });
         
         pla.on('ready', function(){
 
-         	// Inputfelder fÃ¼r Start und Ende der Zitate / Kapitel speichern 
+         	// Inputfelder für Start und Ende der Zitate / Kapitel speichern 
             var $inputTimeStart = $("#<portlet:namespace></portlet:namespace>timeStart").val("");
             var $inputTimeEnd = $("#<portlet:namespace></portlet:namespace>timeEnd").val("");
             var $citation = $("#<portlet:namespace></portlet:namespace>citation").val("");
@@ -91,10 +83,10 @@
             var $chapters = $('#chapters');
             var $chapterDivs = $chapters.find("li.chaptertile");
             
-            // Chapter ids und Zeiten in Object fÃ¼r spÃ¤tere Abfragen speichern
+            // Chapter ids und Zeiten in Object für spätere Abfragen speichern
             var chapters = [];
             for (var i = 0; i < $chapterDivs.length; i++) {
-            	// Array chapters enthÃ¤lt Triple aus id, Anfangs- und Endzeit der Kapitel
+            	// Array chapters enthält Triple aus id, Anfangs- und Endzeit der Kapitel
             	var chapter = {
             			id : $chapterDivs.eq(i).attr("id"),
             			begin : timeToSeconds($chapterDivs.eq(i).attr("begin")),
@@ -105,13 +97,13 @@
 
             if (frameStart && frameEnd) {
                 // Sollten sich die Start- und Endzeit in den URL Parametern befinden
-                // wird in diesen Abschnitt dafÃ¼r gesorgt das man auch nur das Entsprechende
+                // wird in diesen Abschnitt dafür gesorgt das man auch nur das Entsprechende
                 // Videomaterial zu sehen bekommt
 
 
-                // iOS und Android unterstÃ¼tzen seek nur wenn der Nutzer
+                // iOS und Android unterstützen seek nur wenn der Nutzer
                 // selbst manuell das vide gestartet hat. Wir werden den start des Zitates
-                // spÃ¤ter anders lÃ¶sen
+                // später anders lösen
                 if (!isTouchDevice) {
                 	jwplayer().on('firstFrame', function() { 
                 		jwplayer().play();
@@ -121,14 +113,14 @@
             }
 
                 
-            // Event listener alle 100 ms wÃ¤hrend playback
+            // Event listener alle 100 ms während playback
             pla.on('time', function(event) {
-                // Sicher stellen, dass der gewÃ¤hlte Zeitraum eingehalten wird
+                // Sicher stellen, dass der gewählte Zeitraum eingehalten wird
 
                 var pos =  Math.floor(event.position);
 
                 if (pos < frameStart && isTouchDevice) {
-                    // Nur unter iOS und Android nÃ¶tig,
+                    // Nur unter iOS und Android nötig,
                     jwplayer().seek(frameStart);
                 } else if (pos > frameEnd) {
                     jwplayer().seek(frameStart);
@@ -155,7 +147,7 @@
                 }
             });
 
-            // Diese Stelle ist wiederum nur auf PC nÃ¶tig.
+            // Diese Stelle ist wiederum nur auf PC nötig.
             // Hiermit wird verhindert, dass der Nutzer per Tastatur
             // aus den Zitatsbereich herausspult
             if (!isTouchDevice) {
@@ -186,7 +178,7 @@
             	event.stopPropagation();
             });
 
-            // Im nachfolgenden Abschnitt wird den Nutzer ermÃ¶glicht
+            // Im nachfolgenden Abschnitt wird den Nutzer ermöglicht
             // eigene Zitate zu erstellen und zu teilen
 
             var startFrameTime = undefined;

@@ -1,4 +1,3 @@
-<script type="text/javascript">jwplayer.key="your-licence-here";</script>
 
 <style>
 <!--
@@ -64,18 +63,13 @@
             width: "100%",
             aspectratio: "16:9",
             playbackRateControls: [0.75, 1, 1.25, 1.5],
+            image: "${reqVideo.image}",
             cast: {},
-            playlist: [{
-                <c:if test="${reqVideo.is360()}">
-                        stereomode: 'monoscopic',
-                </c:if>
-                image: "${reqVideo.image}",
-                sources: ${reqVideo.jsonPlayerUris},
-                <c:if test="${reqVideo.hasCaption || reqVideo.hasChapters}">
-                        tracks: ${reqVideo.jsonPlayerTracks},
-                </c:if>
+            sources: ${reqVideo.jsonPlayerUris},
+            tracks: [{
+                file: vttFile,
+                kind:'chapters'
             }],
-
             hlshtml: true,
             androidhls: true
         });

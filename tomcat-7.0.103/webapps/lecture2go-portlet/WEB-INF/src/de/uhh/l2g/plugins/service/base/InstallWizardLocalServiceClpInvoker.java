@@ -106,17 +106,17 @@ public class InstallWizardLocalServiceClpInvoker {
 				"de.uhh.l2g.plugins.model.InstallWizard"
 			};
 
-		_methodName172 = "getBeanIdentifier";
+		_methodName156 = "getBeanIdentifier";
 
-		_methodParameterTypes172 = new String[] {  };
+		_methodParameterTypes156 = new String[] {  };
 
-		_methodName173 = "setBeanIdentifier";
+		_methodName157 = "setBeanIdentifier";
 
-		_methodParameterTypes173 = new String[] { "java.lang.String" };
+		_methodParameterTypes157 = new String[] { "java.lang.String" };
 
-		_methodName178 = "activate";
+		_methodName162 = "activate";
 
-		_methodParameterTypes178 = new String[] {
+		_methodParameterTypes162 = new String[] {
 				"de.uhh.l2g.plugins.model.InstallWizard"
 			};
 	}
@@ -210,20 +210,20 @@ public class InstallWizardLocalServiceClpInvoker {
 			return InstallWizardLocalServiceUtil.updateInstallWizard((de.uhh.l2g.plugins.model.InstallWizard)arguments[0]);
 		}
 
-		if (_methodName172.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes172, parameterTypes)) {
+		if (_methodName156.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes156, parameterTypes)) {
 			return InstallWizardLocalServiceUtil.getBeanIdentifier();
 		}
 
-		if (_methodName173.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes173, parameterTypes)) {
+		if (_methodName157.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes157, parameterTypes)) {
 			InstallWizardLocalServiceUtil.setBeanIdentifier((java.lang.String)arguments[0]);
 
 			return null;
 		}
 
-		if (_methodName178.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes178, parameterTypes)) {
+		if (_methodName162.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes162, parameterTypes)) {
 			InstallWizardLocalServiceUtil.activate((de.uhh.l2g.plugins.model.InstallWizard)arguments[0]);
 
 			return null;
@@ -264,10 +264,10 @@ public class InstallWizardLocalServiceClpInvoker {
 	private String[] _methodParameterTypes14;
 	private String _methodName15;
 	private String[] _methodParameterTypes15;
-	private String _methodName172;
-	private String[] _methodParameterTypes172;
-	private String _methodName173;
-	private String[] _methodParameterTypes173;
-	private String _methodName178;
-	private String[] _methodParameterTypes178;
+	private String _methodName156;
+	private String[] _methodParameterTypes156;
+	private String _methodName157;
+	private String[] _methodParameterTypes157;
+	private String _methodName162;
+	private String[] _methodParameterTypes162;
 }

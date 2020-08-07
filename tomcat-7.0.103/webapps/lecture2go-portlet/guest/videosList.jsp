@@ -64,33 +64,25 @@
  	if (hasParentInstitutionFiltered) {
 		presentParentInstitutions.add(InstitutionLocalServiceUtil.getById(parentInstitutionId));
 	} else {
-		if (FeatureManager.hasInstitutionCatalogFilter()) {
-			presentParentInstitutions = InstitutionLocalServiceUtil.getInstitutionsFromLectureseriesIdsAndVideoIds(lectureseriesIds, videoIds);
-		}
+		presentParentInstitutions = InstitutionLocalServiceUtil.getInstitutionsFromLectureseriesIdsAndVideoIds(lectureseriesIds, videoIds);
 	} 
 	
  	if (hasParentInstitutionFiltered && hasInstitutionFiltered) {
 		presentInstitutions.add(InstitutionLocalServiceUtil.getById(institutionId));
 	} else {
-		if (FeatureManager.hasSubInstitutionCatalogFilter()) {
-			presentInstitutions = InstitutionLocalServiceUtil.getInstitutionsFromLectureseriesIdsAndVideoIds(lectureseriesIds, videoIds, parentInstitutionId);
-		}
+		presentInstitutions = InstitutionLocalServiceUtil.getInstitutionsFromLectureseriesIdsAndVideoIds(lectureseriesIds, videoIds, parentInstitutionId);
 	}
 	
 	if (hasTermFiltered) {
 		presentTerms.add(TermLocalServiceUtil.getById(termId));
 	} else {
-		if (FeatureManager.hasTermsCatalogFilter()) {
-			presentTerms = TermLocalServiceUtil.getTermsFromLectureseriesIdsAndVideoIds(lectureseriesIds, videoIds);
-		}
+		presentTerms = TermLocalServiceUtil.getTermsFromLectureseriesIdsAndVideoIds(lectureseriesIds, videoIds);
 	}
 	
 	if (hasCategoryFiltered) {
 		presentCategories.add(CategoryLocalServiceUtil.getById(categoryId));
 	} else {
-		if (FeatureManager.hasCategoryCatalogFilter()) {
-			presentCategories = CategoryLocalServiceUtil.getCategoriesFromLectureseriesIdsAndVideoIds(lectureseriesIds, videoIds);
-		}
+		presentCategories = CategoryLocalServiceUtil.getCategoriesFromLectureseriesIdsAndVideoIds(lectureseriesIds, videoIds);
 	}
 	
 	List<Lectureseries> tempLectureseriesList = new ArrayList();
@@ -383,19 +375,15 @@
 										          %>
 										          <span class="label label-light2"><%=cat%></span>
 										          <%
-										          		String instLink= "";
-										         	 	try{
+										          		try{
 															Institution inst = InstitutionLocalServiceUtil.getById(vi.get(0).getInstitutionId());
-															instLink="<a href='/l2go/-/get/"+inst.getInstitutionId() + "/" + inst.getParentId() + "/0/0/0/'>" + inst.getName() + "</a>"; 
-											          		
+															String instLink="<a href='/l2go/-/get/"+inst.getInstitutionId() + "/" + inst.getParentId() + "/0/0/0/'>" + inst.getName() + "</a>"; 
+											          		%>
+													          <span class="label label-light2"><%=instLink%></span>
+											          		<%
 										          		}catch(Exception e){
-										          			// no institution for the video, use the root institution
-										          			Institution rootInst=InstitutionLocalServiceUtil.getById(vidDummy.getRootInstitutionId());
-															instLink="<a href='/l2go/-/get/0/" + rootInst.getInstitutionId() + "/0/0/0/'>" + rootInst.getName() + "</a>"; 
+										          			//
 										          		}
-											          %>
-											         	 <span class="label label-light2"><%=instLink%></span>
-									          		<%
 										          %>
 										        </div>
 									        </div>	
