@@ -1,0 +1,1043 @@
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: 
+ Server Version:        Apache Tomcat/7.0.103
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Server built:          Mar 16 2020 08:34:15 UTC
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Server version number: 7.0.103.0
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: OS Name:               Mac OS X
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: OS Version:            10.15.5
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Architektur:          x86_64
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Java Home:             /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: JVM Version:           1.8.0_222-b10
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: JVM Hersteller:            AdoptOpenJDK
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: 
+ CATALINA_BASE:         /usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: CATALINA_HOME:         /usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:58421
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Dfile.encoding=UTF8
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Djava.net.preferIPv4Stack=true
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Djava.util.logging.config.file=/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/conf/logging.properties
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Djava.io.tmpdir=/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/temp
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Duser.timezone=GMT
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Dexternal-properties=/usr/local/l2go/portal-6.2-ce-ga6/portal-ide.properties
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Dcatalina.base=/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Dcatalina.home=/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Dwtp.deploy=/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Djava.endorsed.dirs=/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/endorsed
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Xmx1024m
+Aug 07, 2020 6:43:37 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFORMATION: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/isturm/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+Aug 07, 2020 6:43:37 AM org.apache.coyote.AbstractProtocol init
+INFORMATION: Initialisiere ProtocolHandler["http-bio-8080"]
+Aug 07, 2020 6:43:37 AM org.apache.coyote.AbstractProtocol init
+INFORMATION: Initialisiere ProtocolHandler["ajp-bio-127.0.0.1-8009"]
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.Catalina load
+INFORMATION: Initialization processed in 463 ms
+Aug 07, 2020 6:43:37 AM org.apache.catalina.core.StandardService startInternal
+INFORMATION: Starting service [Catalina]
+Aug 07, 2020 6:43:37 AM org.apache.catalina.core.StandardEngine startInternal
+INFORMATION: Starting Servlet Engine: Apache Tomcat/7.0.103
+Aug 07, 2020 6:43:37 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFORMATION: Deploying deployment descriptor [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/conf/Catalina/localhost/ROOT.xml]
+Aug 07, 2020 6:43:46 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:44:10 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFORMATION: Deployment of deployment descriptor [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/conf/Catalina/localhost/ROOT.xml] has finished in [33.175] ms
+Aug 07, 2020 6:44:10 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/lecture2go-theme]
+Aug 07, 2020 6:44:11 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:44:11 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/lecture2go-theme] has finished in [655] ms
+Aug 07, 2020 6:44:11 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/lecture2go-hook]
+Aug 07, 2020 6:44:11 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:44:11 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/lecture2go-hook] has finished in [536] ms
+Aug 07, 2020 6:44:11 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/liferay-jedi-theme]
+Aug 07, 2020 6:44:12 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:44:12 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/liferay-jedi-theme] has finished in [415] ms
+Aug 07, 2020 6:44:12 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/servlet-file-upload]
+Aug 07, 2020 6:44:12 AM org.apache.catalina.loader.WebappClassLoaderBase validateJarFile
+INFORMATION: validateJarFile(/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/servlet-file-upload/WEB-INF/lib/javax.servlet-api-3.1.0.jar) - jar not loaded. See Servlet Spec 3.0, section 10.7.2. Offending class: javax/servlet/Servlet.class
+Aug 07, 2020 6:44:13 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:44:13 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/servlet-file-upload] has finished in [912] ms
+Aug 07, 2020 6:44:13 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/marketplace-portlet]
+Aug 07, 2020 6:44:13 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:44:15 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/marketplace-portlet] has finished in [1.964] ms
+Aug 07, 2020 6:44:15 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/lecture2go-portlet]
+Aug 07, 2020 6:44:18 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:44:21 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/lecture2go-portlet] has finished in [6.452] ms
+Aug 07, 2020 6:44:21 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/sync-web]
+Aug 07, 2020 6:44:22 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:44:23 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/sync-web] has finished in [1.519] ms
+Aug 07, 2020 6:44:23 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/opensocial-portlet]
+Aug 07, 2020 6:44:24 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:44:26 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/opensocial-portlet] has finished in [3.531] ms
+Aug 07, 2020 6:44:26 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/resources-importer-web]
+Aug 07, 2020 6:44:27 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:44:27 AM org.apache.shindig.config.JsonContainerConfig loadContainers
+INFORMATION: Loading resources from: containers/default/container.js
+Aug 07, 2020 6:44:27 AM org.apache.shindig.config.JsonContainerConfig loadResources
+INFORMATION: Reading container config: containers/default/container.js
+Aug 07, 2020 6:44:27 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/resources-importer-web] has finished in [1.178] ms
+Aug 07, 2020 6:44:27 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/calendar-portlet]
+Aug 07, 2020 6:44:27 AM org.apache.shindig.gadgets.features.FeatureRegistry register
+INFORMATION: Loading resources from: res:features-extras/features.txt
+Aug 07, 2020 6:44:27 AM org.apache.shindig.common.xml.XmlUtil <clinit>
+INFORMATION: Reusing document builders
+Aug 07, 2020 6:44:28 AM org.apache.shindig.gadgets.features.FeatureRegistry register
+INFORMATION: Loading resources from: res:features/features.txt
+Aug 07, 2020 6:44:28 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:44:30 AM org.apache.shindig.gadgets.servlet.CajaContentRewriter <init>
+INFORMATION: Cajoled cache createdorg.apache.shindig.common.cache.ehcache.EhConfiguredCache@16f23625
+Aug 07, 2020 6:44:30 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/calendar-portlet] has finished in [2.248] ms
+Aug 07, 2020 6:44:30 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/web-form-portlet]
+Aug 07, 2020 6:44:30 AM org.apache.shindig.gadgets.servlet.CajaContentRewriter <init>
+INFORMATION: Cajoled cache createdorg.apache.shindig.common.cache.ehcache.EhConfiguredCache@16f23625
+Aug 07, 2020 6:44:30 AM org.apache.shindig.gadgets.oauth.OAuthModule$OAuthCrypterProvider <init>
+INFORMATION: Using random key for OAuth client-side state encryption
+Aug 07, 2020 6:44:30 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:44:30 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/web-form-portlet] has finished in [526] ms
+Aug 07, 2020 6:44:30 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/servlet-file-download]
+Aug 07, 2020 6:44:30 AM org.apache.catalina.loader.WebappClassLoaderBase validateJarFile
+INFORMATION: validateJarFile(/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/servlet-file-download/WEB-INF/lib/javax.servlet-api-4.0.0-b01.jar) - jar not loaded. See Servlet Spec 3.0, section 10.7.2. Offending class: javax/servlet/Servlet.class
+Aug 07, 2020 6:44:31 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:44:31 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/servlet-file-download] has finished in [445] ms
+Aug 07, 2020 6:44:31 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/notifications-portlet]
+Aug 07, 2020 6:44:31 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:44:32 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/notifications-portlet] has finished in [1.303] ms
+Aug 07, 2020 6:44:32 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/kaleo-web]
+Aug 07, 2020 6:44:33 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:44:35 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/kaleo-web] has finished in [2.892] ms
+Aug 07, 2020 6:44:35 AM org.apache.coyote.AbstractProtocol start
+INFORMATION: Starting ProtocolHandler ["http-bio-8080"]
+Aug 07, 2020 6:44:35 AM org.apache.catalina.core.StandardService startInternal
+SCHWERWIEGEND: Failed to start connector [Connector[AJP/1.3-8009]]
+org.apache.catalina.LifecycleException: service.getName(): "Catalina";  Der Start des Protokoll-Handlers ist fehlgeschlagen
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1016)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:744)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:712)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:284)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:415)
+Caused by: java.lang.IllegalArgumentException: The AJP Connector is configured with secretRequired="true" but the secret attribute is either null or "". This combination is not valid.
+	at org.apache.coyote.ajp.AbstractAjpProtocol.start(AbstractAjpProtocol.java:211)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1009)
+	... 12 more
+
+Aug 07, 2020 6:44:35 AM org.apache.catalina.startup.Catalina start
+INFORMATION: Server startup in 57816 ms
+Aug 07, 2020 6:45:31 AM org.apache.catalina.core.StandardServer await
+INFORMATION: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Aug 07, 2020 6:45:31 AM org.apache.coyote.AbstractProtocol pause
+INFORMATION: Pausing ProtocolHandler ["http-bio-8080"]
+Aug 07, 2020 6:45:31 AM org.apache.coyote.AbstractProtocol pause
+INFORMATION: Pausing ProtocolHandler ["ajp-bio-127.0.0.1-8009"]
+Aug 07, 2020 6:45:31 AM org.apache.catalina.core.StandardService stopInternal
+INFORMATION: Stopping service [Catalina]
+Aug 07, 2020 6:45:33 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SCHWERWIEGEND: The web application [] appears to have started a thread named [org.python.google.common.base.internal.Finalizer] but has failed to stop it. This is very likely to create a memory leak.
+Aug 07, 2020 6:45:33 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SCHWERWIEGEND: The web application [] appears to have started a thread named [mariaDb-2-1] but has failed to stop it. This is very likely to create a memory leak.
+Aug 07, 2020 6:45:33 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SCHWERWIEGEND: The web application [/notifications-portlet] appears to have started a thread named [mariaDb-2-5] but has failed to stop it. This is very likely to create a memory leak.
+Aug 07, 2020 6:45:33 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SCHWERWIEGEND: The web application [/marketplace-portlet] appears to have started a thread named [mariaDb-2-2] but has failed to stop it. This is very likely to create a memory leak.
+Aug 07, 2020 6:45:33 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SCHWERWIEGEND: The web application [/sync-web] appears to have started a thread named [mariaDb-2-3] but has failed to stop it. This is very likely to create a memory leak.
+Aug 07, 2020 6:45:33 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SCHWERWIEGEND: The web application [/calendar-portlet] appears to have started a thread named [mariaDb-2-4] but has failed to stop it. This is very likely to create a memory leak.
+Aug 07, 2020 6:45:34 AM org.apache.coyote.AbstractProtocol stop
+INFORMATION: Stopping ProtocolHandler ["http-bio-8080"]
+Aug 07, 2020 6:45:34 AM org.apache.coyote.AbstractProtocol destroy
+INFORMATION: Destroying ProtocolHandler ["http-bio-8080"]
+Aug 07, 2020 6:45:34 AM org.apache.coyote.AbstractProtocol stop
+INFORMATION: Stopping ProtocolHandler ["ajp-bio-127.0.0.1-8009"]
+Aug 07, 2020 6:45:34 AM org.apache.catalina.util.LifecycleBase destroy
+SCHWERWIEGEND: Called stop() on failed component [Connector[AJP/1.3-8009]] to trigger clean-up but it failed too
+org.apache.catalina.LifecycleException: An invalid Lifecycle transition was attempted ([before_stop]) for component [org.apache.catalina.connector.MapperListener@13b6aecc] in state [INITIALIZED]
+	at org.apache.catalina.util.LifecycleBase.invalidTransition(LifecycleBase.java:430)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:244)
+	at org.apache.catalina.connector.Connector.stopInternal(Connector.java:1042)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:293)
+	at org.apache.catalina.core.StandardService.destroyInternal(StandardService.java:579)
+	at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:321)
+	at org.apache.catalina.core.StandardServer.destroyInternal(StandardServer.java:834)
+	at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:321)
+	at org.apache.catalina.startup.Catalina.stop(Catalina.java:786)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:747)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:284)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:415)
+
+Aug 07, 2020 6:45:34 AM org.apache.coyote.AbstractProtocol destroy
+INFORMATION: Destroying ProtocolHandler ["ajp-bio-127.0.0.1-8009"]
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: 
+ Server Version:        Apache Tomcat/7.0.103
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Server built:          Mar 16 2020 08:34:15 UTC
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Server version number: 7.0.103.0
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: OS Name:               Mac OS X
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: OS Version:            10.15.5
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Architektur:          x86_64
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Java Home:             /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: JVM Version:           1.8.0_222-b10
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: JVM Hersteller:            AdoptOpenJDK
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: 
+ CATALINA_BASE:         /usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: CATALINA_HOME:         /usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Dfile.encoding=UTF8
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Djava.net.preferIPv4Stack=true
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Djava.util.logging.config.file=/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/conf/logging.properties
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Djava.io.tmpdir=/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/temp
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Duser.timezone=GMT
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Dexternal-properties=/usr/local/l2go/portal-6.2-ce-ga6/portal-ide.properties
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Dcatalina.base=/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Dcatalina.home=/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Dwtp.deploy=/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Djava.endorsed.dirs=/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/endorsed
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.VersionLoggerListener log
+INFORMATION: Command line argument: -Xmx1024m
+Aug 07, 2020 6:46:28 AM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFORMATION: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/isturm/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+Aug 07, 2020 6:46:28 AM org.apache.coyote.AbstractProtocol init
+INFORMATION: Initialisiere ProtocolHandler["http-bio-8080"]
+Aug 07, 2020 6:46:28 AM org.apache.coyote.AbstractProtocol init
+INFORMATION: Initialisiere ProtocolHandler["ajp-bio-127.0.0.1-8009"]
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.Catalina load
+INFORMATION: Initialization processed in 493 ms
+Aug 07, 2020 6:46:28 AM org.apache.catalina.core.StandardService startInternal
+INFORMATION: Starting service [Catalina]
+Aug 07, 2020 6:46:28 AM org.apache.catalina.core.StandardEngine startInternal
+INFORMATION: Starting Servlet Engine: Apache Tomcat/7.0.103
+Aug 07, 2020 6:46:28 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFORMATION: Deploying deployment descriptor [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/conf/Catalina/localhost/ROOT.xml]
+Aug 07, 2020 6:46:35 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:46:56 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFORMATION: Deployment of deployment descriptor [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/conf/Catalina/localhost/ROOT.xml] has finished in [27.091] ms
+Aug 07, 2020 6:46:56 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/lecture2go-theme]
+Aug 07, 2020 6:46:56 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:46:56 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/lecture2go-theme] has finished in [514] ms
+Aug 07, 2020 6:46:56 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/lecture2go-hook]
+Aug 07, 2020 6:46:57 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:46:57 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/lecture2go-hook] has finished in [467] ms
+Aug 07, 2020 6:46:57 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/liferay-jedi-theme]
+Aug 07, 2020 6:46:57 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:46:57 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/liferay-jedi-theme] has finished in [346] ms
+Aug 07, 2020 6:46:57 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/servlet-file-upload]
+Aug 07, 2020 6:46:57 AM org.apache.catalina.loader.WebappClassLoaderBase validateJarFile
+INFORMATION: validateJarFile(/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/servlet-file-upload/WEB-INF/lib/javax.servlet-api-3.1.0.jar) - jar not loaded. See Servlet Spec 3.0, section 10.7.2. Offending class: javax/servlet/Servlet.class
+Aug 07, 2020 6:46:57 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:46:58 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/servlet-file-upload] has finished in [746] ms
+Aug 07, 2020 6:46:58 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/marketplace-portlet]
+Aug 07, 2020 6:46:58 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:46:59 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/marketplace-portlet] has finished in [1.538] ms
+Aug 07, 2020 6:46:59 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/lecture2go-portlet]
+Aug 07, 2020 6:47:01 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:47:04 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/lecture2go-portlet] has finished in [4.918] ms
+Aug 07, 2020 6:47:04 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/sync-web]
+Aug 07, 2020 6:47:05 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:47:05 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/sync-web] has finished in [1.261] ms
+Aug 07, 2020 6:47:05 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/opensocial-portlet]
+Aug 07, 2020 6:47:07 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:47:08 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/opensocial-portlet] has finished in [2.979] ms
+Aug 07, 2020 6:47:08 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/resources-importer-web]
+Aug 07, 2020 6:47:09 AM org.apache.shindig.config.JsonContainerConfig loadContainers
+INFORMATION: Loading resources from: containers/default/container.js
+Aug 07, 2020 6:47:09 AM org.apache.shindig.config.JsonContainerConfig loadResources
+INFORMATION: Reading container config: containers/default/container.js
+Aug 07, 2020 6:47:09 AM org.apache.shindig.gadgets.features.FeatureRegistry register
+INFORMATION: Loading resources from: res:features-extras/features.txt
+Aug 07, 2020 6:47:09 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:47:09 AM org.apache.shindig.common.xml.XmlUtil <clinit>
+INFORMATION: Reusing document builders
+Aug 07, 2020 6:47:09 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/resources-importer-web] has finished in [1.143] ms
+Aug 07, 2020 6:47:09 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/calendar-portlet]
+Aug 07, 2020 6:47:10 AM org.apache.shindig.gadgets.features.FeatureRegistry register
+INFORMATION: Loading resources from: res:features/features.txt
+Aug 07, 2020 6:47:10 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:47:11 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/calendar-portlet] has finished in [1.786] ms
+Aug 07, 2020 6:47:11 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/web-form-portlet]
+Aug 07, 2020 6:47:11 AM org.apache.shindig.gadgets.servlet.CajaContentRewriter <init>
+INFORMATION: Cajoled cache createdorg.apache.shindig.common.cache.ehcache.EhConfiguredCache@6f5cdf4b
+Aug 07, 2020 6:47:11 AM org.apache.shindig.gadgets.servlet.CajaContentRewriter <init>
+INFORMATION: Cajoled cache createdorg.apache.shindig.common.cache.ehcache.EhConfiguredCache@6f5cdf4b
+Aug 07, 2020 6:47:11 AM org.apache.shindig.gadgets.oauth.OAuthModule$OAuthCrypterProvider <init>
+INFORMATION: Using random key for OAuth client-side state encryption
+Aug 07, 2020 6:47:12 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:47:12 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/web-form-portlet] has finished in [481] ms
+Aug 07, 2020 6:47:12 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/servlet-file-download]
+Aug 07, 2020 6:47:12 AM org.apache.catalina.loader.WebappClassLoaderBase validateJarFile
+INFORMATION: validateJarFile(/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/servlet-file-download/WEB-INF/lib/javax.servlet-api-4.0.0-b01.jar) - jar not loaded. See Servlet Spec 3.0, section 10.7.2. Offending class: javax/servlet/Servlet.class
+Aug 07, 2020 6:47:12 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:47:12 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/servlet-file-download] has finished in [377] ms
+Aug 07, 2020 6:47:12 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/notifications-portlet]
+Aug 07, 2020 6:47:13 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:47:13 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/notifications-portlet] has finished in [1.017] ms
+Aug 07, 2020 6:47:13 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deploye Web-Applikations-Verzeichnis [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/kaleo-web]
+Aug 07, 2020 6:47:14 AM org.apache.catalina.startup.TldConfig execute
+INFORMATION: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Aug 07, 2020 6:47:15 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFORMATION: Deployment of web application directory [/usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/webapps/kaleo-web] has finished in [2.079] ms
+Aug 07, 2020 6:47:15 AM org.apache.coyote.AbstractProtocol start
+INFORMATION: Starting ProtocolHandler ["http-bio-8080"]
+Aug 07, 2020 6:47:15 AM org.apache.catalina.core.StandardService startInternal
+SCHWERWIEGEND: Failed to start connector [Connector[AJP/1.3-8009]]
+org.apache.catalina.LifecycleException: service.getName(): "Catalina";  Der Start des Protokoll-Handlers ist fehlgeschlagen
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1016)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:460)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:744)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:712)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:284)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:415)
+Caused by: java.lang.IllegalArgumentException: The AJP Connector is configured with secretRequired="true" but the secret attribute is either null or "". This combination is not valid.
+	at org.apache.coyote.ajp.AbstractAjpProtocol.start(AbstractAjpProtocol.java:211)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1009)
+	... 12 more
+
+Aug 07, 2020 6:47:15 AM org.apache.catalina.startup.Catalina start
+INFORMATION: Server startup in 46788 ms
+Aug 07, 2020 9:13:50 AM org.apache.catalina.core.StandardServer await
+INFORMATION: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Aug 07, 2020 9:13:50 AM org.apache.coyote.AbstractProtocol pause
+INFORMATION: Pausing ProtocolHandler ["http-bio-8080"]
+Aug 07, 2020 9:13:50 AM org.apache.coyote.AbstractProtocol pause
+INFORMATION: Pausing ProtocolHandler ["ajp-bio-127.0.0.1-8009"]
+Aug 07, 2020 9:13:50 AM org.apache.catalina.core.StandardService stopInternal
+INFORMATION: Stopping service [Catalina]
+Aug 07, 2020 9:13:52 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SCHWERWIEGEND: The web application [] appears to have started a thread named [org.python.google.common.base.internal.Finalizer] but has failed to stop it. This is very likely to create a memory leak.
+Aug 07, 2020 9:13:52 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SCHWERWIEGEND: The web application [] appears to have started a thread named [mariaDb-2-1] but has failed to stop it. This is very likely to create a memory leak.
+Aug 07, 2020 9:13:52 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SCHWERWIEGEND: The web application [] appears to have started a thread named [mariaDb-2-2] but has failed to stop it. This is very likely to create a memory leak.
+Aug 07, 2020 9:13:52 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SCHWERWIEGEND: The web application [] appears to have started a thread named [mariaDb-2-4] but has failed to stop it. This is very likely to create a memory leak.
+Aug 07, 2020 9:13:52 AM org.apache.catalina.loader.WebappClassLoaderBase openJARs
+WARNUNG: Failed to open JAR [null]
+java.io.FileNotFoundException: /usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/temp/0-lecture2go-hook/WEB-INF/lib/commons-logging.jar (No such file or directory)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:130)
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.openJARs(WebappClassLoaderBase.java:3126)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findResourceInternal(WebappClassLoaderBase.java:3438)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findResource(WebappClassLoaderBase.java:1501)
+	at org.apache.catalina.loader.WebappClassLoaderBase.getResourceAsStream(WebappClassLoaderBase.java:1746)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:2342)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:2283)
+	at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:2183)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:689)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5919)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1705)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1694)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+Aug 07, 2020 9:13:52 AM org.apache.catalina.loader.WebappClassLoaderBase openJARs
+WARNUNG: Failed to open JAR [null]
+java.io.FileNotFoundException: /usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/temp/0-lecture2go-hook/WEB-INF/lib/commons-logging.jar (No such file or directory)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:130)
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.openJARs(WebappClassLoaderBase.java:3126)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findResourceInternal(WebappClassLoaderBase.java:3438)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:3158)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:1416)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1921)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1795)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at java.sql.DriverManager.isDriverAllowed(DriverManager.java:556)
+	at java.sql.DriverManager.isDriverAllowed(DriverManager.java:548)
+	at java.sql.DriverManager.getDrivers(DriverManager.java:446)
+	at org.apache.catalina.loader.JdbcLeakPrevention.clearJdbcDriverRegistrations(JdbcLeakPrevention.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:2365)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:2283)
+	at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:2183)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:689)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5919)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1705)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1694)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+Aug 07, 2020 9:13:52 AM org.apache.catalina.loader.WebappClassLoaderBase openJARs
+WARNUNG: Failed to open JAR [null]
+java.io.FileNotFoundException: /usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/temp/0-lecture2go-hook/WEB-INF/lib/commons-logging.jar (No such file or directory)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:130)
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.openJARs(WebappClassLoaderBase.java:3126)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findResourceInternal(WebappClassLoaderBase.java:3438)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:3158)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:1416)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1921)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1795)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at java.sql.DriverManager.isDriverAllowed(DriverManager.java:556)
+	at java.sql.DriverManager.isDriverAllowed(DriverManager.java:548)
+	at java.sql.DriverManager.getDrivers(DriverManager.java:446)
+	at org.apache.catalina.loader.JdbcLeakPrevention.clearJdbcDriverRegistrations(JdbcLeakPrevention.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:2365)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:2283)
+	at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:2183)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:689)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5919)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1705)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1694)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+Aug 07, 2020 9:13:52 AM org.apache.catalina.loader.WebappClassLoaderBase openJARs
+WARNUNG: Failed to open JAR [null]
+java.io.FileNotFoundException: /usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/temp/0-lecture2go-hook/WEB-INF/lib/commons-logging.jar (No such file or directory)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:130)
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.openJARs(WebappClassLoaderBase.java:3126)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findResourceInternal(WebappClassLoaderBase.java:3438)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:3158)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:1416)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1921)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1795)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at java.sql.DriverManager.isDriverAllowed(DriverManager.java:556)
+	at java.sql.DriverManager.isDriverAllowed(DriverManager.java:548)
+	at java.sql.DriverManager.getDrivers(DriverManager.java:446)
+	at org.apache.catalina.loader.JdbcLeakPrevention.clearJdbcDriverRegistrations(JdbcLeakPrevention.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:2365)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:2283)
+	at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:2183)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:689)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5919)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1705)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1694)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+Aug 07, 2020 9:13:52 AM org.apache.catalina.loader.WebappClassLoaderBase openJARs
+WARNUNG: Failed to open JAR [null]
+java.io.FileNotFoundException: /usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/temp/0-lecture2go-hook/WEB-INF/lib/commons-logging.jar (No such file or directory)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:130)
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.openJARs(WebappClassLoaderBase.java:3126)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findResourceInternal(WebappClassLoaderBase.java:3438)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:3158)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:1416)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1921)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1795)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at java.sql.DriverManager.isDriverAllowed(DriverManager.java:556)
+	at java.sql.DriverManager.isDriverAllowed(DriverManager.java:548)
+	at java.sql.DriverManager.getDrivers(DriverManager.java:446)
+	at org.apache.catalina.loader.JdbcLeakPrevention.clearJdbcDriverRegistrations(JdbcLeakPrevention.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:2365)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:2283)
+	at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:2183)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:689)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5919)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1705)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1694)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+Aug 07, 2020 9:13:52 AM org.apache.catalina.loader.WebappClassLoaderBase openJARs
+WARNUNG: Failed to open JAR [null]
+java.io.FileNotFoundException: /usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/temp/2-lecture2go-portlet/WEB-INF/lib/apache-jakarta-commons-discovery.jar (No such file or directory)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:130)
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.openJARs(WebappClassLoaderBase.java:3126)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findResourceInternal(WebappClassLoaderBase.java:3438)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findResource(WebappClassLoaderBase.java:1501)
+	at org.apache.catalina.loader.WebappClassLoaderBase.getResourceAsStream(WebappClassLoaderBase.java:1746)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:2342)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:2283)
+	at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:2183)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:689)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5919)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1705)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1694)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+Aug 07, 2020 9:13:52 AM org.apache.catalina.loader.WebappClassLoaderBase openJARs
+WARNUNG: Failed to open JAR [null]
+java.io.FileNotFoundException: /usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/temp/2-lecture2go-portlet/WEB-INF/lib/apache-jakarta-commons-discovery.jar (No such file or directory)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:130)
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.openJARs(WebappClassLoaderBase.java:3126)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findResourceInternal(WebappClassLoaderBase.java:3438)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:3158)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:1416)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1921)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1795)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at java.sql.DriverManager.isDriverAllowed(DriverManager.java:556)
+	at java.sql.DriverManager.isDriverAllowed(DriverManager.java:548)
+	at java.sql.DriverManager.getDrivers(DriverManager.java:446)
+	at org.apache.catalina.loader.JdbcLeakPrevention.clearJdbcDriverRegistrations(JdbcLeakPrevention.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:2365)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:2283)
+	at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:2183)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:689)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5919)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1705)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1694)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+Aug 07, 2020 9:13:52 AM org.apache.catalina.loader.WebappClassLoaderBase openJARs
+WARNUNG: Failed to open JAR [null]
+java.io.FileNotFoundException: /usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/temp/2-lecture2go-portlet/WEB-INF/lib/apache-jakarta-commons-discovery.jar (No such file or directory)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:130)
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.openJARs(WebappClassLoaderBase.java:3126)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findResourceInternal(WebappClassLoaderBase.java:3438)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:3158)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:1416)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1921)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1795)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at java.sql.DriverManager.isDriverAllowed(DriverManager.java:556)
+	at java.sql.DriverManager.isDriverAllowed(DriverManager.java:548)
+	at java.sql.DriverManager.getDrivers(DriverManager.java:446)
+	at org.apache.catalina.loader.JdbcLeakPrevention.clearJdbcDriverRegistrations(JdbcLeakPrevention.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:2365)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:2283)
+	at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:2183)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:689)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5919)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1705)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1694)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+Aug 07, 2020 9:13:52 AM org.apache.catalina.loader.WebappClassLoaderBase openJARs
+WARNUNG: Failed to open JAR [null]
+java.io.FileNotFoundException: /usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/temp/2-lecture2go-portlet/WEB-INF/lib/apache-jakarta-commons-discovery.jar (No such file or directory)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:130)
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.openJARs(WebappClassLoaderBase.java:3126)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findResourceInternal(WebappClassLoaderBase.java:3438)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:3158)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:1416)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1921)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1795)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at java.sql.DriverManager.isDriverAllowed(DriverManager.java:556)
+	at java.sql.DriverManager.isDriverAllowed(DriverManager.java:548)
+	at java.sql.DriverManager.getDrivers(DriverManager.java:446)
+	at org.apache.catalina.loader.JdbcLeakPrevention.clearJdbcDriverRegistrations(JdbcLeakPrevention.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:2365)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:2283)
+	at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:2183)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:689)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5919)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1705)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1694)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+Aug 07, 2020 9:13:52 AM org.apache.catalina.loader.WebappClassLoaderBase openJARs
+WARNUNG: Failed to open JAR [null]
+java.io.FileNotFoundException: /usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/temp/2-lecture2go-portlet/WEB-INF/lib/apache-jakarta-commons-discovery.jar (No such file or directory)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:130)
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.openJARs(WebappClassLoaderBase.java:3126)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findResourceInternal(WebappClassLoaderBase.java:3438)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:3158)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:1416)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1921)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1795)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at java.sql.DriverManager.isDriverAllowed(DriverManager.java:556)
+	at java.sql.DriverManager.isDriverAllowed(DriverManager.java:548)
+	at java.sql.DriverManager.getDrivers(DriverManager.java:446)
+	at org.apache.catalina.loader.JdbcLeakPrevention.clearJdbcDriverRegistrations(JdbcLeakPrevention.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:2365)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:2283)
+	at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:2183)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:689)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5919)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1705)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1694)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+Aug 07, 2020 9:13:52 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SCHWERWIEGEND: The web application [/lecture2go-portlet] appears to have started a thread named [mariaDb-2-5] but has failed to stop it. This is very likely to create a memory leak.
+Aug 07, 2020 9:13:52 AM org.apache.catalina.loader.WebappClassLoaderBase openJARs
+WARNUNG: Failed to open JAR [null]
+java.io.FileNotFoundException: /usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/temp/5-resources-importer-web/WEB-INF/lib/commons-logging.jar (No such file or directory)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:130)
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.openJARs(WebappClassLoaderBase.java:3126)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findResourceInternal(WebappClassLoaderBase.java:3438)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findResource(WebappClassLoaderBase.java:1501)
+	at org.apache.catalina.loader.WebappClassLoaderBase.getResourceAsStream(WebappClassLoaderBase.java:1746)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:2342)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:2283)
+	at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:2183)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:689)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5919)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1705)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1694)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+Aug 07, 2020 9:13:52 AM org.apache.catalina.loader.WebappClassLoaderBase openJARs
+WARNUNG: Failed to open JAR [null]
+java.io.FileNotFoundException: /usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/temp/5-resources-importer-web/WEB-INF/lib/commons-logging.jar (No such file or directory)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:130)
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.openJARs(WebappClassLoaderBase.java:3126)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findResourceInternal(WebappClassLoaderBase.java:3438)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:3158)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:1416)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1921)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1795)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at java.sql.DriverManager.isDriverAllowed(DriverManager.java:556)
+	at java.sql.DriverManager.isDriverAllowed(DriverManager.java:548)
+	at java.sql.DriverManager.getDrivers(DriverManager.java:446)
+	at org.apache.catalina.loader.JdbcLeakPrevention.clearJdbcDriverRegistrations(JdbcLeakPrevention.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:2365)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:2283)
+	at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:2183)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:689)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5919)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1705)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1694)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+Aug 07, 2020 9:13:52 AM org.apache.catalina.loader.WebappClassLoaderBase openJARs
+WARNUNG: Failed to open JAR [null]
+java.io.FileNotFoundException: /usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/temp/5-resources-importer-web/WEB-INF/lib/commons-logging.jar (No such file or directory)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:130)
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.openJARs(WebappClassLoaderBase.java:3126)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findResourceInternal(WebappClassLoaderBase.java:3438)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:3158)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:1416)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1921)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1795)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at java.sql.DriverManager.isDriverAllowed(DriverManager.java:556)
+	at java.sql.DriverManager.isDriverAllowed(DriverManager.java:548)
+	at java.sql.DriverManager.getDrivers(DriverManager.java:446)
+	at org.apache.catalina.loader.JdbcLeakPrevention.clearJdbcDriverRegistrations(JdbcLeakPrevention.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:2365)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:2283)
+	at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:2183)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:689)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5919)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1705)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1694)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+Aug 07, 2020 9:13:52 AM org.apache.catalina.loader.WebappClassLoaderBase openJARs
+WARNUNG: Failed to open JAR [null]
+java.io.FileNotFoundException: /usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/temp/5-resources-importer-web/WEB-INF/lib/commons-logging.jar (No such file or directory)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:130)
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.openJARs(WebappClassLoaderBase.java:3126)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findResourceInternal(WebappClassLoaderBase.java:3438)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:3158)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:1416)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1921)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1795)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at java.sql.DriverManager.isDriverAllowed(DriverManager.java:556)
+	at java.sql.DriverManager.isDriverAllowed(DriverManager.java:548)
+	at java.sql.DriverManager.getDrivers(DriverManager.java:446)
+	at org.apache.catalina.loader.JdbcLeakPrevention.clearJdbcDriverRegistrations(JdbcLeakPrevention.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:2365)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:2283)
+	at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:2183)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:689)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5919)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1705)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1694)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+Aug 07, 2020 9:13:52 AM org.apache.catalina.loader.WebappClassLoaderBase openJARs
+WARNUNG: Failed to open JAR [null]
+java.io.FileNotFoundException: /usr/local/l2go/portal-6.2-ce-ga6/tomcat-7.0.103/temp/5-resources-importer-web/WEB-INF/lib/commons-logging.jar (No such file or directory)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:225)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:155)
+	at java.util.jar.JarFile.<init>(JarFile.java:166)
+	at java.util.jar.JarFile.<init>(JarFile.java:130)
+	at org.apache.tomcat.util.compat.JreCompat.jarFileNewInstance(JreCompat.java:344)
+	at org.apache.catalina.loader.WebappClassLoaderBase.openJARs(WebappClassLoaderBase.java:3126)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findResourceInternal(WebappClassLoaderBase.java:3438)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClassInternal(WebappClassLoaderBase.java:3158)
+	at org.apache.catalina.loader.WebappClassLoaderBase.findClass(WebappClassLoaderBase.java:1416)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1921)
+	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1795)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at java.sql.DriverManager.isDriverAllowed(DriverManager.java:556)
+	at java.sql.DriverManager.isDriverAllowed(DriverManager.java:548)
+	at java.sql.DriverManager.getDrivers(DriverManager.java:446)
+	at org.apache.catalina.loader.JdbcLeakPrevention.clearJdbcDriverRegistrations(JdbcLeakPrevention.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc(WebappClassLoaderBase.java:2365)
+	at org.apache.catalina.loader.WebappClassLoaderBase.clearReferences(WebappClassLoaderBase.java:2283)
+	at org.apache.catalina.loader.WebappClassLoaderBase.stop(WebappClassLoaderBase.java:2183)
+	at org.apache.catalina.loader.WebappLoader.stopInternal(WebappLoader.java:689)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5919)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1705)
+	at org.apache.catalina.core.ContainerBase$StopChild.call(ContainerBase.java:1694)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+Aug 07, 2020 9:13:52 AM org.apache.catalina.loader.WebappClassLoaderBase clearReferencesThreads
+SCHWERWIEGEND: The web application [/marketplace-portlet] appears to have started a thread named [mariaDb-2-3] but has failed to stop it. This is very likely to create a memory leak.
+Aug 07, 2020 9:13:53 AM org.apache.coyote.AbstractProtocol stop
+INFORMATION: Stopping ProtocolHandler ["http-bio-8080"]
+Aug 07, 2020 9:13:53 AM org.apache.coyote.AbstractProtocol destroy
+INFORMATION: Destroying ProtocolHandler ["http-bio-8080"]
+Aug 07, 2020 9:13:53 AM org.apache.coyote.AbstractProtocol stop
+INFORMATION: Stopping ProtocolHandler ["ajp-bio-127.0.0.1-8009"]
+Aug 07, 2020 9:13:53 AM org.apache.catalina.util.LifecycleBase destroy
+SCHWERWIEGEND: Called stop() on failed component [Connector[AJP/1.3-8009]] to trigger clean-up but it failed too
+org.apache.catalina.LifecycleException: An invalid Lifecycle transition was attempted ([before_stop]) for component [org.apache.catalina.connector.MapperListener@1d16f93d] in state [INITIALIZED]
+	at org.apache.catalina.util.LifecycleBase.invalidTransition(LifecycleBase.java:430)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:244)
+	at org.apache.catalina.connector.Connector.stopInternal(Connector.java:1042)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:257)
+	at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:293)
+	at org.apache.catalina.core.StandardService.destroyInternal(StandardService.java:579)
+	at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:321)
+	at org.apache.catalina.core.StandardServer.destroyInternal(StandardServer.java:834)
+	at org.apache.catalina.util.LifecycleBase.destroy(LifecycleBase.java:321)
+	at org.apache.catalina.startup.Catalina.stop(Catalina.java:786)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:747)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:284)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:415)
+
+Aug 07, 2020 9:13:53 AM org.apache.coyote.AbstractProtocol destroy
+INFORMATION: Destroying ProtocolHandler ["ajp-bio-127.0.0.1-8009"]
