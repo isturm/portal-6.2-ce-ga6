@@ -1,3 +1,5 @@
+<script type="text/javascript">jwplayer.key="your-licence-here";</script>
+
 <script>
 
     $(function() {
