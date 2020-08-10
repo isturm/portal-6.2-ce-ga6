@@ -9,7 +9,7 @@ Lecture2Go http://lecture2go.uni-hamburg.de is an open source platform for media
 Change Log
 ==============
 
-Bug Fix and Feature Package [master-v.2-b5226] on Thursday, Augus 06, 2020
+Security Update for 6.2-ce-ga6 [master-v.2-b5226] on Thursday, Augus 06, 2020
 
 Bug Fix and Feature Package [master-v.1-b5226] on Thursday, February 27, 2020
 
