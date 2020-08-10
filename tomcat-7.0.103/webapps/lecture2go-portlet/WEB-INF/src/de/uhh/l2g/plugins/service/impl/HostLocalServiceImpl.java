@@ -131,7 +131,7 @@ public class HostLocalServiceImpl extends HostLocalServiceBaseImpl {
 	 */
 
 	protected static Log LOG = LogFactoryUtil.getLog(Host.class.getName());
-	protected static final String SYS_ROOT = "vh_0000";
+	protected static final String SYS_ROOT = "vh_000";
 	protected static final String SYS_SERVER = "localhost";
 	protected static final String SYS_PROTOCOL = "http";
 	protected static final int SYS_PORT = 80;
